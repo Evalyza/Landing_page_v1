@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Evalyza · Diagnóstico de procesos para startups</title>
+  <meta name="description" data-i18n-content="meta.desc" content="Agentes de IA que analizan cómo trabaja tu startup, puntúan cada proceso y te dicen qué mejorar primero.">
+  <meta name="theme-color" content="#F4F5FA">
+  <link rel="icon" href="assets/evalyza-icono-app.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" data-i18n-aria="aria.home" aria-label="Evalyza, inicio">
+      <img src="assets/evalyza-logo-horizontal.svg" alt="Evalyza" width="564" height="180">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
+      <li><a href="#framework" data-i18n="nav.framework">Framework</a></li>
+      <li><a href="#a-medida" data-i18n="nav.custom">A medida</a></li>
+      <li><a href="#faq" data-i18n="nav.faq">Preguntas</a></li>
+    </ul>
+    <div class="nav-actions">
+      <label class="lang">
+        <span class="sr-only" data-i18n="lang.label">Idioma</span>
+        <i class="ph ph-globe" aria-hidden="true"></i>
+        <select data-lang>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+        <i class="ph ph-caret-down" aria-hidden="true"></i>
+      </label>
+      <a class="btn btn-dark btn-small nav-cta" href="#lista" data-open-tab="waitlist" data-i18n="cta.join">Unirme a la lista</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1><span data-i18n="hero.h1a">Mira tu startup</span> <span class="mark" data-i18n="hero.h1b">por dentro.</span></h1>
+        <p class="hero-sub" data-i18n="hero.sub">Agentes de IA analizan cómo trabajáis, puntúan cada proceso y te dicen qué mejorar primero.</p>
+
+        <form class="join" data-join novalidate>
+          <label for="hero-email" data-i18n="form.email">Email de trabajo</label>
+          <div class="join-row">
+            <input id="hero-email" name="email" type="email" autocomplete="email" data-i18n-ph="form.emailPh" placeholder="tu@startup.com" aria-describedby="hero-email-msg" required>
+            <button class="btn btn-primary" type="submit">
+              <span class="btn-label"><span data-i18n="cta.join">Unirme a la lista</span> <i class="ph-bold ph-arrow-right"></i></span>
+            </button>
+          </div>
+          <p class="field-msg" id="hero-email-msg" aria-live="polite"></p>
+        </form>
+
+        <a class="btn btn-ghost" href="#lista" data-open-tab="call"><i class="ph ph-phone"></i><span data-i18n="cta.call">Agendar una llamada</span></a>
+      </div>
+
+      <!-- Agent console: a working mini-version of the product -->
+      <div class="panel console" data-console data-i18n-aria="aria.console" aria-label="Demostración: agentes de Evalyza evaluando una startup de ejemplo">
+        <div class="panel-head">
+          <div class="panel-title">
+            <img src="assets/evalyza-icono-app.svg" alt="">
+            <span data-i18n="console.title">Diagnóstico de Rutalia Solutions</span>
+          </div>
+          <span class="tag tag-sample" data-i18n="tag.sample">Datos de ejemplo</span>
+        </div>
+
+        <div class="console-body">
+          <div class="agents">
+            <div class="col-label" data-i18n="console.agents">Agentes</div>
+            <div class="agent" data-agent="0">
+              <div class="agent-icon"><i class="ph ph-microphone"></i></div>
+              <div><div class="agent-name" data-i18n="agent.interviewer">Entrevistador</div><div class="agent-status" data-status>En espera</div></div>
+            </div>
+            <div class="agent" data-agent="1">
+              <div class="agent-icon"><i class="ph ph-files"></i></div>
+              <div><div class="agent-name" data-i18n="agent.reader">Lector</div><div class="agent-status" data-status>En espera</div></div>
+            </div>
+            <div class="agent" data-agent="2">
+              <div class="agent-icon"><i class="ph ph-graph"></i></div>
+              <div><div class="agent-name" data-i18n="agent.analyst">Analista</div><div class="agent-status" data-status>En espera</div></div>
+            </div>
+            <div class="agent" data-agent="3">
+              <div class="agent-icon"><i class="ph ph-list-checks"></i></div>
+              <div><div class="agent-name" data-i18n="agent.advisor">Consejero</div><div class="agent-status" data-status>En espera</div></div>
+            </div>
+          </div>
+
+          <div class="feed">
+            <div class="col-label" data-i18n="console.findings">Hallazgos</div>
+            <ul class="findings">
+              <li class="finding"><span data-i18n="finding.1">El alta de clientes depende de una sola persona</span><span class="tag tag-crit" data-i18n="tag.crit">Crítico</span></li>
+              <li class="finding"><span data-i18n="finding.2">Los objetivos trimestrales no llegan a los equipos</span><span class="tag tag-watch" data-i18n="tag.watch">Vigilar</span></li>
+              <li class="finding"><span data-i18n="finding.3">Ciclo de producto corto y bien medido</span><span class="tag tag-ok" data-i18n="tag.ok">Fortaleza</span></li>
+            </ul>
+
+            <div class="scores">
+              <div class="score-row"><span data-i18n="area.product">Producto</span><div class="bar"><i class="c-ok" style="--v:82%"></i></div><span class="mono">82</span></div>
+              <div class="score-row"><span data-i18n="area.team">Equipo</span><div class="bar"><i class="c-ok" style="--v:71%"></i></div><span class="mono">71</span></div>
+              <div class="score-row"><span data-i18n="area.sales">Ventas</span><div class="bar"><i class="c-watch" style="--v:54%"></i></div><span class="mono">54</span></div>
+              <div class="score-row"><span data-i18n="area.ops">Operaciones</span><div class="bar"><i class="c-crit" style="--v:38%"></i></div><span class="mono">38</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="console-foot">
+          <span class="progress-text" data-progress>Preparando agentes</span>
+          <button class="replay" type="button" data-replay><i class="ph ph-arrow-counter-clockwise"></i> <span data-i18n="console.replay">Repetir</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="sources" data-i18n-aria="sources.title" aria-label="Qué analizan los agentes">
+    <div class="wrap">
+      <p data-i18n="sources.title">Qué analizan los agentes</p>
+      <div class="sources-row">
+        <span class="source"><i class="ph ph-microphone"></i><span data-i18n="source.1">Entrevistas al equipo</span></span>
+        <span class="source"><i class="ph ph-file-text"></i><span data-i18n="source.2">Procesos y documentos</span></span>
+        <span class="source"><i class="ph ph-target"></i><span data-i18n="source.3">Objetivos y OKR</span></span>
+        <span class="source"><i class="ph ph-kanban"></i><span data-i18n="source.4">Tableros de proyecto</span></span>
+        <span class="source"><i class="ph ph-chart-line-up"></i><span data-i18n="source.5">Métricas comerciales</span></span>
+        <span class="source"><i class="ph ph-table"></i><span data-i18n="source.6">Datos financieros</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS: pinned story -->
+  <section class="section story" id="como-funciona">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="story.h2">Así trabajan tus agentes</h2>
+        <p data-i18n="story.p">Cuatro agentes especializados recorren tu empresa como lo haría un buen consultor de operaciones. Tú solo ves el resultado.</p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-steps">
+          <article class="step" data-step="0" id="escucha">
+            <h3 class="step-verb" data-i18n="step.0.verb">Escucha</h3>
+            <p data-i18n="step.0.text">Entrevista a tu equipo por chat o voz y lee los documentos que decidas compartir: procesos, OKR, actas, tableros.</p>
+            <div class="inline-stage"></div>
+          </article>
+          <article class="step" data-step="1" id="ordena">
+            <h3 class="step-verb" data-i18n="step.1.verb">Ordena</h3>
+            <p data-i18n="step.1.text">Cada evidencia se asigna a un área del framework. Nada queda en una opinión suelta: todo tiene su fuente.</p>
+            <div class="inline-stage"></div>
+          </article>
+          <article class="step" data-step="2" id="puntua">
+            <h3 class="step-verb" data-i18n="step.2.verb">Puntúa</h3>
+            <p data-i18n="step.2.text">Evalúa cada proceso en cuatro dimensiones: qué está definido, cómo se ejecuta, si se mide y si aguantará cuando crezcáis.</p>
+            <div class="inline-stage"></div>
+          </article>
+          <article class="step" data-step="3" id="recomienda">
+            <h3 class="step-verb" data-i18n="step.3.verb">Recomienda</h3>
+            <p data-i18n="step.3.text">Te entrega un plan priorizado por impacto y esfuerzo, con responsables sugeridos y el porqué de cada paso.</p>
+            <div class="inline-stage"></div>
+          </article>
+        </div>
+
+        <div class="stage-wrap">
+          <div class="panel stage">
+            <div class="panel-head">
+              <div class="panel-title"><img src="assets/evalyza-icono-app.svg" alt=""><span data-stage-title>Entrevistas</span></div>
+              <span class="tag tag-sample" data-i18n="tag.sample">Datos de ejemplo</span>
+            </div>
+            <div class="stage-screens">
+
+              <div class="screen is-active" data-screen="0">
+                <div class="chat">
+                  <div class="bubble agent-b"><small data-i18n="agent.interviewer">Entrevistador</small><span data-i18n="chat.q1">¿Cómo decidís qué entra en el siguiente sprint?</span></div>
+                  <div class="bubble person-b"><small>Marta, CTO</small><span data-i18n="chat.a1">Lo hablamos el lunes, aunque a veces ventas mete cosas a mitad de semana.</span></div>
+                  <div class="bubble agent-b"><small data-i18n="agent.interviewer">Entrevistador</small><span data-i18n="chat.q2">¿Queda registrado en algún sitio cuándo pasa eso?</span></div>
+                  <div class="bubble person-b"><small>Marta, CTO</small><span data-i18n="chat.a2">No siempre. Suele ser por Slack.</span></div>
+                </div>
+                <div class="docs">
+                  <span class="doc"><i class="ph ph-file-text"></i><span data-i18n="doc.1">OKR T3.pdf</span></span>
+                  <span class="doc"><i class="ph ph-kanban"></i><span data-i18n="doc.2">Tablero de producto</span></span>
+                  <span class="doc"><i class="ph ph-file-text"></i><span data-i18n="doc.3">Proceso de alta.docx</span></span>
+                  <span class="doc"><i class="ph ph-table"></i><span data-i18n="doc.4">Pipeline comercial</span></span>
+                </div>
+              </div>
+
+              <div class="screen" data-screen="1">
+                <div class="areas-map">
+                  <div class="area-bin"><header><span data-i18n="area.strategy">Estrategia</span><span class="mono">9</span></header><div class="chips"><i class="h"></i><i></i><i></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="area-bin"><header><span data-i18n="area.product">Producto</span><span class="mono">14</span></header><div class="chips"><i></i><i class="h"></i><i></i><i></i><i></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="area-bin"><header><span data-i18n="area.team">Equipo</span><span class="mono">11</span></header><div class="chips"><i></i><i></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="area-bin"><header><span data-i18n="area.ops">Operaciones</span><span class="mono">17</span></header><div class="chips"><i class="h"></i><i class="h"></i><i></i><i></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="area-bin"><header><span data-i18n="area.sales">Ventas</span><span class="mono">12</span></header><div class="chips"><i></i><i></i><i></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="area-bin"><header><span data-i18n="area.marketing">Marketing</span><span class="mono">6</span></header><div class="chips"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="area-bin"><header><span data-i18n="area.finance">Finanzas</span><span class="mono">8</span></header><div class="chips"><i></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="area-bin"><header><span data-i18n="area.tech">Tecnología</span><span class="mono">10</span></header><div class="chips"><i></i><i></i><i></i><i></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                </div>
+              </div>
+
+              <div class="screen" data-screen="2">
+                <div class="heat" role="table" data-i18n-aria="aria.heat" aria-label="Puntuación por área y dimensión, datos de ejemplo">
+                  <span></span><span class="hd" data-i18n="heat.def">Definido</span><span class="hd" data-i18n="heat.exec">Ejecutado</span><span class="hd" data-i18n="heat.meas">Medido</span><span class="hd" data-i18n="heat.scal">Escalable</span>
+                  <span class="rl" data-i18n="area.product">Producto</span><span class="cell s4">4</span><span class="cell s4">4</span><span class="cell s3">3</span><span class="cell s3">3</span>
+                  <span class="rl" data-i18n="area.team">Equipo</span><span class="cell s3">3</span><span class="cell s4">4</span><span class="cell s2">2</span><span class="cell s3">3</span>
+                  <span class="rl" data-i18n="area.sales">Ventas</span><span class="cell s3">3</span><span class="cell s2">2</span><span class="cell s3">3</span><span class="cell s2">2</span>
+                  <span class="rl" data-i18n="area.ops">Operaciones</span><span class="cell s2">2</span><span class="cell s1">1</span><span class="cell s1">1</span><span class="cell s1">1</span>
+                  <span class="rl" data-i18n="area.finance">Finanzas</span><span class="cell s3">3</span><span class="cell s3">3</span><span class="cell s4">4</span><span class="cell s2">2</span>
+                  <span class="rl" data-i18n="area.strategy">Estrategia</span><span class="cell s3">3</span><span class="cell s2">2</span><span class="cell s2">2</span><span class="cell s3">3</span>
+                </div>
+                <div class="legend">
+                  <span><i style="background:var(--coral)"></i><span data-i18n="tag.crit">Crítico</span></span>
+                  <span><i style="background:var(--ambar)"></i><span data-i18n="tag.watch">Vigilar</span></span>
+                  <span><i style="background:#7fd8cd"></i><span data-i18n="tag.correct">Correcto</span></span>
+                  <span><i style="background:var(--turquesa)"></i><span data-i18n="tag.ok">Fortaleza</span></span>
+                </div>
+              </div>
+
+              <div class="screen" data-screen="3">
+                <ol class="recs">
+                  <li class="rec"><div><strong data-i18n="rec.1">Documentar el alta de clientes y formar a una segunda persona</strong><div class="meta"><span class="tag tag-crit" data-i18n="impact.high">Impacto alto</span><span class="tag tag-ok" data-i18n="effort.low">Esfuerzo bajo</span><span class="tag tag-sample" data-i18n="area.ops">Operaciones</span></div></div></li>
+                  <li class="rec"><div><strong data-i18n="rec.2">Congelar el sprint y canalizar las peticiones de ventas por un único formulario</strong><div class="meta"><span class="tag tag-watch" data-i18n="impact.med">Impacto medio</span><span class="tag tag-ok" data-i18n="effort.low">Esfuerzo bajo</span><span class="tag tag-sample" data-i18n="area.product">Producto</span></div></div></li>
+                  <li class="rec"><div><strong data-i18n="rec.3">Bajar los OKR trimestrales a objetivos por equipo con revisión quincenal</strong><div class="meta"><span class="tag tag-watch" data-i18n="impact.med">Impacto medio</span><span class="tag tag-watch" data-i18n="effort.med">Esfuerzo medio</span><span class="tag tag-sample" data-i18n="area.strategy">Estrategia</span></div></div></li>
+                </ol>
+              </div>
+
+            </div>
+            <div class="stage-foot" aria-hidden="true">
+              <div class="build-track"><i></i><i></i><i></i><i></i></div>
+              <span class="mono" data-build-text></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK -->
+  <section class="section" id="framework">
+    <div class="wrap">
+      <div class="framework-grid">
+        <div class="radar-box">
+          <svg class="radar" viewBox="-60 -30 520 470" role="img" aria-labelledby="radar-title">
+            <title id="radar-title" data-i18n="aria.radar">Radar del framework: puntuación de ejemplo frente a lo esperado para la fase elegida</title>
+            <g data-radar></g>
+          </svg>
+          <div class="radar-legend">
+            <span><i class="sw-actual"></i><span data-i18n="fw.yours">Rutalia Solutions (ejemplo)</span></span>
+            <span><i class="sw-expected"></i><span data-expected-label>Esperado en Seed</span></span>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-head" style="margin-bottom:32px">
+            <h2 data-i18n="fw.h2">Un framework de ocho áreas, calibrado a tu fase</h2>
+            <p data-i18n="fw.p">Lo que es normal en un pre-seed es una alarma en una Serie A. Evalyza compara tus procesos con lo que se espera en tu momento.</p>
+          </div>
+
+          <div class="fw-controls">
+            <label id="phase-label" data-i18n="fw.phase">Fase de la startup</label>
+            <div class="segmented" role="group" aria-labelledby="phase-label" data-phase>
+              <span class="thumb" aria-hidden="true"></span>
+              <button type="button" aria-pressed="false" data-phase-value="preseed" data-i18n="phase.preseed">Pre-seed</button>
+              <button type="button" aria-pressed="true" data-phase-value="seed" data-i18n="phase.seed">Seed</button>
+              <button type="button" aria-pressed="false" data-phase-value="seriea" data-i18n="phase.seriea">Serie A</button>
+            </div>
+          </div>
+
+          <ul class="area-list" data-area-list></ul>
+
+          <div class="area-detail swap" data-area-detail aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM / BENTO -->
+  <section class="section" id="a-medida" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="custom.h2">Hecho para tu empresa, no para una plantilla</h2>
+      </div>
+
+      <div class="bento">
+        <article class="tile t-config">
+          <div class="tile-head"><h3 data-i18n="config.h3">Agentes configurados para tu caso</h3><span class="tag tag-sample-light" data-i18n="tag.sample">Datos de ejemplo</span></div>
+          <p data-i18n="config.p">Antes de empezar ajustamos preguntas, pesos y fuentes a tu sector, tu tamaño y lo que más te preocupa.</p>
+          <div class="config">
+            <div><small data-i18n="config.sector">Sector</small><b data-i18n="config.sectorV">Logística</b></div>
+            <div><small data-i18n="config.phase">Fase</small><b data-i18n="phase.seed">Seed</b></div>
+            <div><small data-i18n="config.team">Equipo</small><b data-i18n="config.teamV">24 personas</b></div>
+            <div><small data-i18n="config.focus">Foco</small><b data-i18n="area.ops">Operaciones</b></div>
+          </div>
+        </article>
+
+        <article class="tile t-track">
+          <div class="tile-head"><h3 data-i18n="track.h3">Seguimiento, no foto fija</h3><span class="tag tag-sample" data-i18n="tag.example">Ejemplo</span></div>
+          <p data-i18n="track.p">Repite la evaluación cada trimestre y mira qué ha mejorado.</p>
+          <div class="trend" data-i18n-aria="aria.trend" aria-label="Evolución de ejemplo del índice de salud">
+            <svg viewBox="0 0 260 120">
+              <polyline class="ln" points="16,92 92,74 168,52 244,30"/>
+              <circle class="dt" cx="16" cy="92" r="5"/><circle class="dt" cx="92" cy="74" r="5"/><circle class="dt" cx="168" cy="52" r="5"/><circle class="dt" cx="244" cy="30" r="6"/>
+              <text x="16" y="116" text-anchor="middle" data-i18n="track.q1">T1</text><text x="92" y="116" text-anchor="middle" data-i18n="track.q2">T2</text><text x="168" y="116" text-anchor="middle" data-i18n="track.q3">T3</text><text x="244" y="116" text-anchor="middle" data-i18n="track.q4">T4</text>
+              <text class="val" x="244" y="14" text-anchor="middle">71</text><text x="16" y="74" text-anchor="middle">52</text>
+            </svg>
+          </div>
+        </article>
+
+        <article class="tile t-privacy">
+          <h3 data-i18n="evidence.h3">Cada hallazgo, con su fuente</h3>
+          <p data-i18n="evidence.p">Tú decides qué fuentes y personas participan.</p>
+          <div class="evidence" data-i18n-aria="aria.evidence" aria-label="Hallazgo de ejemplo con sus fuentes">
+            <div class="claim" data-i18n="finding.1">El alta de clientes depende de una sola persona</div>
+            <div class="src">
+              <span><i class="ph ph-microphone"></i><span data-i18n="evidence.src1">Entrevista, CTO</span></span>
+              <span><i class="ph ph-file-text"></i><span data-i18n="doc.3">Proceso de alta.docx</span></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile t-portfolio">
+          <div class="tile-head"><h3 data-i18n="portfolio.h3">Para aceleradoras e inversores</h3><span class="tag tag-sample" data-i18n="tag.sample">Datos de ejemplo</span></div>
+          <p data-i18n="portfolio.p">Evalúa varias startups con el mismo framework y detecta dónde necesita ayuda cada una.</p>
+          <div class="portfolio-heat" role="table" data-i18n-aria="aria.portfolio" aria-label="Comparativa de cartera, datos de ejemplo">
+            <span></span><span class="hd" data-i18n="area.strategy">Estrategia</span><span class="hd" data-i18n="area.product">Producto</span><span class="hd" data-i18n="area.team">Equipo</span><span class="hd" data-i18n="area.sales">Ventas</span><span class="hd" data-i18n="area.opsShort">Operac.</span>
+            <span class="rl">Rutalia</span><span class="cell s3"></span><span class="cell s4"></span><span class="cell s3"></span><span class="cell s2"></span><span class="cell s1"></span>
+            <span class="rl">Nodra</span><span class="cell s4"></span><span class="cell s3"></span><span class="cell s2"></span><span class="cell s3"></span><span class="cell s3"></span>
+            <span class="rl">Kelpa Labs</span><span class="cell s2"></span><span class="cell s3"></span><span class="cell s4"></span><span class="cell s1"></span><span class="cell s2"></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE: self-check + waitlist / call request -->
+  <section class="close" id="lista">
+    <div class="wrap">
+      <div class="panel close-panel">
+        <div>
+          <h2 data-i18n="close.h2">¿Por dónde empezaría tu diagnóstico?</h2>
+          <p data-i18n="close.p">Tres preguntas, sin registro. Te damos una primera pista y te guardamos sitio para cuando abramos.</p>
+
+          <div class="quiz" data-quiz>
+            <fieldset class="q">
+              <legend data-i18n="q.phase">¿En qué fase estáis?</legend>
+              <div class="pills" data-q="phase">
+                <button type="button" aria-pressed="false" data-v="preseed" data-i18n="phase.preseed">Pre-seed</button>
+                <button type="button" aria-pressed="true" data-v="seed" data-i18n="phase.seed">Seed</button>
+                <button type="button" aria-pressed="false" data-v="seriea" data-i18n="phase.serieaPlus">Serie A o más</button>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend data-i18n="q.size">¿Cuántas personas sois?</legend>
+              <div class="pills" data-q="size">
+                <button type="button" aria-pressed="false" data-v="s" data-i18n="size.s">1 a 10</button>
+                <button type="button" aria-pressed="true" data-v="m" data-i18n="size.m">11 a 50</button>
+                <button type="button" aria-pressed="false" data-v="l" data-i18n="size.l">Más de 50</button>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend data-i18n="q.pain">¿Qué os quita más tiempo?</legend>
+              <div class="pills" data-q="pain">
+                <button type="button" aria-pressed="true" data-v="coord" data-i18n="pain.coord">Coordinarnos</button>
+                <button type="button" aria-pressed="false" data-v="sales" data-i18n="pain.sales">Cerrar ventas</button>
+                <button type="button" aria-pressed="false" data-v="hiring" data-i18n="pain.hiring">Contratar</button>
+                <button type="button" aria-pressed="false" data-v="report" data-i18n="pain.report">Reportar a inversores</button>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="result" aria-live="polite">
+            <div class="result-icon"><i class="ph-bold ph-compass"></i></div>
+            <div class="swap" data-result>
+              <strong data-result-title>Empezaríamos por Operaciones</strong>
+              <p data-result-text>Con 11 a 50 personas, los procesos que funcionaban de palabra empiezan a romperse.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="segmented segmented-dark" role="tablist" data-tabs>
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" role="tab" aria-pressed="true" aria-selected="true" data-v="waitlist" data-i18n="tabs.waitlist">Lista de espera</button>
+            <button type="button" role="tab" aria-pressed="false" aria-selected="false" data-v="call" data-i18n="tabs.call">Agendar llamada</button>
+          </div>
+
+          <!-- Waitlist -->
+          <div class="waitlist" data-waitlist data-tabpanel="waitlist" role="tabpanel">
+            <form data-waitlist-form novalidate>
+              <div class="form-stack">
+                <h3 data-i18n="wl.h3">Únete a la lista de espera</h3>
+                <p class="waitlist-intro" data-i18n="wl.intro">Te avisaremos en cuanto abramos las primeras plazas.</p>
+
+                <div class="field">
+                  <label for="wl-email" data-i18n="form.email">Email de trabajo</label>
+                  <input id="wl-email" name="email" type="email" autocomplete="email" data-i18n-ph="form.emailPh" placeholder="tu@startup.com" aria-describedby="wl-email-err" required>
+                  <span class="err" id="wl-email-err" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="wl-company" data-i18n="form.company">Empresa</label>
+                  <input id="wl-company" name="company" type="text" autocomplete="organization" data-i18n-ph="form.companyPh" placeholder="Nombre de tu startup">
+                </div>
+                <div class="field">
+                  <label for="wl-role" data-i18n="form.role">Tu rol</label>
+                  <select id="wl-role" name="role">
+                    <option data-i18n="role.1">Fundador o CEO</option>
+                    <option data-i18n="role.2">Operaciones o COO</option>
+                    <option data-i18n="role.3">Producto o tecnología</option>
+                    <option data-i18n="role.4">Aceleradora o inversor</option>
+                    <option data-i18n="role.5">Otro</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="cta.join">Unirme a la lista</span> <i class="ph-bold ph-arrow-right"></i></span></button>
+                <p class="privacy-note"><i class="ph ph-lock-simple"></i><span data-i18n="wl.privacy">Solo usaremos tu email para avisarte del lanzamiento.</span></p>
+              </div>
+            </form>
+            <div class="success" role="status">
+              <div class="check"><i class="ph-bold ph-check"></i></div>
+              <h3 data-i18n="wl.okH">Tienes sitio reservado</h3>
+              <p data-success-text>Te escribiremos cuando abramos la siguiente tanda.</p>
+            </div>
+          </div>
+
+          <!-- Call request -->
+          <div class="waitlist" data-call data-tabpanel="call" role="tabpanel" hidden>
+            <form data-call-form novalidate>
+              <div class="form-stack">
+                <h3 data-i18n="call.h3">Habla con nuestro equipo</h3>
+                <p class="waitlist-intro" data-i18n="call.intro">Déjanos tu teléfono y el equipo de atención al cliente te llamará para resolver tus dudas.</p>
+
+                <div class="field">
+                  <label for="call-name" data-i18n="form.name">Nombre</label>
+                  <input id="call-name" name="name" type="text" autocomplete="name" data-i18n-ph="form.namePh" placeholder="Tu nombre" aria-describedby="call-name-err" required>
+                  <span class="err" id="call-name-err" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="call-phone" data-i18n="form.phone">Teléfono</label>
+                  <div class="phone-row">
+                    <select name="prefix" data-i18n-aria="form.prefix" aria-label="Prefijo">
+                      <option value="+34">+34</option>
+                      <option value="+44">+44</option>
+                      <option value="+33">+33</option>
+                      <option value="+49">+49</option>
+                      <option value="+39">+39</option>
+                      <option value="+351">+351</option>
+                      <option value="+1">+1</option>
+                    </select>
+                    <input id="call-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" data-i18n-ph="form.phonePh" placeholder="600 123 456" aria-describedby="call-phone-err" required>
+                  </div>
+                  <span class="err" id="call-phone-err" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="call-slot" data-i18n="form.slot">¿Cuándo te viene mejor?</label>
+                  <select id="call-slot" name="slot">
+                    <option data-i18n="slot.am">Mañana (9:00 a 14:00)</option>
+                    <option data-i18n="slot.pm">Tarde (15:00 a 19:00)</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary" type="submit"><span class="btn-label"><i class="ph-bold ph-phone"></i> <span data-i18n="call.cta">Solicitar llamada</span></span></button>
+                <p class="privacy-note"><i class="ph ph-lock-simple"></i><span data-i18n="call.privacy">Solo usaremos tu teléfono para esta llamada.</span></p>
+              </div>
+            </form>
+            <div class="success" role="status">
+              <div class="check"><i class="ph-bold ph-phone-call"></i></div>
+              <h3 data-i18n="call.okH">Llamada solicitada</h3>
+              <p data-i18n="call.okP">El equipo de atención al cliente te llamará en la franja que has elegido.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <h2 data-i18n="faq.h2">Preguntas frecuentes</h2>
+      <div class="faq">
+        <details>
+          <summary><span data-i18n="faq.q1">¿Qué necesito para empezar?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a1">Una sesión inicial para configurar los agentes y acceso a las fuentes que quieras incluir. Ellos se encargan de las entrevistas y la lectura.</p>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q2">¿Quién ve los datos de mi empresa?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a2">Solo las personas que tú autorices. Tú eliges qué documentos, herramientas y personas forman parte del diagnóstico.</p>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q3">¿En qué se diferencia de una consultoría?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a3">Los agentes trabajan en paralelo y dejan rastro de cada conclusión, así que el diagnóstico se puede repetir cada trimestre para medir el avance.</p>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q4">¿Cuánto costará?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a4">Aún no hemos publicado precios. Quien esté en la lista de espera los conocerá primero.</p>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q5">¿Sirve si somos muy pocos?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a5">Sí. El framework se ajusta a tu fase, así que en un equipo pequeño se centra en lo que te ayudará a crecer sin romperte.</p>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q6">¿Puedo hablar con alguien antes de apuntarme?</span><i class="ph ph-plus"></i></summary>
+          <p><span data-i18n="faq.a6">Claro. Déjanos tu teléfono y el equipo de atención al cliente te llamará.</span> <a href="#lista" data-open-tab="call" data-i18n="cta.call">Agendar una llamada</a></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/evalyza-logo-horizontal.svg" alt="Evalyza" width="564" height="180" style="height:52px"></a>
+    <nav data-i18n-aria="aria.footer" aria-label="Pie de página">
+      <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
+      <a href="#framework" data-i18n="nav.framework">Framework</a>
+      <a href="#faq" data-i18n="nav.faq">Preguntas</a>
+    </nav>
+    <span>© 2026 Evalyza</span>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
