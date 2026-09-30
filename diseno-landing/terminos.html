@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.terms">Evalyza</title>
+  <meta name="theme-color" content="#0B0E24">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/evalyza-icono-app.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body class="legal-page" data-doc="terms">
+
+<header class="nav is-scrolled" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" data-i18n-aria="aria.home" aria-label="Evalyza, inicio">
+      <img src="assets/evalyza-logo-horizontal-blanco.svg" alt="Evalyza" width="564" height="180">
+    </a>
+    <div class="nav-actions">
+      <label class="lang">
+        <span class="sr-only" data-i18n="lang.label">Idioma</span>
+        <i class="ph ph-globe" aria-hidden="true"></i>
+        <select data-lang>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+        <i class="ph ph-caret-down" aria-hidden="true"></i>
+      </label>
+      <a class="btn btn-dark btn-small nav-cta" href="index.html#lista" data-i18n="cta.join">Unirme a la lista</a>
+    </div>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap legal-grid">
+    <aside class="legal-toc" aria-labelledby="toc-title">
+      <p class="legal-toc-title" id="toc-title" data-i18n="legal.toc">En esta página</p>
+      <ol data-toc></ol>
+    </aside>
+
+    <article class="legal-doc">
+      <a class="legal-back" href="index.html"><i class="ph ph-arrow-left" aria-hidden="true"></i><span data-i18n="legal.back">Volver a Evalyza</span></a>
+      <h1 data-doc-title></h1>
+      <p class="legal-date" data-i18n="legal.updated"></p>
+      <p class="legal-pending"><i class="ph ph-pencil-simple-line" aria-hidden="true"></i><span data-i18n="legal.pending"></span></p>
+
+      <details class="legal-toc-mobile">
+        <summary><span data-i18n="legal.toc">En esta página</span><i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+        <ol data-toc></ol>
+      </details>
+
+      <div class="legal-intro" data-doc-intro></div>
+      <div data-doc-body></div>
+
+      <p class="legal-note" data-i18n="legal.translation"></p>
+      <p class="legal-other"><a href="privacidad.html"><span data-i18n="footer.privacy"></span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></p>
+    </article>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/evalyza-logo-horizontal-blanco.svg" alt="Evalyza" width="564" height="180" style="height:52px"></a>
+    <nav data-i18n-aria="aria.footer" aria-label="Pie de página">
+      <a href="terminos.html" data-i18n="footer.terms">Términos de Servicio</a>
+      <a href="privacidad.html" data-i18n="footer.privacy">Política de Privacidad</a>
+    </nav>
+    <span>© 2026 Evalyza</span>
+  </div>
+</footer>
+
+<script src="i18n.js?v=2"></script>
+<script src="legal-content.js?v=2"></script>
+<script src="legal.js?v=2"></script>
+</body>
+</html>

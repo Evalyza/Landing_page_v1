@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="meta.title">Evalyza · Diagnóstico de procesos para startups</title>
   <meta name="description" data-i18n-content="meta.desc" content="Agentes de IA que analizan cómo trabaja tu startup, puntúan cada proceso y te dicen qué mejorar primero.">
-  <meta name="theme-color" content="#F4F5FA">
+  <meta name="theme-color" content="#0B0E24">
+  <meta name="color-scheme" content="dark">
   <link rel="icon" href="assets/evalyza-icono-app.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -20,7 +21,7 @@
 <header class="nav" id="top">
   <div class="wrap">
     <a class="brand" href="#top" data-i18n-aria="aria.home" aria-label="Evalyza, inicio">
-      <img src="assets/evalyza-logo-horizontal.svg" alt="Evalyza" width="564" height="180">
+      <img src="assets/evalyza-logo-horizontal-blanco.svg" alt="Evalyza" width="564" height="180">
     </a>
     <ul class="nav-links">
       <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
@@ -63,6 +64,7 @@
               <span class="btn-label"><span data-i18n="cta.join">Unirme a la lista</span> <i class="ph-bold ph-arrow-right"></i></span>
             </button>
           </div>
+          <label class="consent"><input type="checkbox" name="consent" aria-describedby="hero-email-msg"><span data-i18n-html="consent.html">Acepto los Términos de Servicio y he leído la Política de Privacidad.</span></label>
           <p class="field-msg" id="hero-email-msg" aria-live="polite"></p>
         </form>
 
@@ -420,6 +422,10 @@
                     <option data-i18n="role.5">Otro</option>
                   </select>
                 </div>
+                <div class="field">
+                  <label class="consent"><input type="checkbox" name="consent" aria-describedby="wl-consent-err"><span data-i18n-html="consent.html">Acepto los Términos de Servicio y he leído la Política de Privacidad.</span></label>
+                  <span class="err" id="wl-consent-err" aria-live="polite"></span>
+                </div>
                 <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="cta.join">Unirme a la lista</span> <i class="ph-bold ph-arrow-right"></i></span></button>
                 <p class="privacy-note"><i class="ph ph-lock-simple"></i><span data-i18n="wl.privacy">Solo usaremos tu email para avisarte del lanzamiento.</span></p>
               </div>
@@ -465,6 +471,10 @@
                     <option data-i18n="slot.am">Mañana (9:00 a 14:00)</option>
                     <option data-i18n="slot.pm">Tarde (15:00 a 19:00)</option>
                   </select>
+                </div>
+                <div class="field">
+                  <label class="consent"><input type="checkbox" name="consent" aria-describedby="call-consent-err"><span data-i18n-html="consent.html">Acepto los Términos de Servicio y he leído la Política de Privacidad.</span></label>
+                  <span class="err" id="call-consent-err" aria-live="polite"></span>
                 </div>
                 <button class="btn btn-primary" type="submit"><span class="btn-label"><i class="ph-bold ph-phone"></i> <span data-i18n="call.cta">Solicitar llamada</span></span></button>
                 <p class="privacy-note"><i class="ph ph-lock-simple"></i><span data-i18n="call.privacy">Solo usaremos tu teléfono para esta llamada.</span></p>
@@ -518,17 +528,19 @@
 
 <footer class="footer">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="assets/evalyza-logo-horizontal.svg" alt="Evalyza" width="564" height="180" style="height:52px"></a>
+    <a class="brand" href="#top"><img src="assets/evalyza-logo-horizontal-blanco.svg" alt="Evalyza" width="564" height="180" style="height:52px"></a>
     <nav data-i18n-aria="aria.footer" aria-label="Pie de página">
       <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
       <a href="#framework" data-i18n="nav.framework">Framework</a>
       <a href="#faq" data-i18n="nav.faq">Preguntas</a>
+      <a href="terminos.html" data-i18n="footer.terms">Términos de Servicio</a>
+      <a href="privacidad.html" data-i18n="footer.privacy">Política de Privacidad</a>
     </nav>
     <span>© 2026 Evalyza</span>
   </div>
 </footer>
 
-<script src="i18n.js"></script>
-<script src="app.js"></script>
+<script src="i18n.js?v=2"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>

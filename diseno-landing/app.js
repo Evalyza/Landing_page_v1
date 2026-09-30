@@ -28,6 +28,8 @@
     $$("[data-i18n-ph]").forEach((n) => (n.placeholder = t(n.dataset.i18nPh)));
     $$("[data-i18n-aria]").forEach((n) => n.setAttribute("aria-label", t(n.dataset.i18nAria)));
     $$("[data-i18n-content]").forEach((n) => n.setAttribute("content", t(n.dataset.i18nContent)));
+    // Only our own translation strings (with links) are injected as HTML
+    $$("[data-i18n-html]").forEach((n) => (n.innerHTML = t(n.dataset.i18nHtml)));
   }
   function setLang(next) {
     lang = next;
@@ -346,12 +348,19 @@
       return fieldError(input, msg, v ? "err.emailBad" : "err.emailEmpty");
     }
     input.removeAttribute("aria-invalid");
+    const consent = $("[name=consent]", hero);
+    if (!consent.checked) {
+      msg.classList.add("is-error");
+      return fieldError(consent, msg, "err.consent");
+    }
+    consent.removeAttribute("aria-invalid");
     setLoading(btn, true);
     await fakeSubmit();
     setLoading(btn, false);
     msg.classList.add("is-ok");
     msg.textContent = t("ok.hero");
     input.value = "";
+    consent.checked = false;
   });
 
   const wl = $("[data-waitlist]");
@@ -362,6 +371,9 @@
     const v = email.value.trim();
     if (!EMAIL_RE.test(v)) return fieldError(email, err, v ? "err.emailBad" : "err.emailEmpty");
     clearError(email, err);
+    const consent = $("[name=consent]", wlForm), consentErr = $("#wl-consent-err");
+    clearError(consent, consentErr);
+    if (!consent.checked) return fieldError(consent, consentErr, "err.consent");
     setLoading(btn, true);
     await fakeSubmit();
     wl.classList.add("is-done");
@@ -379,6 +391,9 @@
     const digits = phone.value.replace(/[\s\-().]/g, "");
     if (!name.value.trim()) return fieldError(name, nameErr, "err.name");
     if (!/^\d{6,15}$/.test(digits)) return fieldError(phone, phoneErr, "err.phone");
+    const consent = $("[name=consent]", callForm), consentErr = $("#call-consent-err");
+    clearError(consent, consentErr);
+    if (!consent.checked) return fieldError(consent, consentErr, "err.consent");
     setLoading(btn, true);
     await fakeSubmit();
     call.classList.add("is-done");

@@ -1,3 +1,5 @@
+> **Actualización 1 oct 2026:** la landing pasa a tema oscuro (suelo de Tinta profunda #0b0e24 con paneles Tinta), disponible en español, inglés, francés, alemán e italiano, con petición de llamada, casilla de consentimiento y las páginas legales `diseno-landing/terminos.html` y `diseno-landing/privacidad.html`. El sistema de diseño completo y actualizado está en `DESIGN.md`.
+
 Design System: Evalyza
 
 Overview

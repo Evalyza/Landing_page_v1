@@ -223,7 +223,19 @@ window.I18N = {
     "faq.q5": "¿Sirve si somos muy pocos?",
     "faq.a5": "Sí. El framework se ajusta a tu fase, así que en un equipo pequeño se centra en lo que te ayudará a crecer sin romperte.",
     "faq.q6": "¿Puedo hablar con alguien antes de apuntarme?",
-    "faq.a6": "Claro. Déjanos tu teléfono y el equipo de atención al cliente te llamará."
+    "faq.a6": "Claro. Déjanos tu teléfono y el equipo de atención al cliente te llamará.",
+    "footer.terms": "Términos de Servicio",
+    "footer.privacy": "Política de Privacidad",
+    "legal.back": "Volver a Evalyza",
+    "legal.toc": "En esta página",
+    "legal.updated": "Última actualización: 1 de octubre de 2026",
+    "legal.pending": "Borrador pendiente de completar: los datos resaltados en ámbar deben rellenarse antes de publicar.",
+    "legal.translation": "Las versiones en otros idiomas son traducciones. En caso de discrepancia, prevalece la versión en español.",
+    "meta.terms": "Términos de Servicio · Evalyza",
+    "meta.privacy": "Política de Privacidad · Evalyza",
+    "consent.html": "Acepto los <a href=\"terminos.html\" target=\"_blank\">Términos de Servicio</a> y he leído la <a href=\"privacidad.html\" target=\"_blank\">Política de Privacidad</a>.",
+    "consent.short": "Al enviar aceptas los <a href=\"terminos.html\" target=\"_blank\">Términos</a> y la <a href=\"privacidad.html\" target=\"_blank\">Política de Privacidad</a>.",
+    "err.consent": "Para continuar, acepta los Términos y la Política de Privacidad."
   },
 
   en: {
@@ -447,7 +459,19 @@ window.I18N = {
     "faq.q5": "Does it work for very small teams?",
     "faq.a5": "Yes. The framework adapts to your stage, so for a small team it focuses on what will help you grow without breaking.",
     "faq.q6": "Can I talk to someone before signing up?",
-    "faq.a6": "Of course. Leave your number and our customer information team will call you."
+    "faq.a6": "Of course. Leave your number and our customer information team will call you.",
+    "footer.terms": "Terms of Service",
+    "footer.privacy": "Privacy Policy",
+    "legal.back": "Back to Evalyza",
+    "legal.toc": "On this page",
+    "legal.updated": "Last updated: October 1, 2026",
+    "legal.pending": "Draft pending completion: the details highlighted in amber must be filled in before publishing.",
+    "legal.translation": "Versions in other languages are translations. In case of discrepancy, the Spanish version prevails.",
+    "meta.terms": "Terms of Service · Evalyza",
+    "meta.privacy": "Privacy Policy · Evalyza",
+    "consent.html": "I agree to the <a href=\"terminos.html\" target=\"_blank\">Terms of Service</a> and have read the <a href=\"privacidad.html\" target=\"_blank\">Privacy Policy</a>.",
+    "consent.short": "By submitting you agree to the <a href=\"terminos.html\" target=\"_blank\">Terms</a> and <a href=\"privacidad.html\" target=\"_blank\">Privacy Policy</a>.",
+    "err.consent": "To continue, please accept the Terms and Privacy Policy."
   },
 
   fr: {
@@ -671,7 +695,19 @@ window.I18N = {
     "faq.q5": "Est-ce utile pour une très petite équipe ?",
     "faq.a5": "Oui. Le framework s'adapte à votre stade : pour une petite équipe, il se concentre sur ce qui vous aidera à grandir sans casser.",
     "faq.q6": "Puis-je parler à quelqu'un avant de m'inscrire ?",
-    "faq.a6": "Bien sûr. Laissez-nous votre numéro et notre service d'information client vous appellera."
+    "faq.a6": "Bien sûr. Laissez-nous votre numéro et notre service d'information client vous appellera.",
+    "footer.terms": "Conditions d'utilisation",
+    "footer.privacy": "Politique de confidentialité",
+    "legal.back": "Retour à Evalyza",
+    "legal.toc": "Sur cette page",
+    "legal.updated": "Dernière mise à jour : 1er octobre 2026",
+    "legal.pending": "Brouillon à compléter : les informations surlignées en ambre doivent être renseignées avant publication.",
+    "legal.translation": "Les versions dans d'autres langues sont des traductions. En cas de divergence, la version espagnole prévaut.",
+    "meta.terms": "Conditions d'utilisation · Evalyza",
+    "meta.privacy": "Politique de confidentialité · Evalyza",
+    "consent.html": "J'accepte les <a href=\"terminos.html\" target=\"_blank\">Conditions d'utilisation</a> et j'ai lu la <a href=\"privacidad.html\" target=\"_blank\">Politique de confidentialité</a>.",
+    "consent.short": "En envoyant, vous acceptez les <a href=\"terminos.html\" target=\"_blank\">Conditions</a> et la <a href=\"privacidad.html\" target=\"_blank\">Politique de confidentialité</a>.",
+    "err.consent": "Pour continuer, acceptez les Conditions et la Politique de confidentialité."
   },
 
   de: {
@@ -895,7 +931,19 @@ window.I18N = {
     "faq.q5": "Lohnt es sich auch für sehr kleine Teams?",
     "faq.a5": "Ja. Das Framework passt sich deiner Phase an und konzentriert sich bei kleinen Teams auf das, was euch beim Wachsen hilft, ohne dass etwas bricht.",
     "faq.q6": "Kann ich vor der Anmeldung mit jemandem sprechen?",
-    "faq.a6": "Natürlich. Hinterlass deine Nummer, und unser Kundeninformationsteam ruft dich an."
+    "faq.a6": "Natürlich. Hinterlass deine Nummer, und unser Kundeninformationsteam ruft dich an.",
+    "footer.terms": "Nutzungsbedingungen",
+    "footer.privacy": "Datenschutzerklärung",
+    "legal.back": "Zurück zu Evalyza",
+    "legal.toc": "Auf dieser Seite",
+    "legal.updated": "Zuletzt aktualisiert: 1. Oktober 2026",
+    "legal.pending": "Entwurf, noch zu vervollständigen: Die gelb markierten Angaben müssen vor der Veröffentlichung ergänzt werden.",
+    "legal.translation": "Fassungen in anderen Sprachen sind Übersetzungen. Im Zweifel gilt die spanische Fassung.",
+    "meta.terms": "Nutzungsbedingungen · Evalyza",
+    "meta.privacy": "Datenschutzerklärung · Evalyza",
+    "consent.html": "Ich akzeptiere die <a href=\"terminos.html\" target=\"_blank\">Nutzungsbedingungen</a> und habe die <a href=\"privacidad.html\" target=\"_blank\">Datenschutzerklärung</a> gelesen.",
+    "consent.short": "Mit dem Absenden akzeptierst du die <a href=\"terminos.html\" target=\"_blank\">Bedingungen</a> und die <a href=\"privacidad.html\" target=\"_blank\">Datenschutzerklärung</a>.",
+    "err.consent": "Bitte akzeptiere die Bedingungen und die Datenschutzerklärung, um fortzufahren."
   },
 
   it: {
@@ -1119,6 +1167,18 @@ window.I18N = {
     "faq.q5": "Serve anche se siamo in pochi?",
     "faq.a5": "Sì. Il framework si adatta alla tua fase, quindi in un team piccolo si concentra su ciò che vi aiuterà a crescere senza rompervi.",
     "faq.q6": "Posso parlare con qualcuno prima di iscrivermi?",
-    "faq.a6": "Certo. Lasciaci il tuo numero e il team informazioni clienti ti chiamerà."
+    "faq.a6": "Certo. Lasciaci il tuo numero e il team informazioni clienti ti chiamerà.",
+    "footer.terms": "Termini di servizio",
+    "footer.privacy": "Informativa sulla privacy",
+    "legal.back": "Torna a Evalyza",
+    "legal.toc": "In questa pagina",
+    "legal.updated": "Ultimo aggiornamento: 1 ottobre 2026",
+    "legal.pending": "Bozza da completare: i dati evidenziati in ambra devono essere compilati prima della pubblicazione.",
+    "legal.translation": "Le versioni in altre lingue sono traduzioni. In caso di discrepanza prevale la versione in spagnolo.",
+    "meta.terms": "Termini di servizio · Evalyza",
+    "meta.privacy": "Informativa sulla privacy · Evalyza",
+    "consent.html": "Accetto i <a href=\"terminos.html\" target=\"_blank\">Termini di servizio</a> e ho letto l'<a href=\"privacidad.html\" target=\"_blank\">Informativa sulla privacy</a>.",
+    "consent.short": "Inviando accetti i <a href=\"terminos.html\" target=\"_blank\">Termini</a> e l'<a href=\"privacidad.html\" target=\"_blank\">Informativa sulla privacy</a>.",
+    "err.consent": "Per continuare, accetta i Termini e l'Informativa sulla privacy."
   }
 };
