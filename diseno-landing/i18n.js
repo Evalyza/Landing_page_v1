@@ -235,7 +235,9 @@ window.I18N = {
     "meta.privacy": "Política de Privacidad · Evalyza",
     "consent.html": "Acepto los <a href=\"terminos.html\" target=\"_blank\">Términos de Servicio</a> y he leído la <a href=\"privacidad.html\" target=\"_blank\">Política de Privacidad</a>.",
     "consent.short": "Al enviar aceptas los <a href=\"terminos.html\" target=\"_blank\">Términos</a> y la <a href=\"privacidad.html\" target=\"_blank\">Política de Privacidad</a>.",
-    "err.consent": "Para continuar, acepta los Términos y la Política de Privacidad."
+    "err.consent": "Para continuar, acepta los Términos y la Política de Privacidad.",
+    "theme.toLight": "Cambiar a modo claro",
+    "theme.toDark": "Cambiar a modo oscuro"
   },
 
   en: {
@@ -471,7 +473,9 @@ window.I18N = {
     "meta.privacy": "Privacy Policy · Evalyza",
     "consent.html": "I agree to the <a href=\"terminos.html\" target=\"_blank\">Terms of Service</a> and have read the <a href=\"privacidad.html\" target=\"_blank\">Privacy Policy</a>.",
     "consent.short": "By submitting you agree to the <a href=\"terminos.html\" target=\"_blank\">Terms</a> and <a href=\"privacidad.html\" target=\"_blank\">Privacy Policy</a>.",
-    "err.consent": "To continue, please accept the Terms and Privacy Policy."
+    "err.consent": "To continue, please accept the Terms and Privacy Policy.",
+    "theme.toLight": "Switch to light mode",
+    "theme.toDark": "Switch to dark mode"
   },
 
   fr: {
@@ -707,7 +711,9 @@ window.I18N = {
     "meta.privacy": "Politique de confidentialité · Evalyza",
     "consent.html": "J'accepte les <a href=\"terminos.html\" target=\"_blank\">Conditions d'utilisation</a> et j'ai lu la <a href=\"privacidad.html\" target=\"_blank\">Politique de confidentialité</a>.",
     "consent.short": "En envoyant, vous acceptez les <a href=\"terminos.html\" target=\"_blank\">Conditions</a> et la <a href=\"privacidad.html\" target=\"_blank\">Politique de confidentialité</a>.",
-    "err.consent": "Pour continuer, acceptez les Conditions et la Politique de confidentialité."
+    "err.consent": "Pour continuer, acceptez les Conditions et la Politique de confidentialité.",
+    "theme.toLight": "Passer en mode clair",
+    "theme.toDark": "Passer en mode sombre"
   },
 
   de: {
@@ -943,7 +949,9 @@ window.I18N = {
     "meta.privacy": "Datenschutzerklärung · Evalyza",
     "consent.html": "Ich akzeptiere die <a href=\"terminos.html\" target=\"_blank\">Nutzungsbedingungen</a> und habe die <a href=\"privacidad.html\" target=\"_blank\">Datenschutzerklärung</a> gelesen.",
     "consent.short": "Mit dem Absenden akzeptierst du die <a href=\"terminos.html\" target=\"_blank\">Bedingungen</a> und die <a href=\"privacidad.html\" target=\"_blank\">Datenschutzerklärung</a>.",
-    "err.consent": "Bitte akzeptiere die Bedingungen und die Datenschutzerklärung, um fortzufahren."
+    "err.consent": "Bitte akzeptiere die Bedingungen und die Datenschutzerklärung, um fortzufahren.",
+    "theme.toLight": "Zum hellen Modus wechseln",
+    "theme.toDark": "Zum dunklen Modus wechseln"
   },
 
   it: {
@@ -1179,6 +1187,8 @@ window.I18N = {
     "meta.privacy": "Informativa sulla privacy · Evalyza",
     "consent.html": "Accetto i <a href=\"terminos.html\" target=\"_blank\">Termini di servizio</a> e ho letto l'<a href=\"privacidad.html\" target=\"_blank\">Informativa sulla privacy</a>.",
     "consent.short": "Inviando accetti i <a href=\"terminos.html\" target=\"_blank\">Termini</a> e l'<a href=\"privacidad.html\" target=\"_blank\">Informativa sulla privacy</a>.",
-    "err.consent": "Per continuare, accetta i Termini e l'Informativa sulla privacy."
+    "err.consent": "Per continuare, accetta i Termini e l'Informativa sulla privacy.",
+    "theme.toLight": "Passa alla modalità chiara",
+    "theme.toDark": "Passa alla modalità scura"
   }
 };
