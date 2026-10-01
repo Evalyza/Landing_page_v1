@@ -800,8 +800,8 @@ mark.todo { background: rgba(255, 176, 32, 0.16); color: #ffc85a; padding: 1px 6
 :root[data-theme="light"] .join-row input::placeholder { color: #6b7194; }
 :root[data-theme="light"] .field-msg.is-error { color: #c7361a; }
 :root[data-theme="light"] .field-msg.is-ok { color: #0c7f73; }
-:root[data-theme="light"] .panel { box-shadow: 0 30px 60px -30px rgba(18, 22, 51, 0.55), 0 1px 0 rgba(255, 255, 255, 0.06) inset; }
-:root[data-theme="light"] .btn-primary { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 6px 14px -8px rgba(18, 22, 51, 0.35); }
+:root[data-theme="light"] .panel { box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.06) inset; }
+:root[data-theme="light"] .btn-primary { box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 6px 14px -8px rgba(0, 0, 0, 0.25); }
 :root[data-theme="light"] .step-verb { color: #b9bdd6; }
 :root[data-theme="light"] .step-verb::before { background: #dfe1ee; }
 :root[data-theme="light"] .step.is-active .step-verb, :root[data-theme="light"] .step.is-active .step-verb { color: var(--ink); }
