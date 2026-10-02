@@ -4,11 +4,11 @@
 // {{PRIVACY}} and {{TERMS}} become links to the other legal page.
 window.LEGAL = {
   placeholders: {
-    es: { COMPANY: "[RAZÓN SOCIAL]", NIF: "[NIF Y DATOS REGISTRALES]", ADDRESS: "[DOMICILIO SOCIAL]", EMAIL: "[EMAIL DE CONTACTO LEGAL]", PROVIDERS: "[LISTA DE PROVEEDORES]", PRIVACY: "Política de Privacidad", TERMS: "Términos de Servicio" },
-    en: { COMPANY: "[LEGAL COMPANY NAME]", NIF: "[TAX ID AND REGISTRATION DETAILS]", ADDRESS: "[REGISTERED ADDRESS]", EMAIL: "[LEGAL CONTACT EMAIL]", PROVIDERS: "[LIST OF PROVIDERS]", PRIVACY: "Privacy Policy", TERMS: "Terms of Service" },
-    fr: { COMPANY: "[RAISON SOCIALE]", NIF: "[NUMÉRO FISCAL ET IMMATRICULATION]", ADDRESS: "[SIÈGE SOCIAL]", EMAIL: "[E-MAIL DE CONTACT JURIDIQUE]", PROVIDERS: "[LISTE DES PRESTATAIRES]", PRIVACY: "Politique de confidentialité", TERMS: "Conditions d'utilisation" },
-    de: { COMPANY: "[FIRMENNAME]", NIF: "[STEUERNUMMER UND REGISTERANGABEN]", ADDRESS: "[FIRMENSITZ]", EMAIL: "[RECHTLICHE KONTAKT-E-MAIL]", PROVIDERS: "[LISTE DER DIENSTLEISTER]", PRIVACY: "Datenschutzerklärung", TERMS: "Nutzungsbedingungen" },
-    it: { COMPANY: "[RAGIONE SOCIALE]", NIF: "[PARTITA IVA E DATI DI REGISTRAZIONE]", ADDRESS: "[SEDE LEGALE]", EMAIL: "[EMAIL DI CONTATTO LEGALE]", PROVIDERS: "[ELENCO DEI FORNITORI]", PRIVACY: "Informativa sulla privacy", TERMS: "Termini di servizio" },
+    es: { COMPANY: "[RAZÓN SOCIAL]", NIF: "[NIF Y DATOS REGISTRALES]", ADDRESS: "[DOMICILIO SOCIAL]", EMAIL: "[EMAIL DE CONTACTO LEGAL]", PROVIDERS: "[OTROS PROVEEDORES]", PRIVACY: "Política de Privacidad", TERMS: "Términos de Servicio" },
+    en: { COMPANY: "[LEGAL COMPANY NAME]", NIF: "[TAX ID AND REGISTRATION DETAILS]", ADDRESS: "[REGISTERED ADDRESS]", EMAIL: "[LEGAL CONTACT EMAIL]", PROVIDERS: "[OTHER PROVIDERS]", PRIVACY: "Privacy Policy", TERMS: "Terms of Service" },
+    fr: { COMPANY: "[RAISON SOCIALE]", NIF: "[NUMÉRO FISCAL ET IMMATRICULATION]", ADDRESS: "[SIÈGE SOCIAL]", EMAIL: "[E-MAIL DE CONTACT JURIDIQUE]", PROVIDERS: "[AUTRES PRESTATAIRES]", PRIVACY: "Politique de confidentialité", TERMS: "Conditions d'utilisation" },
+    de: { COMPANY: "[FIRMENNAME]", NIF: "[STEUERNUMMER UND REGISTERANGABEN]", ADDRESS: "[FIRMENSITZ]", EMAIL: "[RECHTLICHE KONTAKT-E-MAIL]", PROVIDERS: "[WEITERE DIENSTLEISTER]", PRIVACY: "Datenschutzerklärung", TERMS: "Nutzungsbedingungen" },
+    it: { COMPANY: "[RAGIONE SOCIALE]", NIF: "[PARTITA IVA E DATI DI REGISTRAZIONE]", ADDRESS: "[SEDE LEGALE]", EMAIL: "[EMAIL DI CONTATTO LEGALE]", PROVIDERS: "[ALTRI FORNITORI]", PRIVACY: "Informativa sulla privacy", TERMS: "Termini di servizio" },
   },
 
   /* =====================================================================
@@ -578,7 +578,8 @@ window.LEGAL = {
           "Después, los datos pueden conservarse bloqueados durante los plazos legales aplicables para atender posibles responsabilidades.",
         ]},
         { h: "Con quién los compartimos", b: [
-          "No vendemos tus datos. Pueden acceder a ellos los proveedores que nos prestan servicios (por ejemplo, alojamiento web, envío de emails o herramientas de gestión) como encargados del tratamiento, con contrato y solo para prestarnos esos servicios: {{PROVIDERS}}.",
+          "No vendemos tus datos. Pueden acceder a ellos los proveedores que nos prestan servicios (por ejemplo, alojamiento web, envío de emails o herramientas de gestión) como encargados del tratamiento, con contrato y solo para prestarnos esos servicios:",
+          ["Supabase, Inc.: base de datos en la que se guardan las inscripciones en la lista de espera y las solicitudes de llamada, en servidores de la Unión Europea (Irlanda).", "{{PROVIDERS}}"],
           "También podemos comunicarlos a autoridades públicas cuando exista una obligación legal.",
         ]},
         { h: "Transferencias internacionales", b: [
@@ -631,7 +632,8 @@ window.LEGAL = {
           "Afterwards, data may be kept blocked for the applicable legal periods in order to address possible liabilities.",
         ]},
         { h: "Who we share it with", b: [
-          "We do not sell your data. Providers that deliver services to us (for example, web hosting, email delivery, or management tools) may access it as data processors, under contract and only to provide those services: {{PROVIDERS}}.",
+          "We do not sell your data. Providers that deliver services to us (for example, web hosting, email delivery, or management tools) may access it as data processors, under contract and only to provide those services:",
+          ["Supabase, Inc.: the database that stores waitlist sign-ups and call requests, on servers in the European Union (Ireland).", "{{PROVIDERS}}"],
           "We may also disclose it to public authorities where there is a legal obligation.",
         ]},
         { h: "International transfers", b: [
@@ -684,7 +686,8 @@ window.LEGAL = {
           "Les données peuvent ensuite être conservées de manière bloquée pendant les délais légaux applicables afin de répondre à d'éventuelles responsabilités.",
         ]},
         { h: "Destinataires", b: [
-          "Nous ne vendons pas vos données. Les prestataires qui nous fournissent des services (par exemple l'hébergement web, l'envoi d'e-mails ou des outils de gestion) peuvent y accéder en tant que sous-traitants, sous contrat et uniquement pour fournir ces services : {{PROVIDERS}}.",
+          "Nous ne vendons pas vos données. Les prestataires qui nous fournissent des services (par exemple l'hébergement web, l'envoi d'e-mails ou des outils de gestion) peuvent y accéder en tant que sous-traitants, sous contrat et uniquement pour fournir ces services :",
+          ["Supabase, Inc. : la base de données qui conserve les inscriptions à la liste d'attente et les demandes d'appel, sur des serveurs situés dans l'Union européenne (Irlande).", "{{PROVIDERS}}"],
           "Nous pouvons également les communiquer aux autorités publiques en cas d'obligation légale.",
         ]},
         { h: "Transferts internationaux", b: [
@@ -737,7 +740,8 @@ window.LEGAL = {
           "Anschließend können die Daten für die geltenden gesetzlichen Fristen gesperrt aufbewahrt werden, um mögliche Haftungsansprüche zu erfüllen.",
         ]},
         { h: "An wen wir sie weitergeben", b: [
-          "Wir verkaufen deine Daten nicht. Dienstleister, die für uns tätig sind (zum Beispiel Webhosting, E-Mail-Versand oder Verwaltungstools), können als Auftragsverarbeiter vertraglich gebunden und nur zur Erbringung dieser Leistungen darauf zugreifen: {{PROVIDERS}}.",
+          "Wir verkaufen deine Daten nicht. Dienstleister, die für uns tätig sind (zum Beispiel Webhosting, E-Mail-Versand oder Verwaltungstools), können als Auftragsverarbeiter vertraglich gebunden und nur zur Erbringung dieser Leistungen darauf zugreifen:",
+          ["Supabase, Inc.: die Datenbank, in der Wartelisten-Eintragungen und Rückrufanfragen gespeichert werden, auf Servern in der Europäischen Union (Irland).", "{{PROVIDERS}}"],
           "Bei einer gesetzlichen Verpflichtung können wir sie auch an Behörden weitergeben.",
         ]},
         { h: "Internationale Übermittlungen", b: [
@@ -790,7 +794,8 @@ window.LEGAL = {
           "Successivamente, i dati possono essere conservati in forma bloccata per i periodi previsti dalla legge, al fine di far fronte a eventuali responsabilità.",
         ]},
         { h: "Con chi li condividiamo", b: [
-          "Non vendiamo i tuoi dati. I fornitori che ci prestano servizi (ad esempio hosting web, invio di email o strumenti di gestione) possono accedervi in qualità di responsabili del trattamento, sulla base di un contratto e solo per fornirci tali servizi: {{PROVIDERS}}.",
+          "Non vendiamo i tuoi dati. I fornitori che ci prestano servizi (ad esempio hosting web, invio di email o strumenti di gestione) possono accedervi in qualità di responsabili del trattamento, sulla base di un contratto e solo per fornirci tali servizi:",
+          ["Supabase, Inc.: il database in cui vengono salvate le iscrizioni alla lista d'attesa e le richieste di chiamata, su server nell'Unione europea (Irlanda).", "{{PROVIDERS}}"],
           "Possiamo inoltre comunicarli alle autorità pubbliche in presenza di un obbligo di legge.",
         ]},
         { h: "Trasferimenti internazionali", b: [
