@@ -1,4 +1,4 @@
-// Evalyza legal pages: renders LEGAL[doc][lang] and shares the language switch with the landing
+// Ozmetra legal pages: renders LEGAL[doc][lang] and shares the language switch with the landing
 (() => {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -6,8 +6,8 @@
   const LANGS = Object.keys(window.LEGAL[doc]);
 
   const store = {
-    get: () => { try { return localStorage.getItem("evalyza-lang"); } catch { return null; } },
-    set: (v) => { try { localStorage.setItem("evalyza-lang", v); } catch { /* private mode */ } },
+    get: () => { try { return localStorage.getItem("ozmetra-lang"); } catch { return null; } },
+    set: (v) => { try { localStorage.setItem("ozmetra-lang", v); } catch { /* private mode */ } },
   };
   const fromUrl = new URLSearchParams(location.search).get("lang");
   const fromBrowser = (navigator.language || "es").slice(0, 2);

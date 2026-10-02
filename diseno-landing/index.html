@@ -3,31 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="meta.title">Evalyza · Diagnóstico de procesos para startups</title>
-  <meta name="description" data-i18n-content="meta.desc" content="Agentes de IA que analizan cómo trabaja tu startup, puntúan cada proceso y te dicen qué mejorar primero.">
-  <meta name="theme-color" content="#0B0E24">
+  <title data-i18n="meta.title">Ozmetra · Diagnóstico de procesos y normas ISO para startups y pymes</title>
+  <meta name="description" data-i18n-content="meta.desc" content="Agentes de IA que evalúan los procesos de tu empresa, preparan la documentación ISO y te dicen qué mejorar primero para convencer a inversores.">
+  <meta name="theme-color" content="#F5F1E8">
   <meta name="color-scheme" content="dark">
-  <link rel="icon" href="assets/evalyza-icono-app.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/ozmetra-icono-app.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <script>try{if(localStorage.getItem("evalyza-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css?v=12">
+  <script>var t;try{t=localStorage.getItem("ozmetra-theme")}catch(e){}if(t!=="dark")document.documentElement.dataset.theme="light"</script>
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 
 <header class="nav" id="top">
   <div class="wrap">
-    <a class="brand" href="#top" data-i18n-aria="aria.home" aria-label="Evalyza, inicio">
-      <img class="logo-on-dark" src="assets/evalyza-logo-horizontal-blanco.svg" alt="Evalyza" width="564" height="180"><img class="logo-on-light" src="assets/evalyza-logo-horizontal.svg" alt="Evalyza" width="564" height="180">
+    <a class="brand" href="#top" data-i18n-aria="aria.home" aria-label="Ozmetra, inicio">
+      <img class="logo-on-dark" src="assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="564" height="180"><img class="logo-on-light" src="assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="564" height="180">
     </a>
     <ul class="nav-links">
       <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
       <li><a href="#framework" data-i18n="nav.framework">Framework</a></li>
       <li><a href="#a-medida" data-i18n="nav.custom">A medida</a></li>
+      <li><a href="#iso" data-i18n="nav.iso">Normas ISO</a></li>
       <li><a href="#faq" data-i18n="nav.faq">Preguntas</a></li>
     </ul>
     <div class="nav-actions">
@@ -59,7 +60,7 @@
     <div class="wrap">
       <div>
         <h1><span data-i18n="hero.h1a">Mira tu startup</span> <span class="mark" data-i18n="hero.h1b">por dentro.</span></h1>
-        <p class="hero-sub" data-i18n="hero.sub">Agentes de IA analizan cómo trabajáis, puntúan cada proceso y te dicen qué mejorar primero.</p>
+        <p class="hero-sub" data-i18n="hero.sub">Agentes de IA evalúan tus procesos, preparan la documentación ISO y te dicen qué mejorar primero para convencer a inversores. Pensado para startups, también para pymes.</p>
 
         <form class="join" data-join novalidate>
           <label for="hero-email" data-i18n="form.email">Email de trabajo</label>
@@ -77,10 +78,10 @@
       </div>
 
       <!-- Agent console: a working mini-version of the product -->
-      <div class="panel console" data-console data-i18n-aria="aria.console" aria-label="Demostración: agentes de Evalyza evaluando una startup de ejemplo">
+      <div class="panel console" data-console data-i18n-aria="aria.console" aria-label="Demostración: agentes de Ozmetra evaluando una startup de ejemplo">
         <div class="panel-head">
           <div class="panel-title">
-            <img src="assets/evalyza-icono-app.svg" alt="">
+            <img src="assets/ozmetra-icono-app.svg" alt="">
             <span data-i18n="console.title">Diagnóstico de Rutalia Solutions</span>
           </div>
           <span class="tag tag-sample" data-i18n="tag.sample">Datos de ejemplo</span>
@@ -182,7 +183,7 @@
         <div class="stage-wrap">
           <div class="panel stage">
             <div class="panel-head">
-              <div class="panel-title"><img src="assets/evalyza-icono-app.svg" alt=""><span data-stage-title>Entrevistas</span></div>
+              <div class="panel-title"><img src="assets/ozmetra-icono-app.svg" alt=""><span data-stage-title>Entrevistas</span></div>
               <span class="tag tag-sample" data-i18n="tag.sample">Datos de ejemplo</span>
             </div>
             <div class="stage-screens">
@@ -226,10 +227,10 @@
                   <span class="rl" data-i18n="area.strategy">Estrategia</span><span class="cell s3">3</span><span class="cell s2">2</span><span class="cell s2">2</span><span class="cell s3">3</span>
                 </div>
                 <div class="legend">
-                  <span><i style="background:var(--coral)"></i><span data-i18n="tag.crit">Crítico</span></span>
-                  <span><i style="background:var(--ambar)"></i><span data-i18n="tag.watch">Vigilar</span></span>
-                  <span><i style="background:#7fd8cd"></i><span data-i18n="tag.correct">Correcto</span></span>
-                  <span><i style="background:var(--turquesa)"></i><span data-i18n="tag.ok">Fortaleza</span></span>
+                  <span><i style="background:var(--s-crit)"></i><span data-i18n="tag.crit">Crítico</span></span>
+                  <span><i style="background:var(--s-watch)"></i><span data-i18n="tag.watch">Vigilar</span></span>
+                  <span><i style="background:var(--s-fair)"></i><span data-i18n="tag.correct">Correcto</span></span>
+                  <span><i style="background:var(--s-ok)"></i><span data-i18n="tag.ok">Fortaleza</span></span>
                 </div>
               </div>
 
@@ -270,7 +271,7 @@
         <div>
           <div class="section-head" style="margin-bottom:32px">
             <h2 data-i18n="fw.h2">Un framework de ocho áreas, calibrado a tu fase</h2>
-            <p data-i18n="fw.p">Lo que es normal en un pre-seed es una alarma en una Serie A. Evalyza compara tus procesos con lo que se espera en tu momento.</p>
+            <p data-i18n="fw.p">Lo que es normal en un pre-seed es una alarma en una Serie A. Ozmetra compara tus procesos con lo que se espera en tu momento.</p>
           </div>
 
           <div class="fw-controls">
@@ -349,6 +350,144 @@
     </div>
   </section>
 
+  <!-- ISO: documentation and audit readiness -->
+  <section class="section iso" id="iso">
+    <div class="wrap iso-grid">
+      <div class="iso-copy">
+        <h2 data-i18n="iso.h2">Normas ISO sin ahogarte en papeles</h2>
+        <p class="iso-lead" data-i18n="iso.p">Ozmetra convierte lo que tu equipo ya hace en la documentación que piden las normas ISO. Llegas a la auditoría, y a la ronda de inversión, con todo en orden.</p>
+        <ul class="iso-points">
+          <li><i class="ph ph-magnifying-glass" aria-hidden="true"></i><span data-i18n="iso.pt1">Detecta qué documentos te faltan para cada norma</span></li>
+          <li><i class="ph ph-pencil-simple-line" aria-hidden="true"></i><span data-i18n="iso.pt2">Redacta borradores a partir de tus procesos reales</span></li>
+          <li><i class="ph ph-link-simple" aria-hidden="true"></i><span data-i18n="iso.pt3">Enlaza cada evidencia con su fuente para el auditor</span></li>
+        </ul>
+        <div class="iso-actions">
+          <a class="btn btn-primary" href="#lista" data-open-tab="call"><span class="btn-label"><i class="ph-bold ph-phone"></i> <span data-i18n="cta.call">Agendar una llamada</span></span></a>
+          <a class="btn btn-ghost" href="#madurez"><span data-i18n="iso.cta2">Ver niveles de madurez</span><i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="iso-side">
+        <div class="panel iso-panel" aria-labelledby="iso-panel-title">
+          <div class="panel-head">
+            <div class="panel-title"><img src="assets/ozmetra-icono-app.svg" alt=""><span id="iso-panel-title" data-i18n="iso.panel">Documentación ISO de Rutalia Solutions</span></div>
+            <span class="tag tag-sample" data-i18n="tag.sample">Datos de ejemplo</span>
+          </div>
+          <div class="iso-body">
+            <div class="segmented segmented-dark iso-tabs" role="tablist" data-iso-tabs>
+              <span class="thumb" aria-hidden="true"></span>
+              <button type="button" role="tab" aria-pressed="true" aria-selected="true" data-v="9001">ISO 9001</button>
+              <button type="button" role="tab" aria-pressed="false" aria-selected="false" data-v="20000">ISO/IEC 20000-1</button>
+              <button type="button" role="tab" aria-pressed="false" aria-selected="false" data-v="33000">ISO/IEC 33000</button>
+            </div>
+            <div class="iso-ready">
+              <div>
+                <span class="iso-norm" data-iso-norm>Gestión de la calidad</span>
+                <span class="iso-ready-label" data-i18n="iso.ready">Preparación para la auditoría</span>
+              </div>
+              <span class="iso-score mono" data-iso-score>57 %</span>
+            </div>
+            <div class="iso-meter" aria-hidden="true"><i data-iso-meter></i></div>
+            <ul class="iso-docs" data-iso-docs aria-live="polite"></ul>
+          </div>
+        </div>
+        <p class="iso-note"><i class="ph ph-seal-check" aria-hidden="true"></i><span data-i18n="iso.note">Ozmetra te prepara para la auditoría. La certificación la concede una entidad de certificación acreditada.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATURITY: LightStartup / LightSME levels -->
+  <section class="section maturity" id="madurez">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="mat.h2">De la gestión informal a una empresa que convence</h2>
+        <p data-i18n="mat.p">Un modelo de madurez por niveles. Cada nivel añade solo los procesos que tu empresa puede sostener en ese momento, sin la burocracia de una gran corporación.</p>
+      </div>
+
+      <div class="mat-controls">
+        <span class="mat-type-label" id="mat-type-label" data-i18n="mat.type">Tipo de empresa</span>
+        <div class="segmented" role="group" aria-labelledby="mat-type-label" data-mat-type>
+          <span class="thumb" aria-hidden="true"></span>
+          <button type="button" aria-pressed="true" data-v="startup"><i class="ph ph-rocket-launch" aria-hidden="true"></i> <span data-i18n="mat.startup">Startup</span></button>
+          <button type="button" aria-pressed="false" data-v="sme"><i class="ph ph-buildings" aria-hidden="true"></i> <span data-i18n="mat.sme">Pyme</span></button>
+        </div>
+      </div>
+
+      <div class="mat-track" data-mat-track>
+        <div class="mat-line" aria-hidden="true"><i data-mat-fill></i></div>
+        <ol class="mat-steps" data-mat-steps></ol>
+      </div>
+
+      <div class="mat-detail swap" data-mat-detail aria-live="polite"></div>
+      <p class="mat-next" data-mat-next><i class="ph ph-arrow-bend-down-right" aria-hidden="true"></i><span data-i18n="mat.next">Y cuando la startup crece, continúa con el modelo para pymes sin empezar de cero.</span></p>
+
+      <div class="cap">
+        <h3 class="cap-title" data-i18n="mat.cap">Cómo puntuamos cada proceso</h3>
+        <ol class="cap-scale">
+          <li><span class="cap-bar" style="--h:22%"></span><b>L0</b><span data-i18n="mat.cap.l0">Incompleto</span><span class="mono">&lt; 15 %</span></li>
+          <li><span class="cap-bar" style="--h:46%"></span><b>L1</b><span data-i18n="mat.cap.l1">Realizado</span><span class="mono">15-50 %</span></li>
+          <li><span class="cap-bar" style="--h:72%"></span><b>L2</b><span data-i18n="mat.cap.l2">Gestionado</span><span class="mono">50-85 %</span></li>
+          <li><span class="cap-bar is-top" style="--h:100%"></span><b>L3</b><span data-i18n="mat.cap.l3">Establecido</span><span class="mono">&gt; 85 %</span></li>
+        </ol>
+        <p class="cap-note" data-i18n="mat.cap.note">Cada tarea se valora con evidencias: no conseguida, conseguida en parte o conseguida del todo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH: the scientific basis -->
+  <section class="section research" id="investigacion">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="res.h2">Un método con base científica</h2>
+        <p data-i18n="res.p">Ozmetra se apoya en dos marcos de evaluación desarrollados en la Universidad Rey Juan Carlos, basados en la familia de normas ISO/IEC 33000 y validados en empresas reales.</p>
+      </div>
+
+      <div class="papers">
+        <a class="paper" href="https://doi.org/10.1007/s10257-022-00576-1" target="_blank" rel="noopener">
+          <span class="paper-icon"><i class="ph ph-buildings" aria-hidden="true"></i></span>
+          <span class="paper-kind" data-i18n="res.sme.t">LightSME · para pymes de servicios</span>
+          <span class="paper-title">Towards a lightweight framework for service management evaluation in SMEs</span>
+          <span class="paper-desc" data-i18n="res.sme.d">Modelo de referencia de procesos, modelo de evaluación y modelo de madurez de cuatro niveles.</span>
+          <span class="paper-meta">Information Systems and e-Business Management · 2022</span>
+          <span class="paper-link"><span data-i18n="res.read">Leer el artículo</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+        </a>
+        <a class="paper" href="https://hdl.handle.net/10125/109456" target="_blank" rel="noopener">
+          <span class="paper-icon"><i class="ph ph-rocket-launch" aria-hidden="true"></i></span>
+          <span class="paper-kind" data-i18n="res.st.t">LightStartup · para startups</span>
+          <span class="paper-title">Towards a Framework for Service Quality Improvement in Startup Companies</span>
+          <span class="paper-desc" data-i18n="res.st.d">Adapta LightSME a las startups con un 34 % menos de procesos y menos burocracia.</span>
+          <span class="paper-meta">HICSS 58 · 2025</span>
+          <span class="paper-link"><span data-i18n="res.read">Leer el artículo</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+
+      <div class="res-lower">
+        <div class="dims">
+          <h3 data-i18n="res.dims">Cuatro dimensiones que evaluamos</h3>
+          <ul class="dims-list">
+            <li><i class="ph ph-compass" aria-hidden="true"></i><div><b data-i18n="res.dim.gov">Gobierno organizativo</b><span data-i18n="res.dim.gov.d">Estrategia, cartera, cultura de servicio, cumplimiento y datos.</span></div></li>
+            <li><i class="ph ph-headset" aria-hidden="true"></i><div><b data-i18n="res.dim.svc">Servicios</b><span data-i18n="res.dim.svc.d">Diseño e innovación, gestión, entrega e incidencias.</span></div></li>
+            <li><i class="ph ph-users" aria-hidden="true"></i><div><b data-i18n="res.dim.cus">Clientes y consumidores</b><span data-i18n="res.dim.cus.d">Canales de comunicación, necesidades y fidelización.</span></div></li>
+            <li><i class="ph ph-users-three" aria-hidden="true"></i><div><b data-i18n="res.dim.ppl">Personas</b><span data-i18n="res.dim.ppl.d">Administración, formación y gestión de equipos.</span></div></li>
+          </ul>
+          <p class="std-label" data-i18n="res.std">Inspirado en</p>
+          <ul class="std-list">
+            <li>ISO/IEC 33000</li><li>ISO 9001</li><li>ISO/IEC 20000-1</li><li>ITIL</li><li>FitSM</li><li>CMMI-SVC</li><li>EFQM</li><li>VeriSM</li>
+          </ul>
+        </div>
+
+        <figure class="investor">
+          <i class="ph ph-chart-line-up investor-icon" aria-hidden="true"></i>
+          <blockquote>
+            <p class="investor-h" data-i18n="res.inv.h">Procesos evaluados, inversores más tranquilos</p>
+            <p data-i18n="res.inv.p">Una empresa que evalúa y mejora sus procesos internos es más competitiva, accede mejor a financiación y resulta más atractiva para los inversores.</p>
+          </blockquote>
+          <figcaption data-i18n="res.inv.src">Conclusión del estudio LightStartup, HICSS 2025</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- CLOSE: self-check + waitlist / call request -->
   <section class="close" id="lista">
     <div class="wrap">
@@ -420,11 +559,11 @@
                 <div class="field">
                   <label for="wl-role" data-i18n="form.role">Tu rol</label>
                   <select id="wl-role" name="role">
-                    <option data-i18n="role.1">Fundador o CEO</option>
-                    <option data-i18n="role.2">Operaciones o COO</option>
-                    <option data-i18n="role.3">Producto o tecnología</option>
-                    <option data-i18n="role.4">Aceleradora o inversor</option>
-                    <option data-i18n="role.5">Otro</option>
+                    <option value="founder" data-i18n="role.1">Fundador o CEO</option>
+                    <option value="ops" data-i18n="role.2">Operaciones o COO</option>
+                    <option value="product" data-i18n="role.3">Producto o tecnología</option>
+                    <option value="investor" data-i18n="role.4">Aceleradora o inversor</option>
+                    <option value="other" data-i18n="role.5">Otro</option>
                   </select>
                 </div>
                 <div class="field">
@@ -473,8 +612,8 @@
                 <div class="field">
                   <label for="call-slot" data-i18n="form.slot">¿Cuándo te viene mejor?</label>
                   <select id="call-slot" name="slot">
-                    <option data-i18n="slot.am">Mañana (9:00 a 14:00)</option>
-                    <option data-i18n="slot.pm">Tarde (15:00 a 19:00)</option>
+                    <option value="am" data-i18n="slot.am">Mañana (9:00 a 14:00)</option>
+                    <option value="pm" data-i18n="slot.pm">Tarde (15:00 a 19:00)</option>
                   </select>
                 </div>
                 <div class="field">
@@ -525,6 +664,14 @@
           <summary><span data-i18n="faq.q6">¿Puedo hablar con alguien antes de apuntarme?</span><i class="ph ph-plus"></i></summary>
           <p><span data-i18n="faq.a6">Claro. Déjanos tu teléfono y el equipo de atención al cliente te llamará.</span> <a href="#lista" data-open-tab="call" data-i18n="cta.call">Agendar una llamada</a></p>
         </details>
+        <details>
+          <summary><span data-i18n="faq.q7">¿Ozmetra certifica a mi empresa en ISO?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a7">No. Te ayudamos a preparar los procesos, la documentación y las evidencias que piden normas como ISO 9001 o ISO/IEC 20000-1. La certificación la concede una entidad acreditada tras su auditoría.</p>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q8">¿En qué se basa vuestro método?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a8">En los marcos LightSME y LightStartup, publicados en una revista y un congreso científicos, basados en la familia ISO/IEC 33000 y validados con casos reales de pymes y startups.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -533,7 +680,7 @@
 
 <footer class="footer">
   <div class="wrap">
-    <a class="brand" href="#top"><img class="logo-on-dark" src="assets/evalyza-logo-horizontal-blanco.svg" alt="Evalyza" width="564" height="180" style="height:52px"><img class="logo-on-light" src="assets/evalyza-logo-horizontal.svg" alt="Evalyza" width="564" height="180" style="height:52px"></a>
+    <a class="brand" href="#top"><img class="logo-on-dark" src="assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="564" height="180" style="height:52px"><img class="logo-on-light" src="assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="564" height="180" style="height:52px"></a>
     <nav data-i18n-aria="aria.footer" aria-label="Pie de página">
       <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
       <a href="#framework" data-i18n="nav.framework">Framework</a>
@@ -541,12 +688,12 @@
       <a href="terminos.html" data-i18n="footer.terms">Términos de Servicio</a>
       <a href="privacidad.html" data-i18n="footer.privacy">Política de Privacidad</a>
     </nav>
-    <span>© 2026 Evalyza</span>
+    <span>© 2026 Ozmetra</span>
   </div>
 </footer>
 
-<script src="i18n.js?v=3"></script>
-<script src="app.js?v=3"></script>
-<script src="theme.js?v=3"></script>
+<script src="i18n.js?v=12"></script>
+<script src="app.js?v=12"></script>
+<script src="theme.js?v=12"></script>
 </body>
 </html>

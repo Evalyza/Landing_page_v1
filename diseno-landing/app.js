@@ -1,4 +1,4 @@
-// Evalyza landing: design prototype interactions (vanilla JS, no build step)
+// Ozmetra landing: design prototype interactions (vanilla JS, no build step)
 (() => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -8,8 +8,8 @@
   /* ---------- i18n ---------- */
   const LANGS = Object.keys(window.I18N);
   const store = {
-    get: () => { try { return localStorage.getItem("evalyza-lang"); } catch { return null; } },
-    set: (v) => { try { localStorage.setItem("evalyza-lang", v); } catch { /* private mode */ } },
+    get: () => { try { return localStorage.getItem("ozmetra-lang"); } catch { return null; } },
+    set: (v) => { try { localStorage.setItem("ozmetra-lang", v); } catch { /* private mode */ } },
   };
   const fromUrl = new URLSearchParams(location.search).get("lang");
   const fromBrowser = (navigator.language || "es").slice(0, 2);
@@ -132,7 +132,7 @@
     const holder = $(".inline-stage", step);
     const panel = document.createElement("div");
     panel.className = "panel";
-    panel.innerHTML = `<div class="panel-head"><div class="panel-title"><img src="assets/evalyza-icono-app.svg" alt=""><span data-i18n="stage.${i}"></span></div><span class="tag tag-sample" data-i18n="tag.sample"></span></div>`;
+    panel.innerHTML = `<div class="panel-head"><div class="panel-title"><img src="assets/ozmetra-icono-app.svg" alt=""><span data-i18n="stage.${i}"></span></div><span class="tag tag-sample" data-i18n="tag.sample"></span></div>`;
     const clone = screens[i].cloneNode(true);
     clone.removeAttribute("data-screen");
     panel.appendChild(clone);
@@ -317,7 +317,26 @@
   });
   $$("[data-open-tab]").forEach((link) => link.addEventListener("click", () => tabs.select(link.dataset.openTab)));
 
-  /* ---------- Forms (prototype: no backend, simulated submit) ---------- */
+  /* ---------- Forms: saved in Supabase (project Landing_page_v1) ---------- */
+  // The publishable key is meant to live in the browser. The tables are closed to it;
+  // it can only call the two validating functions join_waitlist and request_call.
+  const SUPABASE_URL = "https://oobfyooytxscmqkrwemj.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_WlHIirz5kR1zG_LIIwNTRw_or0vUlkf";
+  async function rpc(fn, args) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 12000);
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fn}`, {
+        method: "POST",
+        headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json" },
+        body: JSON.stringify(args),
+        signal: ctrl.signal,
+      });
+      if (!res.ok) throw new Error(`${fn} ${res.status}`);
+    } finally {
+      clearTimeout(timer);
+    }
+  }
   function setLoading(btn, on) {
     btn.disabled = on;
     const label = $(".btn-label", btn);
@@ -329,7 +348,6 @@
       $$("[data-i18n]", label).forEach((n) => (n.textContent = t(n.dataset.i18n)));
     }
   }
-  const fakeSubmit = () => new Promise((r) => setTimeout(r, 900));
   const fieldError = (input, errEl, key) => {
     input.setAttribute("aria-invalid", "true");
     errEl.textContent = t(key);
@@ -355,7 +373,17 @@
     }
     consent.removeAttribute("aria-invalid");
     setLoading(btn, true);
-    await fakeSubmit();
+    try {
+      await rpc("join_waitlist", {
+        p_email: v, p_company: "", p_role: "", p_lang: lang,
+        p_quiz_phase: "", p_quiz_size: "", p_quiz_pain: "", p_source: "hero", p_consent: true,
+      });
+    } catch {
+      setLoading(btn, false);
+      msg.classList.add("is-error");
+      msg.textContent = t("err.send");
+      return;
+    }
     setLoading(btn, false);
     msg.classList.add("is-ok");
     msg.textContent = t("ok.hero");
@@ -375,7 +403,18 @@
     clearError(consent, consentErr);
     if (!consent.checked) return fieldError(consent, consentErr, "err.consent");
     setLoading(btn, true);
-    await fakeSubmit();
+    try {
+      await rpc("join_waitlist", {
+        p_email: v, p_company: $("#wl-company").value, p_role: $("#wl-role").value, p_lang: lang,
+        // The quick self-check answers travel with the sign-up ("we keep your first hint")
+        p_quiz_phase: answers.phase, p_quiz_size: answers.size, p_quiz_pain: answers.pain,
+        p_source: "waitlist", p_consent: true,
+      });
+    } catch {
+      setLoading(btn, false);
+      consentErr.textContent = t("err.send");
+      return;
+    }
     wl.classList.add("is-done");
   });
 
@@ -395,9 +434,107 @@
     clearError(consent, consentErr);
     if (!consent.checked) return fieldError(consent, consentErr, "err.consent");
     setLoading(btn, true);
-    await fakeSubmit();
+    try {
+      await rpc("request_call", {
+        p_name: name.value.trim(), p_phone_prefix: $("[name=prefix]", callForm).value, p_phone: digits,
+        p_slot: $("#call-slot").value, p_lang: lang, p_consent: true,
+      });
+    } catch {
+      setLoading(btn, false);
+      consentErr.textContent = t("err.send");
+      return;
+    }
     call.classList.add("is-done");
   });
+
+  /* ---------- ISO documentation panel (sample data) ---------- */
+  // Status per document, in the same order as the translated names in iso.docs.<norm>
+  const ISO_STATUS = {
+    "9001": ["done", "done", "draft", "done", "draft", "todo", "todo"],
+    "20000": ["done", "draft", "done", "draft", "todo", "todo"],
+    "33000": ["done", "done", "done", "draft", "draft"],
+  };
+  const ISO_ICON = { done: "ph-check-circle", draft: "ph-pencil-simple", todo: "ph-circle-dashed" };
+  const ISO_TAG = { done: "tag-ok", draft: "tag-watch", todo: "tag-sample" };
+  const isoList = $("[data-iso-docs]");
+  const isoScore = $("[data-iso-score]");
+  const isoMeter = $("[data-iso-meter]");
+  let norm = "9001";
+  let shownPct = 0;
+  let scoreRaf;
+
+  const isoPct = (n) => {
+    const st = ISO_STATUS[n];
+    const pts = st.reduce((a, s) => a + (s === "done" ? 1 : s === "draft" ? 0.5 : 0), 0);
+    return Math.round((pts / st.length) * 100);
+  };
+  // Count the readiness number toward its new value instead of swapping it
+  function tweenScore(target) {
+    cancelAnimationFrame(scoreRaf);
+    if (reduceMotion) { shownPct = target; isoScore.textContent = `${target} %`; return; }
+    const from = shownPct, t0 = performance.now(), dur = 420;
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      shownPct = Math.round(from + (target - from) * (1 - Math.pow(1 - p, 3)));
+      isoScore.textContent = `${shownPct} %`;
+      if (p < 1) scoreRaf = requestAnimationFrame(tick);
+    };
+    scoreRaf = requestAnimationFrame(tick);
+  }
+  function renderIso(animate = true) {
+    const names = t(`iso.docs.${norm}`);
+    $("[data-iso-norm]").textContent = t(`iso.n.${norm}`);
+    isoList.innerHTML = ISO_STATUS[norm].map((st, i) => `
+      <li style="--i:${i}"><i class="ph ${ISO_ICON[st]} iso-ic-${st}" aria-hidden="true"></i><span>${names[i]}</span><span class="tag ${ISO_TAG[st]}">${t(`iso.st.${st}`)}</span></li>`).join("");
+    isoList.classList.remove("is-animated");
+    if (animate && !reduceMotion) { void isoList.offsetWidth; isoList.classList.add("is-animated"); }
+    const pct = isoPct(norm);
+    isoMeter.style.transform = `scaleX(${pct / 100})`;
+    if (animate) tweenScore(pct); else { shownPct = pct; isoScore.textContent = `${pct} %`; }
+  }
+  segmented($("[data-iso-tabs]"), (value) => { norm = value; renderIso(); });
+  onLang(() => renderIso(false));
+
+  /* ---------- Maturity path (LightStartup / LightSME) ---------- */
+  const matSteps = $("[data-mat-steps]");
+  const matFill = $("[data-mat-fill]");
+  const matDetail = $("[data-mat-detail]");
+  let matType = "startup";
+  let matLevel = 0;
+
+  function renderMatDetail() {
+    const lv = t(`mat.levels.${matType}`)[matLevel];
+    matDetail.innerHTML = `
+      <div class="mat-detail-head">
+        <span class="mat-lvl">${t("mat.lvl", { n: matLevel + 1 })}</span>
+        <h3>${lv.n}</h3>
+        <p>${lv.d}</p>
+      </div>
+      <div class="mat-detail-procs">
+        <span class="mat-procs-label">${t("mat.procs")}</span>
+        <ul>${lv.p.map((x) => `<li><i class="ph-bold ph-plus" aria-hidden="true"></i><span>${x}</span></li>`).join("")}</ul>
+      </div>`;
+  }
+  function renderMat(animate = true) {
+    const levels = t(`mat.levels.${matType}`);
+    matSteps.innerHTML = levels.map((lv, i) => `
+      <li><button type="button" class="mat-step${i < matLevel ? " is-reached" : ""}${i === matLevel ? " is-current" : ""}" aria-pressed="${i === matLevel}" data-level="${i}">
+        <span class="mat-dot mono">${i + 1}</span><span class="mat-name">${lv.n}</span>
+      </button></li>`).join("");
+    matFill.style.transform = `scaleX(${matLevel / (levels.length - 1)})`;
+    $("[data-mat-next]").hidden = matType !== "startup";
+    if (!animate || reduceMotion) return renderMatDetail();
+    matDetail.classList.add("is-swapping");
+    setTimeout(() => { renderMatDetail(); matDetail.classList.remove("is-swapping"); }, 140);
+  }
+  matSteps.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-level]");
+    if (!b || +b.dataset.level === matLevel) return;
+    matLevel = +b.dataset.level;
+    renderMat();
+  });
+  segmented($("[data-mat-type]"), (value) => { matType = value; renderMat(); });
+  onLang(() => renderMat(false));
 
   /* ---------- Boot ---------- */
   setStep(0);

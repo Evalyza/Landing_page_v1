@@ -1,4 +1,4 @@
-// Evalyza legal texts (Terms of Service + Privacy Policy) in es, en, fr, de, it.
+// Ozmetra legal texts (Terms of Service + Privacy Policy) in es, en, fr, de, it.
 // Block types: string = paragraph, array = bullet list.
 // Tokens: {{COMPANY}} {{NIF}} {{ADDRESS}} {{EMAIL}} {{PROVIDERS}} are pending legal data (rendered highlighted);
 // {{PRIVACY}} and {{TERMS}} become links to the other legal page.
@@ -18,12 +18,12 @@ window.LEGAL = {
     es: {
       title: "Términos de Servicio",
       intro: [
-        "Estos Términos de Servicio («Términos») regulan el acceso y el uso de Evalyza, una plataforma de software como servicio basada en inteligencia artificial operada por {{COMPANY}} («nosotros»).",
+        "Estos Términos de Servicio («Términos») regulan el acceso y el uso de Ozmetra, una plataforma de software como servicio basada en inteligencia artificial operada por {{COMPANY}} («nosotros»).",
         "Al unirte a nuestra lista de espera, solicitar una llamada, acceder a nuestro sitio web o usar nuestros servicios cuando estén disponibles, aceptas estos Términos. Si no estás de acuerdo, no uses el sitio web ni los servicios.",
       ],
       sections: [
         { h: "El Servicio", b: [
-          "Evalyza es una plataforma basada en inteligencia artificial diseñada para evaluar los procesos internos de las empresas, en particular de las startups. El Servicio se configura para cada cliente y puede, entre otras cosas:",
+          "Ozmetra es una plataforma basada en inteligencia artificial diseñada para evaluar los procesos internos de las empresas, en particular de las startups. El Servicio se configura para cada cliente y puede, entre otras cosas:",
           ["recopilar información de la empresa mediante entrevistas con su equipo y a partir de los documentos y herramientas que el cliente decida compartir;",
            "analizar esa información según un marco de evaluación;",
            "utilizar inteligencia artificial para clasificar, resumir, puntuar o analizar de otro modo esa información;",
@@ -51,7 +51,7 @@ window.LEGAL = {
         { h: "Herramientas y fuentes de terceros", b: [
           "El Servicio puede conectarse con herramientas de terceros que decidas utilizar, como sistemas de gestión documental, de gestión de proyectos, CRM o herramientas financieras.",
           "Esas herramientas pertenecen a terceros independientes que no son de nuestra propiedad ni están bajo nuestro control. Su uso sigue sujeto a sus propios términos, políticas y prácticas de privacidad.",
-          "Evalyza no está afiliada, respaldada ni patrocinada por ningún proveedor de esas herramientas, salvo que se indique expresamente.",
+          "Ozmetra no está afiliada, respaldada ni patrocinada por ningún proveedor de esas herramientas, salvo que se indique expresamente.",
           "No garantizamos la disponibilidad, exactitud, accesibilidad o compatibilidad continuas de los datos obtenidos de herramientas de terceros. Los cambios en sus API, políticas o restricciones técnicas pueden afectar o limitar el funcionamiento del Servicio.",
         ]},
         { h: "Propiedad intelectual", b: [
@@ -124,12 +124,12 @@ window.LEGAL = {
     en: {
       title: "Terms of Service",
       intro: [
-        "These Terms of Service (“Terms”) govern your access to and use of Evalyza, an AI-powered software-as-a-service platform operated by {{COMPANY}} (“we”, “us”, “our”).",
+        "These Terms of Service (“Terms”) govern your access to and use of Ozmetra, an AI-powered software-as-a-service platform operated by {{COMPANY}} (“we”, “us”, “our”).",
         "By joining our waitlist, requesting a call, accessing our website, or using our services once available, you agree to these Terms. If you do not agree, please do not use the website or services.",
       ],
       sections: [
         { h: "The Service", b: [
-          "Evalyza is an AI-powered platform designed to assess the internal processes of companies, in particular startups. The Service is configured for each client and may, among other things:",
+          "Ozmetra is an AI-powered platform designed to assess the internal processes of companies, in particular startups. The Service is configured for each client and may, among other things:",
           ["gather information about the company through interviews with its team and from the documents and tools the client chooses to share;",
            "analyse that information against an evaluation framework;",
            "use artificial intelligence to classify, summarise, score, or otherwise analyse that information;",
@@ -157,7 +157,7 @@ window.LEGAL = {
         { h: "Third-party tools and sources", b: [
           "The Service may connect to third-party tools you choose to use, such as document management, project management, CRM, or financial tools.",
           "These tools are provided by independent third parties that are not owned, controlled, or operated by us. Your use of them remains subject to their respective terms, policies, and privacy practices.",
-          "Evalyza is not affiliated with, endorsed by, or sponsored by any provider of those tools unless expressly stated otherwise.",
+          "Ozmetra is not affiliated with, endorsed by, or sponsored by any provider of those tools unless expressly stated otherwise.",
           "We do not guarantee the continued availability, accuracy, accessibility, or compatibility of data obtained from third-party tools. Changes to their APIs, policies, or technical restrictions may affect or limit the functionality of the Service.",
         ]},
         { h: "Intellectual property", b: [
@@ -230,12 +230,12 @@ window.LEGAL = {
     fr: {
       title: "Conditions d'utilisation",
       intro: [
-        "Les présentes Conditions d'utilisation (les « Conditions ») régissent l'accès à Evalyza et son utilisation. Evalyza est une plateforme logicielle en tant que service fondée sur l'intelligence artificielle, exploitée par {{COMPANY}} (« nous »).",
+        "Les présentes Conditions d'utilisation (les « Conditions ») régissent l'accès à Ozmetra et son utilisation. Ozmetra est une plateforme logicielle en tant que service fondée sur l'intelligence artificielle, exploitée par {{COMPANY}} (« nous »).",
         "En rejoignant notre liste d'attente, en demandant un appel, en accédant à notre site web ou en utilisant nos services lorsqu'ils seront disponibles, vous acceptez les présentes Conditions. Si vous ne les acceptez pas, veuillez ne pas utiliser le site web ni les services.",
       ],
       sections: [
         { h: "Le Service", b: [
-          "Evalyza est une plateforme fondée sur l'intelligence artificielle, conçue pour évaluer les processus internes des entreprises, en particulier des startups. Le Service est configuré pour chaque client et peut notamment :",
+          "Ozmetra est une plateforme fondée sur l'intelligence artificielle, conçue pour évaluer les processus internes des entreprises, en particulier des startups. Le Service est configuré pour chaque client et peut notamment :",
           ["recueillir des informations sur l'entreprise au moyen d'entretiens avec son équipe et à partir des documents et outils que le client choisit de partager ;",
            "analyser ces informations selon un cadre d'évaluation ;",
            "utiliser l'intelligence artificielle pour classer, résumer, noter ou analyser autrement ces informations ;",
@@ -263,7 +263,7 @@ window.LEGAL = {
         { h: "Outils et sources tiers", b: [
           "Le Service peut se connecter à des outils tiers que vous choisissez d'utiliser, tels que des outils de gestion documentaire, de gestion de projet, de CRM ou de finance.",
           "Ces outils sont fournis par des tiers indépendants qui ne nous appartiennent pas et que nous ne contrôlons pas. Leur utilisation reste soumise à leurs propres conditions, politiques et pratiques en matière de confidentialité.",
-          "Evalyza n'est ni affiliée, ni approuvée, ni sponsorisée par un fournisseur de ces outils, sauf mention expresse contraire.",
+          "Ozmetra n'est ni affiliée, ni approuvée, ni sponsorisée par un fournisseur de ces outils, sauf mention expresse contraire.",
           "Nous ne garantissons pas la disponibilité, l'exactitude, l'accessibilité ou la compatibilité continues des données obtenues à partir d'outils tiers. Les modifications de leurs API, politiques ou restrictions techniques peuvent affecter ou limiter le fonctionnement du Service.",
         ]},
         { h: "Propriété intellectuelle", b: [
@@ -336,12 +336,12 @@ window.LEGAL = {
     de: {
       title: "Nutzungsbedingungen",
       intro: [
-        "Diese Nutzungsbedingungen („Bedingungen“) regeln den Zugang zu und die Nutzung von Evalyza, einer KI-gestützten Software-as-a-Service-Plattform, die von {{COMPANY}} („wir“, „uns“) betrieben wird.",
+        "Diese Nutzungsbedingungen („Bedingungen“) regeln den Zugang zu und die Nutzung von Ozmetra, einer KI-gestützten Software-as-a-Service-Plattform, die von {{COMPANY}} („wir“, „uns“) betrieben wird.",
         "Indem du dich auf unsere Warteliste einträgst, einen Anruf anforderst, unsere Website aufrufst oder unsere Dienste nutzt, sobald sie verfügbar sind, stimmst du diesen Bedingungen zu. Wenn du nicht einverstanden bist, nutze die Website und die Dienste bitte nicht.",
       ],
       sections: [
         { h: "Der Dienst", b: [
-          "Evalyza ist eine KI-gestützte Plattform zur Bewertung der internen Prozesse von Unternehmen, insbesondere von Startups. Der Dienst wird für jeden Kunden konfiguriert und kann unter anderem:",
+          "Ozmetra ist eine KI-gestützte Plattform zur Bewertung der internen Prozesse von Unternehmen, insbesondere von Startups. Der Dienst wird für jeden Kunden konfiguriert und kann unter anderem:",
           ["Informationen über das Unternehmen durch Interviews mit dem Team sowie aus den Dokumenten und Tools erheben, die der Kunde teilen möchte;",
            "diese Informationen anhand eines Bewertungsrahmens analysieren;",
            "künstliche Intelligenz nutzen, um diese Informationen zu klassifizieren, zusammenzufassen, zu bewerten oder anderweitig zu analysieren;",
@@ -369,7 +369,7 @@ window.LEGAL = {
         { h: "Tools und Quellen Dritter", b: [
           "Der Dienst kann sich mit Tools Dritter verbinden, die du nutzen möchtest, etwa Dokumentenmanagement, Projektmanagement, CRM oder Finanztools.",
           "Diese Tools werden von unabhängigen Dritten bereitgestellt, die nicht uns gehören und nicht von uns kontrolliert werden. Ihre Nutzung unterliegt weiterhin deren eigenen Bedingungen, Richtlinien und Datenschutzpraktiken.",
-          "Evalyza ist mit keinem Anbieter dieser Tools verbunden und wird von keinem unterstützt oder gesponsert, sofern nicht ausdrücklich anders angegeben.",
+          "Ozmetra ist mit keinem Anbieter dieser Tools verbunden und wird von keinem unterstützt oder gesponsert, sofern nicht ausdrücklich anders angegeben.",
           "Wir garantieren nicht die fortlaufende Verfügbarkeit, Richtigkeit, Zugänglichkeit oder Kompatibilität von Daten aus Tools Dritter. Änderungen an deren APIs, Richtlinien oder technischen Beschränkungen können die Funktion des Dienstes beeinträchtigen oder einschränken.",
         ]},
         { h: "Geistiges Eigentum", b: [
@@ -442,12 +442,12 @@ window.LEGAL = {
     it: {
       title: "Termini di servizio",
       intro: [
-        "I presenti Termini di servizio (i «Termini») disciplinano l'accesso e l'utilizzo di Evalyza, una piattaforma software-as-a-service basata sull'intelligenza artificiale gestita da {{COMPANY}} («noi»).",
+        "I presenti Termini di servizio (i «Termini») disciplinano l'accesso e l'utilizzo di Ozmetra, una piattaforma software-as-a-service basata sull'intelligenza artificiale gestita da {{COMPANY}} («noi»).",
         "Iscrivendoti alla nostra lista d'attesa, richiedendo una chiamata, accedendo al nostro sito web o utilizzando i nostri servizi quando saranno disponibili, accetti i presenti Termini. Se non li accetti, non utilizzare il sito web né i servizi.",
       ],
       sections: [
         { h: "Il Servizio", b: [
-          "Evalyza è una piattaforma basata sull'intelligenza artificiale progettata per valutare i processi interni delle aziende, in particolare delle startup. Il Servizio viene configurato per ciascun cliente e può, tra l'altro:",
+          "Ozmetra è una piattaforma basata sull'intelligenza artificiale progettata per valutare i processi interni delle aziende, in particolare delle startup. Il Servizio viene configurato per ciascun cliente e può, tra l'altro:",
           ["raccogliere informazioni sull'azienda tramite interviste al team e a partire dai documenti e dagli strumenti che il cliente decide di condividere;",
            "analizzare tali informazioni secondo un framework di valutazione;",
            "utilizzare l'intelligenza artificiale per classificare, riassumere, valutare o analizzare in altro modo tali informazioni;",
@@ -475,7 +475,7 @@ window.LEGAL = {
         { h: "Strumenti e fonti di terzi", b: [
           "Il Servizio può collegarsi a strumenti di terzi che decidi di utilizzare, come sistemi di gestione documentale, di gestione dei progetti, CRM o strumenti finanziari.",
           "Tali strumenti sono forniti da terzi indipendenti che non sono di nostra proprietà né sotto il nostro controllo. Il loro utilizzo resta soggetto ai rispettivi termini, politiche e pratiche sulla privacy.",
-          "Evalyza non è affiliata, approvata o sponsorizzata da alcun fornitore di tali strumenti, salvo diversa indicazione espressa.",
+          "Ozmetra non è affiliata, approvata o sponsorizzata da alcun fornitore di tali strumenti, salvo diversa indicazione espressa.",
           "Non garantiamo la disponibilità, l'accuratezza, l'accessibilità o la compatibilità continue dei dati ottenuti da strumenti di terzi. Modifiche alle loro API, politiche o restrizioni tecniche possono influire sul funzionamento del Servizio o limitarlo.",
         ]},
         { h: "Proprietà intellettuale", b: [
@@ -553,7 +553,7 @@ window.LEGAL = {
     es: {
       title: "Política de Privacidad",
       intro: [
-        "Esta Política de Privacidad explica cómo {{COMPANY}} trata los datos personales que recogemos a través del sitio web de Evalyza, conforme al Reglamento (UE) 2016/679 («RGPD») y a la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales.",
+        "Esta Política de Privacidad explica cómo {{COMPANY}} trata los datos personales que recogemos a través del sitio web de Ozmetra, conforme al Reglamento (UE) 2016/679 («RGPD») y a la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales.",
       ],
       sections: [
         { h: "Responsable del tratamiento", b: [
@@ -606,7 +606,7 @@ window.LEGAL = {
     en: {
       title: "Privacy Policy",
       intro: [
-        "This Privacy Policy explains how {{COMPANY}} processes the personal data we collect through the Evalyza website, in accordance with Regulation (EU) 2016/679 (“GDPR”) and Spanish Organic Law 3/2018 on the Protection of Personal Data and the Guarantee of Digital Rights.",
+        "This Privacy Policy explains how {{COMPANY}} processes the personal data we collect through the Ozmetra website, in accordance with Regulation (EU) 2016/679 (“GDPR”) and Spanish Organic Law 3/2018 on the Protection of Personal Data and the Guarantee of Digital Rights.",
       ],
       sections: [
         { h: "Data controller", b: [
@@ -659,7 +659,7 @@ window.LEGAL = {
     fr: {
       title: "Politique de confidentialité",
       intro: [
-        "La présente Politique de confidentialité explique comment {{COMPANY}} traite les données personnelles recueillies via le site web d'Evalyza, conformément au Règlement (UE) 2016/679 (« RGPD ») et à la loi organique espagnole 3/2018 relative à la protection des données personnelles et à la garantie des droits numériques.",
+        "La présente Politique de confidentialité explique comment {{COMPANY}} traite les données personnelles recueillies via le site web d'Ozmetra, conformément au Règlement (UE) 2016/679 (« RGPD ») et à la loi organique espagnole 3/2018 relative à la protection des données personnelles et à la garantie des droits numériques.",
       ],
       sections: [
         { h: "Responsable du traitement", b: [
@@ -712,7 +712,7 @@ window.LEGAL = {
     de: {
       title: "Datenschutzerklärung",
       intro: [
-        "Diese Datenschutzerklärung erläutert, wie {{COMPANY}} die personenbezogenen Daten verarbeitet, die wir über die Website von Evalyza erheben, gemäß der Verordnung (EU) 2016/679 („DSGVO“) und dem spanischen Organgesetz 3/2018 über den Schutz personenbezogener Daten und die Gewährleistung digitaler Rechte.",
+        "Diese Datenschutzerklärung erläutert, wie {{COMPANY}} die personenbezogenen Daten verarbeitet, die wir über die Website von Ozmetra erheben, gemäß der Verordnung (EU) 2016/679 („DSGVO“) und dem spanischen Organgesetz 3/2018 über den Schutz personenbezogener Daten und die Gewährleistung digitaler Rechte.",
       ],
       sections: [
         { h: "Verantwortlicher", b: [
@@ -765,7 +765,7 @@ window.LEGAL = {
     it: {
       title: "Informativa sulla privacy",
       intro: [
-        "La presente Informativa sulla privacy spiega come {{COMPANY}} tratta i dati personali raccolti tramite il sito web di Evalyza, in conformità con il Regolamento (UE) 2016/679 («GDPR») e con la Legge organica spagnola 3/2018 sulla protezione dei dati personali e la garanzia dei diritti digitali.",
+        "La presente Informativa sulla privacy spiega come {{COMPANY}} tratta i dati personali raccolti tramite il sito web di Ozmetra, in conformità con il Regolamento (UE) 2016/679 («GDPR») e con la Legge organica spagnola 3/2018 sulla protezione dei dati personali e la garanzia dei diritti digitali.",
       ],
       sections: [
         { h: "Titolare del trattamento", b: [

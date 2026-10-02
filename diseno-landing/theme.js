@@ -1,4 +1,4 @@
-// Evalyza: dark (default) / light theme switch, shared by every page.
+// Ozmetra: light (default) / dark theme switch, shared by every page.
 // The initial theme is applied by an inline script in <head> to avoid a flash.
 (() => {
   const root = document.documentElement;
@@ -22,8 +22,8 @@
     // Switch every colour at once instead of letting each element run its own transition
     root.classList.add("theme-switching");
     root.dataset.theme = theme;
-    meta?.setAttribute("content", theme === "light" ? "#F4F5FA" : "#0B0E24");
-    try { localStorage.setItem("evalyza-theme", theme); } catch { /* private mode */ }
+    meta?.setAttribute("content", theme === "light" ? "#F5F1E8" : "#0E100F");
+    try { localStorage.setItem("ozmetra-theme", theme); } catch { /* private mode */ }
     label();
     requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove("theme-switching")));
   }
@@ -31,6 +31,6 @@
   btn.addEventListener("click", () => apply(current() === "dark" ? "light" : "dark"));
   // Keep the label in the page language when the language selector changes <html lang>
   new MutationObserver(label).observe(root, { attributes: true, attributeFilter: ["lang"] });
-  meta?.setAttribute("content", current() === "light" ? "#F4F5FA" : "#0B0E24");
+  meta?.setAttribute("content", current() === "light" ? "#F5F1E8" : "#0E100F");
   label();
 })();

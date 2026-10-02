@@ -1,3 +1,5 @@
+> **Actualización 2 oct 2026 · Ozmetra:** la marca pasa de Evalyza a **Ozmetra** (logos en `diseno-landing/assets/ozmetra-*`, Bricolage Grotesque + Instrument Sans). Modo claro por defecto (Papel con paneles Bosque) y modo oscuro "Grafito". Nuevas secciones: normas ISO, modelo de madurez (LightStartup / LightSME) y base científica. Los formularios (lista de espera y petición de llamada) guardan en Supabase, proyecto `Landing_page_v1`; el esquema está en `supabase/migrations/`.
+
 > **Actualización 1 oct 2026:** la landing pasa a tema oscuro (suelo de Tinta profunda #0b0e24 con paneles Tinta), disponible en español, inglés, francés, alemán e italiano, con petición de llamada, casilla de consentimiento y las páginas legales `diseno-landing/terminos.html` y `diseno-landing/privacidad.html`. El sistema de diseño completo y actualizado está en `DESIGN.md`.
 
 Design System: Evalyza

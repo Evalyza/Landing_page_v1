@@ -1,5 +1,5 @@
 ---
-name: Evalyza
+name: Ozmetra
 description: Diagnóstico de procesos para startups; el informe se construye a la vista.
 colors:
   tinta: "#121633"
@@ -168,7 +168,17 @@ components:
     height: "8px"
 ---
 
-# Design System: Evalyza
+# Design System: Ozmetra
+
+> **Rebrand 2 oct 2026: Evalyza pasa a llamarse Ozmetra.** Fuente de verdad: `Logo y marca/Marcas y logos Ozmetra/ozmetra-hoja-de-marca.png`. La estructura, componentes y comportamiento de la landing no cambian; cambian nombre, logotipo, paleta y tipografía:
+> - **Paleta:** Bosque `#0f2b24` (base y paneles; las variables `--tinta*` de la hoja de estilos son ahora la familia Bosque), Musgo `#2e5a4c` (superficies), Salvia `#a9c4b8` (datos neutros y fortalezas), Lima `#c6f24e` (único acento: botón principal, foco, subrayado, área crítica), Lavanda `#b7a6f2` (todo lo que sugiere la IA: agentes activos, recomendaciones), Papel `#f5f1e8` (modo claro y texto sobre oscuro).
+> - **Escala del diagnóstico:** crítico = Lima (el área donde la IA pone el foco), vigilar `#6e978a`, correcto `#8db0a2`, fortaleza = Salvia. Sustituye a la tríada coral/ámbar/turquesa, que ya no existe. Las barras de puntuación llevan pista en Musgo como en la hoja de marca.
+> - **Tipografía:** Bricolage Grotesque (titulares, -0.02em) e Instrument Sans (texto y cifras con numerales tabulares). Lexend y Spline Sans Mono quedan retiradas.
+> - **Temas:** oscuro por defecto (suelo `#0a211b`), claro sobre Papel. Paneles planos con borde, sin sombra.
+> - **Actualización 2 oct 2026 · modo oscuro "Grafito" (paleta A):** el modo oscuro deja el Bosque y pasa a grafito neutro: suelo `#0e100f`, paneles `#17191a`, filas internas `#1f2223`, líneas `#27292b`, texto secundario `#a9b1ad`. Lima sigue siendo el acento y Lavanda la IA. En oscuro la escala del diagnóstico vuelve a ser de semáforo: crítico coral `#ff8a64`, vigilar ámbar `#f5c451`, correcto salvia `#8fafa2`, fortaleza menta `#d4e8dd`. El modo claro no cambia (Papel con paneles Bosque y escala de foco en Lima).
+> - Las secciones siguientes describen el sistema anterior de Evalyza; donde contradigan esta nota, manda esta nota.
+
+
 
 ## Overview
 
