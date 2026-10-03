@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Social card 1200x630 · rendered by headless Chrome into diseno-landing/og/og-<lang>.png */
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #0f2b24; color: #f5f1e8; font-family: "Instrument Sans", sans-serif; display: grid; grid-template-columns: 1fr 360px; }
+  .copy { padding: 72px 0 64px 80px; display: flex; flex-direction: column; }
+  .logo { height: 64px; width: auto; align-self: flex-start; margin-left: -14px; }
+  h1 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; font-size: 76px; line-height: 1.02; letter-spacing: -0.03em; margin: 56px 0 0; }
+  h1 span { display: inline-block; padding-bottom: 6px; background: linear-gradient(#c6f24e, #c6f24e) left bottom / 100% 10px no-repeat; }
+  p { margin: auto 0 0; font-size: 28px; line-height: 1.35; color: #a9c4b8; max-width: 20ch; }
+  .chips { display: flex; gap: 10px; margin-top: 18px; }
+  .chips b { font-weight: 500; font-size: 20px; padding: 8px 16px; border-radius: 999px; background: #163a31; color: #f5f1e8; }
+  .mark { display: grid; place-items: center; }
+  .mark img { width: 300px; height: 300px; }
+</style></head>
+<body>
+  <div class="copy">
+    <img class="logo" src="../diseno-landing/assets/ozmetra-logo-horizontal-blanco.svg" alt="">
+    <h1 id="h"></h1>
+    <p id="p"></p>
+    <div class="chips"><b>ISO 9001</b><b>ISO/IEC 20000-1</b><b>ISO/IEC 33000</b></div>
+  </div>
+  <div class="mark"><img src="../diseno-landing/assets/ozmetra-simbolo-claro.svg" alt=""></div>
+<script>
+  const T = {
+    es: ["Mira tu startup", "por dentro.", "Diagnóstico de procesos e ISO para startups y pymes"],
+    en: ["See your startup", "from the inside.", "Process diagnostics and ISO for startups and SMEs"],
+    fr: ["Voyez votre startup", "de l'intérieur.", "Diagnostic des processus et ISO pour startups et PME"],
+    de: ["Sieh dein Startup", "von innen.", "Prozessdiagnose und ISO für Startups und KMU"],
+    it: ["Guarda la tua startup", "dall'interno.", "Diagnosi dei processi e ISO per startup e PMI"],
+  };
+  const l = new URLSearchParams(location.search).get("lang") || "es";
+  document.getElementById("h").innerHTML = `${T[l][0]}<br><span>${T[l][1]}</span>`;
+  document.getElementById("p").textContent = T[l][2];
+</script>
+</body></html>

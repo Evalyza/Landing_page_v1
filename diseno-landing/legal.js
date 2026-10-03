@@ -34,6 +34,13 @@
     document.documentElement.lang = lang;
     $$("[data-i18n]").forEach((n) => (n.textContent = t(n.dataset.i18n)));
     $$("[data-i18n-aria]").forEach((n) => n.setAttribute("aria-label", t(n.dataset.i18nAria)));
+    // Links back to the landing go to that language's own page (/, /en/, /fr/…)
+    $$("a[data-home]").forEach((a) => {
+      a.href = `${lang === "es" ? "index.html" : `${lang}/`}${a.dataset.home}`;
+    });
+    $$('a[href^="terminos.html"], a[href^="privacidad.html"]').forEach((a) => {
+      a.href = `${a.getAttribute("href").split("?")[0]}${lang === "es" ? "" : `?lang=${lang}`}`;
+    });
 
     $("[data-doc-title]").textContent = d.title;
     $("[data-doc-intro]").innerHTML = d.intro.map(block).join("");

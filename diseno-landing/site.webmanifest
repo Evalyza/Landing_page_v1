@@ -1,0 +1,21 @@
+{
+  "name": "Ozmetra",
+  "short_name": "Ozmetra",
+  "lang": "es",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F5F1E8",
+  "theme_color": "#0F2B24",
+  "icons": [
+    {
+      "src": "/assets/ozmetra-icono-app-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/ozmetra-icono-app-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

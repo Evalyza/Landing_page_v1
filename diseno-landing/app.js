@@ -11,9 +11,22 @@
     get: () => { try { return localStorage.getItem("ozmetra-lang"); } catch { return null; } },
     set: (v) => { try { localStorage.setItem("ozmetra-lang", v); } catch { /* private mode */ } },
   };
+  // Each language has its own static page (/, /en/, /fr/…) built by tools/build-pages.mjs
+  const PAGE_LANG = document.documentElement.dataset.pageLang;
+  const BASE = document.documentElement.dataset.base || "";
+  const langUrl = (l) => `${BASE}${l === "es" ? "" : `${l}/`}` || "./";
   const fromUrl = new URLSearchParams(location.search).get("lang");
   const fromBrowser = (navigator.language || "es").slice(0, 2);
-  let lang = [fromUrl, store.get(), fromBrowser].find((l) => LANGS.includes(l)) || "es";
+  let lang = PAGE_LANG
+    ? (LANGS.includes(fromUrl) ? fromUrl : PAGE_LANG)
+    : [fromUrl, store.get(), fromBrowser].find((l) => LANGS.includes(l)) || "es";
+  // A visitor who explicitly chose another language lands on it from the root page
+  const saved = store.get();
+  if (PAGE_LANG === "es" && !fromUrl && LANGS.includes(saved) && saved !== "es") {
+    location.replace(langUrl(saved) + location.hash);
+  }
+  const legalHref = (html) => html.replace(/href="(terminos|privacidad)\.html"/g,
+    (_, page) => `href="${BASE}${page}.html${lang === "es" ? "" : `?lang=${lang}`}"`);
 
   const t = (key, vars = {}) => {
     const v = window.I18N[lang][key] ?? window.I18N.es[key] ?? key;
@@ -29,16 +42,24 @@
     $$("[data-i18n-aria]").forEach((n) => n.setAttribute("aria-label", t(n.dataset.i18nAria)));
     $$("[data-i18n-content]").forEach((n) => n.setAttribute("content", t(n.dataset.i18nContent)));
     // Only our own translation strings (with links) are injected as HTML
-    $$("[data-i18n-html]").forEach((n) => (n.innerHTML = t(n.dataset.i18nHtml)));
+    $$("[data-i18n-html]").forEach((n) => (n.innerHTML = legalHref(t(n.dataset.i18nHtml))));
   }
   function setLang(next) {
     lang = next;
-    store.set(next);
     $("[data-lang]").value = next;
     applyStatic();
     langListeners.forEach((fn) => fn());
   }
-  $("[data-lang]").addEventListener("change", (e) => setLang(e.target.value));
+  $("[data-lang]").addEventListener("change", (e) => {
+    const next = e.target.value;
+    store.set(next);
+    // On the static language pages, changing language means going to that page's URL
+    if (PAGE_LANG && next !== PAGE_LANG) {
+      location.href = langUrl(next) + location.hash;
+      return;
+    }
+    setLang(next);
+  });
 
   /* ---------- Nav border on scroll ---------- */
   const nav = $(".nav");
@@ -132,7 +153,7 @@
     const holder = $(".inline-stage", step);
     const panel = document.createElement("div");
     panel.className = "panel";
-    panel.innerHTML = `<div class="panel-head"><div class="panel-title"><img src="assets/ozmetra-icono-app.svg" alt=""><span data-i18n="stage.${i}"></span></div><span class="tag tag-sample" data-i18n="tag.sample"></span></div>`;
+    panel.innerHTML = `<div class="panel-head"><div class="panel-title"><img src="${BASE}assets/ozmetra-icono-app.svg" alt=""><span data-i18n="stage.${i}"></span></div><span class="tag tag-sample" data-i18n="tag.sample"></span></div>`;
     const clone = screens[i].cloneNode(true);
     clone.removeAttribute("data-screen");
     panel.appendChild(clone);

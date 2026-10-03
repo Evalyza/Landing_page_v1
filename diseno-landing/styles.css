@@ -152,7 +152,7 @@ p { margin: 0; text-wrap: pretty; }
 }
 .js .hero h1 .mark::after { animation: bar-in 900ms var(--ease-out) 250ms both; }
 @keyframes bar-in { from { transform: scaleX(0.08); opacity: 0.2; } }
-.hero-sub { margin-top: 36px; font-size: 19px; line-height: 1.55; color: var(--ink-soft); max-width: 34ch; }
+.hero-sub { margin-top: 36px; font-size: 19px; line-height: 1.55; color: var(--ink-soft); max-width: 40ch; }
 
 .join { margin-top: 36px; max-width: 500px; }
 .join label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; }
