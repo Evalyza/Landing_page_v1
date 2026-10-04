@@ -1,14 +1,14 @@
 // Ozmetra legal texts (Terms of Service + Privacy Policy) in es, en, fr, de, it.
 // Block types: string = paragraph, array = bullet list.
-// Tokens: {{COMPANY}} {{NIF}} {{ADDRESS}} {{EMAIL}} {{PROVIDERS}} are pending legal data (rendered highlighted);
+// Tokens: {{COMPANY}} {{NIF}} {{ADDRESS}} {{EMAIL}} {{PROVIDERS}} are the legal data below (a value still in [BRACKETS] renders highlighted as pending);
 // {{PRIVACY}} and {{TERMS}} become links to the other legal page.
 window.LEGAL = {
   placeholders: {
-    es: { COMPANY: "[RAZÓN SOCIAL]", NIF: "[NIF Y DATOS REGISTRALES]", ADDRESS: "[DOMICILIO SOCIAL]", EMAIL: "[EMAIL DE CONTACTO LEGAL]", PROVIDERS: "[OTROS PROVEEDORES]", PRIVACY: "Política de Privacidad", TERMS: "Términos de Servicio" },
-    en: { COMPANY: "[LEGAL COMPANY NAME]", NIF: "[TAX ID AND REGISTRATION DETAILS]", ADDRESS: "[REGISTERED ADDRESS]", EMAIL: "[LEGAL CONTACT EMAIL]", PROVIDERS: "[OTHER PROVIDERS]", PRIVACY: "Privacy Policy", TERMS: "Terms of Service" },
-    fr: { COMPANY: "[RAISON SOCIALE]", NIF: "[NUMÉRO FISCAL ET IMMATRICULATION]", ADDRESS: "[SIÈGE SOCIAL]", EMAIL: "[E-MAIL DE CONTACT JURIDIQUE]", PROVIDERS: "[AUTRES PRESTATAIRES]", PRIVACY: "Politique de confidentialité", TERMS: "Conditions d'utilisation" },
-    de: { COMPANY: "[FIRMENNAME]", NIF: "[STEUERNUMMER UND REGISTERANGABEN]", ADDRESS: "[FIRMENSITZ]", EMAIL: "[RECHTLICHE KONTAKT-E-MAIL]", PROVIDERS: "[WEITERE DIENSTLEISTER]", PRIVACY: "Datenschutzerklärung", TERMS: "Nutzungsbedingungen" },
-    it: { COMPANY: "[RAGIONE SOCIALE]", NIF: "[PARTITA IVA E DATI DI REGISTRAZIONE]", ADDRESS: "[SEDE LEGALE]", EMAIL: "[EMAIL DI CONTATTO LEGALE]", PROVIDERS: "[ALTRI FORNITORI]", PRIVACY: "Informativa sulla privacy", TERMS: "Termini di servizio" },
+    es: { COMPANY: "Ángel León Soriano", NIF: "50580118J", ADDRESS: "Calle Santiago, 28300 Aranjuez (Madrid), España", EMAIL: "ozmetra.solution@gmail.com", PROVIDERS: "Vercel Inc.: alojamiento y publicación del sitio web.", PRIVACY: "Política de Privacidad", TERMS: "Términos de Servicio" },
+    en: { COMPANY: "Ángel León Soriano", NIF: "50580118J", ADDRESS: "Calle Santiago, 28300 Aranjuez (Madrid), Spain", EMAIL: "ozmetra.solution@gmail.com", PROVIDERS: "Vercel Inc.: hosting and delivery of the website.", PRIVACY: "Privacy Policy", TERMS: "Terms of Service" },
+    fr: { COMPANY: "Ángel León Soriano", NIF: "50580118J", ADDRESS: "Calle Santiago, 28300 Aranjuez (Madrid), Espagne", EMAIL: "ozmetra.solution@gmail.com", PROVIDERS: "Vercel Inc. : hébergement et diffusion du site web.", PRIVACY: "Politique de confidentialité", TERMS: "Conditions d'utilisation" },
+    de: { COMPANY: "Ángel León Soriano", NIF: "50580118J", ADDRESS: "Calle Santiago, 28300 Aranjuez (Madrid), Spanien", EMAIL: "ozmetra.solution@gmail.com", PROVIDERS: "Vercel Inc.: Hosting und Auslieferung der Website.", PRIVACY: "Datenschutzerklärung", TERMS: "Nutzungsbedingungen" },
+    it: { COMPANY: "Ángel León Soriano", NIF: "50580118J", ADDRESS: "Calle Santiago, 28300 Aranjuez (Madrid), Spagna", EMAIL: "ozmetra.solution@gmail.com", PROVIDERS: "Vercel Inc.: hosting e pubblicazione del sito web.", PRIVACY: "Informativa sulla privacy", TERMS: "Termini di servizio" },
   },
 
   /* =====================================================================
@@ -116,7 +116,7 @@ window.LEGAL = {
         ]},
         { h: "Contacto", b: [
           "Si tienes preguntas sobre estos Términos, puedes contactar con nosotros en:",
-          ["{{COMPANY}}", "Email: {{EMAIL}}", "Domicilio: {{ADDRESS}}", "NIF y datos registrales: {{NIF}}"],
+          ["{{COMPANY}}", "Email: {{EMAIL}}", "Domicilio: {{ADDRESS}}", "NIF: {{NIF}}"],
         ]},
       ],
     },
@@ -222,7 +222,7 @@ window.LEGAL = {
         ]},
         { h: "Contact", b: [
           "If you have questions regarding these Terms, you can contact us at:",
-          ["{{COMPANY}}", "Email: {{EMAIL}}", "Address: {{ADDRESS}}", "Tax ID and registration details: {{NIF}}"],
+          ["{{COMPANY}}", "Email: {{EMAIL}}", "Address: {{ADDRESS}}", "Tax ID (NIF): {{NIF}}"],
         ]},
       ],
     },
@@ -328,7 +328,7 @@ window.LEGAL = {
         ]},
         { h: "Contact", b: [
           "Pour toute question concernant les présentes Conditions, vous pouvez nous contacter :",
-          ["{{COMPANY}}", "E-mail : {{EMAIL}}", "Adresse : {{ADDRESS}}", "Numéro fiscal et immatriculation : {{NIF}}"],
+          ["{{COMPANY}}", "E-mail : {{EMAIL}}", "Adresse : {{ADDRESS}}", "Numéro d'identification fiscale (NIF) : {{NIF}}"],
         ]},
       ],
     },
@@ -434,7 +434,7 @@ window.LEGAL = {
         ]},
         { h: "Kontakt", b: [
           "Bei Fragen zu diesen Bedingungen erreichst du uns unter:",
-          ["{{COMPANY}}", "E-Mail: {{EMAIL}}", "Anschrift: {{ADDRESS}}", "Steuernummer und Registerangaben: {{NIF}}"],
+          ["{{COMPANY}}", "E-Mail: {{EMAIL}}", "Anschrift: {{ADDRESS}}", "Steuer-Identifikationsnummer (NIF): {{NIF}}"],
         ]},
       ],
     },
@@ -540,7 +540,7 @@ window.LEGAL = {
         ]},
         { h: "Contatti", b: [
           "Per domande sui presenti Termini puoi contattarci a:",
-          ["{{COMPANY}}", "Email: {{EMAIL}}", "Indirizzo: {{ADDRESS}}", "Partita IVA e dati di registrazione: {{NIF}}"],
+          ["{{COMPANY}}", "Email: {{EMAIL}}", "Indirizzo: {{ADDRESS}}", "Codice fiscale (NIF): {{NIF}}"],
         ]},
       ],
     },
@@ -557,7 +557,7 @@ window.LEGAL = {
       ],
       sections: [
         { h: "Responsable del tratamiento", b: [
-          ["Responsable: {{COMPANY}}", "NIF y datos registrales: {{NIF}}", "Domicilio: {{ADDRESS}}", "Email de contacto: {{EMAIL}}"],
+          ["Responsable: {{COMPANY}}", "NIF: {{NIF}}", "Domicilio: {{ADDRESS}}", "Email de contacto: {{EMAIL}}"],
         ]},
         { h: "Qué datos recogemos", b: [
           "Solo recogemos los datos que nos facilitas directamente o que son necesarios para mostrar el sitio web:",
@@ -611,7 +611,7 @@ window.LEGAL = {
       ],
       sections: [
         { h: "Data controller", b: [
-          ["Controller: {{COMPANY}}", "Tax ID and registration details: {{NIF}}", "Address: {{ADDRESS}}", "Contact email: {{EMAIL}}"],
+          ["Controller: {{COMPANY}}", "Tax ID (NIF): {{NIF}}", "Address: {{ADDRESS}}", "Contact email: {{EMAIL}}"],
         ]},
         { h: "What data we collect", b: [
           "We only collect the data you give us directly or that is necessary to display the website:",
@@ -665,7 +665,7 @@ window.LEGAL = {
       ],
       sections: [
         { h: "Responsable du traitement", b: [
-          ["Responsable : {{COMPANY}}", "Numéro fiscal et immatriculation : {{NIF}}", "Adresse : {{ADDRESS}}", "E-mail de contact : {{EMAIL}}"],
+          ["Responsable : {{COMPANY}}", "Numéro d'identification fiscale (NIF) : {{NIF}}", "Adresse : {{ADDRESS}}", "E-mail de contact : {{EMAIL}}"],
         ]},
         { h: "Données recueillies", b: [
           "Nous recueillons uniquement les données que vous nous fournissez directement ou qui sont nécessaires à l'affichage du site :",
@@ -719,7 +719,7 @@ window.LEGAL = {
       ],
       sections: [
         { h: "Verantwortlicher", b: [
-          ["Verantwortlicher: {{COMPANY}}", "Steuernummer und Registerangaben: {{NIF}}", "Anschrift: {{ADDRESS}}", "Kontakt-E-Mail: {{EMAIL}}"],
+          ["Verantwortlicher: {{COMPANY}}", "Steuer-Identifikationsnummer (NIF): {{NIF}}", "Anschrift: {{ADDRESS}}", "Kontakt-E-Mail: {{EMAIL}}"],
         ]},
         { h: "Welche Daten wir erheben", b: [
           "Wir erheben nur Daten, die du uns direkt mitteilst oder die zur Anzeige der Website erforderlich sind:",
@@ -773,7 +773,7 @@ window.LEGAL = {
       ],
       sections: [
         { h: "Titolare del trattamento", b: [
-          ["Titolare: {{COMPANY}}", "Partita IVA e dati di registrazione: {{NIF}}", "Indirizzo: {{ADDRESS}}", "Email di contatto: {{EMAIL}}"],
+          ["Titolare: {{COMPANY}}", "Codice fiscale (NIF): {{NIF}}", "Indirizzo: {{ADDRESS}}", "Email di contatto: {{EMAIL}}"],
         ]},
         { h: "Quali dati raccogliamo", b: [
           "Raccogliamo solo i dati che ci fornisci direttamente o che sono necessari per visualizzare il sito web:",

@@ -16,13 +16,17 @@
   const t = (key) => window.I18N[lang][key] ?? window.I18N.es[key] ?? key;
   const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-  // Pending legal data is highlighted; cross-links point to the other legal page
+  // Legal data fills the tokens; a value still in [BRACKETS] is highlighted as pending.
+  // Cross-links point to the other legal page and the email opens the mail client.
   function inline(text) {
     const ph = window.LEGAL.placeholders[lang];
     return esc(text).replace(/\{\{(\w+)\}\}/g, (_, k) => {
       if (k === "PRIVACY") return `<a href="privacidad.html">${esc(ph.PRIVACY)}</a>`;
       if (k === "TERMS") return `<a href="terminos.html">${esc(ph.TERMS)}</a>`;
-      return `<mark class="todo">${esc(ph[k] ?? k)}</mark>`;
+      const v = ph[k] ?? k;
+      if (v.startsWith("[")) return `<mark class="todo">${esc(v)}</mark>`;
+      if (k === "EMAIL") return `<a href="mailto:${esc(v)}">${esc(v)}</a>`;
+      return esc(v);
     });
   }
   const block = (b) => Array.isArray(b)
