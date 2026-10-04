@@ -60,4 +60,16 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://ozmetra.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozmetra.com/"/>
   </url>
+  <url>
+    <loc>https://ozmetra.com/recursos/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ozmetra.com/recursos/checklist-due-diligence-operativa/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
