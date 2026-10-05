@@ -1085,3 +1085,18 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 :root[data-theme="light"] .paper-icon { background: var(--tinta); }
 .iso-docs li, .mat-detail-procs li, .iso-points li { line-height: 1.4; }
 .paper-title { line-height: 1.38; }
+
+/* Footer: LinkedIn button */
+.footer-end { display: flex; align-items: center; gap: 16px; }
+.footer a.social-btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px;
+  border-radius: var(--r-pill); border: 1px solid var(--line); background: var(--paper);
+  color: var(--ink); font-weight: 500; font-size: 14px;
+  transition: border-color 150ms ease, transform 160ms var(--ease-out);
+}
+.footer a.social-btn .ph { font-size: 18px; }
+.footer a.social-btn:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) { .footer a.social-btn:hover { border-color: var(--ink-soft); color: var(--ink); } }
+/* Footer links wrap on narrow screens instead of overflowing */
+.footer nav { flex-wrap: wrap; gap: 10px 22px; }
+@media (max-width: 520px) { .footer nav a { white-space: nowrap; } }

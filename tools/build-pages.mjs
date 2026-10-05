@@ -16,7 +16,7 @@ import vm from "node:vm";
 
 // ---- Change this when the final domain is known (no trailing slash) ----
 const SITE_URL = process.env.SITE_URL || "https://ozmetra.com";
-const VERSION = "13"; // cache-busting for styles/scripts
+const VERSION = "15"; // cache-busting for styles/scripts
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "diseno-landing");
@@ -68,7 +68,7 @@ function seoHead(lang, base) {
   const ld = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: "Ozmetra", url: `${SITE_URL}/`, logo: `${SITE_URL}/assets/ozmetra-icono-app-512.png` },
+      { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: "Ozmetra", url: `${SITE_URL}/`, logo: `${SITE_URL}/assets/ozmetra-icono-app-512.png`, sameAs: ["https://www.linkedin.com/company/ozmetra/"] },
       { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: "Ozmetra", inLanguage: LANGS, publisher: { "@id": `${SITE_URL}/#org` } },
       { "@type": "WebPage", "@id": `${url}#webpage`, url, name: title, description: desc, inLanguage: lang, isPartOf: { "@id": `${SITE_URL}/#website` }, primaryImageOfPage: ogImage },
       {
