@@ -5,6 +5,8 @@
 // Source: tools/index.template.html (edit THIS file, not diseno-landing/index.html).
 // Output: diseno-landing/index.html (es), diseno-landing/{en,fr,de,it}/index.html,
 //         diseno-landing/sitemap.xml, diseno-landing/robots.txt, diseno-landing/site.webmanifest
+// The Recursos section (/recursos/) is built by tools/build-recursos.mjs; this script
+// adds its menu link to the Spanish page once there is at least one article.
 //
 // Every page ships its texts already translated in the HTML, so search engines index
 // each language at its own URL; app.js keeps the interactive parts working on top.
@@ -13,16 +15,17 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
+import { readArticles, writeSitemap } from "./recursos-lib.mjs";
 
 // ---- Change this when the final domain is known (no trailing slash) ----
 const SITE_URL = process.env.SITE_URL || "https://ozmetra.com";
-const VERSION = "15"; // cache-busting for styles/scripts
+const VERSION = "16"; // cache-busting for styles/scripts
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "diseno-landing");
 const LANGS = ["es", "en", "fr", "de", "it"];
 const DEFAULT = "es";
-const today = new Date().toISOString().slice(0, 10);
+const ARTICLES = readArticles();
 
 // Load the translations exactly as the browser does
 const sandbox = { window: {} };
@@ -125,6 +128,11 @@ function buildPage(lang) {
   html = html.replace(/(\bdata-i18n-ph="([^"]+)"[^>]*?\bplaceholder=")[^"]*"/g, (_, pre, key) => `${pre}${escAttr(t(lang, key))}"`);
   html = html.replace(/(\bdata-i18n-aria="([^"]+)"[^>]*?\baria-label=")[^"]*"/g, (_, pre, key) => `${pre}${escAttr(t(lang, key))}"`);
 
+  // The blog is Spanish only: link it from the Spanish page when it has content
+  const recursos = lang === DEFAULT && ARTICLES.length;
+  html = html.replace(/\n([ \t]*)<!--RECURSOS-NAV-->/, (_, i) => (recursos ? `\n${i}<li><a href="recursos/">Recursos</a></li>` : ""));
+  html = html.replace(/\n([ \t]*)<!--RECURSOS-FOOTER-->/, (_, i) => (recursos ? `\n${i}<a href="recursos/">Recursos</a>` : ""));
+
   html = relink(html, base, lang);
   html = legalLinks(html, base, lang);
   html = html.replace("<!--SEO-->", seoHead(lang, base).trimStart());
@@ -139,20 +147,7 @@ function buildPage(lang) {
 }
 
 function buildSitemap() {
-  const alts = LANGS.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${pageUrl(l)}"/>`).join("\n");
-  const urls = LANGS.map((l) => `  <url>
-    <loc>${pageUrl(l)}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>${l === DEFAULT ? "1.0" : "0.9"}</priority>
-${alts}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl(DEFAULT)}"/>
-  </url>`).join("\n");
-  writeFileSync(join(OUT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls}
-</urlset>
-`);
+  writeSitemap(ARTICLES);
   writeFileSync(join(OUT, "robots.txt"), `User-agent: *
 Allow: /
 

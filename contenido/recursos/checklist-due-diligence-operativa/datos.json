@@ -1,0 +1,262 @@
+{
+  "slug": "checklist-due-diligence-operativa",
+  "titulo": "Checklist de due diligence operativa: qué revisa un inversor",
+  "tituloSeo": "Checklist de due diligence operativa para startups",
+  "descripcion": "Checklist de due diligence operativa para startups y pymes: qué pide un inversor área por área, señales de alarma y plan de 4-6 semanas para prepararla.",
+  "entradilla": "Qué mira un fondo de tus procesos, área por área, qué señales de alarma bajan el precio y cómo tenerlo todo listo en 4 a 6 semanas, con una checklist descargable para medir tu preparación.",
+  "tema": "inversores",
+  "pilar": true,
+  "palabraClave": "checklist due diligence operativa",
+  "palabrasSecundarias": [
+    "due diligence operativa startup",
+    "due diligence startup checklist",
+    "qué revisa un inversor en una due diligence"
+  ],
+  "autor": "angel",
+  "publicado": "2026-10-05",
+  "actualizado": "2026-10-05",
+  "faq": [
+    {
+      "pregunta": "¿Qué es una due diligence operativa?",
+      "respuesta": "Es la parte de la due diligence que revisa cómo funciona la empresa por dentro: procesos, organización, métricas, proveedores, personas y seguridad. Responde a si la empresa puede ejecutar su plan de crecimiento sin romperse. Se diferencia de la legal, que revisa contratos y sociedad, y de la financiera, que revisa las cuentas."
+    },
+    {
+      "pregunta": "¿Es lo mismo una due diligence que una auditoría?",
+      "respuesta": "No. Una auditoría de cuentas verifica los estados financieros según unas normas y tiene alcance fijo. La due diligence la encarga un inversor o comprador antes de una operación, con el alcance que él decide, para detectar riesgos que afecten a la decisión, al precio o a las condiciones."
+    },
+    {
+      "pregunta": "¿Cuánto dura una due diligence de una startup?",
+      "respuesta": "Depende de la fase, del tamaño de la operación y, sobre todo, de lo preparada que esté la empresa. En rondas tempranas suele ser más ligera y en Serie A o compras, mucho más profunda. Tener la documentación lista antes de la oferta es lo que más acorta el proceso."
+    },
+    {
+      "pregunta": "¿Qué documentos necesita una startup para la due diligence operativa?",
+      "respuesta": "Como mínimo: organigrama, mapa de procesos con responsables, métricas con definiciones, lista de clientes conciliada con la facturación, contratos clave, inventario de proveedores críticos, plantilla con tipo de contrato, cesiones de propiedad intelectual y política de accesos. La checklist del artículo los ordena por áreas y fase."
+    },
+    {
+      "pregunta": "¿Qué pasa si en la due diligence sale algo mal?",
+      "respuesta": "Según la gravedad, el inversor puede retirarse, renegociar el precio o pedir condiciones: garantías, correcciones antes del cierre o retener parte del pago. Lo que mejor funciona es adelantarse y explicar los problemas conocidos con un plan para resolverlos. Las consecuencias concretas conviene revisarlas con tu abogado."
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre una data room y una carpeta compartida?",
+      "respuesta": "Una data room permite dar permisos por carpeta y por persona, registra quién ha visto cada documento y facilita retirar el acceso al terminar. Una carpeta compartida normal no suele ofrecer ese control. En rondas pequeñas puede bastar una carpeta bien ordenada, pero en operaciones grandes el inversor suele esperar una data room."
+    }
+  ],
+  "relacionados": [],
+  "recurso": {
+    "tipo": "checklist",
+    "titulo": "Checklist de due diligence operativa: puntuación de preparación por áreas",
+    "descripcion": "Seis áreas y 37 puntos verificables para saber qué te va a pedir un inversor de tus procesos y si hoy podrías entregarlo. Marca lo que cumples, mira tu puntuación y empieza por los puntos críticos.",
+    "secciones": [
+      {
+        "titulo": "Gobierno y organización",
+        "items": [
+          {
+            "texto": "Tienes un organigrama actualizado en el último mes con un responsable por área",
+            "detalle": "Incluye vacantes abiertas y coincide con la plantilla real."
+          },
+          {
+            "texto": "Tienes un mapa de procesos de una página con un dueño por proceso",
+            "detalle": "Cada proceso crítico (vender, entregar, cobrar, contratar, dar soporte) tiene una persona responsable con nombre.",
+            "critico": true
+          },
+          {
+            "texto": "Existe una matriz de aprobaciones escrita",
+            "detalle": "Queda claro quién aprueba gastos, contratos, descuentos y contrataciones, y hasta qué importe."
+          },
+          {
+            "texto": "Las decisiones del consejo y de dirección de los últimos 12 meses están registradas",
+            "detalle": "Actas o resúmenes con fecha, decisión tomada y responsable."
+          },
+          {
+            "texto": "Los objetivos trimestrales están escritos y se revisan",
+            "detalle": "OKR o similar, con al menos una revisión documentada por trimestre."
+          },
+          {
+            "texto": "El día a día no se bloquea si el CEO no está disponible una semana",
+            "detalle": "Las decisiones operativas habituales tienen otro responsable definido."
+          }
+        ]
+      },
+      {
+        "titulo": "Finanzas operativas",
+        "items": [
+          {
+            "texto": "Ingresos recurrentes, burn y runway tienen la misma cifra en todos los documentos",
+            "detalle": "Deck, modelo financiero e informes a inversores muestran los mismos números a la misma fecha.",
+            "critico": true
+          },
+          {
+            "texto": "Cada métrica principal tiene una definición escrita",
+            "detalle": "Un documento explica cómo se calcula cada métrica y de qué fuente sale."
+          },
+          {
+            "texto": "El cierre mensual tiene fecha límite y responsable",
+            "detalle": "Los últimos tres cierres se hicieron en plazo."
+          },
+          {
+            "texto": "El proceso de facturación y cobro está documentado",
+            "detalle": "Incluye quién factura, cuándo, con qué herramienta y cómo se reclaman los impagos."
+          },
+          {
+            "texto": "Tienes presupuesto frente a real de los últimos 4 trimestres",
+            "detalle": "Con explicación de las desviaciones relevantes."
+          },
+          {
+            "texto": "Existe un listado de proveedores con coste anual y contrato localizado",
+            "detalle": "Cada proveedor recurrente tiene su contrato o condiciones accesibles."
+          }
+        ]
+      },
+      {
+        "titulo": "Ventas y clientes",
+        "items": [
+          {
+            "texto": "La lista de clientes está conciliada con la facturación",
+            "detalle": "Cada cliente activo aparece con sus ingresos y coincide con lo facturado.",
+            "critico": true
+          },
+          {
+            "texto": "Los contratos con clientes están localizados y las condiciones especiales listadas",
+            "detalle": "Descuentos, cláusulas de salida y SLA comprometidos recogidos en una tabla.",
+            "critico": true
+          },
+          {
+            "texto": "El embudo comercial tiene etapas definidas y tasas de conversión",
+            "detalle": "Cada etapa tiene un criterio de entrada escrito."
+          },
+          {
+            "texto": "Tienes cohortes de retención de clientes y de ingresos",
+            "detalle": "Al menos por trimestre de alta."
+          },
+          {
+            "texto": "Conoces el peso de tu mayor cliente y de los cinco mayores",
+            "detalle": "Calculado sobre ingresos y con una explicación preparada si es alto."
+          },
+          {
+            "texto": "El onboarding de clientes y el soporte están documentados",
+            "detalle": "Pasos, responsables y tiempos objetivo escritos."
+          }
+        ]
+      },
+      {
+        "titulo": "Producto y tecnología",
+        "items": [
+          {
+            "texto": "Repositorios, dominios y cuentas en la nube están a nombre de la empresa",
+            "detalle": "Ninguno depende de una cuenta personal de un fundador o empleado.",
+            "critico": true
+          },
+          {
+            "texto": "Al menos dos personas pueden desplegar a producción",
+            "detalle": "Con credenciales propias, no compartidas.",
+            "critico": true
+          },
+          {
+            "texto": "Existe un inventario de deuda técnica priorizado",
+            "detalle": "Lista con impacto estimado y plan para los puntos más graves."
+          },
+          {
+            "texto": "Las incidencias se registran con tiempos de resolución",
+            "detalle": "Hay histórico de al menos los últimos 6 meses."
+          },
+          {
+            "texto": "Los proveedores críticos tienen SLA y una alternativa pensada",
+            "detalle": "Nube, pagos y servicios externos de los que depende el producto."
+          },
+          {
+            "texto": "La hoja de ruta tiene un criterio de priorización escrito",
+            "detalle": "Se puede explicar por qué entra cada iniciativa."
+          }
+        ]
+      },
+      {
+        "titulo": "Personas",
+        "items": [
+          {
+            "texto": "Todos los fundadores, empleados y freelances han firmado la cesión de la propiedad intelectual",
+            "detalle": "Incluye a quien trabajó en el producto antes de constituir la sociedad; revisado con un abogado.",
+            "critico": true
+          },
+          {
+            "texto": "Tienes un listado de plantilla y colaboradores con tipo de contrato y coste",
+            "detalle": "Coincide con nóminas y facturas de colaboradores."
+          },
+          {
+            "texto": "Las personas clave están identificadas y tienen respaldo",
+            "detalle": "Su conocimiento está documentado y otra persona puede cubrirlas.",
+            "critico": true
+          },
+          {
+            "texto": "El plan de stock options está documentado con sus beneficiarios",
+            "detalle": "Condiciones y asignaciones actualizadas."
+          },
+          {
+            "texto": "El proceso de contratación e incorporación está escrito",
+            "detalle": "Pasos, responsables y lo que recibe cada nueva persona el primer día."
+          },
+          {
+            "texto": "Conoces las bajas voluntarias del último año y sus motivos",
+            "detalle": "Registradas con fecha y causa principal."
+          }
+        ]
+      },
+      {
+        "titulo": "Seguridad y cumplimiento",
+        "items": [
+          {
+            "texto": "Ningún antiguo empleado o colaborador conserva accesos",
+            "detalle": "Revisión de accesos hecha en los últimos 3 meses y proceso de bajas definido.",
+            "critico": true
+          },
+          {
+            "texto": "Tienes registro de actividades de tratamiento y contratos con los encargados de datos",
+            "detalle": "Revisado con tu asesor de protección de datos.",
+            "critico": true
+          },
+          {
+            "texto": "Las copias de seguridad se han restaurado con éxito en los últimos 6 meses",
+            "detalle": "Hay constancia de la prueba y de quién la hizo."
+          },
+          {
+            "texto": "El registro de jornada está implantado y se usa",
+            "detalle": "Hay registros reales de toda la plantilla."
+          },
+          {
+            "texto": "Has comprobado si te aplican plan de igualdad y canal de denuncias",
+            "detalle": "Si te aplican, están en marcha o con calendario; si no, sabes en qué momento te aplicarán."
+          },
+          {
+            "texto": "Los incidentes de seguridad están registrados con su resolución",
+            "detalle": "Aunque no haya habido ninguno grave, existe el registro."
+          },
+          {
+            "texto": "Tu facturación cumple los requisitos vigentes que te aplican",
+            "detalle": "Revisado con tu asesor, incluido el calendario de Veri*factu y factura electrónica."
+          }
+        ]
+      }
+    ],
+    "niveles": [
+      {
+        "desde": 0,
+        "titulo": "Sin preparar",
+        "texto": "Si un fondo te mandara hoy su lista, buena parte tendrías que reconstruirla. Empieza por los puntos críticos y aplica el plan completo de 6 semanas antes de abrir conversaciones."
+      },
+      {
+        "desde": 40,
+        "titulo": "Base parcial",
+        "texto": "Tienes piezas sueltas pero no una versión única de la verdad. Prioriza números coherentes, propiedad de cuentas y cesiones de propiedad intelectual; con 4-6 semanas de trabajo ordenado estarás en buena posición."
+      },
+      {
+        "desde": 65,
+        "titulo": "Casi lista",
+        "texto": "Lo esencial existe. Cierra los críticos pendientes, prepara la explicación de lo que no puedas arreglar y monta la data room con índice."
+      },
+      {
+        "desde": 85,
+        "titulo": "Lista para la data room",
+        "texto": "Puedes responder a la mayoría de preguntas con un documento. Mantenlo actualizado cada trimestre y ensaya las preguntas difíciles con alguien de fuera del equipo."
+      }
+    ]
+  }
+}

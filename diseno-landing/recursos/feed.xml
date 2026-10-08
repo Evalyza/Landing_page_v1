@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Recursos · Ozmetra</title>
+    <link>https://ozmetra.com/recursos/</link>
+    <description>Guías, checklists y plantillas para los procesos de tu startup.</description>
+    <language>es-es</language>
+    <item>
+      <title>Checklist de due diligence operativa: qué revisa un inversor</title>
+      <link>https://ozmetra.com/recursos/checklist-due-diligence-operativa/</link>
+      <guid>https://ozmetra.com/recursos/checklist-due-diligence-operativa/</guid>
+      <pubDate>Mon, 05 Oct 2026 08:00:00 GMT</pubDate>
+      <description>Checklist de due diligence operativa para startups y pymes: qué pide un inversor área por área, señales de alarma y plan de 4-6 semanas para prepararla.</description>
+    </item>
+  </channel>
+</rss>

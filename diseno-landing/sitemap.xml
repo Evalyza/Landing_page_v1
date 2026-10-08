@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ozmetra.com/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ozmetra.com/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://ozmetra.com/en/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ozmetra.com/"/>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://ozmetra.com/fr/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ozmetra.com/"/>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://ozmetra.com/de/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ozmetra.com/"/>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://ozmetra.com/it/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://ozmetra.com/"/>
@@ -59,5 +59,17 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://ozmetra.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://ozmetra.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ozmetra.com/"/>
+  </url>
+  <url>
+    <loc>https://ozmetra.com/recursos/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ozmetra.com/recursos/checklist-due-diligence-operativa/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

@@ -1,0 +1,15 @@
+{
+  "name": "ozmetra-landing-tools",
+  "private": true,
+  "type": "module",
+  "description": "Generadores estáticos de ozmetra.com: páginas por idioma y sección Recursos.",
+  "scripts": {
+    "paginas": "node build-pages.mjs",
+    "recursos": "node build-recursos.mjs",
+    "todo": "node build-pages.mjs && node build-recursos.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "marked": "^16.4.0"
+  }
+}
