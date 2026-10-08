@@ -20,7 +20,7 @@ import {
 } from "./recursos-lib.mjs";
 
 const VERSION = "1"; // cache-busting for recursos.css / recursos.js
-const STYLES_VERSION = "14"; // must match the ?v= used by the landing for styles.css
+const STYLES_VERSION = "16"; // must match the ?v= used by the landing for styles.css
 const DIR = join(OUT, "recursos");
 
 const PAPERS = [
@@ -152,7 +152,10 @@ const FOOTER = `<footer class="footer">
       <a href="/terminos.html">Términos de Servicio</a>
       <a href="/privacidad.html">Política de Privacidad</a>
     </nav>
-    <span>© 2026 Ozmetra</span>
+    <div class="footer-end">
+      <a class="social-btn" href="https://www.linkedin.com/company/ozmetra/" target="_blank" rel="noopener" aria-label="Ozmetra en LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i><span>LinkedIn</span></a>
+      <span>© 2026 Ozmetra</span>
+    </div>
   </div>
 </footer>`;
 
@@ -228,7 +231,7 @@ function articlePage(a, all, authors) {
         image, datePublished: a.publicado, dateModified: updated, inLanguage: "es",
         mainEntityOfPage: url, articleSection: tema.nombre, keywords: [a.palabraClave, ...(a.palabrasSecundarias || [])].join(", "),
         author: { "@type": "Person", name: author.nombre, jobTitle: author.cargo, ...(author.url ? { url: author.url } : {}), ...(author.sameAs?.length ? { sameAs: author.sameAs } : {}) },
-        publisher: { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: "Ozmetra", url: `${SITE_URL}/`, logo: { "@type": "ImageObject", url: `${SITE_URL}/assets/ozmetra-icono-app-512.png` } },
+        publisher: { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: "Ozmetra", url: `${SITE_URL}/`, logo: { "@type": "ImageObject", url: `${SITE_URL}/assets/ozmetra-icono-app-512.png` }, sameAs: ["https://www.linkedin.com/company/ozmetra/"] },
         citation: PAPERS,
       },
       {
