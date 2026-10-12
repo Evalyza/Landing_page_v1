@@ -1,0 +1,271 @@
+{
+  "slug": "plantilla-okr-startup",
+  "titulo": "Plantilla OKR para startups: versiones pre-seed, seed y Serie A",
+  "tituloSeo": "Plantilla OKR para startups gratis: pre-seed a Serie A",
+  "descripcion": "Plantilla OKR para startups con tres versiones (pre-seed, seed y Serie A), ejemplos en euros y el trimestre semana a semana. Descárgala gratis.",
+  "entradilla": "Tres versiones de la plantilla, una por fase y con ejemplos en euros, más el trimestre real semana a semana y una tabla para no confundir resultados clave con tareas.",
+  "tema": "okr",
+  "pilar": true,
+  "palabraClave": "plantilla OKR startup",
+  "palabrasSecundarias": [
+    "plantilla OKR",
+    "OKR startup ejemplos",
+    "cómo hacer OKR en una startup"
+  ],
+  "autor": "angel",
+  "publicado": "2026-10-12",
+  "actualizado": "2026-10-12",
+  "faq": [
+    {
+      "pregunta": "¿Cuántos OKR debe tener una startup por trimestre?",
+      "respuesta": "Menos de los que crees. Como criterio de partida: un objetivo con dos o tres KR en pre-seed, dos o tres objetivos con unos tres KR en seed y como máximo tres objetivos de empresa en Serie A, más los de cada equipo. Si dudas entre poner uno más o uno menos, quédate con menos."
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre OKR y KPI?",
+      "respuesta": "El KPI mide la salud del negocio de forma continua; el OKR marca lo que quieres cambiar este trimestre. Un KPI se convierte en resultado clave cuando decides moverlo a propósito, con valor inicial y meta. El MRR es un KPI; subirlo de 8.000 € a 15.000 € en un trimestre es un KR."
+    },
+    {
+      "pregunta": "¿Los OKR de una startup deben ser trimestrales o mensuales?",
+      "respuesta": "En fases muy tempranas tiene sentido un ciclo mensual dentro del trimestre, porque la startup puede cambiar de dirección varias veces en tres meses. A partir de seed, el ciclo trimestral con check-in semanal y revisión mensual suele funcionar mejor."
+    },
+    {
+      "pregunta": "¿Qué puntuación de OKR se considera buena?",
+      "respuesta": "Depende del tipo. Los comprometidos deben llegar a 1,0. En los aspiracionales, la guía re:Work de Google sitúa la zona ideal entre 0,6 y 0,7, y cumplir siempre el 100 % indica que las metas no eran lo bastante ambiciosas."
+    },
+    {
+      "pregunta": "¿Hay que ligar los OKR a bonus o a la evaluación del desempeño?",
+      "respuesta": "Es mejor no hacerlo. Si la retribución depende de llegar al 1,0, el equipo propondrá metas fáciles y los OKR aspiracionales desaparecerán. Usa los OKR para decidir y aprender, y evalúa el desempeño con otros criterios."
+    },
+    {
+      "pregunta": "¿Qué herramienta usar para gestionar OKR en una startup?",
+      "respuesta": "Para la mayoría de startups de menos de 30 personas basta con una hoja de cálculo en Google Sheets, Excel o Notion bien estructurada. Una herramienta específica empieza a compensar cuando hay varios equipos con OKR propios y el seguimiento manual se vuelve pesado."
+    }
+  ],
+  "relacionados": [],
+  "recurso": {
+    "tipo": "plantilla",
+    "titulo": "Plantilla OKR para startups por fase: pre-seed, seed y Serie A",
+    "descripcion": "Tres tablas listas para copiar, una por fase, con objetivo, tipo, resultados clave, responsable, valor inicial, meta y seguimiento semanal. Vienen rellenas con ejemplos en euros para que veas cómo se escribe un buen KR en cada etapa.",
+    "tablas": [
+      {
+        "titulo": "Pre-seed: validar el problema",
+        "descripcion": "Un objetivo de validación y uno comprometido de caja. Ciclo mensual dentro del trimestre; el seguimiento muestra la foto de la semana 6.",
+        "columnas": [
+          "Objetivo",
+          "Tipo",
+          "Resultado clave",
+          "Responsable",
+          "Valor inicial",
+          "Meta",
+          "Seguimiento (valor actual · confianza 1-10)",
+          "Puntuación al cierre (0-1)"
+        ],
+        "filas": [
+          [
+            "Ejemplo: Demostrar que las clínicas dentales pequeñas pagarían por dejar de gestionar las citas a mano",
+            "Aspiracional",
+            "Entrevistas con responsables de clínica",
+            "CEO",
+            "0",
+            "30",
+            "Semana 6: 17 · 7/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo: (mismo objetivo)",
+            "Aspiracional",
+            "Cartas de intención firmadas",
+            "CEO",
+            "0",
+            "5",
+            "Semana 6: 1 · 5/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo: (mismo objetivo)",
+            "Aspiracional",
+            "Pilotos de pago activos, aunque sea a precio reducido",
+            "CTO",
+            "0",
+            "2",
+            "Semana 6: 0 · 4/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo: Mantener la caja bajo control mientras validamos",
+            "Comprometido",
+            "Gasto mensual total",
+            "CEO",
+            "16.500 €",
+            "≤ 18.000 €",
+            "Semana 6: 17.200 € · 9/10",
+            "Semana 13"
+          ]
+        ]
+      },
+      {
+        "titulo": "Seed: ajuste producto-mercado",
+        "descripcion": "Tres objetivos: uno de uso, uno de ingresos y uno comprometido de fiabilidad. Ciclo trimestral con check-in semanal de 15 minutos.",
+        "columnas": [
+          "Objetivo",
+          "Tipo",
+          "Resultado clave",
+          "Responsable",
+          "Valor inicial",
+          "Meta",
+          "Seguimiento (valor actual · confianza 1-10)",
+          "Puntuación al cierre (0-1)"
+        ],
+        "filas": [
+          [
+            "Ejemplo: Que nuestros clientes no quieran trabajar sin el producto",
+            "Aspiracional",
+            "% de usuarios activos que responden «muy decepcionado» si dejaran de usar el producto",
+            "Dirección de producto",
+            "22 %",
+            "40 %",
+            "Semana 6: 29 % · 6/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo: (mismo objetivo)",
+            "Aspiracional",
+            "Retención de la cohorte del trimestre al tercer mes",
+            "Customer Success",
+            "55 %",
+            "70 %",
+            "Semana 6: 61 % · 6/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo: (mismo objetivo)",
+            "Aspiracional",
+            "% de cuentas nuevas que completan la primera integración en 7 días",
+            "Dirección de producto",
+            "35 %",
+            "60 %",
+            "Semana 6: 44 % · 7/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo: Convertir la tracción en ingresos recurrentes",
+            "Aspiracional",
+            "MRR",
+            "CEO",
+            "8.000 €",
+            "15.000 €",
+            "Semana 6: 10.900 € · 6/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo: (mismo objetivo)",
+            "Aspiracional",
+            "Conversión de prueba gratuita a pago",
+            "Dirección comercial",
+            "12 %",
+            "20 %",
+            "Semana 6: 15 % · 5/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo: Mantener la plataforma fiable mientras crecemos",
+            "Comprometido",
+            "Disponibilidad mensual de la plataforma",
+            "CTO",
+            "99,2 %",
+            "≥ 99,5 %",
+            "Semana 6: 99,6 % · 8/10",
+            "Semana 13"
+          ]
+        ]
+      },
+      {
+        "titulo": "Serie A: crecimiento repetible",
+        "descripcion": "Objetivos de empresa centrados en eficiencia y equipo, más un ejemplo de OKR de equipo en cascada parcial. Ciclo trimestral con revisión mensual de dirección.",
+        "columnas": [
+          "Objetivo",
+          "Tipo",
+          "Resultado clave",
+          "Responsable",
+          "Valor inicial",
+          "Meta",
+          "Seguimiento (valor actual · confianza 1-10)",
+          "Puntuación al cierre (0-1)"
+        ],
+        "filas": [
+          [
+            "Ejemplo (empresa): Crecer de forma rentable en el segmento mid-market",
+            "Aspiracional",
+            "Meses para recuperar el CAC",
+            "CFO",
+            "22 meses",
+            "15 meses",
+            "Semana 6: 19 meses · 6/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo (empresa): (mismo objetivo)",
+            "Aspiracional",
+            "Retención neta de ingresos (NRR) de los últimos 12 meses",
+            "Dirección de Customer Success",
+            "98 %",
+            "110 %",
+            "Semana 6: 103 % · 5/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo (empresa): Construir el equipo para duplicar capacidad sin perder calidad",
+            "Aspiracional",
+            "Días medios hasta cubrir un puesto clave",
+            "Dirección de personas",
+            "75 días",
+            "45 días",
+            "Semana 6: 60 días · 6/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo (empresa): (mismo objetivo)",
+            "Aspiracional",
+            "% de incorporaciones autónomas en su primer mes según su responsable",
+            "Dirección de personas",
+            "50 %",
+            "80 %",
+            "Semana 6: 62 % · 6/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo (equipo de Customer Success): Que ningún cliente mid-market se vaya por un mal arranque",
+            "Aspiracional",
+            "Churn mensual de ingresos",
+            "Responsable de onboarding",
+            "2,1 %",
+            "1,2 %",
+            "Semana 6: 1,7 % · 6/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo (equipo de Customer Success): (mismo objetivo)",
+            "Aspiracional",
+            "% de clientes nuevos con primera puesta en marcha en menos de 30 días",
+            "Responsable de onboarding",
+            "40 %",
+            "75 %",
+            "Semana 6: 55 % · 7/10",
+            "Semana 13"
+          ],
+          [
+            "Ejemplo (empresa): Mantener la salud financiera mientras crecemos",
+            "Comprometido",
+            "Margen bruto trimestral",
+            "CFO",
+            "76 %",
+            "≥ 75 %",
+            "Semana 6: 77 % · 9/10",
+            "Semana 13"
+          ]
+        ]
+      }
+    ],
+    "nota": "Copia en Google Sheets, Excel o Notion solo la tabla de tu fase y borra las filas de ejemplo. Cada fila es un resultado clave; repite el objetivo en todas las filas que le pertenecen. Rellena el valor inicial con datos reales en la semana 1 y actualiza la columna de seguimiento cada semana en el check-in de 15 minutos. En la semana 13, puntúa cada KR con la fórmula (valor final − valor inicial) / (meta − valor inicial): los comprometidos deberían llegar a 1,0 y en los aspiracionales una puntuación de 0,6-0,7 es una buena señal. Añade una columna de aprendizaje si quieres llevar la retro en la misma hoja."
+  }
+}
