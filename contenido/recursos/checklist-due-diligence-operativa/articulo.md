@@ -38,7 +38,6 @@ El resultado es un informe con los riesgos, las contingencias y las conclusiones
 
 El problema habitual no es que falten documentos. Es que la lista llega con plazo y el equipo descubre que muchas respuestas no están escritas en ningún sitio.
 
-[[TU EXPERIENCIA: cuenta una situación que hayas visto o vivido en la que la parte operativa de una due diligence generó más trabajo del esperado: qué se pidió, qué no existía por escrito y cuánto tiempo costó reconstruirlo.]]
 
 ## Qué revisa un inversor en una due diligence operativa, área por área
 
@@ -76,7 +75,7 @@ No es la auditoría de cuentas, sino los procesos que las producen.
 - Contratos tipo y las desviaciones firmadas: descuentos, cláusulas de salida, niveles de servicio (SLA) comprometidos.
 - Proceso de onboarding (incorporación) de clientes y de soporte.
 
-**Señal de alarma:** concentración de clientes. [Teamon](https://teamon.es/due-diligence-inversor-que-revisan-fondos-antes-invertir/) la sitúa por encima del 20 % de los ingresos en un solo cliente. Más allá de la cifra, el criterio es simple: si la marcha de un cliente te deja sin pista, el fondo lo verá. Otra señal frecuente son los compromisos firmados en contratos que nadie controla.
+**Señal de alarma:** concentración de clientes. El criterio es simple: si la marcha de un cliente te deja sin pista, el fondo lo verá. Otra señal frecuente son los compromisos firmados en contratos que nadie controla.
 
 ### 4. Producto y tecnología
 
@@ -154,7 +153,11 @@ No todo lo que encuentre el inversor se puede corregir antes de que lo encuentre
 
 Un riesgo explicado con un plan creíble pesa mucho menos que el mismo riesgo descubierto por el inversor en la página 40 de tu data room.
 
-[[TU EXPERIENCIA: si has visto una señal de alarma operativa que se explicó bien a tiempo (o que se descubrió tarde), cuenta qué era y cómo cambió la conversación con el inversor. Sin nombres.]]
+Lo he visto de cerca. Cuando trabajábamos con nuestros profesores en la universidad buscando la mejor forma de aplicar estos métodos, contactamos con empresas con las que ellos ya habían colaborado en otros estudios. Una de ellas nos aseguró que sus procesos estaban perfectos: tan preparados que en unas semanas les iba a visitar un auditor. Aun así, les ofrecimos un análisis gratuito, porque para nuestra investigación necesitábamos casos reales y fiables.
+
+Encontramos bastantes procesos sin optimizar. Y cuando llegó la auditoría, no consiguieron la certificación a la primera. Estaban convencidos de que todo estaba bien, pero se les escaparon un par de detalles, y en una auditoría un par de detalles bastan para tener que corregir, volver a pasar la revisión y volver a pagarla.
+
+Aquello era una auditoría de certificación, no una due diligence, pero la lección es la misma: creer que tus procesos están bien no es lo mismo que poder demostrarlo ante alguien de fuera. Mejor que los huecos los encuentres tú antes de que los encuentre el auditor o el inversor.
 
 ## Cómo preparar la due diligence operativa en 4-6 semanas
 
