@@ -1,0 +1,70 @@
+name: Recursos
+
+# Every push to a recursos/* branch (the weekly article from Evalyza/blog-automatizacion,
+# or your edits on github.com) rebuilds the HTML, opens the pull request if it does not
+# exist yet, and checks that no "[[TU EXPERIENCIA: …]]" block is left to write.
+# Merging the pull request publishes the article (Vercel deploys main).
+
+on:
+  push:
+    branches: ['recursos/**']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: recursos-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # The PR takes its title and description from the commit that started the branch
+      # Requiere Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests"
+      - name: Abrir el pull request
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RAMA: ${{ github.ref_name }}
+        run: |
+          if [ -z "$(gh pr list --head "$RAMA" --state open --json number --jq '.[].number')" ]; then
+            primero="$(git rev-list --reverse origin/main..HEAD | head -1)"
+            primero="${primero:-HEAD}"
+            git log -1 --format=%s "$primero" > /tmp/titulo.txt
+            git log -1 --format=%b "$primero" > /tmp/cuerpo.md
+            gh pr create --base main --head "$RAMA" --title "$(cat /tmp/titulo.txt)" --body-file /tmp/cuerpo.md
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tools/package-lock.json
+
+      - name: Generar páginas
+        working-directory: tools
+        run: |
+          npm ci
+          node build-pages.mjs
+          node build-recursos.mjs
+
+      - name: Guardar el HTML generado
+        run: |
+          git config user.name "ozmetra-bot"
+          git config user.email "ozmetra-bot@users.noreply.github.com"
+          git add -A diseno-landing
+          git diff --cached --quiet || (git commit -m "Recursos: HTML generado" && git push)
+
+      - name: Comprobar que no falta tu experiencia
+        run: |
+          if grep -rn "\[\[TU EXPERIENCIA:" contenido/recursos --include=articulo.md; then
+            echo "::error::Quedan bloques [[TU EXPERIENCIA: …]] por escribir. Edita articulo.md, sustituye cada bloque por tu anécdota o dato real (o bórralo) y guarda; la comprobación se repite sola."
+            exit 1
+          fi

@@ -563,23 +563,24 @@ window.LEGAL = {
           "Solo recogemos los datos que nos facilitas directamente o que son necesarios para mostrar el sitio web:",
           ["Lista de espera: tu email de trabajo y, de forma opcional, el nombre de tu empresa, tu rol y tus respuestas a la prueba rápida (fase, tamaño del equipo y principal dificultad).",
            "Solicitud de llamada: tu nombre, tu número de teléfono con prefijo y la franja horaria que prefieras.",
-           "Preferencias del sitio: el idioma que eliges se guarda en el almacenamiento local de tu navegador. No usamos cookies de analítica ni de publicidad.",
+           "Descarga de recursos (guías, checklists y plantillas de ozmetra.com/recursos): tu email de trabajo, el recurso que descargas y, si marcas la casilla opcional, tu consentimiento para recibir nuevos recursos por email.",
+           "Preferencias del sitio: el idioma y el tema que eliges, los recursos que ya has desbloqueado y tus respuestas en las checklists se guardan solo en el almacenamiento local de tu navegador; no nos llegan. No usamos cookies de analítica ni de publicidad.",
            "Datos técnicos: al cargar las tipografías y los iconos del sitio desde servidores de terceros (Google Fonts y unpkg), esos proveedores reciben tu dirección IP."],
         ]},
         { h: "Para qué los usamos", b: [
-          ["gestionar tu inscripción en la lista de espera y avisarte cuando el Servicio esté disponible;", "enviarte información relevante sobre el lanzamiento;", "atender tu solicitud de llamada a través de nuestro equipo de atención al cliente;", "adaptar la primera orientación que te mostramos según tus respuestas a la prueba rápida;", "mostrar correctamente el sitio web en el idioma que elijas."],
+          ["gestionar tu inscripción en la lista de espera y avisarte cuando el Servicio esté disponible;", "enviarte información relevante sobre el lanzamiento;","darte acceso al recurso que descargas y saber qué artículos de nuestro blog interesan más;","solo si marcas la casilla opcional, enviarte por email nuevas guías y plantillas, como máximo dos al mes (puedes darte de baja en cualquier momento escribiéndonos o desde el propio email);", "atender tu solicitud de llamada a través de nuestro equipo de atención al cliente;", "adaptar la primera orientación que te mostramos según tus respuestas a la prueba rápida;", "mostrar correctamente el sitio web en el idioma que elijas."],
           "No tomamos decisiones automatizadas con efectos jurídicos sobre ti a partir de estos datos.",
         ]},
         { h: "Base legal", b: [
-          ["Consentimiento (art. 6.1.a RGPD): cuando marcas la casilla de aceptación y envías el formulario de la lista de espera o de solicitud de llamada. Puedes retirarlo en cualquier momento.", "Aplicación de medidas precontractuales a petición tuya (art. 6.1.b RGPD): cuando nos pides que te llamemos para informarte sobre el Servicio.", "Interés legítimo (art. 6.1.f RGPD): para cargar los recursos técnicos necesarios para mostrar el sitio web correctamente."],
+          ["Consentimiento (art. 6.1.a RGPD): cuando marcas la casilla de aceptación y envías el formulario de la lista de espera, de solicitud de llamada o de descarga de un recurso, y, por separado, cuando marcas la casilla opcional para recibir nuevos recursos por email. Puedes retirar cada consentimiento en cualquier momento, sin que afecte al otro.", "Aplicación de medidas precontractuales a petición tuya (art. 6.1.b RGPD): cuando nos pides que te llamemos para informarte sobre el Servicio.", "Interés legítimo (art. 6.1.f RGPD): para cargar los recursos técnicos necesarios para mostrar el sitio web correctamente."],
         ]},
         { h: "Cuánto tiempo los conservamos", b: [
-          "Conservamos los datos de la lista de espera mientras sigas inscrito o hasta que retires tu consentimiento. Los datos de las solicitudes de llamada se conservan el tiempo necesario para atenderlas y después se suprimen, salvo que a raíz de la llamada se inicie una relación contractual.",
+          "Conservamos los datos de la lista de espera y de las descargas de recursos mientras sigas inscrito o hasta que retires tu consentimiento. Si retiras solo el consentimiento para recibir recursos por email, dejaremos de enviártelos y conservaremos el resto. Los datos de las solicitudes de llamada se conservan el tiempo necesario para atenderlas y después se suprimen, salvo que a raíz de la llamada se inicie una relación contractual.",
           "Después, los datos pueden conservarse bloqueados durante los plazos legales aplicables para atender posibles responsabilidades.",
         ]},
         { h: "Con quién los compartimos", b: [
           "No vendemos tus datos. Pueden acceder a ellos los proveedores que nos prestan servicios (por ejemplo, alojamiento web, envío de emails o herramientas de gestión) como encargados del tratamiento, con contrato y solo para prestarnos esos servicios:",
-          ["Supabase, Inc.: base de datos en la que se guardan las inscripciones en la lista de espera y las solicitudes de llamada, en servidores de la Unión Europea (Irlanda).", "{{PROVIDERS}}"],
+          ["Supabase, Inc.: base de datos en la que se guardan las inscripciones en la lista de espera, las solicitudes de llamada y las descargas de recursos, en servidores de la Unión Europea (Irlanda).", "{{PROVIDERS}}"],
           "También podemos comunicarlos a autoridades públicas cuando exista una obligación legal.",
         ]},
         { h: "Transferencias internacionales", b: [
@@ -617,23 +618,24 @@ window.LEGAL = {
           "We only collect the data you give us directly or that is necessary to display the website:",
           ["Waitlist: your work email and, optionally, your company name, your role, and your answers to the quick self-check (stage, team size, and main pain point).",
            "Call request: your name, your phone number with country code, and your preferred time slot.",
-           "Site preferences: the language you choose is stored in your browser's local storage. We do not use analytics or advertising cookies.",
+           "Resource downloads (guides, checklists and templates at ozmetra.com/recursos): your work email, the resource you download and, if you tick the optional box, your consent to receive new resources by email.",
+           "Site preferences: the language and theme you choose, the resources you have unlocked and your checklist answers are stored only in your browser's local storage; they never reach us. We do not use analytics or advertising cookies.",
            "Technical data: when the site's fonts and icons load from third-party servers (Google Fonts and unpkg), those providers receive your IP address."],
         ]},
         { h: "How we use it", b: [
-          ["to manage your place on the waitlist and let you know when the Service is available;", "to send you relevant information about the launch;", "to handle your call request through our customer information team;", "to tailor the first hint we show you based on your self-check answers;", "to display the website correctly in the language you choose."],
+          ["to manage your place on the waitlist and let you know when the Service is available;", "to send you relevant information about the launch;","to give you access to the resource you download and to learn which articles on our blog are most useful;","only if you tick the optional box, to email you new guides and templates, at most twice a month (you can unsubscribe at any time by writing to us or from the email itself);", "to handle your call request through our customer information team;", "to tailor the first hint we show you based on your self-check answers;", "to display the website correctly in the language you choose."],
           "We do not make automated decisions with legal effects on you based on this data.",
         ]},
         { h: "Legal basis", b: [
-          ["Consent (Art. 6(1)(a) GDPR): when you tick the acceptance box and submit the waitlist or call request form. You can withdraw it at any time.", "Steps taken at your request prior to entering into a contract (Art. 6(1)(b) GDPR): when you ask us to call you about the Service.", "Legitimate interest (Art. 6(1)(f) GDPR): to load the technical resources needed to display the website correctly."],
+          ["Consent (Art. 6(1)(a) GDPR): when you tick the acceptance box and submit the waitlist, call request or resource download form and, separately, when you tick the optional box to receive new resources by email. You can withdraw each consent at any time without affecting the other.", "Steps taken at your request prior to entering into a contract (Art. 6(1)(b) GDPR): when you ask us to call you about the Service.", "Legitimate interest (Art. 6(1)(f) GDPR): to load the technical resources needed to display the website correctly."],
         ]},
         { h: "How long we keep it", b: [
-          "We keep waitlist data for as long as you remain on the list or until you withdraw your consent. Call request data is kept for as long as needed to handle the request and is then deleted, unless the call leads to a contractual relationship.",
+          "We keep waitlist and resource download data for as long as you remain on the list or until you withdraw your consent. If you only withdraw your consent to receive resources by email, we will stop sending them and keep the rest. Call request data is kept for as long as needed to handle the request and is then deleted, unless the call leads to a contractual relationship.",
           "Afterwards, data may be kept blocked for the applicable legal periods in order to address possible liabilities.",
         ]},
         { h: "Who we share it with", b: [
           "We do not sell your data. Providers that deliver services to us (for example, web hosting, email delivery, or management tools) may access it as data processors, under contract and only to provide those services:",
-          ["Supabase, Inc.: the database that stores waitlist sign-ups and call requests, on servers in the European Union (Ireland).", "{{PROVIDERS}}"],
+          ["Supabase, Inc.: the database that stores waitlist sign-ups, call requests and resource downloads, on servers in the European Union (Ireland).", "{{PROVIDERS}}"],
           "We may also disclose it to public authorities where there is a legal obligation.",
         ]},
         { h: "International transfers", b: [
@@ -671,23 +673,24 @@ window.LEGAL = {
           "Nous recueillons uniquement les données que vous nous fournissez directement ou qui sont nécessaires à l'affichage du site :",
           ["Liste d'attente : votre e-mail professionnel et, de manière facultative, le nom de votre entreprise, votre rôle et vos réponses au test rapide (stade, taille de l'équipe et principale difficulté).",
            "Demande d'appel : votre nom, votre numéro de téléphone avec indicatif et le créneau horaire de votre choix.",
-           "Préférences du site : la langue choisie est enregistrée dans le stockage local de votre navigateur. Nous n'utilisons pas de cookies d'analyse ni de publicité.",
+           "Téléchargement de ressources (guides, checklists et modèles sur ozmetra.com/recursos) : votre email professionnel, la ressource téléchargée et, si vous cochez la case facultative, votre consentement à recevoir de nouvelles ressources par email.",
+           "Préférences du site : la langue et le thème choisis, les ressources déjà débloquées et vos réponses aux checklists sont enregistrés uniquement dans le stockage local de votre navigateur ; ils ne nous parviennent pas. Nous n'utilisons pas de cookies d'analyse ni de publicité.",
            "Données techniques : lorsque les polices et icônes du site sont chargées depuis des serveurs tiers (Google Fonts et unpkg), ces prestataires reçoivent votre adresse IP."],
         ]},
         { h: "Finalités", b: [
-          ["gérer votre inscription sur la liste d'attente et vous prévenir lorsque le Service sera disponible ;", "vous envoyer des informations pertinentes sur le lancement ;", "traiter votre demande d'appel par l'intermédiaire de notre service d'information client ;", "adapter la première piste affichée en fonction de vos réponses au test rapide ;", "afficher correctement le site dans la langue de votre choix."],
+          ["gérer votre inscription sur la liste d'attente et vous prévenir lorsque le Service sera disponible ;", "vous envoyer des informations pertinentes sur le lancement ;","vous donner accès à la ressource téléchargée et savoir quels articles de notre blog intéressent le plus ;","uniquement si vous cochez la case facultative, vous envoyer par email de nouveaux guides et modèles, au maximum deux fois par mois (vous pouvez vous désinscrire à tout moment en nous écrivant ou depuis l'email lui-même) ;", "traiter votre demande d'appel par l'intermédiaire de notre service d'information client ;", "adapter la première piste affichée en fonction de vos réponses au test rapide ;", "afficher correctement le site dans la langue de votre choix."],
           "Nous ne prenons aucune décision automatisée produisant des effets juridiques à votre égard sur la base de ces données.",
         ]},
         { h: "Base juridique", b: [
-          ["Consentement (art. 6.1.a du RGPD) : lorsque vous cochez la case d'acceptation et envoyez le formulaire de liste d'attente ou de demande d'appel. Vous pouvez le retirer à tout moment.", "Mesures précontractuelles prises à votre demande (art. 6.1.b du RGPD) : lorsque vous nous demandez de vous appeler au sujet du Service.", "Intérêt légitime (art. 6.1.f du RGPD) : pour charger les ressources techniques nécessaires au bon affichage du site."],
+          ["Consentement (art. 6.1.a du RGPD) : lorsque vous cochez la case d'acceptation et envoyez le formulaire de liste d'attente, de demande d'appel ou de téléchargement d'une ressource et, séparément, lorsque vous cochez la case facultative pour recevoir de nouvelles ressources par email. Vous pouvez retirer chaque consentement à tout moment, sans effet sur l'autre.", "Mesures précontractuelles prises à votre demande (art. 6.1.b du RGPD) : lorsque vous nous demandez de vous appeler au sujet du Service.", "Intérêt légitime (art. 6.1.f du RGPD) : pour charger les ressources techniques nécessaires au bon affichage du site."],
         ]},
         { h: "Durée de conservation", b: [
-          "Nous conservons les données de la liste d'attente tant que vous y restez inscrit ou jusqu'au retrait de votre consentement. Les données des demandes d'appel sont conservées le temps nécessaire à leur traitement puis supprimées, sauf si l'appel donne lieu à une relation contractuelle.",
+          "Nous conservons les données de la liste d'attente et des téléchargements de ressources tant que vous y restez inscrit ou jusqu'au retrait de votre consentement. Si vous retirez uniquement votre consentement à recevoir des ressources par email, nous cesserons de vous les envoyer et conserverons le reste. Les données des demandes d'appel sont conservées le temps nécessaire à leur traitement puis supprimées, sauf si l'appel donne lieu à une relation contractuelle.",
           "Les données peuvent ensuite être conservées de manière bloquée pendant les délais légaux applicables afin de répondre à d'éventuelles responsabilités.",
         ]},
         { h: "Destinataires", b: [
           "Nous ne vendons pas vos données. Les prestataires qui nous fournissent des services (par exemple l'hébergement web, l'envoi d'e-mails ou des outils de gestion) peuvent y accéder en tant que sous-traitants, sous contrat et uniquement pour fournir ces services :",
-          ["Supabase, Inc. : la base de données qui conserve les inscriptions à la liste d'attente et les demandes d'appel, sur des serveurs situés dans l'Union européenne (Irlande).", "{{PROVIDERS}}"],
+          ["Supabase, Inc. : la base de données qui conserve les inscriptions à la liste d'attente, les demandes d'appel et les téléchargements de ressources, sur des serveurs situés dans l'Union européenne (Irlande).", "{{PROVIDERS}}"],
           "Nous pouvons également les communiquer aux autorités publiques en cas d'obligation légale.",
         ]},
         { h: "Transferts internationaux", b: [
@@ -725,23 +728,24 @@ window.LEGAL = {
           "Wir erheben nur Daten, die du uns direkt mitteilst oder die zur Anzeige der Website erforderlich sind:",
           ["Warteliste: deine geschäftliche E-Mail-Adresse und optional der Name deines Unternehmens, deine Rolle und deine Antworten auf den Schnelltest (Phase, Teamgröße und größte Herausforderung).",
            "Rückrufanfrage: dein Name, deine Telefonnummer mit Vorwahl und dein bevorzugtes Zeitfenster.",
-           "Website-Einstellungen: die gewählte Sprache wird im lokalen Speicher deines Browsers gespeichert. Wir verwenden keine Analyse- oder Werbe-Cookies.",
+           "Download von Ressourcen (Leitfäden, Checklisten und Vorlagen auf ozmetra.com/recursos): deine geschäftliche E-Mail-Adresse, die heruntergeladene Ressource und, wenn du das optionale Feld ankreuzt, deine Einwilligung, neue Ressourcen per E-Mail zu erhalten.",
+           "Website-Einstellungen: die gewählte Sprache und das Farbschema, bereits freigeschaltete Ressourcen und deine Antworten in den Checklisten werden nur im lokalen Speicher deines Browsers gespeichert; sie erreichen uns nicht. Wir verwenden keine Analyse- oder Werbe-Cookies.",
            "Technische Daten: Wenn Schriften und Icons der Website von Servern Dritter (Google Fonts und unpkg) geladen werden, erhalten diese Anbieter deine IP-Adresse."],
         ]},
         { h: "Wofür wir sie verwenden", b: [
-          ["um deine Eintragung in die Warteliste zu verwalten und dich zu benachrichtigen, sobald der Dienst verfügbar ist;", "um dir relevante Informationen zum Start zu senden;", "um deine Rückrufanfrage über unser Kundeninformationsteam zu bearbeiten;", "um den ersten Hinweis, den wir dir zeigen, an deine Antworten im Schnelltest anzupassen;", "um die Website in der gewählten Sprache korrekt anzuzeigen."],
+          ["um deine Eintragung in die Warteliste zu verwalten und dich zu benachrichtigen, sobald der Dienst verfügbar ist;", "um dir relevante Informationen zum Start zu senden;","um dir Zugang zur heruntergeladenen Ressource zu geben und zu erfahren, welche Artikel unseres Blogs am meisten interessieren;","nur wenn du das optionale Feld ankreuzt, um dir neue Leitfäden und Vorlagen per E-Mail zu senden, höchstens zweimal im Monat (du kannst dich jederzeit abmelden, indem du uns schreibst oder direkt über die E-Mail);", "um deine Rückrufanfrage über unser Kundeninformationsteam zu bearbeiten;", "um den ersten Hinweis, den wir dir zeigen, an deine Antworten im Schnelltest anzupassen;", "um die Website in der gewählten Sprache korrekt anzuzeigen."],
           "Wir treffen auf Grundlage dieser Daten keine automatisierten Entscheidungen mit rechtlicher Wirkung für dich.",
         ]},
         { h: "Rechtsgrundlage", b: [
-          ["Einwilligung (Art. 6 Abs. 1 lit. a DSGVO): wenn du das Zustimmungsfeld ankreuzt und das Formular für die Warteliste oder die Rückrufanfrage absendest. Du kannst sie jederzeit widerrufen.", "Vorvertragliche Maßnahmen auf deine Anfrage (Art. 6 Abs. 1 lit. b DSGVO): wenn du uns bittest, dich wegen des Dienstes anzurufen.", "Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO): um die technischen Ressourcen zu laden, die für die korrekte Anzeige der Website erforderlich sind."],
+          ["Einwilligung (Art. 6 Abs. 1 lit. a DSGVO): wenn du das Zustimmungsfeld ankreuzt und das Formular für die Warteliste, die Rückrufanfrage oder den Download einer Ressource absendest, und gesondert, wenn du das optionale Feld für neue Ressourcen per E-Mail ankreuzt. Du kannst jede Einwilligung jederzeit widerrufen, ohne dass dies die andere berührt.", "Vorvertragliche Maßnahmen auf deine Anfrage (Art. 6 Abs. 1 lit. b DSGVO): wenn du uns bittest, dich wegen des Dienstes anzurufen.", "Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO): um die technischen Ressourcen zu laden, die für die korrekte Anzeige der Website erforderlich sind."],
         ]},
         { h: "Wie lange wir sie speichern", b: [
-          "Daten der Warteliste speichern wir, solange du eingetragen bist oder bis du deine Einwilligung widerrufst. Daten aus Rückrufanfragen werden so lange gespeichert, wie es für die Bearbeitung nötig ist, und danach gelöscht, sofern aus dem Anruf keine Vertragsbeziehung entsteht.",
+          "Daten der Warteliste und der Ressourcen-Downloads speichern wir, solange du eingetragen bist oder bis du deine Einwilligung widerrufst. Widerrufst du nur die Einwilligung zum Erhalt von Ressourcen per E-Mail, senden wir dir keine mehr und behalten den Rest. Daten aus Rückrufanfragen werden so lange gespeichert, wie es für die Bearbeitung nötig ist, und danach gelöscht, sofern aus dem Anruf keine Vertragsbeziehung entsteht.",
           "Anschließend können die Daten für die geltenden gesetzlichen Fristen gesperrt aufbewahrt werden, um mögliche Haftungsansprüche zu erfüllen.",
         ]},
         { h: "An wen wir sie weitergeben", b: [
           "Wir verkaufen deine Daten nicht. Dienstleister, die für uns tätig sind (zum Beispiel Webhosting, E-Mail-Versand oder Verwaltungstools), können als Auftragsverarbeiter vertraglich gebunden und nur zur Erbringung dieser Leistungen darauf zugreifen:",
-          ["Supabase, Inc.: die Datenbank, in der Wartelisten-Eintragungen und Rückrufanfragen gespeichert werden, auf Servern in der Europäischen Union (Irland).", "{{PROVIDERS}}"],
+          ["Supabase, Inc.: die Datenbank, in der Wartelisten-Eintragungen, Rückrufanfragen und Ressourcen-Downloads gespeichert werden, auf Servern in der Europäischen Union (Irland).", "{{PROVIDERS}}"],
           "Bei einer gesetzlichen Verpflichtung können wir sie auch an Behörden weitergeben.",
         ]},
         { h: "Internationale Übermittlungen", b: [
@@ -779,23 +783,24 @@ window.LEGAL = {
           "Raccogliamo solo i dati che ci fornisci direttamente o che sono necessari per visualizzare il sito web:",
           ["Lista d'attesa: la tua email di lavoro e, facoltativamente, il nome della tua azienda, il tuo ruolo e le risposte al test rapido (fase, dimensione del team e principale difficoltà).",
            "Richiesta di chiamata: il tuo nome, il numero di telefono con prefisso e la fascia oraria preferita.",
-           "Preferenze del sito: la lingua scelta viene salvata nella memoria locale del browser. Non utilizziamo cookie di analisi né pubblicitari.",
+           "Download di risorse (guide, checklist e modelli su ozmetra.com/recursos): la tua email di lavoro, la risorsa scaricata e, se selezioni la casella facoltativa, il consenso a ricevere nuove risorse via email.",
+           "Preferenze del sito: la lingua e il tema scelti, le risorse già sbloccate e le risposte alle checklist vengono salvati solo nella memoria locale del browser; non ci arrivano. Non utilizziamo cookie di analisi né pubblicitari.",
            "Dati tecnici: quando i caratteri e le icone del sito vengono caricati da server di terzi (Google Fonts e unpkg), tali fornitori ricevono il tuo indirizzo IP."],
         ]},
         { h: "Per cosa li utilizziamo", b: [
-          ["gestire la tua iscrizione alla lista d'attesa e avvisarti quando il Servizio sarà disponibile;", "inviarti informazioni rilevanti sul lancio;", "gestire la tua richiesta di chiamata tramite il nostro team informazioni clienti;", "adattare il primo indizio che ti mostriamo in base alle risposte al test rapido;", "visualizzare correttamente il sito nella lingua scelta."],
+          ["gestire la tua iscrizione alla lista d'attesa e avvisarti quando il Servizio sarà disponibile;", "inviarti informazioni rilevanti sul lancio;","darti accesso alla risorsa scaricata e capire quali articoli del nostro blog interessano di più;","solo se selezioni la casella facoltativa, inviarti via email nuove guide e modelli, al massimo due volte al mese (puoi annullare l'iscrizione in qualsiasi momento scrivendoci o dall'email stessa);", "gestire la tua richiesta di chiamata tramite il nostro team informazioni clienti;", "adattare il primo indizio che ti mostriamo in base alle risposte al test rapido;", "visualizzare correttamente il sito nella lingua scelta."],
           "Non adottiamo decisioni automatizzate che producano effetti giuridici nei tuoi confronti sulla base di questi dati.",
         ]},
         { h: "Base giuridica", b: [
-          ["Consenso (art. 6.1.a GDPR): quando selezioni la casella di accettazione e invii il modulo della lista d'attesa o della richiesta di chiamata. Puoi revocarlo in qualsiasi momento.", "Misure precontrattuali adottate su tua richiesta (art. 6.1.b GDPR): quando ci chiedi di chiamarti per avere informazioni sul Servizio.", "Legittimo interesse (art. 6.1.f GDPR): per caricare le risorse tecniche necessarie a visualizzare correttamente il sito."],
+          ["Consenso (art. 6.1.a GDPR): quando selezioni la casella di accettazione e invii il modulo della lista d'attesa, della richiesta di chiamata o del download di una risorsa e, separatamente, quando selezioni la casella facoltativa per ricevere nuove risorse via email. Puoi revocare ciascun consenso in qualsiasi momento, senza effetti sull'altro.", "Misure precontrattuali adottate su tua richiesta (art. 6.1.b GDPR): quando ci chiedi di chiamarti per avere informazioni sul Servizio.", "Legittimo interesse (art. 6.1.f GDPR): per caricare le risorse tecniche necessarie a visualizzare correttamente il sito."],
         ]},
         { h: "Per quanto tempo li conserviamo", b: [
-          "Conserviamo i dati della lista d'attesa finché resti iscritto o fino alla revoca del consenso. I dati delle richieste di chiamata sono conservati per il tempo necessario a gestirle e poi cancellati, salvo che dalla chiamata nasca un rapporto contrattuale.",
+          "Conserviamo i dati della lista d'attesa e dei download di risorse finché resti iscritto o fino alla revoca del consenso. Se revochi solo il consenso a ricevere risorse via email, smetteremo di inviartele e conserveremo il resto. I dati delle richieste di chiamata sono conservati per il tempo necessario a gestirle e poi cancellati, salvo che dalla chiamata nasca un rapporto contrattuale.",
           "Successivamente, i dati possono essere conservati in forma bloccata per i periodi previsti dalla legge, al fine di far fronte a eventuali responsabilità.",
         ]},
         { h: "Con chi li condividiamo", b: [
           "Non vendiamo i tuoi dati. I fornitori che ci prestano servizi (ad esempio hosting web, invio di email o strumenti di gestione) possono accedervi in qualità di responsabili del trattamento, sulla base di un contratto e solo per fornirci tali servizi:",
-          ["Supabase, Inc.: il database in cui vengono salvate le iscrizioni alla lista d'attesa e le richieste di chiamata, su server nell'Unione europea (Irlanda).", "{{PROVIDERS}}"],
+          ["Supabase, Inc.: il database in cui vengono salvate le iscrizioni alla lista d'attesa, le richieste di chiamata e i download di risorse, su server nell'Unione europea (Irlanda).", "{{PROVIDERS}}"],
           "Possiamo inoltre comunicarli alle autorità pubbliche in presenza di un obbligo di legge.",
         ]},
         { h: "Trasferimenti internazionali", b: [

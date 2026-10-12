@@ -340,7 +340,8 @@
 
   /* ---------- Forms: saved in Supabase (project Landing_page_v1) ---------- */
   // The publishable key is meant to live in the browser. The tables are closed to it;
-  // it can only call the two validating functions join_waitlist and request_call.
+  // it can only call the validating functions join_waitlist, request_call and
+  // download_resource (the last one from the Recursos pages, see recursos.js).
   const SUPABASE_URL = "https://oobfyooytxscmqkrwemj.supabase.co";
   const SUPABASE_KEY = "sb_publishable_WlHIirz5kR1zG_LIIwNTRw_or0vUlkf";
   async function rpc(fn, args) {
@@ -356,6 +357,22 @@
       if (!res.ok) throw new Error(`${fn} ${res.status}`);
     } finally {
       clearTimeout(timer);
+    }
+  }
+  // Article of the Recursos section (ozmetra.com/recursos/) that brought the visitor:
+  // recursos.js keeps the first one of the visit; the blog's CTA also tags the URL.
+  const blogArticle = (() => {
+    const q = new URLSearchParams(location.search);
+    let v = q.get("utm_source") === "blog" ? q.get("utm_campaign") : null;
+    try { v = sessionStorage.getItem("ozmetra-articulo") || v; } catch { /* private mode */ }
+    return v && v !== "recursos" && /^[a-z0-9-]{1,120}$/.test(v) ? v : null;
+  })();
+  async function joinWaitlist(args) {
+    if (!blogArticle) return rpc("join_waitlist", args);
+    try {
+      await rpc("join_waitlist", { ...args, p_article: blogArticle });
+    } catch {
+      await rpc("join_waitlist", args); // never lose a sign-up over the attribution
     }
   }
   function setLoading(btn, on) {
@@ -395,7 +412,7 @@
     consent.removeAttribute("aria-invalid");
     setLoading(btn, true);
     try {
-      await rpc("join_waitlist", {
+      await joinWaitlist({
         p_email: v, p_company: "", p_role: "", p_lang: lang,
         p_quiz_phase: "", p_quiz_size: "", p_quiz_pain: "", p_source: "hero", p_consent: true,
       });
@@ -425,7 +442,7 @@
     if (!consent.checked) return fieldError(consent, consentErr, "err.consent");
     setLoading(btn, true);
     try {
-      await rpc("join_waitlist", {
+      await joinWaitlist({
         p_email: v, p_company: $("#wl-company").value, p_role: $("#wl-role").value, p_lang: lang,
         // The quick self-check answers travel with the sign-up ("we keep your first hint")
         p_quiz_phase: answers.phase, p_quiz_size: answers.size, p_quiz_pain: answers.pain,
