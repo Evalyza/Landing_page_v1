@@ -19,7 +19,7 @@ import { readArticles, writeSitemap } from "./recursos-lib.mjs";
 
 // ---- Change this when the final domain is known (no trailing slash) ----
 const SITE_URL = process.env.SITE_URL || "https://ozmetra.com";
-const VERSION = "16"; // cache-busting for styles/scripts
+const VERSION = "17"; // cache-busting for styles/scripts
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "diseno-landing");

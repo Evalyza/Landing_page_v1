@@ -393,41 +393,108 @@
   };
   const clearError = (input, errEl) => { input.removeAttribute("aria-invalid"); errEl.textContent = ""; };
 
-  const hero = $("[data-join]");
-  hero.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const input = $("input", hero), msg = $(".field-msg", hero), btn = $("button", hero);
-    const v = input.value.trim();
-    msg.className = "field-msg";
-    if (!EMAIL_RE.test(v)) {
-      msg.classList.add("is-error");
-      return fieldError(input, msg, v ? "err.emailBad" : "err.emailEmpty");
-    }
-    input.removeAttribute("aria-invalid");
-    const consent = $("[name=consent]", hero);
-    if (!consent.checked) {
-      msg.classList.add("is-error");
-      return fieldError(consent, msg, "err.consent");
-    }
-    consent.removeAttribute("aria-invalid");
-    setLoading(btn, true);
-    try {
-      await joinWaitlist({
-        p_email: v, p_company: "", p_role: "", p_lang: lang,
-        p_quiz_phase: "", p_quiz_size: "", p_quiz_pain: "", p_source: "hero", p_consent: true,
-      });
-    } catch {
-      setLoading(btn, false);
-      msg.classList.add("is-error");
-      msg.textContent = t("err.send");
-      return;
-    }
-    setLoading(btn, false);
-    msg.classList.add("is-ok");
-    msg.textContent = t("ok.hero");
-    input.value = "";
-    consent.checked = false;
+  /* ---------- Hero prompt box: the first request travels to the sign-up form ---------- */
+  const promptForm = $("[data-prompt]");
+  const promptInput = $("[data-prompt-input]");
+  const wlPromptField = $("[data-wl-prompt]");
+  const wlPrompt = $("#wl-prompt");
+
+  // Typewriter placeholder cycling through example requests while the box is empty
+  let typeTimer = null;
+  function stopTyping() { clearTimeout(typeTimer); typeTimer = null; }
+  function startTyping() {
+    stopTyping();
+    const examples = t("prompt.examples");
+    if (reduceMotion || !Array.isArray(examples)) { promptInput.placeholder = t("prompt.ph"); return; }
+    let i = 0, n = 0, deleting = false;
+    const tick = () => {
+      if (promptInput.value || document.activeElement === promptInput) { promptInput.placeholder = examples[i]; return stopTyping(); }
+      const text = examples[i];
+      n += deleting ? -1 : 1;
+      promptInput.placeholder = text.slice(0, n);
+      let wait = deleting ? 18 : 38;
+      if (!deleting && n >= text.length) { deleting = true; wait = 2200; }
+      else if (deleting && n <= 0) { deleting = false; i = (i + 1) % examples.length; wait = 350; }
+      typeTimer = setTimeout(tick, wait);
+    };
+    typeTimer = setTimeout(tick, 600);
+  }
+  promptInput.addEventListener("focus", stopTyping);
+  promptInput.addEventListener("blur", () => { if (!promptInput.value) startTyping(); });
+  onLang(startTyping);
+  startTyping();
+
+  // Chips fill the box with a ready-made request
+  $$("[data-fill]", promptForm).forEach((chip) => chip.addEventListener("click", () => {
+    stopTyping();
+    promptInput.value = t(`prompt.fill.${chip.dataset.fill}`);
+    promptInput.focus();
+    promptInput.setSelectionRange(promptInput.value.length, promptInput.value.length);
+  }));
+
+  // Enter sends, Shift+Enter adds a line (like any chat box)
+  promptInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); promptForm.requestSubmit(); }
   });
+
+  promptForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const v = promptInput.value.trim();
+    wlPrompt.value = v;
+    wlPromptField.hidden = !v;
+    tabs.select("waitlist");
+    $("#lista").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    // Focus once the scroll has settled so the page doesn't jump back
+    setTimeout(() => $("#wl-email").focus({ preventScroll: true }), reduceMotion ? 0 : 650);
+  });
+
+  /* ---------- Product video: lazy, looping, chapters follow playback ---------- */
+  const demo = $("[data-demo]");
+  const video = $("[data-demo-video]");
+  const demoToggle = $("[data-demo-toggle]");
+  const chapters = $$("[data-demo-chapters] button");
+  let userPaused = reduceMotion; // reduced motion: poster until the visitor presses play
+  const setToggle = () => {
+    const playing = !video.paused;
+    demo.classList.toggle("is-playing", playing);
+    demoToggle.setAttribute("aria-label", t(playing ? "demo.pause" : "demo.play"));
+    demoToggle.dataset.i18nAria = playing ? "demo.pause" : "demo.play";
+  };
+  const loadVideo = () => {
+    if (video.dataset.loaded) return;
+    video.dataset.loaded = "1";
+    $$("source", video).forEach((s) => (s.src = s.dataset.src));
+    video.load();
+  };
+  const play = () => { loadVideo(); video.play().catch(() => setToggle()); };
+  ["play", "pause"].forEach((ev) => video.addEventListener(ev, setToggle));
+  onLang(setToggle);
+  demoToggle.addEventListener("click", () => {
+    if (video.paused) { userPaused = false; play(); } else { userPaused = true; video.pause(); }
+  });
+  // Only plays while on screen; never downloads before the visitor gets near it
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { if (!userPaused) play(); else loadVideo(); }
+    else if (!video.paused) video.pause();
+  }, { threshold: 0.35 }).observe(video);
+
+  const chapterAt = (time) => chapters.findLastIndex((b) => time >= +b.dataset.t);
+  video.addEventListener("timeupdate", () => {
+    const now = video.currentTime;
+    const cur = chapterAt(now);
+    chapters.forEach((b, i) => {
+      const from = +b.dataset.t, to = +b.dataset.end;
+      b.toggleAttribute("aria-current", i === cur);
+      b.style.setProperty("--p", i < cur ? 1 : i > cur ? 0 : Math.min(1, (now - from) / (to - from)).toFixed(3));
+    });
+  });
+  chapters.forEach((b) => b.addEventListener("click", () => {
+    loadVideo();
+    const seek = () => { video.currentTime = +b.dataset.t + 0.05; };
+    video.readyState >= 1 ? seek() : video.addEventListener("loadedmetadata", seek, { once: true });
+    userPaused = false;
+    play();
+  }));
 
   const wl = $("[data-waitlist]");
   const wlForm = $("[data-waitlist-form]");
@@ -447,6 +514,7 @@
         // The quick self-check answers travel with the sign-up ("we keep your first hint")
         p_quiz_phase: answers.phase, p_quiz_size: answers.size, p_quiz_pain: answers.pain,
         p_source: "waitlist", p_consent: true,
+        ...(wlPrompt.value.trim() && { p_prompt: wlPrompt.value.trim() }),
       });
     } catch {
       setLoading(btn, false);
