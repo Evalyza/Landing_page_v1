@@ -478,10 +478,33 @@
     else if (!video.paused) video.pause();
   }, { threshold: 0.35 }).observe(video);
 
+  // Texts taken from list entries (iso.docs.*, mat.levels.*) and the "Nivel {n}" label
+  const fillDemoTexts = () => {
+    $$("[data-i18n-arr]", demo).forEach((n) => {
+      const [key, i, prop] = n.dataset.i18nArr.split(":");
+      const item = t(key)?.[+i];
+      if (item) n.textContent = prop ? item[prop] : item;
+    });
+    $$("[data-i18n-lvl]", demo).forEach((n) => (n.textContent = t("mat.lvl", { n: n.dataset.i18nLvl })));
+  };
+  fillDemoTexts();
+  onLang(fillDemoTexts);
+
+  // The side card shows the data of the chapter playing on the phone
+  const cards = $$("[data-card]", demo);
+  let shownCard = 0;
+  const showCard = (i) => {
+    if (i === shownCard || !cards[i]) return;
+    cards[shownCard].hidden = true;
+    cards[i].hidden = false;
+    shownCard = i;
+  };
+
   const chapterAt = (time) => chapters.findLastIndex((b) => time >= +b.dataset.t);
   video.addEventListener("timeupdate", () => {
     const now = video.currentTime;
     const cur = chapterAt(now);
+    showCard(cur);
     chapters.forEach((b, i) => {
       const from = +b.dataset.t, to = +b.dataset.end;
       b.toggleAttribute("aria-current", i === cur);

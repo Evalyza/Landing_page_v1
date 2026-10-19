@@ -44,7 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="stylesheet" href="../styles.css?v=17">
+  <link rel="stylesheet" href="../styles.css?v=18">
   <script>var t;try{t=localStorage.getItem("ozmetra-theme")}catch(e){}if(t!=="dark")document.documentElement.dataset.theme="light"</script>
   <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -191,33 +191,79 @@
   <section class="section demo" id="demo" aria-labelledby="demo-h2">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow" data-i18n="demo.eyebrow">Das Produkt in 35 Sekunden</p>
+        <p class="eyebrow" data-i18n="demo.eyebrow">Das Produkt in 40 Sekunden</p>
         <h2 id="demo-h2" data-i18n="demo.h2">Sieh Ozmetra bei der Arbeit zu</h2>
-        <p data-i18n="demo.p">Aufgenommen in unserer Software mit den Beispieldaten von Rutalia Solutions: Die Agenten stellen die Diagnose, der Dokumentalist schreibt die ISO-Unterlagen und der Bericht ist bereit für Investoren.</p>
+        <p data-i18n="demo.p">Aufgenommen in unserer Software mit den Beispieldaten von Rutalia Solutions. Funktioniert auf dem Handy genauso wie am Computer.</p>
       </div>
 
-      <div class="demo-frame" data-demo>
-        <div class="demo-chrome">
-          <span class="demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="demo-title"><img src="../assets/ozmetra-icono-app.svg" alt="">Ozmetra</span>
-          <span class="tag tag-sample" data-i18n="tag.sample">Beispieldaten</span>
-        </div>
-        <div class="demo-screen">
-          <video data-demo-video muted loop playsinline preload="none" width="1280" height="800" poster="assets/video/ozmetra-demo-poster.jpg" data-i18n-aria="demo.aria" aria-label="Video ohne Ton: Rundgang durch die Ozmetra-Software mit Beispieldaten">
-            <source data-src="../assets/video/ozmetra-demo.webm" type="video/webm">
-            <source data-src="../assets/video/ozmetra-demo.mp4" type="video/mp4">
-          </video>
+      <div class="showcase" data-demo>
+        <!-- Floating labels (decorative, like the product's main areas) -->
+        <ul class="float-tags" aria-hidden="true">
+          <li style="--x:2%;--y:8%;--d:0s"><i class="ph ph-pulse"></i><span data-i18n="demo.tag.1">KI-Diagnose</span></li>
+          <li style="--x:18%;--y:30%;--d:-1.4s" class="is-soft"><i class="ph ph-users-three"></i><span data-i18n="demo.tag.2">4 Agenten</span></li>
+          <li style="--x:0%;--y:50%;--d:-2.6s"><i class="ph ph-seal-check"></i><span data-i18n="demo.tag.3">ISO 9001</span></li>
+          <li style="--x:20%;--y:72%;--d:-0.8s" class="is-soft"><i class="ph ph-list-checks"></i><span data-i18n="demo.tag.5">Verbesserungsplan</span></li>
+          <li style="--x:4%;--y:90%;--d:-2s" class="is-accent"><i class="ph ph-briefcase"></i><span data-i18n="demo.tag.6">Bereit für Investoren</span></li>
+        </ul>
+
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-status" aria-hidden="true">
+              <span class="phone-time">9:41</span>
+              <span class="phone-island"></span>
+              <span class="phone-icons"><i class="ph-bold ph-cell-signal-high"></i><i class="ph-bold ph-wifi-high"></i><i class="ph-bold ph-battery-full"></i></span>
+            </div>
+            <video data-demo-video muted loop playsinline preload="none" width="780" height="1688" poster="assets/video/ozmetra-phone-poster.jpg" data-i18n-aria="demo.aria" aria-label="Video ohne Ton: Rundgang durch die Ozmetra-Software mit Beispieldaten">
+              <source data-src="../assets/video/ozmetra-phone.webm" type="video/webm">
+              <source data-src="../assets/video/ozmetra-phone.mp4" type="video/mp4">
+            </video>
+          </div>
           <button class="demo-toggle" type="button" data-demo-toggle data-i18n-aria="demo.pause" aria-label="Video pausieren">
             <i class="ph-bold ph-pause" aria-hidden="true"></i><i class="ph-bold ph-play" aria-hidden="true"></i>
           </button>
         </div>
+
+        <!-- Side card: follows the chapter playing on the phone -->
+        <div class="side-cards" aria-live="off">
+          <article class="side-card" data-card="0">
+            <header><span data-i18n="demo.card.score">Gesamtwert</span><span class="tag tag-sample-light" data-i18n="tag.example">Beispiel</span></header>
+            <p class="sc-big"><span class="mono">60</span><small class="mono">/100</small></p>
+            <p class="sc-note" data-i18n="demo.card.scoreNote">Über dem Erwartungswert für Seed (56)</p>
+            <div class="sc-trend" aria-hidden="true"><i style="--h:52%"></i><i style="--h:62%"></i><i style="--h:72%"></i><i class="is-now" style="--h:86%"></i></div>
+          </article>
+          <article class="side-card" data-card="1" hidden>
+            <header><span data-i18n="demo.card.agents">Agenten bei der Arbeit</span><span class="sc-live"><i></i><span data-i18n="demo.card.live">Live</span></span></header>
+            <ul class="sc-agents">
+              <li><i class="ph ph-microphone"></i><span><b data-i18n="agent.interviewer">Interviewer</b><small data-i18n="demo.st.1">2 von 4 Interviews</small></span></li>
+              <li class="is-on"><i class="ph ph-files"></i><span><b data-i18n="agent.reader">Leser</b><small data-i18n="demo.st.2">Liest Quellen</small></span></li>
+              <li><i class="ph ph-graph"></i><span><b data-i18n="agent.analyst">Analyst</b><small data-i18n="demo.st.3">Bewertet Nachweise</small></span></li>
+              <li><i class="ph ph-list-checks"></i><span><b data-i18n="agent.advisor">Berater</b><small data-i18n="demo.st.4">Erstellt den Plan</small></span></li>
+            </ul>
+          </article>
+          <article class="side-card" data-card="2" hidden>
+            <header><span>ISO 9001 · <span data-i18n="iso.n.9001">Qualitätsmanagement</span></span></header>
+            <div class="sc-meter"><span data-i18n="iso.ready">Audit-Bereitschaft</span><b class="mono">64 %</b></div>
+            <div class="sc-bar" aria-hidden="true"><i style="--v:64%"></i></div>
+            <ul class="sc-docs">
+              <li><i class="ph ph-check-circle"></i><span data-i18n-arr="iso.docs.9001:0">Alcance del sistema de gestión</span><span class="tag tag-light-ok" data-i18n="iso.st.done">Fertig</span></li>
+              <li><i class="ph ph-pencil-simple"></i><span data-i18n-arr="iso.docs.9001:5">Auditoría interna</span><span class="tag tag-light-watch" data-i18n="iso.st.draft">Entwurf</span></li>
+              <li><i class="ph ph-circle-dashed"></i><span data-i18n-arr="iso.docs.9001:6">Revisión por la dirección</span><span class="tag tag-sample-light" data-i18n="iso.st.todo">Offen</span></li>
+            </ul>
+          </article>
+          <article class="side-card" data-card="3" hidden>
+            <header><span data-i18n="demo.card.level">Erreichtes Niveau</span></header>
+            <p class="sc-level"><span data-i18n-lvl="1">Nivel 1</span> · <span data-i18n-arr="mat.levels.startup:0:n">Emergente</span></p>
+            <div class="sc-steps" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+            <div class="sc-steps-labels"><span data-i18n-arr="mat.levels.startup:0:n">Emergente</span><span data-i18n-arr="mat.levels.startup:1:n">Esencial</span><span data-i18n-arr="mat.levels.startup:2:n">Óptimo</span><span data-i18n-arr="mat.levels.startup:3:n">Premium</span></div>
+          </article>
+        </div>
       </div>
 
       <ol class="demo-chapters" data-demo-chapters data-i18n-aria="demo.chapters" aria-label="Videokapitel">
-        <li><button type="button" data-t="0" data-end="5"><span class="ch-num mono">01</span><span class="ch-name" data-i18n="demo.ch.1">Überblick</span><span class="ch-bar" aria-hidden="true"><i></i></span></button></li>
-        <li><button type="button" data-t="5" data-end="20"><span class="ch-num mono">02</span><span class="ch-name" data-i18n="demo.ch.2">Agenten im Einsatz</span><span class="ch-bar" aria-hidden="true"><i></i></span></button></li>
-        <li><button type="button" data-t="20" data-end="30"><span class="ch-num mono">03</span><span class="ch-name" data-i18n="demo.ch.3">ISO-Normen</span><span class="ch-bar" aria-hidden="true"><i></i></span></button></li>
-        <li><button type="button" data-t="30" data-end="35.6"><span class="ch-num mono">04</span><span class="ch-name" data-i18n="demo.ch.4">Reifegrad</span><span class="ch-bar" aria-hidden="true"><i></i></span></button></li>
+        <li><button type="button" data-t="0" data-end="7.79"><span class="ch-num mono">01</span><span class="ch-name" data-i18n="demo.ch.1">Überblick</span><span class="ch-bar" aria-hidden="true"><i></i></span></button></li>
+        <li><button type="button" data-t="7.79" data-end="19.83"><span class="ch-num mono">02</span><span class="ch-name" data-i18n="demo.ch.2">Agenten im Einsatz</span><span class="ch-bar" aria-hidden="true"><i></i></span></button></li>
+        <li><button type="button" data-t="19.83" data-end="31.4"><span class="ch-num mono">03</span><span class="ch-name" data-i18n="demo.ch.3">ISO-Normen</span><span class="ch-bar" aria-hidden="true"><i></i></span></button></li>
+        <li><button type="button" data-t="31.4" data-end="39.45"><span class="ch-num mono">04</span><span class="ch-name" data-i18n="demo.ch.4">Reifegrad</span><span class="ch-bar" aria-hidden="true"><i></i></span></button></li>
       </ol>
 
       <div class="demo-cta">
@@ -778,8 +824,8 @@
   </div>
 </footer>
 
-<script src="../i18n.js?v=17"></script>
-<script src="../app.js?v=17"></script>
-<script src="../theme.js?v=17"></script>
+<script src="../i18n.js?v=18"></script>
+<script src="../app.js?v=18"></script>
+<script src="../theme.js?v=18"></script>
 </body>
 </html>
