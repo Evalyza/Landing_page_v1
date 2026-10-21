@@ -41,7 +41,9 @@
       "respuesta": "Una data room permite dar permisos por carpeta y por persona, registra quién ha visto cada documento y facilita retirar el acceso al terminar. Una carpeta compartida normal no suele ofrecer ese control. En rondas pequeñas puede bastar una carpeta bien ordenada, pero en operaciones grandes el inversor suele esperar una data room."
     }
   ],
-  "relacionados": [],
+  "relacionados": [
+    "escalar-procesos-startup"
+  ],
   "recurso": {
     "tipo": "checklist",
     "titulo": "Checklist de due diligence operativa: puntuación de preparación por áreas",
