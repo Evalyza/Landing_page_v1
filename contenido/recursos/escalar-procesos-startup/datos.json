@@ -1,0 +1,256 @@
+{
+  "slug": "escalar-procesos-startup",
+  "titulo": "Cómo escalar los procesos de una startup sin llenarla de burocracia",
+  "tituloSeo": "Cómo escalar procesos en una startup sin burocracia",
+  "descripcion": "Cómo escalar procesos en una startup de 10 a 50 personas: qué formalizar primero, con cuánto detalle y un plan de 30 días, con plantilla gratis.",
+  "entradilla": "Qué procesos formalizar primero al pasar de 10 a 50 personas, cuánto detalle necesita cada uno y un plan de 30 días para empezar, con una plantilla de mapa de procesos descargable.",
+  "tema": "escalar",
+  "pilar": true,
+  "palabraClave": "cómo escalar procesos en una startup",
+  "palabrasSecundarias": [
+    "escalar procesos startup",
+    "procesos startup",
+    "escalabilidad de procesos"
+  ],
+  "autor": "angel",
+  "publicado": "2026-10-21",
+  "actualizado": "2026-10-21",
+  "faq": [
+    {
+      "pregunta": "¿Qué significa que un proceso sea escalable?",
+      "respuesta": "Que puede asumir más volumen sin necesitar proporcionalmente más personas ni más esfuerzo, que no depende de una sola persona y que da el mismo resultado lo haga quien lo haga."
+    },
+    {
+      "pregunta": "¿Cuándo debe una startup empezar a formalizar sus procesos?",
+      "respuesta": "Cuando aparecen las primeras señales de que el crecimiento cuesta más de lo que debería: tareas que dependen de una persona, onboardings largos o errores que se repiten. En muchas startups ocurre entre las 10 y las 25 personas, a menudo justo después de levantar una ronda."
+    },
+    {
+      "pregunta": "¿Qué procesos hay que documentar primero?",
+      "respuesta": "Los que harían daño si fallaran delante de un cliente o un inversor y los que hoy dependen de una sola persona. Suelen ser el alta de clientes, la facturación y el cobro, la contratación e incorporación, la entrada de trabajo a producto y las ventas."
+    },
+    {
+      "pregunta": "¿Formalizar procesos no crea burocracia?",
+      "respuesta": "Solo si se formaliza de más. Con una ficha de una página por proceso crítico, un dueño y una revisión trimestral, los procesos quitan trabajo en lugar de añadirlo. El marco LightStartup, por ejemplo, propone un 34 % menos de procesos que su versión para pymes."
+    },
+    {
+      "pregunta": "¿Qué herramienta uso para documentar los procesos?",
+      "respuesta": "En esta fase sirve casi cualquiera: Notion, Confluence, Google Drive o una wiki interna. Lo importante es que haya un único sitio, que todo el mundo sepa dónde buscar y que cada documento tenga un responsable."
+    },
+    {
+      "pregunta": "¿Conviene automatizar los procesos desde el principio?",
+      "respuesta": "No. Primero hay que hacerlos a mano, escribirlos y medirlos. Automatizar un proceso que no está claro solo hace que los errores ocurran más rápido; las partes repetitivas y estables son las que conviene automatizar primero."
+    }
+  ],
+  "relacionados": [
+    "checklist-due-diligence-operativa"
+  ],
+  "recurso": {
+    "tipo": "plantilla",
+    "titulo": "Plantilla de mapa de procesos para startups",
+    "descripcion": "Haz el inventario de tus procesos, decide cuáles son críticos y escribe cada uno en una página. Incluye el mapa de procesos, la ficha de una página y el plan de 30 días.",
+    "tablas": [
+      {
+        "titulo": "1. Mapa de procesos",
+        "descripcion": "Apunta todos tus procesos, aunque sean informales. Las filas son ejemplos: sustitúyelas por los tuyos.",
+        "columnas": [
+          "Proceso",
+          "Área",
+          "Dueño",
+          "Qué lo inicia",
+          "Qué produce",
+          "Herramienta",
+          "¿Está escrito?",
+          "Nivel (L0-L3)",
+          "¿Crítico?",
+          "Siguiente paso"
+        ],
+        "filas": [
+          [
+            "Ejemplo: alta de clientes",
+            "Clientes",
+            "Responsable de customer success",
+            "Firma del contrato",
+            "Cliente usando el producto",
+            "CRM + gestor de tareas",
+            "No",
+            "L1",
+            "Sí",
+            "Escribir la ficha esta semana"
+          ],
+          [
+            "Ejemplo: facturación y cobro",
+            "Finanzas",
+            "Responsable de finanzas",
+            "Cierre de mes",
+            "Facturas emitidas y cobradas",
+            "Herramienta de facturación",
+            "En parte",
+            "L1",
+            "Sí",
+            "Calendario de facturación y seguimiento de impagos"
+          ],
+          [
+            "Ejemplo: contratación",
+            "Personas",
+            "CEO",
+            "Vacante aprobada",
+            "Persona contratada",
+            "Hoja de candidatos",
+            "No",
+            "L1",
+            "Sí",
+            "Proceso común de selección"
+          ],
+          [
+            "Ejemplo: incorporación de empleados",
+            "Personas",
+            "Responsable de personas",
+            "Contrato firmado",
+            "Persona productiva en su puesto",
+            "Checklist en Notion",
+            "Sí",
+            "L2",
+            "Sí",
+            "Revisar con la última incorporación"
+          ],
+          [
+            "Ejemplo: entrada de peticiones a producto",
+            "Producto",
+            "Product manager",
+            "Petición de cliente o de ventas",
+            "Tarea priorizada en el backlog",
+            "Gestor de tareas",
+            "No",
+            "L0",
+            "Sí",
+            "Un único canal de entrada"
+          ],
+          [
+            "Ejemplo: despliegue a producción",
+            "Tecnología",
+            "CTO",
+            "Cambio aprobado",
+            "Versión publicada",
+            "Repositorio y CI",
+            "En parte",
+            "L1",
+            "Sí",
+            "Documentar y dar accesos a una segunda persona"
+          ],
+          [
+            "Ejemplo: aprobación de gastos",
+            "Finanzas",
+            "CEO",
+            "Solicitud de compra",
+            "Gasto aprobado o rechazado",
+            "Email",
+            "No",
+            "L0",
+            "No",
+            "Definir quién aprueba qué importe"
+          ],
+          [
+            "Ejemplo: reporting a inversores",
+            "Dirección",
+            "CEO",
+            "Fin de trimestre",
+            "Informe enviado",
+            "Hoja de cálculo",
+            "En parte",
+            "L1",
+            "No",
+            "Plantilla fija de métricas"
+          ]
+        ]
+      },
+      {
+        "titulo": "2. Ficha de proceso en una página",
+        "descripcion": "Rellena una ficha por cada proceso crítico. La columna de ejemplo usa el alta de clientes.",
+        "columnas": [
+          "Campo",
+          "Qué poner",
+          "Ejemplo: alta de clientes"
+        ],
+        "filas": [
+          [
+            "Objetivo",
+            "Para qué existe y qué resultado produce",
+            "Que el cliente use el producto con éxito en menos de 14 días desde la firma"
+          ],
+          [
+            "Disparador",
+            "Qué hace que empiece",
+            "Contrato firmado en el CRM"
+          ],
+          [
+            "Dueño",
+            "Una persona responsable de mantenerlo",
+            "Responsable de customer success"
+          ],
+          [
+            "Pasos",
+            "Entre 5 y 10, con quién hace cada uno",
+            "1. Llamada de bienvenida (CS). 2. Crear cuenta (CS). 3. Importar datos (soporte). 4. Formación (CS). 5. Revisión a los 14 días (CS)"
+          ],
+          [
+            "Herramientas",
+            "Dónde se hace",
+            "CRM, panel de administración, calendario"
+          ],
+          [
+            "Excepciones",
+            "Qué hacer en los casos raros más comunes",
+            "Si el cliente no aporta los datos en 5 días, aviso a su responsable comercial"
+          ],
+          [
+            "Cómo se mide",
+            "Uno o dos datos",
+            "Días desde la firma hasta el primer uso real; clientes que necesitan soporte extra"
+          ],
+          [
+            "Revisión",
+            "Cuándo se vuelve a mirar",
+            "Cada trimestre o cuando cambie el producto"
+          ]
+        ]
+      },
+      {
+        "titulo": "3. Plan de 30 días",
+        "descripcion": "El orden recomendado para empezar sin bloquear el día a día.",
+        "columnas": [
+          "Semana",
+          "Qué hacer",
+          "Entregable",
+          "Hecho"
+        ],
+        "filas": [
+          [
+            "1",
+            "Completar el mapa de procesos y marcar los críticos",
+            "Lista con dueño y nivel actual de cada proceso",
+            ""
+          ],
+          [
+            "2",
+            "Escribir la ficha de los tres procesos más urgentes",
+            "Tres fichas revisadas por quien hace el proceso",
+            ""
+          ],
+          [
+            "3",
+            "Probar cada ficha con otra persona y corregirla",
+            "Fichas validadas en un único sitio",
+            ""
+          ],
+          [
+            "4",
+            "Definir una métrica por proceso y fijar la revisión",
+            "Métricas, revisión trimestral y siguientes procesos",
+            ""
+          ]
+        ]
+      }
+    ],
+    "nota": "Puedes editar las celdas aquí mismo o descargar la plantilla y completarla en Excel o Google Sheets. Los niveles L0 a L3 siguen la escala de capacidad de la familia ISO/IEC 33000: incompleto, realizado, gestionado y establecido."
+  }
+}
