@@ -1310,3 +1310,37 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 @media (prefers-reduced-motion: reduce) {
   .float-tags li, .side-card, .sc-live i { animation: none; }
 }
+
+/* ---------- Program moments: selection, mentoring, continuity ---------- */
+.moments { padding-top: 0; }
+.moments-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: moment; }
+.moment {
+  position: relative; display: flex; flex-direction: column; gap: 14px;
+  padding: 28px 26px 30px; border-radius: var(--r-panel); background: var(--paper); border: 1px solid var(--line);
+}
+.moment-k { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); }
+.moment-k .ph { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: var(--lima); color: var(--tinta); font-size: 18px; }
+.moment h3 { font-size: 22px; line-height: 1.2; }
+.moment > p { margin: 0; color: var(--ink-soft); font-size: 15.5px; line-height: 1.55; }
+.moment ul { list-style: none; margin: auto 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+.moment ul li { position: relative; padding-left: 22px; font-size: 14.5px; line-height: 1.4; }
+.moment ul li::before { content: ""; position: absolute; left: 2px; top: 0.45em; width: 10px; height: 6px; border: 2px solid var(--lima); border-top: 0; border-right: 0; transform: rotate(-45deg); }
+
+.pilot {
+  margin-top: 16px; padding: clamp(28px, 4vw, 44px); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 40px; align-items: center;
+}
+.pilot h3 { margin-top: 14px; font-size: clamp(1.5rem, 2.4vw, 2rem); color: var(--on-tinta); }
+.pilot p { margin: 10px 0 0; color: var(--on-tinta-soft); max-width: 58ch; }
+.pilot-actions { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+.pilot .pilot-call { color: var(--on-tinta); border-color: var(--tinta-line); }
+@media (hover: hover) and (pointer: fine) { .pilot .pilot-call:hover { background: var(--tinta-2); border-color: var(--on-tinta-soft); } }
+
+:root[data-theme="light"] .moment { border-color: var(--line); }
+:root[data-theme="light"] .moment ul li::before { border-color: var(--tinta-3); }
+:root[data-theme="light"] .moment-k .ph { box-shadow: inset 0 0 0 1px rgba(15, 43, 36, 0.14); }
+:root[data-theme="light"] .pilot .pilot-call { border-color: var(--tinta-line); }
+
+@media (max-width: 900px) {
+  .moments-grid { grid-template-columns: 1fr; }
+  .pilot { grid-template-columns: 1fr; }
+}

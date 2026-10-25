@@ -23,9 +23,9 @@
       <img class="logo-on-dark" src="assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200"><img class="logo-on-light" src="assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200">
     </a>
     <ul class="nav-links">
+      <li><a href="#programa" data-i18n="nav.program">Tu programa</a></li>
       <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
       <li><a href="#framework" data-i18n="nav.framework">Framework</a></li>
-      <li><a href="#a-medida" data-i18n="nav.custom">A medida</a></li>
       <li><a href="#iso" data-i18n="nav.iso">Normas ISO</a></li>
       <li><a href="#faq" data-i18n="nav.faq">Preguntas</a></li>
       <!--RECURSOS-NAV-->
@@ -47,7 +47,7 @@
         </select>
         <i class="ph ph-caret-down" aria-hidden="true"></i>
       </label>
-      <a class="btn btn-dark btn-small nav-cta" href="#lista" data-open-tab="waitlist" data-i18n="cta.join">Empezar gratis</a>
+      <a class="btn btn-dark btn-small nav-cta" href="#lista" data-open-tab="waitlist" data-i18n="cta.nav">Empezar gratis</a>
     </div>
   </div>
 </header>
@@ -236,6 +236,48 @@
 
       <div class="demo-cta">
         <a class="btn btn-primary" href="#lista" data-open-tab="waitlist"><span data-i18n="cta.join">Empezar gratis</span> <i class="ph-bold ph-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM: selection, mentoring and continuity (accelerators, incubators, viveros) -->
+  <section class="section moments" id="programa" aria-labelledby="moment-h2">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="moment-h2" data-i18n="moment.h2">De la convocatoria al día después del programa</h2>
+        <p data-i18n="moment.p">El mismo análisis sirve a tu equipo para decidir y a cada startup para mejorar.</p>
+      </div>
+      <ol class="moments-grid">
+        <li class="moment">
+          <span class="moment-k"><i class="ph ph-funnel-simple" aria-hidden="true"></i><span data-i18n="moment.1.k">Antes · Selección</span></span>
+          <h3 data-i18n="moment.1.h">Elige con evidencias, no solo con el pitch</h3>
+          <p data-i18n="moment.1.p">Ozmetra analiza cómo funcionan por dentro las startups candidatas.</p>
+          <ul><li data-i18n="moment.1.pt1">El mismo criterio para todas las candidatas</li><li data-i18n="moment.1.pt2">Puntuación por área, ajustada a su fase</li><li data-i18n="moment.1.pt3">Riesgos detectados antes del comité</li></ul>
+        </li>
+        <li class="moment">
+          <span class="moment-k"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i><span data-i18n="moment.2.k">Durante · Mentoría</span></span>
+          <h3 data-i18n="moment.2.h">Mentorías que empiezan por lo importante</h3>
+          <p data-i18n="moment.2.p">Cada mentor llega sabiendo dónde flojea cada startup.</p>
+          <ul><li data-i18n="moment.2.pt1">Plan priorizado por impacto y esfuerzo</li><li data-i18n="moment.2.pt2">Cada hallazgo, con su fuente</li><li data-i18n="moment.2.pt3">Toda la cohorte en una vista</li></ul>
+        </li>
+        <li class="moment">
+          <span class="moment-k"><i class="ph ph-arrows-clockwise" aria-hidden="true"></i><span data-i18n="moment.3.k">Después · Continuidad</span></span>
+          <h3 data-i18n="moment.3.h">Lo trabajado no se queda en el programa</h3>
+          <p data-i18n="moment.3.p">Las startups pueden seguir usando Ozmetra con una implantación a su medida.</p>
+          <ul><li data-i18n="moment.3.pt1">Implantación adaptada a cada startup</li><li data-i18n="moment.3.pt2">Evaluación trimestral para medir el avance</li><li data-i18n="moment.3.pt3">Documentación ISO cuando la necesiten</li></ul>
+        </li>
+      </ol>
+
+      <div class="panel pilot">
+        <div>
+          <span class="tag tag-sample" data-i18n="pilot.badge">Fase MVP</span>
+          <h3 data-i18n="pilot.h">Pruébalo gratis con tu próxima convocatoria</h3>
+          <p data-i18n="pilot.p">Más que venderte un producto terminado, queremos que lo probéis sin coste y nos ayudéis a darle forma con vuestro feedback.</p>
+        </div>
+        <div class="pilot-actions">
+          <a class="btn btn-primary" href="#lista" data-open-tab="waitlist"><span data-i18n="cta.join">Solicitar piloto gratuito</span> <i class="ph-bold ph-arrow-right"></i></a>
+          <a class="btn btn-ghost pilot-call" href="#lista" data-open-tab="call"><i class="ph ph-phone"></i><span data-i18n="cta.call">Agendar una llamada</span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -592,9 +634,10 @@
             <fieldset class="q">
               <legend data-i18n="q.phase">¿En qué fase estáis?</legend>
               <div class="pills" data-q="phase">
-                <button type="button" aria-pressed="false" data-v="preseed" data-i18n="phase.preseed">Pre-seed</button>
-                <button type="button" aria-pressed="true" data-v="seed" data-i18n="phase.seed">Seed</button>
-                <button type="button" aria-pressed="false" data-v="seriea" data-i18n="phase.serieaPlus">Serie A o más</button>
+                <button type="button" aria-pressed="true" data-v="accel" data-i18n="prog.accel">Aceleradora</button>
+                <button type="button" aria-pressed="false" data-v="incub" data-i18n="prog.incub">Incubadora o vivero</button>
+                <button type="button" aria-pressed="false" data-v="uni" data-i18n="prog.uni">Universidad</button>
+                <button type="button" aria-pressed="false" data-v="corp" data-i18n="prog.corp">Corporate o fondo</button>
               </div>
             </fieldset>
             <fieldset class="q">
@@ -608,10 +651,10 @@
             <fieldset class="q">
               <legend data-i18n="q.pain">¿Qué os quita más tiempo?</legend>
               <div class="pills" data-q="pain">
-                <button type="button" aria-pressed="true" data-v="coord" data-i18n="pain.coord">Coordinarnos</button>
-                <button type="button" aria-pressed="false" data-v="sales" data-i18n="pain.sales">Cerrar ventas</button>
-                <button type="button" aria-pressed="false" data-v="hiring" data-i18n="pain.hiring">Contratar</button>
-                <button type="button" aria-pressed="false" data-v="report" data-i18n="pain.report">Reportar a inversores</button>
+                <button type="button" aria-pressed="true" data-v="select" data-i18n="pain.select">Elegir bien</button>
+                <button type="button" aria-pressed="false" data-v="follow" data-i18n="pain.follow">Seguir a la cohorte</button>
+                <button type="button" aria-pressed="false" data-v="impact" data-i18n="pain.impact">Demostrar impacto</button>
+                <button type="button" aria-pressed="false" data-v="time" data-i18n="pain.time">Ahorrar tiempo</button>
               </div>
             </fieldset>
           </div>
@@ -656,10 +699,10 @@
                 <div class="field">
                   <label for="wl-role" data-i18n="form.role">Tu rol</label>
                   <select id="wl-role" name="role">
-                    <option value="founder" data-i18n="role.1">Fundador o CEO</option>
-                    <option value="ops" data-i18n="role.2">Operaciones o COO</option>
-                    <option value="product" data-i18n="role.3">Producto o tecnología</option>
-                    <option value="investor" data-i18n="role.4">Aceleradora o inversor</option>
+                    <option value="director" data-i18n="role.1">Dirección del programa</option>
+                    <option value="analyst" data-i18n="role.2">Selección o inversión</option>
+                    <option value="mentor" data-i18n="role.3">Mentor</option>
+                    <option value="founder" data-i18n="role.4">Startup</option>
                     <option value="other" data-i18n="role.5">Otro</option>
                   </select>
                 </div>

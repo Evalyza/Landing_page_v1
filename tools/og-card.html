@@ -20,19 +20,27 @@
     <img class="logo" src="../diseno-landing/assets/ozmetra-logo-horizontal-blanco.svg" alt="">
     <h1 id="h"></h1>
     <p id="p"></p>
-    <div class="chips"><b>ISO 9001</b><b>ISO/IEC 20000-1</b><b>ISO/IEC 33000</b></div>
+    <div class="chips" id="c"></div>
   </div>
   <div class="mark"><img src="../diseno-landing/assets/ozmetra-simbolo-claro.svg" alt=""></div>
 <script>
   const T = {
-    es: ["Mira tu startup", "por dentro.", "Diagnóstico de procesos e ISO para startups y pymes"],
-    en: ["See your startup", "from the inside.", "Process diagnostics and ISO for startups and SMEs"],
-    fr: ["Voyez votre startup", "de l'intérieur.", "Diagnostic des processus et ISO pour startups et PME"],
-    de: ["Sieh dein Startup", "von innen.", "Prozessdiagnose und ISO für Startups und KMU"],
-    it: ["Guarda la tua startup", "dall'interno.", "Diagnosi dei processi e ISO per startup e PMI"],
+    es: ["Mira por dentro","a cada startup.","Software con IA para aceleradoras, incubadoras y viveros"],
+    en: ["See inside","every startup.","AI software for accelerators, incubators and hubs"],
+    fr: ["Voyez de l'intérieur","chaque startup.","Logiciel d'IA pour accélérateurs, incubateurs et pépinières"],
+    de: ["Schau in","jedes Startup.","KI-Software für Accelerators, Inkubatoren und Gründerzentren"],
+    it: ["Guarda dentro","ogni startup.","Software con IA per acceleratori, incubatori e poli d'impresa"],
+  };
+  const C = {
+    es: ["Selección", "Mentoría", "Continuidad"],
+    en: ["Selection", "Mentoring", "Continuity"],
+    fr: ["Sélection", "Mentorat", "Continuité"],
+    de: ["Auswahl", "Mentoring", "Kontinuität"],
+    it: ["Selezione", "Mentoring", "Continuità"],
   };
   const l = new URLSearchParams(location.search).get("lang") || "es";
   document.getElementById("h").innerHTML = `${T[l][0]}<br><span>${T[l][1]}</span>`;
   document.getElementById("p").textContent = T[l][2];
+  document.getElementById("c").innerHTML = C[l].map((c) => `<b>${c}</b>`).join("");
 </script>
 </body></html>

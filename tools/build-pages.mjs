@@ -19,7 +19,7 @@ import { readArticles, writeSitemap } from "./recursos-lib.mjs";
 
 // ---- Change this when the final domain is known (no trailing slash) ----
 const SITE_URL = process.env.SITE_URL || "https://ozmetra.com";
-const VERSION = "18"; // cache-busting for styles/scripts
+const VERSION = "19"; // cache-busting for styles/scripts
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "diseno-landing");
@@ -78,7 +78,7 @@ function seoHead(lang, base) {
         "@type": "SoftwareApplication", "@id": `${SITE_URL}/#software`, name: "Ozmetra",
         applicationCategory: "BusinessApplication", operatingSystem: "Web",
         description: desc, inLanguage: lang, url, image: ogImage, publisher: { "@id": `${SITE_URL}/#org` },
-        audience: { "@type": "BusinessAudience", audienceType: "Startups, SMEs" },
+        audience: { "@type": "BusinessAudience", audienceType: "Startup accelerators, incubators, business incubators and university entrepreneurship programmes" },
         keywords: t(lang, "seo.keywords"),
       },
       { "@type": "FAQPage", "@id": `${url}#faq`, inLanguage: lang, mainEntity: faq },

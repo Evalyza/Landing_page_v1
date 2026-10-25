@@ -309,13 +309,14 @@
   });
 
   /* ---------- Self-check quiz ---------- */
-  const answers = { phase: "seed", size: "m", pain: "coord" };
+  // Programme type, startups per intake and main concern (stored as quiz_phase/size/pain)
+  const answers = { phase: "accel", size: "m", pain: "select" };
   const resultBox = $("[data-result]");
   const focusTitle = () => t(`focus.${answers.pain}`);
   function renderResult(animate = true) {
     const apply = () => {
       $("[data-result-title]").textContent = t("result.start", { focus: focusTitle() });
-      $("[data-result-text]").textContent = `${t(`sizeText.${answers.size}`)}, ${t(`focusText.${answers.pain}.${answers.size}`)}.`;
+      $("[data-result-text]").textContent = `${t(`sizeText.${answers.size}`)}, ${t(`focusText.${answers.pain}`)}.`;
       $("[data-success-text]").textContent = t("wl.okP", { focus: focusTitle() });
     };
     if (!animate || reduceMotion) return apply();
