@@ -19,7 +19,7 @@ window.LEGAL = {
       title: "Términos de Servicio",
       intro: [
         "Estos Términos de Servicio («Términos») regulan el acceso y el uso de Ozmetra, una plataforma de software como servicio basada en inteligencia artificial operada por {{COMPANY}} («nosotros»).",
-        "Al unirte a nuestra lista de espera, solicitar una llamada, acceder a nuestro sitio web o usar nuestros servicios cuando estén disponibles, aceptas estos Términos. Si no estás de acuerdo, no uses el sitio web ni los servicios.",
+        "Al solicitar un piloto, un diagnóstico o una llamada, acceder a nuestro sitio web o usar nuestros servicios, aceptas estos Términos. Si no estás de acuerdo, no uses el sitio web ni los servicios.",
       ],
       sections: [
         { h: "El Servicio", b: [
@@ -31,12 +31,12 @@ window.LEGAL = {
           "El Servicio no garantiza que las recomendaciones produzcan una mejora concreta en la empresa.",
           "Los resultados generados por IA pueden ser inexactos, incompletos, estar desactualizados o interpretarse de forma incorrecta. Eres responsable de revisarlos antes de actuar.",
         ]},
-        { h: "Lista de espera y solicitudes de llamada", b: [
-          "Antes de que el Servicio esté disponible públicamente, podemos gestionar una lista de espera. Al unirte, recogemos tu email de trabajo y, de forma opcional, el nombre de tu empresa, tu rol y tus respuestas a la prueba rápida, con la finalidad de:",
-          ["avisarte cuando el Servicio esté disponible;", "informarte sobre el acceso al Servicio;", "comunicarte información relevante relacionada con el lanzamiento."],
-          "Si solicitas una llamada, recogemos tu nombre, tu número de teléfono y la franja horaria que prefieras, con el único fin de que nuestro equipo de atención al cliente se ponga en contacto contigo.",
-          "Formar parte de la lista de espera no garantiza el acceso al Servicio, una fecha de lanzamiento, un precio, unas funciones o una disponibilidad determinados. Podemos modificar o cerrar la lista de espera en cualquier momento.",
-          "Cuando lo exija la ley aplicable, solo enviaremos comunicaciones comerciales ajenas al lanzamiento del Servicio si existe una base legal adecuada.",
+        { h: "Solicitudes de piloto, de diagnóstico y de llamada", b: [
+          "Mientras el Servicio está en fase MVP, ofrecemos pilotos a programas de aceleración e incubación y diagnósticos a startups. Cuando nos los solicitas, recogemos tu email de trabajo y, de forma opcional, tu organización, tu rol, la petición que escribas y tus respuestas al cuestionario, con la finalidad de:",
+          ["ponernos en contacto contigo para organizar la demo, el piloto o el diagnóstico;", "preparar la demo según lo que nos cuentas;", "informarte sobre el acceso al Servicio."],
+          "Si solicitas una llamada, recogemos tu nombre, tu número de teléfono y la franja horaria que prefieras, con el único fin de llamarte.",
+          "Enviar una solicitud no garantiza el acceso al Servicio ni una fecha, un precio, unas funciones o una disponibilidad determinados. Las condiciones de cada piloto o diagnóstico se acuerdan por separado antes de empezar.",
+          "Cuando lo exija la ley aplicable, solo enviaremos comunicaciones comerciales ajenas a tu solicitud si existe una base legal adecuada.",
         ]},
         { h: "Privacidad", b: [
           "Tus datos personales se tratarán conforme a nuestra {{PRIVACY}}, que forma parte de estos Términos.",
@@ -125,7 +125,7 @@ window.LEGAL = {
       title: "Terms of Service",
       intro: [
         "These Terms of Service (“Terms”) govern your access to and use of Ozmetra, an AI-powered software-as-a-service platform operated by {{COMPANY}} (“we”, “us”, “our”).",
-        "By joining our waitlist, requesting a call, accessing our website, or using our services once available, you agree to these Terms. If you do not agree, please do not use the website or services.",
+        "By requesting a pilot, a diagnosis or a call, accessing our website or using our services, you agree to these Terms. If you do not agree, please do not use the website or services.",
       ],
       sections: [
         { h: "The Service", b: [
@@ -137,12 +137,12 @@ window.LEGAL = {
           "The Service does not guarantee that any recommendation will lead to a specific improvement in the company.",
           "AI-generated results may be inaccurate, incomplete, outdated, or incorrectly interpreted. You are responsible for reviewing results before taking action.",
         ]},
-        { h: "Waitlist and call requests", b: [
-          "Before the Service is publicly available, we may operate a waitlist. When you join, we collect your work email and, optionally, your company name, your role, and your answers to the quick self-check, for the purpose of:",
-          ["notifying you when the Service becomes available;", "providing information about access to the Service;", "communicating material information relating to the launch."],
-          "If you request a call, we collect your name, phone number, and preferred time slot solely so that our customer information team can contact you.",
-          "Joining the waitlist does not guarantee access to the Service, a particular launch date, pricing, features, or availability. We may discontinue or change the waitlist at any time.",
-          "Where required by applicable law, marketing communications unrelated to the launch of the Service will only be sent where an appropriate legal basis exists.",
+        { h: "Pilot, diagnosis and call requests", b: [
+          "While the Service is at MVP stage, we offer pilots to accelerator and incubator programmes and diagnoses to startups. When you request one, we collect your work email and, optionally, your organisation, your role, the request you write and your answers to the quick check, for the purpose of:",
+          ["contacting you to arrange the demo, the pilot or the diagnosis;", "preparing the demo around what you tell us;", "providing information about access to the Service."],
+          "If you request a call, we collect your name, phone number and preferred time slot solely so that we can call you.",
+          "Sending a request does not guarantee access to the Service, or a particular date, price, features or availability. The terms of each pilot or diagnosis are agreed separately before it starts.",
+          "Where required by applicable law, marketing communications unrelated to your request will only be sent where an appropriate legal basis exists.",
         ]},
         { h: "Privacy", b: [
           "Your personal data will be processed in accordance with our {{PRIVACY}}, which forms part of these Terms.",
@@ -231,7 +231,7 @@ window.LEGAL = {
       title: "Conditions d'utilisation",
       intro: [
         "Les présentes Conditions d'utilisation (les « Conditions ») régissent l'accès à Ozmetra et son utilisation. Ozmetra est une plateforme logicielle en tant que service fondée sur l'intelligence artificielle, exploitée par {{COMPANY}} (« nous »).",
-        "En rejoignant notre liste d'attente, en demandant un appel, en accédant à notre site web ou en utilisant nos services lorsqu'ils seront disponibles, vous acceptez les présentes Conditions. Si vous ne les acceptez pas, veuillez ne pas utiliser le site web ni les services.",
+        "En demandant un pilote, un diagnostic ou un appel, en accédant à notre site web ou en utilisant nos services, vous acceptez les présentes Conditions. Si vous ne les acceptez pas, veuillez ne pas utiliser le site web ni les services.",
       ],
       sections: [
         { h: "Le Service", b: [
@@ -243,12 +243,12 @@ window.LEGAL = {
           "Le Service ne garantit pas que les recommandations entraîneront une amélioration précise dans l'entreprise.",
           "Les résultats générés par l'IA peuvent être inexacts, incomplets, obsolètes ou mal interprétés. Il vous appartient de les vérifier avant d'agir.",
         ]},
-        { h: "Liste d'attente et demandes d'appel", b: [
-          "Avant que le Service ne soit accessible au public, nous pouvons gérer une liste d'attente. Lorsque vous vous inscrivez, nous recueillons votre e-mail professionnel et, de manière facultative, le nom de votre entreprise, votre rôle et vos réponses au test rapide, afin de :",
-          ["vous prévenir lorsque le Service sera disponible ;", "vous informer sur l'accès au Service ;", "vous communiquer des informations importantes relatives au lancement."],
-          "Si vous demandez un appel, nous recueillons votre nom, votre numéro de téléphone et le créneau horaire de votre choix, dans le seul but que notre service d'information client vous contacte.",
-          "L'inscription sur la liste d'attente ne garantit ni l'accès au Service, ni une date de lancement, ni un prix, ni des fonctionnalités ou une disponibilité particulières. Nous pouvons modifier ou clore la liste d'attente à tout moment.",
-          "Lorsque la loi applicable l'exige, les communications commerciales sans lien avec le lancement du Service ne seront envoyées que sur une base juridique appropriée.",
+        { h: "Demandes de pilote, de diagnostic et d'appel", b: [
+          "Tant que le Service est en phase MVP, nous proposons des pilotes aux programmes d'accélération et d'incubation et des diagnostics aux startups. Lorsque vous en faites la demande, nous recueillons votre e-mail professionnel et, de manière facultative, votre organisation, votre rôle, la demande que vous rédigez et vos réponses au questionnaire, afin de :",
+          ["vous contacter pour organiser la démo, le pilote ou le diagnostic ;", "préparer la démo en fonction de ce que vous nous indiquez ;", "vous informer sur l'accès au Service."],
+          "Si vous demandez un appel, nous recueillons votre nom, votre numéro de téléphone et le créneau horaire de votre choix, dans le seul but de vous appeler.",
+          "L'envoi d'une demande ne garantit ni l'accès au Service, ni une date, un prix, des fonctionnalités ou une disponibilité particulières. Les conditions de chaque pilote ou diagnostic sont convenues séparément avant de commencer.",
+          "Lorsque la loi applicable l'exige, les communications commerciales sans lien avec votre demande ne seront envoyées que sur une base juridique appropriée.",
         ]},
         { h: "Confidentialité", b: [
           "Vos données personnelles seront traitées conformément à notre {{PRIVACY}}, qui fait partie intégrante des présentes Conditions.",
@@ -337,7 +337,7 @@ window.LEGAL = {
       title: "Nutzungsbedingungen",
       intro: [
         "Diese Nutzungsbedingungen („Bedingungen“) regeln den Zugang zu und die Nutzung von Ozmetra, einer KI-gestützten Software-as-a-Service-Plattform, die von {{COMPANY}} („wir“, „uns“) betrieben wird.",
-        "Indem du dich auf unsere Warteliste einträgst, einen Anruf anforderst, unsere Website aufrufst oder unsere Dienste nutzt, sobald sie verfügbar sind, stimmst du diesen Bedingungen zu. Wenn du nicht einverstanden bist, nutze die Website und die Dienste bitte nicht.",
+        "Indem du einen Pilot, eine Diagnose oder einen Anruf anfragst, unsere Website aufrufst oder unsere Dienste nutzt, stimmst du diesen Bedingungen zu. Wenn du nicht einverstanden bist, nutze die Website und die Dienste bitte nicht.",
       ],
       sections: [
         { h: "Der Dienst", b: [
@@ -349,12 +349,12 @@ window.LEGAL = {
           "Der Dienst garantiert nicht, dass die Empfehlungen zu einer bestimmten Verbesserung im Unternehmen führen.",
           "KI-generierte Ergebnisse können ungenau, unvollständig, veraltet oder falsch interpretiert sein. Du bist dafür verantwortlich, die Ergebnisse zu prüfen, bevor du handelst.",
         ]},
-        { h: "Warteliste und Rückrufanfragen", b: [
-          "Bevor der Dienst öffentlich verfügbar ist, können wir eine Warteliste führen. Wenn du dich einträgst, erheben wir deine geschäftliche E-Mail-Adresse und optional den Namen deines Unternehmens, deine Rolle und deine Antworten auf den Schnelltest, um:",
-          ["dich zu benachrichtigen, sobald der Dienst verfügbar ist;", "dich über den Zugang zum Dienst zu informieren;", "dir wesentliche Informationen zum Start mitzuteilen."],
-          "Wenn du einen Anruf anforderst, erheben wir deinen Namen, deine Telefonnummer und dein bevorzugtes Zeitfenster ausschließlich, damit unser Kundeninformationsteam dich kontaktieren kann.",
-          "Die Aufnahme in die Warteliste garantiert weder den Zugang zum Dienst noch ein bestimmtes Startdatum, bestimmte Preise, Funktionen oder eine bestimmte Verfügbarkeit. Wir können die Warteliste jederzeit ändern oder beenden.",
-          "Soweit das anwendbare Recht es verlangt, versenden wir Werbemitteilungen, die nicht mit dem Start des Dienstes zusammenhängen, nur auf einer geeigneten Rechtsgrundlage.",
+        { h: "Anfragen für Pilot, Diagnose und Rückruf", b: [
+          "Solange sich der Dienst in der MVP-Phase befindet, bieten wir Accelerator- und Inkubatorprogrammen Pilotprojekte und Startups Diagnosen an. Wenn du eine anfragst, erheben wir deine geschäftliche E-Mail-Adresse und optional deine Organisation, deine Rolle, die Anfrage, die du schreibst, und deine Antworten auf den Schnelltest, um:",
+          ["dich zu kontaktieren, um Demo, Pilot oder Diagnose zu organisieren;", "die Demo auf das abzustimmen, was du uns mitteilst;", "dich über den Zugang zum Dienst zu informieren."],
+          "Wenn du einen Anruf anforderst, erheben wir deinen Namen, deine Telefonnummer und dein bevorzugtes Zeitfenster ausschließlich, um dich anzurufen.",
+          "Eine Anfrage garantiert weder den Zugang zum Dienst noch ein bestimmtes Datum, bestimmte Preise, Funktionen oder eine bestimmte Verfügbarkeit. Die Bedingungen jedes Pilots oder jeder Diagnose werden vor Beginn gesondert vereinbart.",
+          "Soweit das anwendbare Recht es verlangt, versenden wir Werbemitteilungen, die nicht mit deiner Anfrage zusammenhängen, nur auf einer geeigneten Rechtsgrundlage.",
         ]},
         { h: "Datenschutz", b: [
           "Deine personenbezogenen Daten werden gemäß unserer {{PRIVACY}} verarbeitet, die Bestandteil dieser Bedingungen ist.",
@@ -443,7 +443,7 @@ window.LEGAL = {
       title: "Termini di servizio",
       intro: [
         "I presenti Termini di servizio (i «Termini») disciplinano l'accesso e l'utilizzo di Ozmetra, una piattaforma software-as-a-service basata sull'intelligenza artificiale gestita da {{COMPANY}} («noi»).",
-        "Iscrivendoti alla nostra lista d'attesa, richiedendo una chiamata, accedendo al nostro sito web o utilizzando i nostri servizi quando saranno disponibili, accetti i presenti Termini. Se non li accetti, non utilizzare il sito web né i servizi.",
+        "Richiedendo un pilota, una diagnosi o una chiamata, accedendo al nostro sito web o utilizzando i nostri servizi, accetti i presenti Termini. Se non li accetti, non utilizzare il sito web né i servizi.",
       ],
       sections: [
         { h: "Il Servizio", b: [
@@ -455,12 +455,12 @@ window.LEGAL = {
           "Il Servizio non garantisce che le raccomandazioni producano un miglioramento specifico nell'azienda.",
           "I risultati generati dall'IA possono essere inesatti, incompleti, non aggiornati o interpretati in modo errato. Sei responsabile di verificarli prima di agire.",
         ]},
-        { h: "Lista d'attesa e richieste di chiamata", b: [
-          "Prima che il Servizio sia disponibile al pubblico, possiamo gestire una lista d'attesa. Quando ti iscrivi, raccogliamo la tua email di lavoro e, facoltativamente, il nome della tua azienda, il tuo ruolo e le risposte al test rapido, allo scopo di:",
-          ["avvisarti quando il Servizio sarà disponibile;", "informarti sull'accesso al Servizio;", "comunicarti informazioni rilevanti relative al lancio."],
-          "Se richiedi una chiamata, raccogliamo il tuo nome, il numero di telefono e la fascia oraria preferita al solo scopo di farti contattare dal nostro team informazioni clienti.",
-          "L'iscrizione alla lista d'attesa non garantisce l'accesso al Servizio, né una data di lancio, un prezzo, delle funzionalità o una disponibilità specifici. Possiamo modificare o chiudere la lista d'attesa in qualsiasi momento.",
-          "Ove richiesto dalla legge applicabile, le comunicazioni commerciali non legate al lancio del Servizio saranno inviate solo in presenza di un'adeguata base giuridica.",
+        { h: "Richieste di pilota, di diagnosi e di chiamata", b: [
+          "Finché il Servizio è in fase MVP, offriamo progetti pilota ai programmi di accelerazione e incubazione e diagnosi alle startup. Quando ce li richiedi, raccogliamo la tua email di lavoro e, facoltativamente, la tua organizzazione, il tuo ruolo, la richiesta che scrivi e le risposte al questionario, allo scopo di:",
+          ["contattarti per organizzare la demo, il pilota o la diagnosi;", "preparare la demo in base a ciò che ci racconti;", "informarti sull'accesso al Servizio."],
+          "Se richiedi una chiamata, raccogliamo il tuo nome, il numero di telefono e la fascia oraria preferita al solo scopo di chiamarti.",
+          "Inviare una richiesta non garantisce l'accesso al Servizio, né una data, un prezzo, delle funzionalità o una disponibilità specifici. Le condizioni di ogni pilota o diagnosi si concordano separatamente prima di iniziare.",
+          "Ove richiesto dalla legge applicabile, le comunicazioni commerciali non legate alla tua richiesta saranno inviate solo in presenza di un'adeguata base giuridica.",
         ]},
         { h: "Privacy", b: [
           "I tuoi dati personali saranno trattati in conformità con la nostra {{PRIVACY}}, che costituisce parte integrante dei presenti Termini.",
@@ -561,26 +561,26 @@ window.LEGAL = {
         ]},
         { h: "Qué datos recogemos", b: [
           "Solo recogemos los datos que nos facilitas directamente o que son necesarios para mostrar el sitio web:",
-          ["Lista de espera: tu email de trabajo y, de forma opcional, el nombre de tu empresa, tu rol y tus respuestas a la prueba rápida (fase, tamaño del equipo y principal dificultad).",
+          ["Solicitud de piloto o de diagnóstico: tu email de trabajo y, de forma opcional, tu organización, tu rol, la petición que escribas y tus respuestas al cuestionario (tipo de programa, número de startups por convocatoria y principal preocupación). También guardamos la página desde la que envías la solicitud y, si la dirección los incluye, los parámetros de campaña utm_source, utm_medium y utm_campaign.",
            "Solicitud de llamada: tu nombre, tu número de teléfono con prefijo y la franja horaria que prefieras.",
            "Descarga de recursos (guías, checklists y plantillas de ozmetra.com/recursos): tu email de trabajo, el recurso que descargas y, si marcas la casilla opcional, tu consentimiento para recibir nuevos recursos por email.",
            "Preferencias del sitio: el idioma y el tema que eliges, los recursos que ya has desbloqueado y tus respuestas en las checklists se guardan solo en el almacenamiento local de tu navegador; no nos llegan. No usamos cookies de analítica ni de publicidad.",
            "Datos técnicos: al cargar las tipografías y los iconos del sitio desde servidores de terceros (Google Fonts y unpkg), esos proveedores reciben tu dirección IP."],
         ]},
         { h: "Para qué los usamos", b: [
-          ["gestionar tu inscripción en la lista de espera y avisarte cuando el Servicio esté disponible;", "enviarte información relevante sobre el lanzamiento;","darte acceso al recurso que descargas y saber qué artículos de nuestro blog interesan más;","solo si marcas la casilla opcional, enviarte por email nuevas guías y plantillas, como máximo dos al mes (puedes darte de baja en cualquier momento escribiéndonos o desde el propio email);", "atender tu solicitud de llamada a través de nuestro equipo de atención al cliente;", "adaptar la primera orientación que te mostramos según tus respuestas a la prueba rápida;", "mostrar correctamente el sitio web en el idioma que elijas."],
+          ["gestionar tu solicitud de piloto, demo o diagnóstico y ponernos en contacto contigo para organizarlo;", "saber desde qué página y qué campaña nos llegan las solicitudes;","darte acceso al recurso que descargas y saber qué artículos de nuestro blog interesan más;","solo si marcas la casilla opcional, enviarte por email nuevas guías y plantillas, como máximo dos al mes (puedes darte de baja en cualquier momento escribiéndonos o desde el propio email);", "atender tu solicitud de llamada;", "adaptar la orientación que te mostramos según tus respuestas al cuestionario;", "mostrar correctamente el sitio web en el idioma que elijas."],
           "No tomamos decisiones automatizadas con efectos jurídicos sobre ti a partir de estos datos.",
         ]},
         { h: "Base legal", b: [
-          ["Consentimiento (art. 6.1.a RGPD): cuando marcas la casilla de aceptación y envías el formulario de la lista de espera, de solicitud de llamada o de descarga de un recurso, y, por separado, cuando marcas la casilla opcional para recibir nuevos recursos por email. Puedes retirar cada consentimiento en cualquier momento, sin que afecte al otro.", "Aplicación de medidas precontractuales a petición tuya (art. 6.1.b RGPD): cuando nos pides que te llamemos para informarte sobre el Servicio.", "Interés legítimo (art. 6.1.f RGPD): para cargar los recursos técnicos necesarios para mostrar el sitio web correctamente."],
+          ["Consentimiento (art. 6.1.a RGPD): cuando marcas la casilla de aceptación y envías el formulario de solicitud de piloto o de diagnóstico, de solicitud de llamada o de descarga de un recurso, y, por separado, cuando marcas la casilla opcional para recibir nuevos recursos por email. Puedes retirar cada consentimiento en cualquier momento, sin que afecte al otro.", "Aplicación de medidas precontractuales a petición tuya (art. 6.1.b RGPD): cuando nos pides que te llamemos para informarte sobre el Servicio.", "Interés legítimo (art. 6.1.f RGPD): para cargar los recursos técnicos necesarios para mostrar el sitio web correctamente."],
         ]},
         { h: "Cuánto tiempo los conservamos", b: [
-          "Conservamos los datos de la lista de espera y de las descargas de recursos mientras sigas inscrito o hasta que retires tu consentimiento. Si retiras solo el consentimiento para recibir recursos por email, dejaremos de enviártelos y conservaremos el resto. Los datos de las solicitudes de llamada se conservan el tiempo necesario para atenderlas y después se suprimen, salvo que a raíz de la llamada se inicie una relación contractual.",
+          "Conservamos los datos de las solicitudes de piloto o de diagnóstico y de las descargas de recursos mientras dure la relación contigo o hasta que retires tu consentimiento. Si retiras solo el consentimiento para recibir recursos por email, dejaremos de enviártelos y conservaremos el resto. Los datos de las solicitudes de llamada se conservan el tiempo necesario para atenderlas y después se suprimen, salvo que a raíz de la llamada se inicie una relación contractual.",
           "Después, los datos pueden conservarse bloqueados durante los plazos legales aplicables para atender posibles responsabilidades.",
         ]},
         { h: "Con quién los compartimos", b: [
           "No vendemos tus datos. Pueden acceder a ellos los proveedores que nos prestan servicios (por ejemplo, alojamiento web, envío de emails o herramientas de gestión) como encargados del tratamiento, con contrato y solo para prestarnos esos servicios:",
-          ["Supabase, Inc.: base de datos en la que se guardan las inscripciones en la lista de espera, las solicitudes de llamada y las descargas de recursos, en servidores de la Unión Europea (Irlanda).", "{{PROVIDERS}}"],
+          ["Supabase, Inc.: base de datos en la que se guardan las solicitudes de piloto y de diagnóstico, las solicitudes de llamada y las descargas de recursos, en servidores de la Unión Europea (Irlanda).", "{{PROVIDERS}}"],
           "También podemos comunicarlos a autoridades públicas cuando exista una obligación legal.",
         ]},
         { h: "Transferencias internacionales", b: [
@@ -597,7 +597,7 @@ window.LEGAL = {
           "Este sitio está dirigido a profesionales y empresas. No está destinado a menores de 18 años y no recogemos conscientemente sus datos.",
         ]},
         { h: "Datos que tu empresa comparta con el Servicio", b: [
-          "Cuando el Servicio esté disponible, el tratamiento de la información que tu empresa comparta para el diagnóstico (entrevistas, documentos y herramientas) se regirá por el contrato y, cuando corresponda, por el acuerdo de encargo del tratamiento firmado con cada cliente.",
+          "El tratamiento de la información que cada startup comparta para el diagnóstico (entrevistas, documentos y herramientas), también durante un piloto, se regirá por el contrato y, cuando corresponda, por el acuerdo de encargo del tratamiento que firmamos antes de empezar.",
         ]},
         { h: "Cambios en esta política", b: [
           "Podemos actualizar esta Política de Privacidad. La versión vigente será siempre la publicada en esta página, con su fecha de actualización. Consulta también nuestros {{TERMS}}.",
@@ -616,26 +616,26 @@ window.LEGAL = {
         ]},
         { h: "What data we collect", b: [
           "We only collect the data you give us directly or that is necessary to display the website:",
-          ["Waitlist: your work email and, optionally, your company name, your role, and your answers to the quick self-check (stage, team size, and main pain point).",
+          ["Pilot or diagnosis request: your work email and, optionally, your organisation, your role, the request you write and your answers to the quick check (type of programme, startups per intake and main concern). We also store the page you send the request from and, if the address includes them, the campaign parameters utm_source, utm_medium and utm_campaign.",
            "Call request: your name, your phone number with country code, and your preferred time slot.",
            "Resource downloads (guides, checklists and templates at ozmetra.com/recursos): your work email, the resource you download and, if you tick the optional box, your consent to receive new resources by email.",
            "Site preferences: the language and theme you choose, the resources you have unlocked and your checklist answers are stored only in your browser's local storage; they never reach us. We do not use analytics or advertising cookies.",
            "Technical data: when the site's fonts and icons load from third-party servers (Google Fonts and unpkg), those providers receive your IP address."],
         ]},
         { h: "How we use it", b: [
-          ["to manage your place on the waitlist and let you know when the Service is available;", "to send you relevant information about the launch;","to give you access to the resource you download and to learn which articles on our blog are most useful;","only if you tick the optional box, to email you new guides and templates, at most twice a month (you can unsubscribe at any time by writing to us or from the email itself);", "to handle your call request through our customer information team;", "to tailor the first hint we show you based on your self-check answers;", "to display the website correctly in the language you choose."],
+          ["to handle your pilot, demo or diagnosis request and contact you to arrange it;", "to know which page and campaign requests come from;","to give you access to the resource you download and to learn which articles on our blog are most useful;","only if you tick the optional box, to email you new guides and templates, at most twice a month (you can unsubscribe at any time by writing to us or from the email itself);", "to handle your call request;", "to tailor the guidance we show you based on your quick-check answers;", "to display the website correctly in the language you choose."],
           "We do not make automated decisions with legal effects on you based on this data.",
         ]},
         { h: "Legal basis", b: [
-          ["Consent (Art. 6(1)(a) GDPR): when you tick the acceptance box and submit the waitlist, call request or resource download form and, separately, when you tick the optional box to receive new resources by email. You can withdraw each consent at any time without affecting the other.", "Steps taken at your request prior to entering into a contract (Art. 6(1)(b) GDPR): when you ask us to call you about the Service.", "Legitimate interest (Art. 6(1)(f) GDPR): to load the technical resources needed to display the website correctly."],
+          ["Consent (Art. 6(1)(a) GDPR): when you tick the acceptance box and submit the pilot or diagnosis request, call request or resource download form and, separately, when you tick the optional box to receive new resources by email. You can withdraw each consent at any time without affecting the other.", "Steps taken at your request prior to entering into a contract (Art. 6(1)(b) GDPR): when you ask us to call you about the Service.", "Legitimate interest (Art. 6(1)(f) GDPR): to load the technical resources needed to display the website correctly."],
         ]},
         { h: "How long we keep it", b: [
-          "We keep waitlist and resource download data for as long as you remain on the list or until you withdraw your consent. If you only withdraw your consent to receive resources by email, we will stop sending them and keep the rest. Call request data is kept for as long as needed to handle the request and is then deleted, unless the call leads to a contractual relationship.",
+          "We keep pilot or diagnosis request data and resource download data for as long as our relationship with you lasts or until you withdraw your consent. If you only withdraw your consent to receive resources by email, we will stop sending them and keep the rest. Call request data is kept for as long as needed to handle the request and is then deleted, unless the call leads to a contractual relationship.",
           "Afterwards, data may be kept blocked for the applicable legal periods in order to address possible liabilities.",
         ]},
         { h: "Who we share it with", b: [
           "We do not sell your data. Providers that deliver services to us (for example, web hosting, email delivery, or management tools) may access it as data processors, under contract and only to provide those services:",
-          ["Supabase, Inc.: the database that stores waitlist sign-ups, call requests and resource downloads, on servers in the European Union (Ireland).", "{{PROVIDERS}}"],
+          ["Supabase, Inc.: the database that stores pilot and diagnosis requests, call requests and resource downloads, on servers in the European Union (Ireland).", "{{PROVIDERS}}"],
           "We may also disclose it to public authorities where there is a legal obligation.",
         ]},
         { h: "International transfers", b: [
@@ -652,7 +652,7 @@ window.LEGAL = {
           "This site is aimed at professionals and companies. It is not intended for people under 18, and we do not knowingly collect their data.",
         ]},
         { h: "Data your company shares with the Service", b: [
-          "Once the Service is available, the processing of the information your company shares for the diagnosis (interviews, documents, and tools) will be governed by the contract and, where applicable, the data processing agreement signed with each client.",
+          "The processing of the information each startup shares for the diagnosis (interviews, documents and tools), including during a pilot, is governed by the contract and, where applicable, by the data processing agreement we sign before starting.",
         ]},
         { h: "Changes to this policy", b: [
           "We may update this Privacy Policy. The version in force will always be the one published on this page, with its update date. See also our {{TERMS}}.",
@@ -671,26 +671,26 @@ window.LEGAL = {
         ]},
         { h: "Données recueillies", b: [
           "Nous recueillons uniquement les données que vous nous fournissez directement ou qui sont nécessaires à l'affichage du site :",
-          ["Liste d'attente : votre e-mail professionnel et, de manière facultative, le nom de votre entreprise, votre rôle et vos réponses au test rapide (stade, taille de l'équipe et principale difficulté).",
+          ["Demande de pilote ou de diagnostic : votre e-mail professionnel et, de manière facultative, votre organisation, votre rôle, la demande que vous rédigez et vos réponses au questionnaire (type de programme, nombre de startups par appel et principale préoccupation). Nous enregistrons aussi la page depuis laquelle vous envoyez la demande et, si l'adresse les contient, les paramètres de campagne utm_source, utm_medium et utm_campaign.",
            "Demande d'appel : votre nom, votre numéro de téléphone avec indicatif et le créneau horaire de votre choix.",
            "Téléchargement de ressources (guides, checklists et modèles sur ozmetra.com/recursos) : votre email professionnel, la ressource téléchargée et, si vous cochez la case facultative, votre consentement à recevoir de nouvelles ressources par email.",
            "Préférences du site : la langue et le thème choisis, les ressources déjà débloquées et vos réponses aux checklists sont enregistrés uniquement dans le stockage local de votre navigateur ; ils ne nous parviennent pas. Nous n'utilisons pas de cookies d'analyse ni de publicité.",
            "Données techniques : lorsque les polices et icônes du site sont chargées depuis des serveurs tiers (Google Fonts et unpkg), ces prestataires reçoivent votre adresse IP."],
         ]},
         { h: "Finalités", b: [
-          ["gérer votre inscription sur la liste d'attente et vous prévenir lorsque le Service sera disponible ;", "vous envoyer des informations pertinentes sur le lancement ;","vous donner accès à la ressource téléchargée et savoir quels articles de notre blog intéressent le plus ;","uniquement si vous cochez la case facultative, vous envoyer par email de nouveaux guides et modèles, au maximum deux fois par mois (vous pouvez vous désinscrire à tout moment en nous écrivant ou depuis l'email lui-même) ;", "traiter votre demande d'appel par l'intermédiaire de notre service d'information client ;", "adapter la première piste affichée en fonction de vos réponses au test rapide ;", "afficher correctement le site dans la langue de votre choix."],
+          ["traiter votre demande de pilote, de démo ou de diagnostic et vous contacter pour l'organiser ;", "savoir depuis quelle page et quelle campagne arrivent les demandes ;","vous donner accès à la ressource téléchargée et savoir quels articles de notre blog intéressent le plus ;","uniquement si vous cochez la case facultative, vous envoyer par email de nouveaux guides et modèles, au maximum deux fois par mois (vous pouvez vous désinscrire à tout moment en nous écrivant ou depuis l'email lui-même) ;", "traiter votre demande d'appel ;", "adapter l'orientation affichée en fonction de vos réponses au questionnaire ;", "afficher correctement le site dans la langue de votre choix."],
           "Nous ne prenons aucune décision automatisée produisant des effets juridiques à votre égard sur la base de ces données.",
         ]},
         { h: "Base juridique", b: [
-          ["Consentement (art. 6.1.a du RGPD) : lorsque vous cochez la case d'acceptation et envoyez le formulaire de liste d'attente, de demande d'appel ou de téléchargement d'une ressource et, séparément, lorsque vous cochez la case facultative pour recevoir de nouvelles ressources par email. Vous pouvez retirer chaque consentement à tout moment, sans effet sur l'autre.", "Mesures précontractuelles prises à votre demande (art. 6.1.b du RGPD) : lorsque vous nous demandez de vous appeler au sujet du Service.", "Intérêt légitime (art. 6.1.f du RGPD) : pour charger les ressources techniques nécessaires au bon affichage du site."],
+          ["Consentement (art. 6.1.a du RGPD) : lorsque vous cochez la case d'acceptation et envoyez le formulaire de demande de pilote ou de diagnostic, de demande d'appel ou de téléchargement d'une ressource et, séparément, lorsque vous cochez la case facultative pour recevoir de nouvelles ressources par email. Vous pouvez retirer chaque consentement à tout moment, sans effet sur l'autre.", "Mesures précontractuelles prises à votre demande (art. 6.1.b du RGPD) : lorsque vous nous demandez de vous appeler au sujet du Service.", "Intérêt légitime (art. 6.1.f du RGPD) : pour charger les ressources techniques nécessaires au bon affichage du site."],
         ]},
         { h: "Durée de conservation", b: [
-          "Nous conservons les données de la liste d'attente et des téléchargements de ressources tant que vous y restez inscrit ou jusqu'au retrait de votre consentement. Si vous retirez uniquement votre consentement à recevoir des ressources par email, nous cesserons de vous les envoyer et conserverons le reste. Les données des demandes d'appel sont conservées le temps nécessaire à leur traitement puis supprimées, sauf si l'appel donne lieu à une relation contractuelle.",
+          "Nous conservons les données des demandes de pilote ou de diagnostic et des téléchargements de ressources tant que dure notre relation ou jusqu'au retrait de votre consentement. Si vous retirez uniquement votre consentement à recevoir des ressources par email, nous cesserons de vous les envoyer et conserverons le reste. Les données des demandes d'appel sont conservées le temps nécessaire à leur traitement puis supprimées, sauf si l'appel donne lieu à une relation contractuelle.",
           "Les données peuvent ensuite être conservées de manière bloquée pendant les délais légaux applicables afin de répondre à d'éventuelles responsabilités.",
         ]},
         { h: "Destinataires", b: [
           "Nous ne vendons pas vos données. Les prestataires qui nous fournissent des services (par exemple l'hébergement web, l'envoi d'e-mails ou des outils de gestion) peuvent y accéder en tant que sous-traitants, sous contrat et uniquement pour fournir ces services :",
-          ["Supabase, Inc. : la base de données qui conserve les inscriptions à la liste d'attente, les demandes d'appel et les téléchargements de ressources, sur des serveurs situés dans l'Union européenne (Irlande).", "{{PROVIDERS}}"],
+          ["Supabase, Inc. : la base de données qui conserve les demandes de pilote et de diagnostic, les demandes d'appel et les téléchargements de ressources, sur des serveurs situés dans l'Union européenne (Irlande).", "{{PROVIDERS}}"],
           "Nous pouvons également les communiquer aux autorités publiques en cas d'obligation légale.",
         ]},
         { h: "Transferts internationaux", b: [
@@ -707,7 +707,7 @@ window.LEGAL = {
           "Ce site s'adresse aux professionnels et aux entreprises. Il n'est pas destiné aux personnes de moins de 18 ans et nous ne recueillons pas sciemment leurs données.",
         ]},
         { h: "Données partagées par votre entreprise avec le Service", b: [
-          "Lorsque le Service sera disponible, le traitement des informations que votre entreprise partage pour le diagnostic (entretiens, documents et outils) sera régi par le contrat et, le cas échéant, par l'accord de sous-traitance signé avec chaque client.",
+          "Le traitement des informations que chaque startup partage pour le diagnostic (entretiens, documents et outils), y compris pendant un pilote, est régi par le contrat et, le cas échéant, par l'accord de sous-traitance des données que nous signons avant de commencer.",
         ]},
         { h: "Modifications de la présente politique", b: [
           "Nous pouvons mettre à jour la présente Politique de confidentialité. La version en vigueur est toujours celle publiée sur cette page, avec sa date de mise à jour. Consultez également nos {{TERMS}}.",
@@ -726,26 +726,26 @@ window.LEGAL = {
         ]},
         { h: "Welche Daten wir erheben", b: [
           "Wir erheben nur Daten, die du uns direkt mitteilst oder die zur Anzeige der Website erforderlich sind:",
-          ["Warteliste: deine geschäftliche E-Mail-Adresse und optional der Name deines Unternehmens, deine Rolle und deine Antworten auf den Schnelltest (Phase, Teamgröße und größte Herausforderung).",
+          ["Anfrage für Pilot oder Diagnose: deine geschäftliche E-Mail-Adresse und optional deine Organisation, deine Rolle, die Anfrage, die du schreibst, und deine Antworten auf den Schnelltest (Art des Programms, Startups pro Runde und größtes Anliegen). Außerdem speichern wir die Seite, von der du die Anfrage sendest, und, falls die Adresse sie enthält, die Kampagnenparameter utm_source, utm_medium und utm_campaign.",
            "Rückrufanfrage: dein Name, deine Telefonnummer mit Vorwahl und dein bevorzugtes Zeitfenster.",
            "Download von Ressourcen (Leitfäden, Checklisten und Vorlagen auf ozmetra.com/recursos): deine geschäftliche E-Mail-Adresse, die heruntergeladene Ressource und, wenn du das optionale Feld ankreuzt, deine Einwilligung, neue Ressourcen per E-Mail zu erhalten.",
            "Website-Einstellungen: die gewählte Sprache und das Farbschema, bereits freigeschaltete Ressourcen und deine Antworten in den Checklisten werden nur im lokalen Speicher deines Browsers gespeichert; sie erreichen uns nicht. Wir verwenden keine Analyse- oder Werbe-Cookies.",
            "Technische Daten: Wenn Schriften und Icons der Website von Servern Dritter (Google Fonts und unpkg) geladen werden, erhalten diese Anbieter deine IP-Adresse."],
         ]},
         { h: "Wofür wir sie verwenden", b: [
-          ["um deine Eintragung in die Warteliste zu verwalten und dich zu benachrichtigen, sobald der Dienst verfügbar ist;", "um dir relevante Informationen zum Start zu senden;","um dir Zugang zur heruntergeladenen Ressource zu geben und zu erfahren, welche Artikel unseres Blogs am meisten interessieren;","nur wenn du das optionale Feld ankreuzt, um dir neue Leitfäden und Vorlagen per E-Mail zu senden, höchstens zweimal im Monat (du kannst dich jederzeit abmelden, indem du uns schreibst oder direkt über die E-Mail);", "um deine Rückrufanfrage über unser Kundeninformationsteam zu bearbeiten;", "um den ersten Hinweis, den wir dir zeigen, an deine Antworten im Schnelltest anzupassen;", "um die Website in der gewählten Sprache korrekt anzuzeigen."],
+          ["um deine Anfrage für Pilot, Demo oder Diagnose zu bearbeiten und dich zur Organisation zu kontaktieren;", "um zu erfahren, von welcher Seite und aus welcher Kampagne Anfragen kommen;","um dir Zugang zur heruntergeladenen Ressource zu geben und zu erfahren, welche Artikel unseres Blogs am meisten interessieren;","nur wenn du das optionale Feld ankreuzt, um dir neue Leitfäden und Vorlagen per E-Mail zu senden, höchstens zweimal im Monat (du kannst dich jederzeit abmelden, indem du uns schreibst oder direkt über die E-Mail);", "um deine Rückrufanfrage zu bearbeiten;", "um die Einschätzung, die wir dir zeigen, an deine Antworten im Schnelltest anzupassen;", "um die Website in der gewählten Sprache korrekt anzuzeigen."],
           "Wir treffen auf Grundlage dieser Daten keine automatisierten Entscheidungen mit rechtlicher Wirkung für dich.",
         ]},
         { h: "Rechtsgrundlage", b: [
-          ["Einwilligung (Art. 6 Abs. 1 lit. a DSGVO): wenn du das Zustimmungsfeld ankreuzt und das Formular für die Warteliste, die Rückrufanfrage oder den Download einer Ressource absendest, und gesondert, wenn du das optionale Feld für neue Ressourcen per E-Mail ankreuzt. Du kannst jede Einwilligung jederzeit widerrufen, ohne dass dies die andere berührt.", "Vorvertragliche Maßnahmen auf deine Anfrage (Art. 6 Abs. 1 lit. b DSGVO): wenn du uns bittest, dich wegen des Dienstes anzurufen.", "Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO): um die technischen Ressourcen zu laden, die für die korrekte Anzeige der Website erforderlich sind."],
+          ["Einwilligung (Art. 6 Abs. 1 lit. a DSGVO): wenn du das Zustimmungsfeld ankreuzt und das Formular für die Pilot- oder Diagnoseanfrage, die Rückrufanfrage oder den Download einer Ressource absendest, und gesondert, wenn du das optionale Feld für neue Ressourcen per E-Mail ankreuzt. Du kannst jede Einwilligung jederzeit widerrufen, ohne dass dies die andere berührt.", "Vorvertragliche Maßnahmen auf deine Anfrage (Art. 6 Abs. 1 lit. b DSGVO): wenn du uns bittest, dich wegen des Dienstes anzurufen.", "Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO): um die technischen Ressourcen zu laden, die für die korrekte Anzeige der Website erforderlich sind."],
         ]},
         { h: "Wie lange wir sie speichern", b: [
-          "Daten der Warteliste und der Ressourcen-Downloads speichern wir, solange du eingetragen bist oder bis du deine Einwilligung widerrufst. Widerrufst du nur die Einwilligung zum Erhalt von Ressourcen per E-Mail, senden wir dir keine mehr und behalten den Rest. Daten aus Rückrufanfragen werden so lange gespeichert, wie es für die Bearbeitung nötig ist, und danach gelöscht, sofern aus dem Anruf keine Vertragsbeziehung entsteht.",
+          "Daten aus Pilot- oder Diagnoseanfragen und aus Ressourcen-Downloads speichern wir, solange unsere Beziehung besteht oder bis du deine Einwilligung widerrufst. Widerrufst du nur die Einwilligung zum Erhalt von Ressourcen per E-Mail, senden wir dir keine mehr und behalten den Rest. Daten aus Rückrufanfragen werden so lange gespeichert, wie es für die Bearbeitung nötig ist, und danach gelöscht, sofern aus dem Anruf keine Vertragsbeziehung entsteht.",
           "Anschließend können die Daten für die geltenden gesetzlichen Fristen gesperrt aufbewahrt werden, um mögliche Haftungsansprüche zu erfüllen.",
         ]},
         { h: "An wen wir sie weitergeben", b: [
           "Wir verkaufen deine Daten nicht. Dienstleister, die für uns tätig sind (zum Beispiel Webhosting, E-Mail-Versand oder Verwaltungstools), können als Auftragsverarbeiter vertraglich gebunden und nur zur Erbringung dieser Leistungen darauf zugreifen:",
-          ["Supabase, Inc.: die Datenbank, in der Wartelisten-Eintragungen, Rückrufanfragen und Ressourcen-Downloads gespeichert werden, auf Servern in der Europäischen Union (Irland).", "{{PROVIDERS}}"],
+          ["Supabase, Inc.: die Datenbank, in der Pilot- und Diagnoseanfragen, Rückrufanfragen und Ressourcen-Downloads gespeichert werden, auf Servern in der Europäischen Union (Irland).", "{{PROVIDERS}}"],
           "Bei einer gesetzlichen Verpflichtung können wir sie auch an Behörden weitergeben.",
         ]},
         { h: "Internationale Übermittlungen", b: [
@@ -762,7 +762,7 @@ window.LEGAL = {
           "Diese Website richtet sich an Fachleute und Unternehmen. Sie ist nicht für Personen unter 18 Jahren bestimmt, und wir erheben wissentlich keine Daten von ihnen.",
         ]},
         { h: "Daten, die dein Unternehmen mit dem Dienst teilt", b: [
-          "Sobald der Dienst verfügbar ist, richtet sich die Verarbeitung der Informationen, die dein Unternehmen für die Diagnose teilt (Interviews, Dokumente und Tools), nach dem Vertrag und gegebenenfalls nach der mit jedem Kunden geschlossenen Vereinbarung zur Auftragsverarbeitung.",
+          "Die Verarbeitung der Informationen, die jedes Startup für die Diagnose teilt (Interviews, Dokumente und Tools), auch während eines Pilots, richtet sich nach dem Vertrag und gegebenenfalls nach dem Auftragsverarbeitungsvertrag, den wir vor Beginn unterzeichnen.",
         ]},
         { h: "Änderungen dieser Erklärung", b: [
           "Wir können diese Datenschutzerklärung aktualisieren. Maßgeblich ist stets die auf dieser Seite veröffentlichte Fassung mit ihrem Aktualisierungsdatum. Siehe auch unsere {{TERMS}}.",
@@ -781,26 +781,26 @@ window.LEGAL = {
         ]},
         { h: "Quali dati raccogliamo", b: [
           "Raccogliamo solo i dati che ci fornisci direttamente o che sono necessari per visualizzare il sito web:",
-          ["Lista d'attesa: la tua email di lavoro e, facoltativamente, il nome della tua azienda, il tuo ruolo e le risposte al test rapido (fase, dimensione del team e principale difficoltà).",
+          ["Richiesta di pilota o di diagnosi: la tua email di lavoro e, facoltativamente, la tua organizzazione, il tuo ruolo, la richiesta che scrivi e le risposte al questionario (tipo di programma, numero di startup per bando e principale preoccupazione). Salviamo anche la pagina da cui invii la richiesta e, se l'indirizzo li contiene, i parametri di campagna utm_source, utm_medium e utm_campaign.",
            "Richiesta di chiamata: il tuo nome, il numero di telefono con prefisso e la fascia oraria preferita.",
            "Download di risorse (guide, checklist e modelli su ozmetra.com/recursos): la tua email di lavoro, la risorsa scaricata e, se selezioni la casella facoltativa, il consenso a ricevere nuove risorse via email.",
            "Preferenze del sito: la lingua e il tema scelti, le risorse già sbloccate e le risposte alle checklist vengono salvati solo nella memoria locale del browser; non ci arrivano. Non utilizziamo cookie di analisi né pubblicitari.",
            "Dati tecnici: quando i caratteri e le icone del sito vengono caricati da server di terzi (Google Fonts e unpkg), tali fornitori ricevono il tuo indirizzo IP."],
         ]},
         { h: "Per cosa li utilizziamo", b: [
-          ["gestire la tua iscrizione alla lista d'attesa e avvisarti quando il Servizio sarà disponibile;", "inviarti informazioni rilevanti sul lancio;","darti accesso alla risorsa scaricata e capire quali articoli del nostro blog interessano di più;","solo se selezioni la casella facoltativa, inviarti via email nuove guide e modelli, al massimo due volte al mese (puoi annullare l'iscrizione in qualsiasi momento scrivendoci o dall'email stessa);", "gestire la tua richiesta di chiamata tramite il nostro team informazioni clienti;", "adattare il primo indizio che ti mostriamo in base alle risposte al test rapido;", "visualizzare correttamente il sito nella lingua scelta."],
+          ["gestire la tua richiesta di pilota, demo o diagnosi e contattarti per organizzarla;", "sapere da quale pagina e da quale campagna arrivano le richieste;","darti accesso alla risorsa scaricata e capire quali articoli del nostro blog interessano di più;","solo se selezioni la casella facoltativa, inviarti via email nuove guide e modelli, al massimo due volte al mese (puoi annullare l'iscrizione in qualsiasi momento scrivendoci o dall'email stessa);", "gestire la tua richiesta di chiamata;", "adattare l'orientamento che ti mostriamo in base alle risposte al questionario;", "visualizzare correttamente il sito nella lingua scelta."],
           "Non adottiamo decisioni automatizzate che producano effetti giuridici nei tuoi confronti sulla base di questi dati.",
         ]},
         { h: "Base giuridica", b: [
-          ["Consenso (art. 6.1.a GDPR): quando selezioni la casella di accettazione e invii il modulo della lista d'attesa, della richiesta di chiamata o del download di una risorsa e, separatamente, quando selezioni la casella facoltativa per ricevere nuove risorse via email. Puoi revocare ciascun consenso in qualsiasi momento, senza effetti sull'altro.", "Misure precontrattuali adottate su tua richiesta (art. 6.1.b GDPR): quando ci chiedi di chiamarti per avere informazioni sul Servizio.", "Legittimo interesse (art. 6.1.f GDPR): per caricare le risorse tecniche necessarie a visualizzare correttamente il sito."],
+          ["Consenso (art. 6.1.a GDPR): quando selezioni la casella di accettazione e invii il modulo di richiesta di pilota o di diagnosi, di richiesta di chiamata o di download di una risorsa e, separatamente, quando selezioni la casella facoltativa per ricevere nuove risorse via email. Puoi revocare ciascun consenso in qualsiasi momento, senza effetti sull'altro.", "Misure precontrattuali adottate su tua richiesta (art. 6.1.b GDPR): quando ci chiedi di chiamarti per avere informazioni sul Servizio.", "Legittimo interesse (art. 6.1.f GDPR): per caricare le risorse tecniche necessarie a visualizzare correttamente il sito."],
         ]},
         { h: "Per quanto tempo li conserviamo", b: [
-          "Conserviamo i dati della lista d'attesa e dei download di risorse finché resti iscritto o fino alla revoca del consenso. Se revochi solo il consenso a ricevere risorse via email, smetteremo di inviartele e conserveremo il resto. I dati delle richieste di chiamata sono conservati per il tempo necessario a gestirle e poi cancellati, salvo che dalla chiamata nasca un rapporto contrattuale.",
+          "Conserviamo i dati delle richieste di pilota o di diagnosi e dei download di risorse finché dura il nostro rapporto o fino alla revoca del consenso. Se revochi solo il consenso a ricevere risorse via email, smetteremo di inviartele e conserveremo il resto. I dati delle richieste di chiamata sono conservati per il tempo necessario a gestirle e poi cancellati, salvo che dalla chiamata nasca un rapporto contrattuale.",
           "Successivamente, i dati possono essere conservati in forma bloccata per i periodi previsti dalla legge, al fine di far fronte a eventuali responsabilità.",
         ]},
         { h: "Con chi li condividiamo", b: [
           "Non vendiamo i tuoi dati. I fornitori che ci prestano servizi (ad esempio hosting web, invio di email o strumenti di gestione) possono accedervi in qualità di responsabili del trattamento, sulla base di un contratto e solo per fornirci tali servizi:",
-          ["Supabase, Inc.: il database in cui vengono salvate le iscrizioni alla lista d'attesa, le richieste di chiamata e i download di risorse, su server nell'Unione europea (Irlanda).", "{{PROVIDERS}}"],
+          ["Supabase, Inc.: il database in cui vengono salvate le richieste di pilota e di diagnosi, le richieste di chiamata e i download di risorse, su server nell'Unione europea (Irlanda).", "{{PROVIDERS}}"],
           "Possiamo inoltre comunicarli alle autorità pubbliche in presenza di un obbligo di legge.",
         ]},
         { h: "Trasferimenti internazionali", b: [
@@ -817,7 +817,7 @@ window.LEGAL = {
           "Questo sito è rivolto a professionisti e aziende. Non è destinato a persone di età inferiore ai 18 anni e non raccogliamo consapevolmente i loro dati.",
         ]},
         { h: "Dati che la tua azienda condivide con il Servizio", b: [
-          "Quando il Servizio sarà disponibile, il trattamento delle informazioni che la tua azienda condivide per la diagnosi (interviste, documenti e strumenti) sarà disciplinato dal contratto e, ove applicabile, dall'accordo sul trattamento dei dati firmato con ciascun cliente.",
+          "Il trattamento delle informazioni che ogni startup condivide per la diagnosi (interviste, documenti e strumenti), anche durante un pilota, è regolato dal contratto e, ove applicabile, dall'accordo sul trattamento dei dati che firmiamo prima di iniziare.",
         ]},
         { h: "Modifiche alla presente informativa", b: [
           "Possiamo aggiornare la presente Informativa sulla privacy. La versione in vigore è sempre quella pubblicata su questa pagina, con la relativa data di aggiornamento. Consulta anche i nostri {{TERMS}}.",

@@ -129,8 +129,9 @@ const NAV = `<header class="nav is-scrolled" id="top">
       <img class="logo-on-dark" src="/assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200"><img class="logo-on-light" src="/assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200">
     </a>
     <ul class="nav-links">
+      <li><a href="/#programa">Para programas</a></li>
+      <li><a href="/startups/">Para startups</a></li>
       <li><a href="/#como-funciona">Cómo funciona</a></li>
-      <li><a href="/#iso">Normas ISO</a></li>
       <li><a href="/recursos/" aria-current="page">Recursos</a></li>
     </ul>
     <div class="nav-actions">
@@ -138,7 +139,7 @@ const NAV = `<header class="nav is-scrolled" id="top">
         <i class="ph ph-sun" aria-hidden="true"></i>
         <i class="ph ph-moon" aria-hidden="true"></i>
       </button>
-      <a class="btn btn-dark btn-small nav-cta" href="/#lista" data-cta="nav">Piloto gratuito</a>
+      <a class="btn btn-dark btn-small nav-cta" href="/startups/#diagnostico" data-cta="nav">Diagnóstico</a>
     </div>
   </div>
 </header>`;
@@ -148,6 +149,7 @@ const FOOTER = `<footer class="footer">
     <a class="brand" href="/"><img class="logo-on-dark" src="/assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200" style="height:52px"><img class="logo-on-light" src="/assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200" style="height:52px"></a>
     <nav aria-label="Pie de página">
       <a href="/">Inicio</a>
+      <a href="/startups/">Para startups</a>
       <a href="/recursos/">Recursos</a>
       <a href="/terminos.html">Términos de Servicio</a>
       <a href="/privacidad.html">Política de Privacidad</a>
@@ -163,15 +165,17 @@ const SCRIPTS = `<script>window.I18N={es:{"theme.toLight":"Cambiar a modo claro"
 <script src="/theme.js?v=${STYLES_VERSION}"></script>
 <script src="/recursos.js?v=${VERSION}"></script>`;
 
-// Bottom call to action: the free pilot form on the home page, tagged with the article
+// Bottom call to action: the articles speak to founders, so it leads to the diagnosis
+// for startups (/startups/), tagged with the article; programmes get a secondary link.
 function ctaBlock(slug) {
+  const utm = `utm_source=blog&amp;utm_medium=organic&amp;utm_campaign=${slug}`;
   return `<section class="rc-cta" aria-labelledby="cta-h">
       <div>
         <p class="rc-kicker">Ozmetra</p>
-        <h2 id="cta-h">¿Diriges una aceleradora, incubadora o vivero?</h2>
-        <p>Ozmetra analiza con IA cómo funcionan por dentro las startups de tu programa: te ayuda a elegir mejor en la convocatoria y da continuidad a la mentoría cuando termina. Pruébalo gratis con tu próxima convocatoria.</p>
+        <h2 id="cta-h">¿Quieres ver los procesos de tu startup con este nivel de detalle?</h2>
+        <p>En dos semanas analizamos cómo trabaja vuestro equipo por dentro y os entregamos un plan priorizado para ordenar lo que se ha descontrolado al crecer. ¿Diriges una aceleradora o un vivero? <a href="/?${utm}#programa">Mira el piloto gratuito para programas</a>.</p>
       </div>
-      <a class="btn btn-primary" href="/?utm_source=blog&amp;utm_medium=organic&amp;utm_campaign=${slug}#lista" data-cta="final"><span>Solicitar piloto gratuito</span><i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
+      <a class="btn btn-primary" href="/startups/?${utm}#diagnostico" data-cta="final"><span>Ver el diagnóstico</span><i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
     </section>`;
 }
 

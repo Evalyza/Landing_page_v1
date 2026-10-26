@@ -23,10 +23,10 @@
       <img class="logo-on-dark" src="assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200"><img class="logo-on-light" src="assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200">
     </a>
     <ul class="nav-links">
-      <li><a href="#programa" data-i18n="nav.program">Tu programa</a></li>
+      <li><a href="#programa" data-i18n="nav.programs">Para programas</a></li>
+      <li><a href="{{STARTUPS}}" data-i18n="nav.startups">Para startups</a></li>
       <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
       <li><a href="#framework" data-i18n="nav.framework">Framework</a></li>
-      <li><a href="#iso" data-i18n="nav.iso">Normas ISO</a></li>
       <li><a href="#faq" data-i18n="nav.faq">Preguntas</a></li>
       <!--RECURSOS-NAV-->
     </ul>
@@ -82,6 +82,7 @@
         </form>
 
         <a class="btn btn-ghost" href="#lista" data-open-tab="call"><i class="ph ph-phone"></i><span data-i18n="cta.call">Agendar una llamada</span></a>
+        <a class="startup-link" href="{{STARTUPS}}"><span data-i18n="hero.startupLink">¿Eres una startup? Mira el diagnóstico para equipos que acaban de crecer</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </div>
 
       <!-- Agent console: a working mini-version of the product -->
@@ -421,6 +422,7 @@
           <ul class="area-list" data-area-list></ul>
 
           <div class="area-detail swap" data-area-detail aria-live="polite"></div>
+          <p class="fw-src"><i class="ph ph-info" aria-hidden="true"></i><span data-i18n="fw.src">Las referencias por fase salen del modelo LightStartup, desarrollado en la Universidad Rey Juan Carlos.</span></p>
         </div>
       </div>
     </div>
@@ -495,10 +497,6 @@
           <li><i class="ph ph-pencil-simple-line" aria-hidden="true"></i><span data-i18n="iso.pt2">Redacta borradores a partir de tus procesos reales</span></li>
           <li><i class="ph ph-link-simple" aria-hidden="true"></i><span data-i18n="iso.pt3">Enlaza cada evidencia con su fuente para el auditor</span></li>
         </ul>
-        <div class="iso-actions">
-          <a class="btn btn-primary" href="#lista" data-open-tab="call"><span class="btn-label"><i class="ph-bold ph-phone"></i> <span data-i18n="cta.call">Agendar una llamada</span></span></a>
-          <a class="btn btn-ghost" href="#madurez"><span data-i18n="iso.cta2">Ver niveles de madurez</span><i class="ph ph-arrow-down" aria-hidden="true"></i></a>
-        </div>
       </div>
 
       <div class="iso-side">
@@ -525,7 +523,6 @@
             <ul class="iso-docs" data-iso-docs aria-live="polite"></ul>
           </div>
         </div>
-        <p class="iso-note"><i class="ph ph-seal-check" aria-hidden="true"></i><span data-i18n="iso.note">Ozmetra te prepara para la auditoría. La certificación la concede una entidad de certificación acreditada.</span></p>
       </div>
     </div>
   </section>
@@ -612,11 +609,11 @@
 
         <figure class="investor">
           <i class="ph ph-chart-line-up investor-icon" aria-hidden="true"></i>
-          <blockquote>
-            <p class="investor-h" data-i18n="res.inv.h">Procesos evaluados, inversores más tranquilos</p>
-            <p data-i18n="res.inv.p">Una empresa que evalúa y mejora sus procesos internos es más competitiva, accede mejor a financiación y resulta más atractiva para los inversores.</p>
-          </blockquote>
-          <figcaption data-i18n="res.inv.src">Conclusión del estudio LightStartup, HICSS 2025</figcaption>
+          <div class="investor-body">
+            <p class="investor-h" data-i18n="res.inv.h">Startups con procesos evaluados, mejor preparadas para crecer</p>
+            <p data-i18n="res.inv.p">El estudio LightStartup concluye que una empresa que evalúa y mejora sus procesos internos es más competitiva.</p>
+          </div>
+          <figcaption data-i18n="res.inv.src">Resumen de las conclusiones del estudio LightStartup (HICSS 2025)</figcaption>
         </figure>
       </div>
     </div>
@@ -715,9 +712,19 @@
               </div>
             </form>
             <div class="success" role="status">
-              <div class="check"><i class="ph-bold ph-check"></i></div>
-              <h3 data-i18n="wl.okH">Ya tienes acceso</h3>
-              <p data-success-text>Te escribimos con tu acceso en unos minutos.</p>
+              <div data-success-program>
+                <div class="check"><i class="ph-bold ph-check"></i></div>
+                <h3 data-i18n="wl.okH">Solicitud recibida</h3>
+                <p data-i18n="wl.okP">Gracias. Te escribo en las próximas 24-48 horas para conocer vuestra convocatoria y preparar una demo con vuestros criterios.</p>
+                <p class="success-sign">— <span data-i18n="wl.okSign">Ángel, fundador de Ozmetra</span></p>
+              </div>
+              <div data-success-startup hidden>
+                <div class="check"><i class="ph-bold ph-rocket-launch"></i></div>
+                <h3 data-i18n="wl.stH">Gracias por escribirnos</h3>
+                <p data-i18n="wl.stP">El piloto gratuito es para programas de aceleración e incubación.</p>
+                <a class="btn btn-primary" href="{{STARTUPS}}"><span data-i18n="wl.stCta">Ver el diagnóstico</span> <i class="ph-bold ph-arrow-right"></i></a>
+                <p><span data-i18n-html="wl.stP2">Si vuestra aceleradora o vivero aún no trabaja con nosotros, dinos cuál es y les escribimos.</span></p>
+              </div>
             </div>
           </div>
 
@@ -767,7 +774,7 @@
             <div class="success" role="status">
               <div class="check"><i class="ph-bold ph-phone-call"></i></div>
               <h3 data-i18n="call.okH">Llamada solicitada</h3>
-              <p data-i18n="call.okP">El equipo de atención al cliente te llamará en la franja que has elegido.</p>
+              <p><span data-i18n-html="call.okP">Te llamo yo, Ángel, en la franja que has elegido.</span></p>
             </div>
           </div>
         </div>
@@ -812,6 +819,18 @@
           <summary><span data-i18n="faq.q8">¿En qué se basa vuestro método?</span><i class="ph ph-plus"></i></summary>
           <p data-i18n="faq.a8">En los marcos LightSME y LightStartup, publicados en una revista y un congreso científicos, basados en la familia ISO/IEC 33000 y validados con casos reales de pymes y startups.</p>
         </details>
+        <details>
+          <summary><span data-i18n="faq.q9">¿Cuántas startups podéis analizar por convocatoria?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a9">En el piloto trabajamos con hasta 10 startups.</p>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q10">¿Qué hacéis con los datos de las entrevistas?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a10">Cada startup decide qué comparte y quién participa.</p>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q11">¿Quién está detrás de Ozmetra?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a11">Ozmetra la fundó Ángel León.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -837,6 +856,7 @@
 </footer>
 
 <script src="i18n.js?v=__V__"></script>
+<script src="forms.js?v=__V__"></script>
 <script src="app.js?v=__V__"></script>
 <script src="theme.js?v=__V__"></script>
 </body>

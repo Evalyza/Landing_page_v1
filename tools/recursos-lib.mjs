@@ -31,6 +31,7 @@ export const TEMAS = {
 
 export const pageUrl = (lang) => (lang === DEFAULT_LANG ? `${SITE_URL}/` : `${SITE_URL}/${lang}/`);
 export const articleUrl = (slug) => `${SITE_URL}/recursos/${slug}/`;
+export const startupsUrl = (lang) => `${pageUrl(lang)}startups/`;
 
 export function readAuthors() {
   const file = join(CONTENT, "autores.json");
@@ -73,6 +74,16 @@ export function writeSitemap(articles = readArticles()) {
 ${alts}
     <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl(DEFAULT_LANG)}"/>
   </url>`);
+  const startupsDate = lastChange("tools/startups.template.html", "diseno-landing/i18n.js");
+  const stAlts = LANGS.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${startupsUrl(l)}"/>`).join("\n");
+  const startups = LANGS.map((l) => `  <url>
+    <loc>${startupsUrl(l)}</loc>
+    <lastmod>${startupsDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>${l === DEFAULT_LANG ? "0.9" : "0.8"}</priority>
+${stAlts}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${startupsUrl(DEFAULT_LANG)}"/>
+  </url>`);
   const recursos = articles.length
     ? [`  <url>
     <loc>${SITE_URL}/recursos/</loc>
@@ -88,7 +99,7 @@ ${alts}
     : [];
   writeFileSync(join(OUT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${[...home, ...recursos].join("\n")}
+${[...home, ...startups, ...recursos].join("\n")}
 </urlset>
 `);
 }

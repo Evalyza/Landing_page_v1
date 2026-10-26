@@ -2,8 +2,11 @@
 //
 //   node tools/build-pages.mjs
 //
-// Source: tools/index.template.html (edit THIS file, not diseno-landing/index.html).
+// Sources: tools/index.template.html (home for programmes) and tools/startups.template.html
+//          (process diagnosis for startups). Edit THESE files, not the generated HTML.
 // Output: diseno-landing/index.html (es), diseno-landing/{en,fr,de,it}/index.html,
+//         diseno-landing/startups/index.html (es), diseno-landing/{en,fr,de,it}/startups/index.html,
+//         the legal pages filled in Spanish (terminos.html, privacidad.html: readable without JS),
 //         diseno-landing/sitemap.xml, diseno-landing/robots.txt, diseno-landing/site.webmanifest
 // The Recursos section (/recursos/) is built by tools/build-recursos.mjs; this script
 // adds its menu link to the Spanish page once there is at least one article.
@@ -15,11 +18,11 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
-import { readArticles, writeSitemap } from "./recursos-lib.mjs";
+import { readArticles, writeSitemap, startupsUrl } from "./recursos-lib.mjs";
 
 // ---- Change this when the final domain is known (no trailing slash) ----
 const SITE_URL = process.env.SITE_URL || "https://ozmetra.com";
-const VERSION = "19"; // cache-busting for styles/scripts
+const VERSION = "20"; // cache-busting for styles/scripts
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "diseno-landing");
@@ -33,6 +36,12 @@ vm.runInNewContext(readFileSync(join(OUT, "i18n.js"), "utf8"), sandbox);
 const I18N = sandbox.window.I18N;
 
 const template = readFileSync(join(ROOT, "tools", "index.template.html"), "utf8");
+const startupsTemplate = readFileSync(join(ROOT, "tools", "startups.template.html"), "utf8");
+
+// Legal texts, as legal.js renders them
+const legalSandbox = { window: {} };
+vm.runInNewContext(readFileSync(join(OUT, "legal-content.js"), "utf8"), legalSandbox);
+const LEGAL = legalSandbox.window.LEGAL;
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const escAttr = (s) => esc(s).replace(/"/g, "&quot;");
@@ -47,32 +56,67 @@ function t(lang, key) {
 // Relative links inside a language subfolder must climb one level
 function relink(html, base, lang) {
   if (!base) return html;
-  return html.replace(/\b(href|src)="(?!https?:|#|\/|data:|mailto:|tel:)([^"]+)"/g, (_, attr, path) => `${attr}="${base}${path}"`);
+  return html.replace(/\b(href|src|poster)="(?!https?:|#|\/|data:|mailto:|tel:|\{\{)([^"]+)"/g, (_, attr, path) => `${attr}="${base}${path}"`);
 }
 // Legal pages render their language from ?lang=
 function legalLinks(html, base, lang) {
-  return html.replace(/href="((?:\.\.\/)?)(terminos|privacidad)\.html"/g, (_, b, page) =>
+  return html.replace(/href="((?:\.\.\/)*)(terminos|privacidad)\.html"/g, (_, b, page) =>
     `href="${b}${page}.html${lang === DEFAULT ? "" : `?lang=${lang}`}"`);
 }
 
+// Head tags shared by every indexable page: title, description, canonical, hreflang,
+// Open Graph, Twitter and JSON-LD
+function headTags({ lang, base, title, desc, keywords, ogAlt, url, urlFor, ogImage, ld }) {
+  const alternates = LANGS.map((l) => `  <link rel="alternate" hreflang="${l}" href="${urlFor(l)}">`).join("\n");
+  const ogAlternates = LANGS.filter((l) => l !== lang).map((l) => `  <meta property="og:locale:alternate" content="${t(l, "seo.locale")}">`).join("\n");
+  return [
+    `  <title data-i18n="${title.key}">${esc(title.text)}</title>`,
+    `  <meta name="description" data-i18n-content="${desc.key}" content="${escAttr(desc.text)}">`,
+    `  <meta name="keywords" content="${escAttr(keywords)}">`,
+    `  <meta name="robots" content="index, follow, max-image-preview:large">`,
+    `  <link rel="canonical" href="${url}">`,
+    alternates,
+    `  <link rel="alternate" hreflang="x-default" href="${urlFor(DEFAULT)}">`,
+    `  <meta property="og:type" content="website">`,
+    `  <meta property="og:site_name" content="Ozmetra">`,
+    `  <meta property="og:title" content="${escAttr(title.text)}">`,
+    `  <meta property="og:description" content="${escAttr(desc.text)}">`,
+    `  <meta property="og:url" content="${url}">`,
+    `  <meta property="og:image" content="${ogImage}">`,
+    `  <meta property="og:image:width" content="1200">`,
+    `  <meta property="og:image:height" content="630">`,
+    `  <meta property="og:image:alt" content="${escAttr(ogAlt)}">`,
+    `  <meta property="og:locale" content="${t(lang, "seo.locale")}">`,
+    ogAlternates,
+    `  <meta name="twitter:card" content="summary_large_image">`,
+    `  <meta name="twitter:title" content="${escAttr(title.text)}">`,
+    `  <meta name="twitter:description" content="${escAttr(desc.text)}">`,
+    `  <meta name="twitter:image" content="${ogImage}">`,
+    `  <link rel="icon" href="${base}assets/ozmetra-icono-app.svg" type="image/svg+xml">`,
+    `  <link rel="icon" href="${base}assets/ozmetra-icono-app-192.png" type="image/png" sizes="192x192">`,
+    `  <link rel="apple-touch-icon" href="${base}assets/apple-touch-icon.png">`,
+    `  <link rel="manifest" href="${base}site.webmanifest">`,
+    `  <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>`,
+  ].join("\n");
+}
+
+const ORG = { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: "Ozmetra", url: `${SITE_URL}/`, logo: `${SITE_URL}/assets/ozmetra-icono-app-512.png`, sameAs: ["https://www.linkedin.com/company/ozmetra/"] };
+const WEBSITE = { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: "Ozmetra", inLanguage: LANGS, publisher: { "@id": `${SITE_URL}/#org` } };
+
+// Home (programmes): software + FAQ. Every faq.qN in the translations becomes a question.
 function seoHead(lang, base) {
   const title = t(lang, "meta.title");
   const desc = t(lang, "meta.desc");
   const url = pageUrl(lang);
   const ogImage = `${SITE_URL}/og/og-${lang}.png`;
-  const alternates = LANGS.map((l) => `  <link rel="alternate" hreflang="${l}" href="${pageUrl(l)}">`).join("\n");
-  const ogAlternates = LANGS.filter((l) => l !== lang).map((l) => `  <meta property="og:locale:alternate" content="${t(l, "seo.locale")}">`).join("\n");
-
-  const faq = [1, 2, 3, 4, 5, 6, 7, 8].map((n) => ({
-    "@type": "Question",
-    name: t(lang, `faq.q${n}`),
-    acceptedAnswer: { "@type": "Answer", text: t(lang, `faq.a${n}`) },
-  }));
+  const faq = [];
+  for (let n = 1; I18N[lang][`faq.q${n}`]; n++) {
+    faq.push({ "@type": "Question", name: t(lang, `faq.q${n}`), acceptedAnswer: { "@type": "Answer", text: t(lang, `faq.a${n}`) } });
+  }
   const ld = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Organization", "@id": `${SITE_URL}/#org`, name: "Ozmetra", url: `${SITE_URL}/`, logo: `${SITE_URL}/assets/ozmetra-icono-app-512.png`, sameAs: ["https://www.linkedin.com/company/ozmetra/"] },
-      { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: "Ozmetra", inLanguage: LANGS, publisher: { "@id": `${SITE_URL}/#org` } },
+      ORG, WEBSITE,
       { "@type": "WebPage", "@id": `${url}#webpage`, url, name: title, description: desc, inLanguage: lang, isPartOf: { "@id": `${SITE_URL}/#website` }, primaryImageOfPage: ogImage },
       {
         "@type": "SoftwareApplication", "@id": `${SITE_URL}/#software`, name: "Ozmetra",
@@ -84,49 +128,55 @@ function seoHead(lang, base) {
       { "@type": "FAQPage", "@id": `${url}#faq`, inLanguage: lang, mainEntity: faq },
     ],
   };
-
-  return [
-    `  <title data-i18n="meta.title">${esc(title)}</title>`,
-    `  <meta name="description" data-i18n-content="meta.desc" content="${escAttr(desc)}">`,
-    `  <meta name="keywords" content="${escAttr(t(lang, "seo.keywords"))}">`,
-    `  <meta name="robots" content="index, follow, max-image-preview:large">`,
-    `  <link rel="canonical" href="${url}">`,
-    alternates,
-    `  <link rel="alternate" hreflang="x-default" href="${pageUrl(DEFAULT)}">`,
-    `  <meta property="og:type" content="website">`,
-    `  <meta property="og:site_name" content="Ozmetra">`,
-    `  <meta property="og:title" content="${escAttr(title)}">`,
-    `  <meta property="og:description" content="${escAttr(desc)}">`,
-    `  <meta property="og:url" content="${url}">`,
-    `  <meta property="og:image" content="${ogImage}">`,
-    `  <meta property="og:image:width" content="1200">`,
-    `  <meta property="og:image:height" content="630">`,
-    `  <meta property="og:image:alt" content="${escAttr(t(lang, "seo.ogAlt"))}">`,
-    `  <meta property="og:locale" content="${t(lang, "seo.locale")}">`,
-    ogAlternates,
-    `  <meta name="twitter:card" content="summary_large_image">`,
-    `  <meta name="twitter:title" content="${escAttr(title)}">`,
-    `  <meta name="twitter:description" content="${escAttr(desc)}">`,
-    `  <meta name="twitter:image" content="${ogImage}">`,
-    `  <link rel="icon" href="${base}assets/ozmetra-icono-app.svg" type="image/svg+xml">`,
-    `  <link rel="icon" href="${base}assets/ozmetra-icono-app-192.png" type="image/png" sizes="192x192">`,
-    `  <link rel="apple-touch-icon" href="${base}assets/apple-touch-icon.png">`,
-    `  <link rel="manifest" href="${base}site.webmanifest">`,
-    `  <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>`,
-  ].join("\n");
+  return headTags({
+    lang, base, url, urlFor: pageUrl, ogImage, ld,
+    title: { key: "meta.title", text: title }, desc: { key: "meta.desc", text: desc },
+    keywords: t(lang, "seo.keywords"), ogAlt: t(lang, "seo.ogAlt"),
+  });
 }
 
-function buildPage(lang) {
-  const base = lang === DEFAULT ? "" : "../";
-  let html = template;
+// /startups: the process diagnosis as a service (no price published yet)
+function startupsHead(lang, base) {
+  const title = t(lang, "st.meta.title");
+  const desc = t(lang, "st.meta.desc");
+  const url = startupsUrl(lang);
+  const ogImage = `${SITE_URL}/og/og-startups-${lang}.png`;
+  const ld = {
+    "@context": "https://schema.org",
+    "@graph": [
+      ORG, WEBSITE,
+      { "@type": "WebPage", "@id": `${url}#webpage`, url, name: title, description: desc, inLanguage: lang, isPartOf: { "@id": `${SITE_URL}/#website` }, primaryImageOfPage: ogImage },
+      {
+        "@type": "Service", "@id": `${SITE_URL}/startups/#service`, name: t(lang, "st.offer.h"),
+        serviceType: "Process diagnosis", description: desc, inLanguage: lang, url, image: ogImage,
+        provider: { "@id": `${SITE_URL}/#org` },
+        audience: { "@type": "BusinessAudience", audienceType: "Startups of 15 to 60 people that have grown fast" },
+      },
+    ],
+  };
+  return headTags({
+    lang, base, url, urlFor: startupsUrl, ogImage, ld,
+    title: { key: "st.meta.title", text: title }, desc: { key: "st.meta.desc", text: desc },
+    keywords: t(lang, "st.seo.keywords"), ogAlt: t(lang, "st.seo.ogAlt"),
+  });
+}
 
-  // Translate every marked element so the HTML is already in the page language
+// Translate every marked element so the HTML is already in the page language
+function translate(html, lang) {
   html = html.replace(/(<(\w+)\b[^>]*\bdata-i18n="([^"]+)"[^>]*>)([^<]*)(<\/\2>)/g,
     (_, open, tag, key, _text, close) => `${open}${esc(t(lang, key))}${close}`);
   html = html.replace(/(<span\b[^>]*\bdata-i18n-html="([^"]+)"[^>]*>)([\s\S]*?)(<\/span>)/g,
     (_, open, key, _inner, close) => `${open}${t(lang, key)}${close}`);
   html = html.replace(/(\bdata-i18n-ph="([^"]+)"[^>]*?\bplaceholder=")[^"]*"/g, (_, pre, key) => `${pre}${escAttr(t(lang, key))}"`);
   html = html.replace(/(\bdata-i18n-aria="([^"]+)"[^>]*?\baria-label=")[^"]*"/g, (_, pre, key) => `${pre}${escAttr(t(lang, key))}"`);
+  return html;
+}
+
+function buildPage(lang) {
+  const base = lang === DEFAULT ? "" : "../";
+  let html = template;
+
+  html = translate(html, lang);
 
   // The blog is Spanish only: link it from the Spanish page when it has content
   const recursos = lang === DEFAULT && ARTICLES.length;
@@ -135,6 +185,7 @@ function buildPage(lang) {
 
   html = relink(html, base, lang);
   html = legalLinks(html, base, lang);
+  html = html.replaceAll("{{STARTUPS}}", "startups/");
   html = html.replace("<!--SEO-->", seoHead(lang, base).trimStart());
   html = html.replace(/<html lang="es"><!--HTMLATTRS-->/, `<html lang="${lang}" data-page-lang="${lang}"${base ? ` data-base="${base}"` : ""}>`);
   html = html.replaceAll("__V__", VERSION);
@@ -144,6 +195,58 @@ function buildPage(lang) {
   writeFileSync(join(dir, "index.html"), html);
   const left = (html.match(/data-i18n="/g) || []).length;
   return `${lang}: ${pageUrl(lang)} (${left} textos traducidos en el HTML)`;
+}
+
+function buildStartups(lang) {
+  const base = lang === DEFAULT ? "../" : "../../";
+  let html = translate(startupsTemplate, lang);
+  const recursos = lang === DEFAULT && ARTICLES.length;
+  html = html.replace(/\n([ \t]*)<!--RECURSOS-NAV-->/, (_, i) => (recursos ? `\n${i}<li><a href="recursos/">Recursos</a></li>` : ""));
+  html = html.replace(/\n([ \t]*)<!--RECURSOS-FOOTER-->/, (_, i) => (recursos ? `\n${i}<a href="recursos/">Recursos</a>` : ""));
+  html = relink(html, base, lang);
+  html = legalLinks(html, base, lang);
+  html = html.replaceAll("{{HOME}}", "../");
+  html = html.replace("<!--SEO-->", startupsHead(lang, base).trimStart());
+  html = html.replace(/<html lang="es"><!--HTMLATTRS-->/, `<html lang="${lang}" data-page-lang="${lang}" data-base="${base}">`);
+  html = html.replaceAll("__V__", VERSION);
+  const dir = join(OUT, ...(lang === DEFAULT ? [] : [lang]), "startups");
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, "index.html"), html);
+  return `${lang}: ${startupsUrl(lang)}`;
+}
+
+// Legal pages: legal.js renders the chosen language, but the Spanish text is also written
+// into the HTML so the page can be read (and the controller identified) without JavaScript.
+function legalInline(text) {
+  const ph = LEGAL.placeholders[DEFAULT];
+  return esc(text).replace(/\{\{(\w+)\}\}/g, (_, k) => {
+    if (k === "PRIVACY") return `<a href="privacidad.html">${esc(ph.PRIVACY)}</a>`;
+    if (k === "TERMS") return `<a href="terminos.html">${esc(ph.TERMS)}</a>`;
+    const v = ph[k] ?? k;
+    if (v.startsWith("[")) return `<mark class="todo">${esc(v)}</mark>`;
+    if (k === "EMAIL") return `<a href="mailto:${esc(v)}">${esc(v)}</a>`;
+    return esc(v);
+  });
+}
+const legalBlock = (b) => (Array.isArray(b) ? `<ul>${b.map((li) => `<li>${legalInline(li)}</li>`).join("")}</ul>` : `<p>${legalInline(b)}</p>`);
+
+function buildLegal(file, doc) {
+  const path = join(OUT, file);
+  const d = LEGAL[doc][DEFAULT];
+  let html = translate(readFileSync(path, "utf8"), DEFAULT);
+  const sections = d.sections.map((s, i) => `
+      <section class="legal-section" id="s-${i + 1}" aria-labelledby="h-${i + 1}">
+        <h2 id="h-${i + 1}"><span class="legal-num mono">${i + 1}.</span> ${esc(s.h)}</h2>
+        ${s.b.map(legalBlock).join("")}
+      </section>`).join("");
+  const toc = d.sections.map((s, i) => `<li><a href="#s-${i + 1}" data-toc-link="${i + 1}">${esc(s.h)}</a></li>`).join("");
+  html = html.replace(/(<h1 data-doc-title>)[\s\S]*?(<\/h1>)/, `$1${esc(d.title)}$2`);
+  html = html.replace(/(<div class="legal-intro" data-doc-intro>)[\s\S]*?(<\/div>)/, (_, a, b) => `${a}${d.intro.map(legalBlock).join("")}${b}`);
+  html = html.replace(/(<div data-doc-body>)[\s\S]*?(<\/div>\n)/, (_, a, b) => `${a}${sections}\n      ${b}`);
+  html = html.replace(/(<ol data-toc>)[\s\S]*?(<\/ol>)/g, (_, a, b) => `${a}${toc}${b}`);
+  html = html.replace(/\?v=\d+/g, `?v=${VERSION}`);
+  writeFileSync(path, html);
+  return `${file} (${d.sections.length} secciones)`;
 }
 
 function buildSitemap() {
@@ -165,6 +268,8 @@ Sitemap: ${SITE_URL}/sitemap.xml
 
 console.log(`SITE_URL = ${SITE_URL}`);
 for (const l of LANGS) console.log(buildPage(l));
+for (const l of LANGS) console.log(buildStartups(l));
+console.log(buildLegal("terminos.html", "terms"), "·", buildLegal("privacidad.html", "privacy"));
 buildSitemap();
 console.log("sitemap.xml, robots.txt, site.webmanifest");
 if (SITE_URL.includes("REEMPLAZAR")) console.warn("AVISO: SITE_URL es provisional. Ejecuta: SITE_URL=https://tu-dominio node tools/build-pages.mjs");

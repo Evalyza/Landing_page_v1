@@ -38,7 +38,24 @@
     de: ["Auswahl", "Mentoring", "Kontinuität"],
     it: ["Selezione", "Mentoring", "Continuità"],
   };
-  const l = new URLSearchParams(location.search).get("lang") || "es";
+  // /startups variant: ?v=startups
+  const T_ST = {
+    es: ["¿Siguen funcionando","vuestros procesos?","Diagnóstico de procesos para startups que han crecido rápido"],
+    en: ["Do your processes","still work?","Process diagnosis for fast-growing startups"],
+    fr: ["Vos processus","tiennent-ils encore ?","Diagnostic des processus pour startups en forte croissance"],
+    de: ["Funktionieren eure","Prozesse noch?","Prozessdiagnose für schnell wachsende Startups"],
+    it: ["I vostri processi","funzionano ancora?","Diagnosi dei processi per startup cresciute in fretta"],
+  };
+  const C_ST = {
+    es: ["2 semanas","8 áreas","Plan priorizado"],
+    en: ["2 weeks","8 areas","Prioritised plan"],
+    fr: ["2 semaines","8 domaines","Plan priorisé"],
+    de: ["2 Wochen","8 Bereiche","Priorisierter Plan"],
+    it: ["2 settimane","8 aree","Piano prioritizzato"],
+  };
+  const q = new URLSearchParams(location.search);
+  const l = q.get("lang") || "es";
+  if (q.get("v") === "startups") { Object.assign(T, T_ST); Object.assign(C, C_ST); }
   document.getElementById("h").innerHTML = `${T[l][0]}<br><span>${T[l][1]}</span>`;
   document.getElementById("p").textContent = T[l][2];
   document.getElementById("c").innerHTML = C[l].map((c) => `<b>${c}</b>`).join("");

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es"><!--HTMLATTRS-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--SEO-->
+  <meta name="theme-color" content="#F5F1E8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" href="styles.css?v=__V__">
+  <script>var t;try{t=localStorage.getItem("ozmetra-theme")}catch(e){}if(t!=="dark")document.documentElement.dataset.theme="light"</script>
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body class="startups-page">
+
+<!-- Ozmetra for startups: the process diagnosis (source: tools/startups.template.html) -->
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="{{HOME}}" data-i18n-aria="aria.home" aria-label="Ozmetra, inicio">
+      <img class="logo-on-dark" src="assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200"><img class="logo-on-light" src="assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200">
+    </a>
+    <ul class="nav-links">
+      <li><a href="{{HOME}}#programa" data-i18n="nav.programs">Para programas</a></li>
+      <li><a href="#top" aria-current="page" data-i18n="nav.startups">Para startups</a></li>
+      <li><a href="{{HOME}}#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
+      <li><a href="{{HOME}}#framework" data-i18n="nav.framework">Framework</a></li>
+      <li><a href="{{HOME}}#faq" data-i18n="nav.faq">Preguntas</a></li>
+      <!--RECURSOS-NAV-->
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar a modo claro">
+        <i class="ph ph-sun" aria-hidden="true"></i>
+        <i class="ph ph-moon" aria-hidden="true"></i>
+      </button>
+      <label class="lang">
+        <span class="sr-only" data-i18n="lang.label">Idioma</span>
+        <i class="ph ph-globe" aria-hidden="true"></i>
+        <select data-lang>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+        <i class="ph ph-caret-down" aria-hidden="true"></i>
+      </label>
+      <a class="btn btn-dark btn-small nav-cta" href="#diagnostico" data-open-tab="diag" data-i18n="st.cta">Solicitar mi diagnóstico</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero st-hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow" data-i18n="st.eyebrow">Para startups</p>
+        <h1 data-i18n="st.h1">Habéis crecido rápido. ¿Siguen funcionando vuestros procesos?</h1>
+        <p class="hero-sub" data-i18n="st.sub">En dos semanas analizamos cómo trabaja vuestro equipo por dentro y os entregamos un plan priorizado.</p>
+        <div class="st-actions">
+          <a class="btn btn-primary" href="#diagnostico" data-open-tab="diag"><span data-i18n="st.cta">Solicitar mi diagnóstico</span> <i class="ph-bold ph-arrow-right"></i></a>
+          <a class="startup-link" href="#diagnostico" data-open-tab="call"><i class="ph ph-phone" aria-hidden="true"></i><span data-i18n="st.callLink">Prefiero hablarlo antes en una llamada de 15 minutos</span></a>
+        </div>
+      </div>
+
+      <figure class="st-phone" data-demo>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-status" aria-hidden="true">
+              <span class="phone-time">9:41</span>
+              <span class="phone-island"></span>
+              <span class="phone-icons"><i class="ph-bold ph-cell-signal-high"></i><i class="ph-bold ph-wifi-high"></i><i class="ph-bold ph-battery-full"></i></span>
+            </div>
+            <video data-demo-video muted loop playsinline preload="none" width="780" height="1688" poster="assets/video/ozmetra-phone-poster.jpg" data-i18n-aria="demo.aria" aria-label="Vídeo sin sonido: recorrido por el software de Ozmetra con datos de ejemplo">
+              <source data-src="assets/video/ozmetra-phone.webm" type="video/webm">
+              <source data-src="assets/video/ozmetra-phone.mp4" type="video/mp4">
+            </video>
+          </div>
+          <button class="demo-toggle" type="button" data-demo-toggle data-i18n-aria="demo.pause" aria-label="Pausar vídeo">
+            <i class="ph-bold ph-pause" aria-hidden="true"></i><i class="ph-bold ph-play" aria-hidden="true"></i>
+          </button>
+        </div>
+        <figcaption data-i18n="st.video.cap">Así se ve el diagnóstico en nuestro software, con datos de ejemplo.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- OFFER + WHO IT IS FOR -->
+  <section class="section st-offer" id="diagnostico-oferta">
+    <div class="wrap st-offer-grid">
+      <article class="panel st-offer-card">
+        <p class="st-k" data-i18n="st.offer.k">Qué incluye</p>
+        <h2 data-i18n="st.offer.h">Diagnóstico de procesos Ozmetra</h2>
+        <ul class="st-list">
+          <li><i class="ph ph-microphone" aria-hidden="true"></i><span data-i18n="st.offer.i1">Entrevistas con 3-5 personas de vuestro equipo, por chat o voz.</span></li>
+          <li><i class="ph ph-files" aria-hidden="true"></i><span data-i18n="st.offer.i2">Revisión de los documentos y herramientas que decidáis compartir.</span></li>
+          <li><i class="ph ph-graph" aria-hidden="true"></i><span data-i18n="st.offer.i3">Puntuación de 8 áreas, ajustada a vuestra fase.</span></li>
+          <li><i class="ph ph-list-checks" aria-hidden="true"></i><span data-i18n="st.offer.i4">Plan de mejora priorizado por impacto y esfuerzo.</span></li>
+          <li><i class="ph ph-users-three" aria-hidden="true"></i><span data-i18n="st.offer.i5">Sesión de 60 minutos con el equipo fundador para explicarlo.</span></li>
+        </ul>
+        <p class="st-time"><i class="ph ph-calendar-check" aria-hidden="true"></i><span data-i18n="st.offer.time">Entrega en 2 semanas desde el arranque</span></p>
+        <p class="st-next" data-i18n="st.offer.next">Continuidad opcional: seguimiento trimestral con una nueva evaluación y acompañamiento en la implantación.</p>
+        <a class="btn btn-primary" href="#diagnostico" data-open-tab="diag"><span data-i18n="st.cta">Solicitar mi diagnóstico</span> <i class="ph-bold ph-arrow-right"></i></a>
+      </article>
+
+      <div class="st-who">
+        <div class="st-who-card">
+          <h2 data-i18n="st.who.h">¿Para quién es?</h2>
+          <p data-i18n="st.who.p">Para equipos de 15 a 60 personas que han crecido en el último año.</p>
+        </div>
+        <div class="st-who-card st-not">
+          <h3 data-i18n="st.not.h">No es para vosotros si…</h3>
+          <p data-i18n="st.not.p">tenéis muy pocos clientes con proyectos a medida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW THE DIAGNOSIS WORKS -->
+  <section class="section st-how" aria-labelledby="st-how-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="st-how-h" data-i18n="st.how.h">Cómo es el diagnóstico</h2>
+      </div>
+      <ol class="st-steps">
+        <li><span class="mono">01</span><h3 data-i18n="st.how.1.h">Escuchamos</h3><p data-i18n="st.how.1.p">Entrevistas por chat o voz con 3-5 personas del equipo.</p></li>
+        <li><span class="mono">02</span><h3 data-i18n="st.how.2.h">Ordenamos</h3><p data-i18n="st.how.2.p">Cada evidencia va a una de las 8 áreas del framework.</p></li>
+        <li><span class="mono">03</span><h3 data-i18n="st.how.3.h">Puntuamos</h3><p data-i18n="st.how.3.p">Qué está definido, cómo se ejecuta, si se mide y si aguantará.</p></li>
+        <li><span class="mono">04</span><h3 data-i18n="st.how.4.h">Recomendamos</h3><p data-i18n="st.how.4.p">Un plan priorizado, explicado en una sesión de 60 minutos.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- AND ALONG THE WAY: ISO + investors, then the method -->
+  <section class="section st-extra" aria-labelledby="st-extra-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="st-extra-h" data-i18n="st.extra.h">Y de paso</h2>
+      </div>
+      <div class="st-extra-grid">
+        <article class="moment">
+          <span class="moment-k"><i class="ph ph-seal-check" aria-hidden="true"></i>ISO 9001 · ISO/IEC 20000-1</span>
+          <h3 data-i18n="st.extra.iso.h">Medio camino hecho hacia la ISO</h3>
+          <p data-i18n="st.extra.iso.p">El mismo análisis sirve para preparar la documentación que piden las normas ISO.</p>
+        </article>
+        <article class="moment">
+          <span class="moment-k"><i class="ph ph-chart-line-up" aria-hidden="true"></i>LightStartup · HICSS 2025</span>
+          <h3 data-i18n="st.extra.inv.h">Procesos evaluados, inversores más tranquilos</h3>
+          <p data-i18n="st.extra.inv.p">El estudio LightStartup concluye que una empresa que evalúa y mejora sus procesos internos es más competitiva.</p>
+          <p class="st-src" data-i18n="st.extra.inv.src">Resumen de las conclusiones del estudio LightStartup (HICSS 2025)</p>
+        </article>
+      </div>
+      <div class="st-method">
+        <i class="ph ph-graduation-cap" aria-hidden="true"></i>
+        <div>
+          <h3 data-i18n="st.method.h">Un método con base científica</h3>
+          <p data-i18n="st.method.p">Aplicamos LightStartup, un marco de evaluación desarrollado en la Universidad Rey Juan Carlos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUEST: diagnosis or call -->
+  <section class="close" id="diagnostico">
+    <div class="wrap">
+      <div class="panel close-panel">
+        <div>
+          <h2 data-i18n="st.form.h2">¿Lo vemos con vuestro equipo?</h2>
+          <p data-i18n="st.form.p">Cuéntanos quiénes sois y qué os preocupa. Te respondo yo, Ángel, en 24-48 horas.</p>
+          <a class="startup-link st-programs" href="{{HOME}}#programa"><span data-i18n="st.programs">¿Diriges una aceleradora, incubadora o vivero? Mira el piloto gratuito para programas</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="contact">
+          <div class="segmented segmented-dark" role="tablist" data-tabs>
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" role="tab" aria-pressed="true" aria-selected="true" data-v="diag" data-i18n="st.tabs.diag">Diagnóstico</button>
+            <button type="button" role="tab" aria-pressed="false" aria-selected="false" data-v="call" data-i18n="tabs.call">Agendar llamada</button>
+          </div>
+
+          <!-- Diagnosis request -->
+          <div class="waitlist" data-diag data-tabpanel="diag" role="tabpanel">
+            <form data-diag-form novalidate>
+              <div class="form-stack">
+                <h3 data-i18n="st.form.h3">Solicita tu diagnóstico</h3>
+                <p class="waitlist-intro" data-i18n="st.form.intro">Te escribo para conocer a vuestro equipo y organizar el diagnóstico.</p>
+                <div class="field">
+                  <label for="st-email" data-i18n="form.email">Email de trabajo</label>
+                  <input id="st-email" name="email" type="email" autocomplete="email" data-i18n-ph="st.form.emailPh" placeholder="tu@startup.com" aria-describedby="st-email-err" required>
+                  <span class="err" id="st-email-err" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="st-company" data-i18n="st.form.company">Empresa</label>
+                  <input id="st-company" name="company" type="text" autocomplete="organization" data-i18n-ph="st.form.companyPh" placeholder="Nombre de tu startup">
+                </div>
+                <div class="field">
+                  <label for="st-size" data-i18n="st.form.size">¿Cuántas personas sois?</label>
+                  <select id="st-size" name="size">
+                    <option value="s" data-i18n="st.size.s">Menos de 15</option>
+                    <option value="m" selected data-i18n="st.size.m">15 a 60</option>
+                    <option value="l" data-i18n="st.size.l">Más de 60</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="st-worry" data-i18n="st.form.worry">¿Qué se os ha descontrolado al crecer? (opcional)</label>
+                  <textarea id="st-worry" name="worry" rows="2" maxlength="500" data-i18n-ph="st.form.worryPh" placeholder="Por ejemplo: el traspaso de ventas a operaciones o el alta de clientes"></textarea>
+                </div>
+                <div class="field">
+                  <label class="consent"><input type="checkbox" name="consent" aria-describedby="st-consent-err"><span data-i18n-html="consent.html">Acepto los Términos de Servicio y he leído la Política de Privacidad.</span></label>
+                  <span class="err" id="st-consent-err" aria-live="polite"></span>
+                </div>
+                <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="st.cta">Solicitar mi diagnóstico</span> <i class="ph-bold ph-arrow-right"></i></span></button>
+                <p class="privacy-note"><i class="ph ph-lock-simple"></i><span data-i18n="st.form.privacy">Solo usaremos tu email para organizar el diagnóstico.</span></p>
+              </div>
+            </form>
+            <div class="success" role="status">
+              <div class="check"><i class="ph-bold ph-check"></i></div>
+              <h3 data-i18n="st.okH">Solicitud recibida</h3>
+              <p data-i18n="st.okP">Gracias. Te escribo en las próximas 24-48 horas para conocer a vuestro equipo y organizar el diagnóstico.</p>
+              <p class="success-sign">— <span data-i18n="wl.okSign">Ángel, fundador de Ozmetra</span></p>
+            </div>
+          </div>
+
+          <!-- Call request -->
+          <div class="waitlist" data-call data-tabpanel="call" role="tabpanel" hidden>
+            <form data-call-form novalidate>
+              <div class="form-stack">
+                <h3 data-i18n="call.h3">Habla con nuestro equipo</h3>
+                <p class="waitlist-intro" data-i18n="st.call.intro">Déjanos tu teléfono y te llamo yo, Ángel.</p>
+                <div class="field">
+                  <label for="call-name" data-i18n="form.name">Nombre</label>
+                  <input id="call-name" name="name" type="text" autocomplete="name" data-i18n-ph="form.namePh" placeholder="Tu nombre" aria-describedby="call-name-err" required>
+                  <span class="err" id="call-name-err" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="call-phone" data-i18n="form.phone">Teléfono</label>
+                  <div class="phone-row">
+                    <select name="prefix" data-i18n-aria="form.prefix" aria-label="Prefijo">
+                      <option value="+34">+34</option>
+                      <option value="+44">+44</option>
+                      <option value="+33">+33</option>
+                      <option value="+49">+49</option>
+                      <option value="+39">+39</option>
+                      <option value="+351">+351</option>
+                      <option value="+1">+1</option>
+                    </select>
+                    <input id="call-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" data-i18n-ph="form.phonePh" placeholder="600 123 456" aria-describedby="call-phone-err" required>
+                  </div>
+                  <span class="err" id="call-phone-err" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label for="call-slot" data-i18n="form.slot">¿Cuándo te viene mejor?</label>
+                  <select id="call-slot" name="slot">
+                    <option value="am" data-i18n="slot.am">Mañana (9:00 a 14:00)</option>
+                    <option value="pm" data-i18n="slot.pm">Tarde (15:00 a 19:00)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="consent"><input type="checkbox" name="consent" aria-describedby="call-consent-err"><span data-i18n-html="consent.html">Acepto los Términos de Servicio y he leído la Política de Privacidad.</span></label>
+                  <span class="err" id="call-consent-err" aria-live="polite"></span>
+                </div>
+                <button class="btn btn-primary" type="submit"><span class="btn-label"><i class="ph-bold ph-phone"></i> <span data-i18n="call.cta">Solicitar llamada</span></span></button>
+                <p class="privacy-note"><i class="ph ph-lock-simple"></i><span data-i18n="call.privacy">Solo usaremos tu teléfono para esta llamada.</span></p>
+              </div>
+            </form>
+            <div class="success" role="status">
+              <div class="check"><i class="ph-bold ph-phone-call"></i></div>
+              <h3 data-i18n="call.okH">Llamada solicitada</h3>
+              <p><span data-i18n-html="call.okP">Te llamo yo, Ángel, en la franja que has elegido.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="{{HOME}}"><img class="logo-on-dark" src="assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200" style="height:52px"><img class="logo-on-light" src="assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200" style="height:52px"></a>
+    <nav data-i18n-aria="aria.footer" aria-label="Pie de página">
+      <a href="{{HOME}}#programa" data-i18n="nav.programs">Para programas</a>
+      <a href="{{HOME}}#como-funciona" data-i18n="nav.how">Cómo funciona</a>
+      <a href="{{HOME}}#faq" data-i18n="nav.faq">Preguntas</a>
+      <!--RECURSOS-FOOTER-->
+      <a href="terminos.html" data-i18n="footer.terms">Términos de Servicio</a>
+      <a href="privacidad.html" data-i18n="footer.privacy">Política de Privacidad</a>
+    </nav>
+    <div class="footer-end">
+      <a class="social-btn" href="https://www.linkedin.com/company/ozmetra/" target="_blank" rel="noopener" data-i18n-aria="social.linkedin" aria-label="Ozmetra en LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i><span>LinkedIn</span></a>
+      <span>© 2026 Ozmetra</span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js?v=__V__"></script>
+<script src="forms.js?v=__V__"></script>
+<script src="startups.js?v=__V__"></script>
+<script src="theme.js?v=__V__"></script>
+</body>
+</html>
