@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0e100f">
+  <title>Demostración · Diagnóstico de procesos · Servicios · Ozmetra</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/ozmetra-icono-app.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <!-- Ozmetra demo: Services dimension, scripted for screen-sharing. Not linked from the site.
+       All content comes from data.js (window.DEMO); demo.js renders it. -->
+  <div class="banner" role="note">
+    <span class="banner-tag" data-etiqueta></span>
+    <span class="banner-aviso" data-aviso></span>
+  </div>
+
+  <header class="bar">
+    <div class="brands" data-brands>
+      <img class="logo" src="../../assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="132" height="32">
+    </div>
+    <nav class="steps" aria-label="Pasos de la demostración"><ol data-steps></ol></nav>
+  </header>
+
+  <main class="stage" data-stage>
+    <section class="screen" data-screen="1" aria-label="Bienvenida"></section>
+    <section class="screen" data-screen="2" aria-label="Documentos"></section>
+    <section class="screen" data-screen="3" aria-label="Lo que hemos encontrado"></section>
+    <section class="screen" data-screen="4" aria-label="Entrevista"></section>
+    <section class="screen" data-screen="5" aria-label="Resultados"></section>
+  </main>
+
+  <footer class="controls">
+    <p class="keys" data-keys></p>
+    <div class="controls-btns">
+      <button class="btn btn-ghost" type="button" data-prev>
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Anterior
+      </button>
+      <button class="btn btn-primary" type="button" data-next>
+        Siguiente
+        <svg class="ic ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" data-drawer-backdrop hidden></div>
+  <aside class="drawer" data-drawer role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+    <header class="drawer-head">
+      <div class="drawer-title-wrap">
+        <p class="drawer-kicker" data-drawer-kicker></p>
+        <h2 class="drawer-title" id="drawer-title" data-drawer-title></h2>
+      </div>
+      <button class="icon-btn" type="button" data-drawer-close aria-label="Cerrar">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body" data-drawer-body></div>
+  </aside>
+
+  <script src="marcas.js"></script>
+  <script>
+    // Company: ?empresa=<slug> loads data-<slug>.js; no parameter, an invalid slug or a
+    // missing file loads data.js. Plain <script> tags, so it also works opened from disk.
+    (function () {
+      var slug = new URLSearchParams(location.search).get("empresa");
+      var file = slug && /^[a-z0-9-]+$/.test(slug) ? "data-" + slug + ".js" : "data.js";
+      function load(src, ok, ko) {
+        var s = document.createElement("script");
+        s.src = src;
+        s.onload = ok;
+        s.onerror = ko;
+        document.body.appendChild(s);
+      }
+      function start() { load("demo.js"); }
+      load(file, start, function () { load("data.js", start); });
+    })();
+  </script>
+</body>
+</html>
