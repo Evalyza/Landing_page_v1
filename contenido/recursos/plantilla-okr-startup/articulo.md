@@ -93,7 +93,6 @@ Los KR se desplazan hacia la eficiencia y la capacidad de la organización:
 
 En esta fase los OKR empiezan a depender de los procesos. Si no puedes calcular la recuperación del CAC porque marketing y finanzas no comparten datos, el problema no es el OKR: es un proceso que no se mide. Por eso Ozmetra puntuará cada proceso en cuatro dimensiones: si está definido, si se ejecuta, si se mide y si aguantará el crecimiento ([así es el framework](/#framework)). El propio estudio LightStartup concluye que una empresa que evalúa y mejora sus procesos internos accede mejor a financiación y resulta más atractiva para los inversores.
 
-[[TU EXPERIENCIA: si en alguna llamada un fundador te ha contado que no supo responder a un inversor sobre una métrica (CAC, retención, NRR) porque el dato no existía o nadie sabía calcularlo, cuéntalo en dos o tres frases y en anónimo. Muestra mejor que cualquier explicación por qué los OKR de Serie A dependen de los procesos.]]
 
 ## Cómo hacer OKR en una startup: el trimestre semana a semana
 
@@ -113,7 +112,6 @@ Tres reglas que evitan que esto se convierta en burocracia:
 2. **Un KR solo se cambia en la revisión mensual**, y dejando escrito por qué.
 3. **Si el valor inicial no existe, el KR no está listo.** Medirlo es lo primero de la semana 1.
 
-[[TU EXPERIENCIA: si has visto a un equipo abandonar sus OKR a mitad de trimestre, o lo has vivido tú, explica en qué semana pasó y qué lo provocó. Da credibilidad a las tres reglas.]]
 
 ### El trimestre real en España
 
