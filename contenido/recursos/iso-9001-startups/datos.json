@@ -1,0 +1,211 @@
+{
+  "slug": "iso-9001-startups",
+  "titulo": "ISO 9001 para startups: cuándo merece la pena y cómo prepararla sin consultora",
+  "tituloSeo": "ISO 9001 para startups: cuándo y cómo prepararla",
+  "descripcion": "ISO 9001 para startups y pymes: cuándo compensa certificarse, qué exige de verdad, qué cambia en la versión 2026 y cómo prepararla sin consultora.",
+  "entradilla": "Qué es la ISO 9001, qué cambia con la versión de 2026, cuándo compensa certificarse y cómo prepararla paso a paso sin depender de una consultora, con una checklist descargable.",
+  "tema": "iso",
+  "pilar": true,
+  "palabraClave": "ISO 9001 para startups",
+  "palabrasSecundarias": [
+    "certificación ISO 9001 startup",
+    "ISO 9001 pyme",
+    "implantar ISO 9001"
+  ],
+  "autor": "angel",
+  "publicado": "2026-11-03",
+  "actualizado": "2026-11-03",
+  "faq": [
+    {
+      "pregunta": "¿Es obligatoria la ISO 9001 para una startup?",
+      "respuesta": "No. Es una norma voluntaria. La piden algunos clientes grandes, licitaciones públicas o sectores exigentes, pero ninguna ley obliga a una startup a certificarse."
+    },
+    {
+      "pregunta": "¿Quién concede la certificación ISO 9001 en España?",
+      "respuesta": "Una entidad de certificación. Lo recomendable es elegir una acreditada por ENAC, la Entidad Nacional de Acreditación, para la ISO 9001 y con experiencia en tu sector."
+    },
+    {
+      "pregunta": "¿Qué cambia con la ISO 9001:2026?",
+      "respuesta": "Es una evolución de la versión de 2015. Incorpora la cultura de calidad y el comportamiento ético, separa riesgos y oportunidades y refuerza la gestión de cambios. Los certificados de 2015 siguen siendo válidos durante el periodo de transición, que termina el 30 de septiembre de 2029."
+    },
+    {
+      "pregunta": "¿Se puede preparar la ISO 9001 sin consultora?",
+      "respuesta": "Sí. Con una persona responsable, los procesos clave documentados tal como se hacen, evidencias de que funcionan y una auditoría interna seria, muchas startups pueden preparar la mayor parte del trabajo por su cuenta."
+    },
+    {
+      "pregunta": "¿Cuánto dura el certificado ISO 9001?",
+      "respuesta": "Tres años, con auditorías de seguimiento anuales y una auditoría de renovación al final del ciclo."
+    },
+    {
+      "pregunta": "¿La ISO 9001 certifica mi producto?",
+      "respuesta": "No. Certifica el sistema de gestión de la calidad de la empresa: que trabajas de forma controlada, mides los resultados y mejoras. No es un sello de calidad del producto en sí."
+    }
+  ],
+  "relacionados": [
+    "escalar-procesos-startup",
+    "checklist-due-diligence-operativa",
+    "plantilla-okr-startup"
+  ],
+  "recurso": {
+    "tipo": "checklist",
+    "titulo": "Checklist de preparación para la ISO 9001",
+    "descripcion": "Comprueba bloque a bloque qué tienes listo para la auditoría y qué te falta. Los puntos críticos son los que suelen hacer que no se pase a la primera.",
+    "secciones": [
+      {
+        "titulo": "Contexto y alcance",
+        "items": [
+          {
+            "texto": "Está definido el alcance del sistema: qué servicios y qué parte de la empresa cubre",
+            "detalle": "Por escrito, en una página.",
+            "critico": true
+          },
+          {
+            "texto": "Están identificadas las partes interesadas y lo que esperan",
+            "detalle": "Clientes, inversores, equipo, proveedores clave."
+          },
+          {
+            "texto": "Están identificados los factores internos y externos que afectan a la calidad"
+          },
+          {
+            "texto": "Hay un mapa de procesos con su dueño",
+            "detalle": "Aunque sea una tabla sencilla."
+          }
+        ]
+      },
+      {
+        "titulo": "Liderazgo y planificación",
+        "items": [
+          {
+            "texto": "Existe una política de calidad aprobada por la dirección y comunicada al equipo",
+            "critico": true
+          },
+          {
+            "texto": "Hay objetivos de calidad medibles, con responsable y plazo",
+            "critico": true
+          },
+          {
+            "texto": "Están identificados los principales riesgos y oportunidades y qué se hace con cada uno"
+          },
+          {
+            "texto": "Los cambios importantes en la forma de trabajar se planifican y se comunican"
+          },
+          {
+            "texto": "La dirección participa de verdad: revisa resultados y toma decisiones"
+          }
+        ]
+      },
+      {
+        "titulo": "Personas y recursos",
+        "items": [
+          {
+            "texto": "Están definidas las competencias necesarias para cada rol clave"
+          },
+          {
+            "texto": "Hay registros de formación o experiencia de quienes hacen trabajos críticos",
+            "critico": true
+          },
+          {
+            "texto": "El equipo conoce la política, los objetivos y cómo contribuye a la calidad"
+          },
+          {
+            "texto": "Hay un sitio único y controlado para los documentos del sistema",
+            "detalle": "Versiones, responsable y fecha de revisión."
+          },
+          {
+            "texto": "Las herramientas y la infraestructura necesarias están identificadas y mantenidas"
+          }
+        ]
+      },
+      {
+        "titulo": "Operación",
+        "items": [
+          {
+            "texto": "Los procesos que afectan al cliente están definidos: venta, alta, entrega y soporte",
+            "critico": true
+          },
+          {
+            "texto": "Los requisitos del cliente se revisan antes de comprometerse",
+            "detalle": "Contratos, propuestas, alcance."
+          },
+          {
+            "texto": "El diseño y los cambios del producto o servicio se planifican y se revisan"
+          },
+          {
+            "texto": "Los proveedores críticos se evalúan y se controlan"
+          },
+          {
+            "texto": "Las entregas se verifican antes de llegar al cliente"
+          },
+          {
+            "texto": "Las incidencias y reclamaciones quedan registradas",
+            "critico": true
+          }
+        ]
+      },
+      {
+        "titulo": "Evaluación y mejora",
+        "items": [
+          {
+            "texto": "Se miden indicadores de los procesos clave y de la satisfacción del cliente"
+          },
+          {
+            "texto": "Se ha hecho al menos una auditoría interna completa",
+            "detalle": "Por alguien que no hizo el trabajo que audita.",
+            "critico": true
+          },
+          {
+            "texto": "Se ha hecho una revisión por la dirección con resultados y decisiones registradas",
+            "critico": true
+          },
+          {
+            "texto": "Las no conformidades tienen análisis de causa y acción correctiva"
+          },
+          {
+            "texto": "Hay evidencias de mejoras implantadas en los últimos meses"
+          }
+        ]
+      },
+      {
+        "titulo": "Preparación de la auditoría",
+        "items": [
+          {
+            "texto": "El sistema lleva funcionando el tiempo suficiente para tener registros",
+            "detalle": "Unos meses, no unas semanas.",
+            "critico": true
+          },
+          {
+            "texto": "Hay una entidad certificadora acreditada elegida y la auditoría está fechada"
+          },
+          {
+            "texto": "Cada dueño de proceso sabe explicar cómo trabaja y enseñar sus evidencias"
+          },
+          {
+            "texto": "Se ha revisado que lo escrito coincide con lo que se hace"
+          }
+        ]
+      }
+    ],
+    "niveles": [
+      {
+        "desde": 0,
+        "titulo": "Punto de partida",
+        "texto": "Todavía no hay sistema. Empieza por el alcance, la política y los tres procesos que más afectan a tus clientes; en unas semanas tendrás la base."
+      },
+      {
+        "desde": 40,
+        "titulo": "En construcción",
+        "texto": "Tienes piezas, pero faltan evidencias o la parte de evaluación. Pon el sistema a funcionar unos meses y planifica la auditoría interna."
+      },
+      {
+        "desde": 70,
+        "titulo": "Casi listo",
+        "texto": "Lo esencial está. Cierra los puntos críticos pendientes, haz la revisión por la dirección y pide presupuesto a entidades acreditadas."
+      },
+      {
+        "desde": 90,
+        "titulo": "Listo para auditar",
+        "texto": "Puedes fechar la auditoría de certificación. Ensaya con cada dueño de proceso cómo enseñará sus evidencias."
+      }
+    ]
+  }
+}

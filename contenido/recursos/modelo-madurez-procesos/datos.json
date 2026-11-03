@@ -1,0 +1,189 @@
+{
+  "slug": "modelo-madurez-procesos",
+  "titulo": "Modelo de madurez de procesos para startups y pymes: de L0 a L3",
+  "tituloSeo": "Modelo de madurez de procesos: niveles L0 a L3",
+  "descripcion": "Qué es un modelo de madurez de procesos, los niveles L0 a L3, cómo lo aplican LightStartup y LightSME y cómo autoevaluarte con un test gratis.",
+  "entradilla": "La diferencia entre capacidad y madurez, los niveles L0 a L3, cómo los aplican LightStartup y LightSME a startups y pymes, y cómo hacer tu primera autoevaluación con un test descargable.",
+  "tema": "madurez",
+  "pilar": true,
+  "palabraClave": "modelo de madurez de procesos",
+  "palabrasSecundarias": [
+    "madurez de procesos",
+    "modelo de madurez",
+    "nivel de madurez de una empresa"
+  ],
+  "autor": "angel",
+  "publicado": "2026-11-03",
+  "actualizado": "2026-11-03",
+  "faq": [
+    {
+      "pregunta": "¿Qué es un modelo de madurez de procesos?",
+      "respuesta": "Una escala por niveles que describe qué procesos tiene una empresa y con qué grado de control, desde la gestión informal hasta la mejora continua. Sirve para diagnosticar, priorizar y comunicar en qué punto está la empresa."
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre capacidad y madurez?",
+      "respuesta": "La capacidad mide un proceso concreto, por ejemplo la facturación, de L0 a L3. La madurez mide la empresa en conjunto: qué procesos tiene en marcha y si alcanzan la capacidad esperada para su nivel."
+    },
+    {
+      "pregunta": "¿Qué significan los niveles L0, L1, L2 y L3?",
+      "respuesta": "L0, incompleto: el proceso no se hace o no consigue su resultado. L1, realizado: se hace, aunque dependa de quién lo haga. L2, gestionado: se planifica, tiene responsable y deja evidencias. L3, establecido: está definido para toda la empresa y todos lo hacen igual."
+    },
+    {
+      "pregunta": "¿Qué son LightStartup y LightSME?",
+      "respuesta": "Dos marcos de evaluación de procesos desarrollados en la Universidad Rey Juan Carlos y basados en la familia de normas ISO/IEC 33000. LightSME está pensado para pymes de servicios y LightStartup lo adapta a startups con un 34 % menos de procesos."
+    },
+    {
+      "pregunta": "¿Qué nivel de madurez necesita una startup?",
+      "respuesta": "Depende de su fase. En pre-seed basta con el primer nivel; en seed el salto importante es al segundo, con procesos que se pueden demostrar; y en Serie A los procesos críticos deberían estar establecidos."
+    },
+    {
+      "pregunta": "¿Cada cuánto conviene evaluar la madurez?",
+      "respuesta": "Cada seis o doce meses, o cuando la empresa cambie mucho de tamaño. La madurez no es una foto fija: los procesos que bastaban con 10 personas dejan de bastar con 40."
+    }
+  ],
+  "relacionados": [
+    "escalar-procesos-startup",
+    "iso-9001-startups",
+    "checklist-due-diligence-operativa"
+  ],
+  "recurso": {
+    "tipo": "checklist",
+    "titulo": "Test de madurez de procesos para startups y pymes",
+    "descripcion": "Marca lo que puedes demostrar con evidencias, no lo que haces de palabra. El resultado te da un nivel orientativo y por dónde seguir.",
+    "secciones": [
+      {
+        "titulo": "Gobierno organizativo",
+        "items": [
+          {
+            "texto": "La estrategia y los objetivos del año están escritos y el equipo los conoce",
+            "critico": true
+          },
+          {
+            "texto": "Cada proceso clave tiene un dueño con nombre"
+          },
+          {
+            "texto": "Las decisiones importantes quedan registradas"
+          },
+          {
+            "texto": "Hay un plan de negocio que se revisa al menos una vez al año"
+          },
+          {
+            "texto": "Se cumplen y controlan las obligaciones legales básicas (laborales, fiscales, protección de datos)",
+            "critico": true
+          }
+        ]
+      },
+      {
+        "titulo": "Servicios",
+        "items": [
+          {
+            "texto": "La cartera de servicios o producto está definida: qué vendes y qué incluye cada cosa",
+            "critico": true
+          },
+          {
+            "texto": "La entrega del servicio se planifica con plazos y responsables"
+          },
+          {
+            "texto": "Las incidencias se registran y se resuelven con un procedimiento",
+            "critico": true
+          },
+          {
+            "texto": "Los cambios importantes en el servicio se prueban antes de llegar al cliente"
+          },
+          {
+            "texto": "Se miden resultados del servicio, como plazos, calidad o disponibilidad"
+          }
+        ]
+      },
+      {
+        "titulo": "Clientes y consumidores",
+        "items": [
+          {
+            "texto": "Hay criterios claros de atención al cliente que todo el equipo aplica",
+            "critico": true
+          },
+          {
+            "texto": "La cartera de clientes está en un único sitio actualizado",
+            "detalle": "Un CRM o una hoja mantenida."
+          },
+          {
+            "texto": "Las quejas se registran, se responden y se analizan"
+          },
+          {
+            "texto": "Se conocen las necesidades de los clientes por algo más que la intuición",
+            "detalle": "Entrevistas, encuestas, datos de uso."
+          },
+          {
+            "texto": "Hay acciones para fidelizar a los clientes actuales"
+          }
+        ]
+      },
+      {
+        "titulo": "Personas",
+        "items": [
+          {
+            "texto": "La incorporación de una persona nueva sigue un proceso definido",
+            "critico": true
+          },
+          {
+            "texto": "Los roles y responsabilidades están descritos"
+          },
+          {
+            "texto": "Hay un plan de formación, aunque sea sencillo"
+          },
+          {
+            "texto": "El conocimiento crítico no depende de una sola persona",
+            "critico": true
+          },
+          {
+            "texto": "Los equipos tienen objetivos y se revisa su rendimiento"
+          }
+        ]
+      },
+      {
+        "titulo": "Medición y mejora",
+        "items": [
+          {
+            "texto": "Los procesos clave tienen al menos un indicador",
+            "critico": true
+          },
+          {
+            "texto": "Los indicadores se revisan con una frecuencia fija"
+          },
+          {
+            "texto": "Cuando algo falla, se busca la causa y se cambia el proceso",
+            "detalle": "No solo se arregla el caso."
+          },
+          {
+            "texto": "Se ha hecho una evaluación de procesos en el último año"
+          },
+          {
+            "texto": "Hay mejoras concretas implantadas a partir de datos"
+          }
+        ]
+      }
+    ],
+    "niveles": [
+      {
+        "desde": 0,
+        "titulo": "Gestión informal",
+        "texto": "La empresa funciona gracias a las personas, no a los procesos. Céntrate en el nivel 1: define tus servicios, a tus clientes y cómo los atiendes."
+      },
+      {
+        "desde": 35,
+        "titulo": "Nivel emergente",
+        "texto": "Los procesos clave existen, pero falta poder demostrarlos. Tu siguiente paso es el nivel 2: dueños, registros y procedimientos para incidencias e incorporaciones."
+      },
+      {
+        "desde": 60,
+        "titulo": "Nivel esencial",
+        "texto": "Gestionas los procesos y tienes evidencias. Para subir, haz que todo el equipo trabaje igual y añade indicadores a cada proceso clave."
+      },
+      {
+        "desde": 85,
+        "titulo": "Nivel óptimo o superior",
+        "texto": "Tus procesos están establecidos y se miden. El siguiente salto es la mejora continua con datos; es un buen momento para plantearte una certificación."
+      }
+    ]
+  }
+}
