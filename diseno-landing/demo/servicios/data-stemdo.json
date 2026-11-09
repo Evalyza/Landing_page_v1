@@ -1,0 +1,1002 @@
+{
+  "meta": {
+    "etiqueta": "Demostración · Datos de ejemplo",
+    "dimension": "Servicios",
+    "fecha": "2026-11-03",
+    "metodo": "LightSME (Universidad Rey Juan Carlos), dimensión Servicios"
+  },
+  "empresa": {
+    "slug": "stemdo",
+    "nombre": "STEMDO",
+    "descripcion": "Empresa de talento tecnológico: forma y certifica perfiles y los incorpora a los equipos de sus clientes. Con sede en Huelva.",
+    "servicios": [
+      "Talento como servicio (perfiles certificados)",
+      "Construcción de equipos a medida",
+      "Consultoría y despliegue cloud"
+    ],
+    "aviso": "Demostración preparada para STEMDO. Los documentos, las respuestas y los resultados son de ejemplo; no proceden de la empresa."
+  },
+  "documentos": [
+    {
+      "id": "D1",
+      "nombre": "Propuesta_Equipo_RPA_Banca_Norte_sep2026.pdf",
+      "tipo": "Propuesta enviada",
+      "pack": 1,
+      "pide": "La última propuesta o contrato enviado a un cliente"
+    },
+    {
+      "id": "D2",
+      "nombre": "Manual de incorporación al cliente (wiki interna)",
+      "tipo": "Página interna",
+      "pack": 2,
+      "pide": "Checklist de arranque o página «cómo trabajamos»"
+    },
+    {
+      "id": "D3",
+      "nombre": "CRM_asignaciones_oct2026.png",
+      "tipo": "Captura del CRM",
+      "pack": 3,
+      "pide": "Captura del tablero, CRM u hoja de proyectos o servicios"
+    },
+    {
+      "id": "D4",
+      "nombre": "Actas_comite_operaciones_sep-oct2026.pdf",
+      "tipo": "Actas semanales",
+      "pack": 4,
+      "pide": "Calendario o notas de las últimas reuniones de seguimiento"
+    },
+    {
+      "id": "D5",
+      "nombre": "Cuadro_de_mando_servicio_T3_2026.xlsx",
+      "tipo": "Cuadro de mando",
+      "pack": 5,
+      "pide": "Indicadores o encuestas de satisfacción que usen"
+    },
+    {
+      "id": "D6",
+      "nombre": "Export_portal_peticiones_clientes_2026.csv",
+      "tipo": "Registro de peticiones",
+      "pack": 6,
+      "pide": "Registro de incidencias, tickets o quejas"
+    }
+  ],
+  "procesos": [
+    {
+      "id": "SM1",
+      "nombre": "Planificar el servicio",
+      "banda": "Inmaduro",
+      "factor": "Gestión del servicio",
+      "tareas": [
+        {
+          "id": "SM1.1",
+          "nombre": "Definir e implantar criterios generales para la prestación de servicios",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Alcance: qué incluye y qué no incluye",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D1",
+                "cita": "Incluye: 4 perfiles certificados en RPA durante 12 meses. No incluye: licencias del software."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Plazos y tiempos de respuesta comprometidos",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D1",
+                "cita": "Incorporación del equipo en 15 días como máximo; sustitución de un perfil en 10 días."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Responsabilidades de ambas partes",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D1",
+                "cita": "El cliente asigna un referente técnico y da acceso a sus entornos."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "d",
+              "texto": "Arranque y cierre del servicio",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D2",
+                "cita": "Checklist de incorporación y reunión trimestral de seguimiento con el cliente."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "e",
+              "texto": "Planificación de quién presta cada servicio y cuándo",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D3",
+                "cita": "Cada asignación tiene perfil, cliente y fecha de inicio prevista."
+              },
+              "recomendacion": null
+            }
+          ],
+          "pct_previo": 100.0,
+          "pendientes_previo": 0,
+          "pct_final": 100.0,
+          "pendientes_final": 0,
+          "valoracion": 2
+        },
+        {
+          "id": "SM1.2",
+          "nombre": "Control y seguimiento de los servicios prestados y toma de decisiones",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Registro de servicios en curso con cliente y estado",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D3",
+                "cita": "38 asignaciones activas con cliente y estado."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Revisión periódica con responsable",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D4",
+                "cita": "Comité de operaciones cada martes; actas de las últimas 8 semanas."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Decisiones trazables a una revisión",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D4",
+                "cita": "Acta 21/10: se refuerza la formación en identidades tras dos sustituciones."
+              },
+              "recomendacion": null
+            }
+          ],
+          "pct_previo": 100.0,
+          "pendientes_previo": 0,
+          "pct_final": 100.0,
+          "pendientes_final": 0,
+          "valoracion": 2
+        }
+      ],
+      "pct": 100.0,
+      "nivel": 3,
+      "objetivo": 1,
+      "alcanza_objetivo": true
+    },
+    {
+      "id": "SM2",
+      "nombre": "Gestionar y planificar proyectos",
+      "banda": "Básico",
+      "factor": "Gestión del servicio",
+      "tareas": [
+        {
+          "id": "SM2.1",
+          "nombre": "Definir e implantar criterios de gestión y planificación de proyectos",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Fases e hitos definidos",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D2",
+                "cita": "Fases de un equipo a medida: selección, formación, incorporación, seguimiento."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Estimación de esfuerzo y plazos",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D1",
+                "cita": "Calendario por fases con horas de formación estimadas."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Responsable de cada proyecto",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D3",
+                "cita": "Responsable de cuenta asignado en cada cliente."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "d",
+              "texto": "Herramienta de planificación en uso",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D3",
+                "cita": "CRM actualizado esta semana."
+              },
+              "recomendacion": null
+            }
+          ],
+          "pct_previo": 100.0,
+          "pendientes_previo": 0,
+          "pct_final": 100.0,
+          "pendientes_final": 0,
+          "valoracion": 2
+        },
+        {
+          "id": "SM2.2",
+          "nombre": "Definir e implantar una estructura de registro de proyectos",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Un único lugar con todos los proyectos",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D3",
+                "cita": "Un único CRM con todos los programas y asignaciones."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Campos comunes: cliente, responsable, fechas, estado",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D3",
+                "cita": "Campos: cliente, tecnología, responsable, inicio, estado."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Registro al día",
+              "previo": "parcial",
+              "final": "parcial",
+              "evidencia": {
+                "doc": "D3",
+                "cita": "5 de 38 asignaciones sin actualizar en el último mes."
+              },
+              "recomendacion": "Revisar en la reunión periódica que el registro esté al día."
+            }
+          ],
+          "pct_previo": 83.3,
+          "pendientes_previo": 0,
+          "pct_final": 83.3,
+          "pendientes_final": 0,
+          "valoracion": 2
+        },
+        {
+          "id": "SM2.3",
+          "nombre": "Control y seguimiento de proyectos y toma de decisiones",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Se revisa el avance de cada proyecto",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D4",
+                "cita": "El comité repasa cada programa activo."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Se compara lo previsto con lo real (plazos u horas)",
+              "previo": "pendiente",
+              "final": "cumplido",
+              "evidencia": {
+                "chat": "c1",
+                "cita": "Comparan los días reales de incorporación con los 15 comprometidos."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Acciones correctivas registradas por proyecto",
+              "previo": "pendiente",
+              "final": "parcial",
+              "evidencia": {
+                "chat": "c1",
+                "cita": "Las acciones se anotan en los clientes grandes, no siempre en los pequeños."
+              },
+              "recomendacion": "Anotar la acción acordada para cada proyecto desviado."
+            }
+          ],
+          "pct_previo": 33.3,
+          "pendientes_previo": 2,
+          "pct_final": 83.3,
+          "pendientes_final": 0,
+          "valoracion": 2
+        }
+      ],
+      "pct": 100.0,
+      "nivel": 3,
+      "objetivo": 2,
+      "alcanza_objetivo": true
+    },
+    {
+      "id": "SP1",
+      "nombre": "Medir los resultados de la prestación",
+      "banda": "Básico",
+      "factor": "Prestación",
+      "tareas": [
+        {
+          "id": "SP1.1",
+          "nombre": "Definir e implantar criterios de evaluación de la prestación",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Indicadores definidos",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D5",
+                "cita": "Indicadores: días hasta la incorporación, sustituciones, satisfacción del cliente."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Objetivo o umbral para cada indicador",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D5",
+                "cita": "Objetivos: 15 días o menos, menos del 5 % de sustituciones, satisfacción de 4 sobre 5."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Fuente de datos y frecuencia definidas",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D5",
+                "cita": "Datos del CRM y de una encuesta trimestral; cierre mensual."
+              },
+              "recomendacion": null
+            }
+          ],
+          "pct_previo": 100.0,
+          "pendientes_previo": 0,
+          "pct_final": 100.0,
+          "pendientes_final": 0,
+          "valoracion": 2
+        },
+        {
+          "id": "SP1.2",
+          "nombre": "Evaluar la prestación y tomar decisiones según los resultados",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Indicadores medidos en los últimos 3 meses",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D5",
+                "cita": "Valores mensuales de enero a septiembre de 2026."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Resultados revisados frente a los objetivos",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D4",
+                "cita": "El comité revisa el cuadro de mando el primer martes de cada mes."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Acciones a raíz de los resultados",
+              "previo": "parcial",
+              "final": "parcial",
+              "evidencia": {
+                "doc": "D4",
+                "cita": "Acta 07/10: satisfacción baja en un cliente; se acuerda una acción sin fecha."
+              },
+              "recomendacion": "Convertir cada resultado por debajo del objetivo en una acción con fecha."
+            }
+          ],
+          "pct_previo": 83.3,
+          "pendientes_previo": 0,
+          "pct_final": 83.3,
+          "pendientes_final": 0,
+          "valoracion": 2
+        }
+      ],
+      "pct": 100.0,
+      "nivel": 3,
+      "objetivo": 2,
+      "alcanza_objetivo": true
+    },
+    {
+      "id": "SR0",
+      "nombre": "Registrar reclamos e incidencias",
+      "banda": "Mejorado",
+      "factor": "Respuestas e incidencias",
+      "tareas": [
+        {
+          "id": "SR0.1",
+          "nombre": "Definir e implantar tipos de reclamos e incidencias y prioridades",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Tipos definidos (sugerencia, petición, incidencia, queja)",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D6",
+                "cita": "Tipos en el portal: petición, incidencia, queja, sugerencia."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Prioridad por tipo con tiempo de respuesta",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D6",
+                "cita": "Prioridad alta: respuesta en 4 horas laborables."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Canal de entrada conocido por los clientes",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D1",
+                "cita": "Las peticiones se tramitan por el portal de clientes."
+              },
+              "recomendacion": null
+            }
+          ],
+          "pct_previo": 100.0,
+          "pendientes_previo": 0,
+          "pct_final": 100.0,
+          "pendientes_final": 0,
+          "valoracion": 2
+        },
+        {
+          "id": "SR0.2",
+          "nombre": "Registrar, controlar y seguir los reclamos e incidencias y decidir",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Cada caso registrado con fecha, tipo y estado",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D6",
+                "cita": "164 peticiones en 2026 con tipo, estado y fechas."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Seguimiento hasta el cierre con responsable",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D6",
+                "cita": "Todas con responsable; el 92 % se cerró en plazo."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Análisis del registro y decisiones",
+              "previo": "pendiente",
+              "final": "parcial",
+              "evidencia": {
+                "chat": "c2",
+                "cita": "Revisan las quejas cada trimestre, pero no las peticiones ni las incidencias."
+              },
+              "recomendacion": "Revisar periódicamente el registro para detectar problemas repetidos."
+            }
+          ],
+          "pct_previo": 66.7,
+          "pendientes_previo": 1,
+          "pct_final": 83.3,
+          "pendientes_final": 0,
+          "valoracion": 2
+        }
+      ],
+      "pct": 100.0,
+      "nivel": 3,
+      "objetivo": 3,
+      "alcanza_objetivo": true
+    },
+    {
+      "id": "SR1",
+      "nombre": "Gestionar cambios en el servicio",
+      "banda": "Mejorado",
+      "factor": "Respuestas e incidencias",
+      "tareas": [
+        {
+          "id": "SR1.1",
+          "nombre": "Definir e implantar criterios para efectuar cambios en los servicios",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Cómo se evalúa el impacto de un cambio (alcance, plazo, coste)",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D2",
+                "cita": "Cambio de perfil o tecnología: se valora el impacto en plazo, coste y formación."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Quién aprueba los cambios",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D2",
+                "cita": "Los cambios los aprueba la dirección de operaciones."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "c",
+              "texto": "Comunicado al cliente",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D1",
+                "cita": "Cláusula de cambios en el equipo con 30 días de preaviso."
+              },
+              "recomendacion": null
+            }
+          ],
+          "pct_previo": 100.0,
+          "pendientes_previo": 0,
+          "pct_final": 100.0,
+          "pendientes_final": 0,
+          "valoracion": 2
+        },
+        {
+          "id": "SR1.2",
+          "nombre": "Implantar cambios en los servicios",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Un cambio reciente aplicado según los criterios",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D4",
+                "cita": "Acta 14/10: cambio de 2 perfiles de RPA a otra plataforma para un cliente, aprobado."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "El cambio quedó registrado",
+              "previo": "cumplido",
+              "final": "cumplido",
+              "evidencia": {
+                "doc": "D3",
+                "cita": "Adenda v2 adjunta a la asignación en el CRM."
+              },
+              "recomendacion": null
+            }
+          ],
+          "pct_previo": 100.0,
+          "pendientes_previo": 0,
+          "pct_final": 100.0,
+          "pendientes_final": 0,
+          "valoracion": 2
+        },
+        {
+          "id": "SR1.3",
+          "nombre": "Control y seguimiento de los cambios para la mejora continua",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Se revisan los cambios de forma periódica",
+              "previo": "pendiente",
+              "final": "cumplido",
+              "evidencia": {
+                "chat": "c3",
+                "cita": "Cada seis meses revisan qué tecnologías piden los clientes."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Decisiones de mejora a raíz de esa revisión",
+              "previo": "pendiente",
+              "final": "parcial",
+              "evidencia": {
+                "chat": "c3",
+                "cita": "De la última revisión salió un itinerario nuevo, pero la revisión no tiene acta."
+              },
+              "recomendacion": "Anotar las mejoras que salen de esa revisión y convertir los cambios repetidos en parte del servicio estándar."
+            }
+          ],
+          "pct_previo": 0.0,
+          "pendientes_previo": 2,
+          "pct_final": 75.0,
+          "pendientes_final": 0,
+          "valoracion": 2
+        },
+        {
+          "id": "SR1.4",
+          "nombre": "Actualizar el porfolio de servicios",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "El porfolio refleja los últimos cambios",
+              "previo": "pendiente",
+              "final": "cumplido",
+              "evidencia": {
+                "chat": "c3",
+                "cita": "El itinerario nuevo ya figura en el catálogo."
+              },
+              "recomendacion": null
+            },
+            {
+              "codigo": "b",
+              "texto": "Fecha o versión de la actualización visible",
+              "previo": "pendiente",
+              "final": "no",
+              "evidencia": {
+                "chat": "c3",
+                "cita": "El catálogo no lleva fecha ni versión."
+              },
+              "recomendacion": "Fechar las versiones del catálogo de servicios para saber cuál está vigente."
+            }
+          ],
+          "pct_previo": 0.0,
+          "pendientes_previo": 2,
+          "pct_final": 50.0,
+          "pendientes_final": 0,
+          "valoracion": 1
+        }
+      ],
+      "pct": 87.5,
+      "nivel": 3,
+      "objetivo": 3,
+      "alcanza_objetivo": true
+    },
+    {
+      "id": "SD1",
+      "nombre": "Diseñar el servicio y realizar pruebas formales",
+      "banda": "Excelente",
+      "factor": "Diseño e innovación",
+      "tareas": [
+        {
+          "id": "SD1.1",
+          "nombre": "Elaborar el blueprint del servicio",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Pasos del servicio, visibles e internos",
+              "previo": "pendiente",
+              "final": "parcial",
+              "evidencia": {
+                "chat": "c4",
+                "cita": "Diagrama del proceso interno del itinerario, sin la parte del cliente."
+              },
+              "recomendacion": "Documentar el blueprint de un servicio: pasos del cliente y pasos internos."
+            },
+            {
+              "codigo": "b",
+              "texto": "Tiempos y responsables por paso",
+              "previo": "pendiente",
+              "final": "no",
+              "evidencia": null,
+              "recomendacion": "Añadir tiempos y responsable a cada paso del blueprint."
+            },
+            {
+              "codigo": "c",
+              "texto": "Resultados esperados medibles",
+              "previo": "pendiente",
+              "final": "no",
+              "evidencia": null,
+              "recomendacion": "Definir el resultado medible de cada paso clave."
+            }
+          ],
+          "pct_previo": 0.0,
+          "pendientes_previo": 3,
+          "pct_final": 16.7,
+          "pendientes_final": 0,
+          "valoracion": 0
+        },
+        {
+          "id": "SD1.2",
+          "nombre": "Elaborar el customer journey map",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Pasos y puntos de contacto del cliente",
+              "previo": "parcial",
+              "final": "parcial",
+              "evidencia": {
+                "doc": "D2",
+                "cita": "El manual describe los contactos con el cliente durante la incorporación."
+              },
+              "recomendacion": "Dibujar el recorrido completo del cliente, de la propuesta a la renovación."
+            },
+            {
+              "codigo": "b",
+              "texto": "Experiencia y puntos de fricción del cliente",
+              "previo": "pendiente",
+              "final": "no",
+              "evidencia": {
+                "chat": "c4",
+                "cita": "No han descrito cómo vive el servicio el cliente."
+              },
+              "recomendacion": "Anotar en el recorrido las fricciones que comentan los clientes."
+            }
+          ],
+          "pct_previo": 25.0,
+          "pendientes_previo": 1,
+          "pct_final": 25.0,
+          "pendientes_final": 0,
+          "valoracion": 0
+        },
+        {
+          "id": "SD1.3",
+          "nombre": "Probar los servicios según el blueprint y el CJM y decidir",
+          "items": [
+            {
+              "codigo": "a",
+              "texto": "Protocolo de prueba o piloto",
+              "previo": "pendiente",
+              "final": "parcial",
+              "evidencia": {
+                "chat": "c4",
+                "cita": "Probaron el itinerario con un grupo interno, sin protocolo escrito."
+              },
+              "recomendacion": "Probar los servicios nuevos con un protocolo o piloto definido antes de ofrecerlos."
+            },
+            {
+              "codigo": "b",
+              "texto": "Resultados esperados frente a obtenidos registrados",
+              "previo": "pendiente",
+              "final": "no",
+              "evidencia": null,
+              "recomendacion": "Registrar qué se esperaba y qué pasó en la prueba."
+            },
+            {
+              "codigo": "c",
+              "texto": "Decisiones a raíz de la prueba",
+              "previo": "pendiente",
+              "final": "parcial",
+              "evidencia": {
+                "chat": "c4",
+                "cita": "Decidieron lanzarlo tras la prueba interna, sin dejarlo escrito."
+              },
+              "recomendacion": "Decidir y anotar si el servicio se lanza, se ajusta o se descarta según la prueba."
+            }
+          ],
+          "pct_previo": 0.0,
+          "pendientes_previo": 3,
+          "pct_final": 33.3,
+          "pendientes_final": 0,
+          "valoracion": 1
+        }
+      ],
+      "pct": 16.7,
+      "nivel": 1,
+      "objetivo": 3,
+      "alcanza_objetivo": false
+    }
+  ],
+  "factores": [
+    {
+      "nombre": "Gestión del servicio",
+      "procesos": [
+        "SM1",
+        "SM2"
+      ],
+      "pct": 100.0
+    },
+    {
+      "nombre": "Prestación",
+      "procesos": [
+        "SP1"
+      ],
+      "pct": 100.0
+    },
+    {
+      "nombre": "Respuestas e incidencias",
+      "procesos": [
+        "SR0",
+        "SR1"
+      ],
+      "pct": 93.8
+    },
+    {
+      "nombre": "Diseño e innovación",
+      "procesos": [
+        "SD1"
+      ],
+      "pct": 16.7
+    }
+  ],
+  "entrevista": [
+    {
+      "id": "c1",
+      "bloque": "B. Cómo saben que va bien",
+      "pregunta": "El comité de operaciones repasa cada programa. Cuando una incorporación se retrasa respecto a lo comprometido, ¿cómo lo detectan y qué hacen? Si tiene un caso reciente, cuéntenoslo.",
+      "respuesta": "El CRM cuenta los días desde la firma y los comparamos con los 15 que comprometemos. En septiembre un equipo se retrasó y reasignamos a dos personas de otra sede. Eso lo anotamos porque era un cliente grande; con los pequeños no siempre.",
+      "seguimiento": null
+    },
+    {
+      "id": "c2",
+      "bloque": "C. Cuando algo va mal",
+      "pregunta": "Hemos visto cómo gestionan cada petición en el portal. Más allá de resolver cada una, ¿qué hacen con el conjunto de peticiones, incidencias y quejas?",
+      "respuesta": "Las quejas las revisamos cada trimestre en el comité. Las peticiones y las incidencias no las analizamos en conjunto.",
+      "seguimiento": null
+    },
+    {
+      "id": "c3",
+      "bloque": "C. Cuando el cliente pide cambios",
+      "pregunta": "Además del cambio de perfiles de octubre, ¿qué hacen con los cambios que les piden los clientes a lo largo del tiempo? ¿Les han llevado a cambiar lo que ofrecen?",
+      "respuesta": "Cada seis meses miramos qué tecnologías nos piden y no tenemos. De la última revisión salió un itinerario de datos, que ya está en el catálogo. La revisión no tiene acta y el catálogo no lleva fecha.",
+      "seguimiento": null
+    },
+    {
+      "id": "c4",
+      "bloque": "D. Servicios nuevos",
+      "pregunta": "¿Cómo pusieron en marcha ese itinerario nuevo? ¿Lo diseñaron o lo probaron de alguna forma antes de ofrecerlo?",
+      "respuesta": "Hicimos un diagrama del proceso por dentro y lo probamos con un grupo interno antes de ofrecerlo. No escribimos un protocolo de prueba ni hemos descrito cómo lo vive el cliente.",
+      "seguimiento": null
+    }
+  ],
+  "resultado": {
+    "banda": "Mejorado",
+    "siguiente_banda": "Excelente",
+    "bloquean": [
+      "SD1"
+    ],
+    "bandas": [
+      "Inmaduro",
+      "Básico",
+      "Mejorado",
+      "Excelente"
+    ],
+    "objetivo_por_banda": {
+      "Inmaduro": 1,
+      "Básico": 2,
+      "Mejorado": 3,
+      "Excelente": 3
+    }
+  },
+  "recomendaciones": [
+    {
+      "proceso": "SD1",
+      "tarea": "SD1.1",
+      "item": "a",
+      "prioridad": "Alta",
+      "texto": "Documentar el blueprint de un servicio: pasos del cliente y pasos internos."
+    },
+    {
+      "proceso": "SD1",
+      "tarea": "SD1.1",
+      "item": "b",
+      "prioridad": "Alta",
+      "texto": "Añadir tiempos y responsable a cada paso del blueprint."
+    },
+    {
+      "proceso": "SD1",
+      "tarea": "SD1.1",
+      "item": "c",
+      "prioridad": "Alta",
+      "texto": "Definir el resultado medible de cada paso clave."
+    },
+    {
+      "proceso": "SD1",
+      "tarea": "SD1.2",
+      "item": "a",
+      "prioridad": "Alta",
+      "texto": "Dibujar el recorrido completo del cliente, de la propuesta a la renovación."
+    },
+    {
+      "proceso": "SD1",
+      "tarea": "SD1.2",
+      "item": "b",
+      "prioridad": "Alta",
+      "texto": "Anotar en el recorrido las fricciones que comentan los clientes."
+    },
+    {
+      "proceso": "SD1",
+      "tarea": "SD1.3",
+      "item": "a",
+      "prioridad": "Alta",
+      "texto": "Probar los servicios nuevos con un protocolo o piloto definido antes de ofrecerlos."
+    },
+    {
+      "proceso": "SD1",
+      "tarea": "SD1.3",
+      "item": "b",
+      "prioridad": "Alta",
+      "texto": "Registrar qué se esperaba y qué pasó en la prueba."
+    },
+    {
+      "proceso": "SD1",
+      "tarea": "SD1.3",
+      "item": "c",
+      "prioridad": "Alta",
+      "texto": "Decidir y anotar si el servicio se lanza, se ajusta o se descarta según la prueba."
+    },
+    {
+      "proceso": "SM2",
+      "tarea": "SM2.2",
+      "item": "c",
+      "prioridad": "Media",
+      "texto": "Revisar en la reunión periódica que el registro esté al día."
+    },
+    {
+      "proceso": "SM2",
+      "tarea": "SM2.3",
+      "item": "c",
+      "prioridad": "Media",
+      "texto": "Anotar la acción acordada para cada proyecto desviado."
+    },
+    {
+      "proceso": "SP1",
+      "tarea": "SP1.2",
+      "item": "c",
+      "prioridad": "Media",
+      "texto": "Convertir cada resultado por debajo del objetivo en una acción con fecha."
+    },
+    {
+      "proceso": "SR0",
+      "tarea": "SR0.2",
+      "item": "c",
+      "prioridad": "Media",
+      "texto": "Revisar periódicamente el registro para detectar problemas repetidos."
+    },
+    {
+      "proceso": "SR1",
+      "tarea": "SR1.3",
+      "item": "b",
+      "prioridad": "Media",
+      "texto": "Anotar las mejoras que salen de esa revisión y convertir los cambios repetidos en parte del servicio estándar."
+    },
+    {
+      "proceso": "SR1",
+      "tarea": "SR1.4",
+      "item": "b",
+      "prioridad": "Media",
+      "texto": "Fechar las versiones del catálogo de servicios para saber cuál está vigente."
+    }
+  ]
+}
