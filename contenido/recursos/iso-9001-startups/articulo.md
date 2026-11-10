@@ -89,7 +89,7 @@ Escribe lo que falte, empezando por los procesos que más afectan al cliente, y 
 
 ### 3. Auditoría interna y revisión por la dirección
 
-Alguien que no haya hecho el trabajo revisa el sistema como lo haría un auditor. Después, la dirección analiza los resultados y decide qué corregir. Las dos cosas son requisitos de la norma, no un extra.
+Alguien que no haya hecho el trabajo revisa el sistema como lo haría un auditor. Después, la dirección analiza los resultados y decide qué corregir. Las dos cosas son requisitos de la norma, no un extra. Te lo explicamos paso a paso en la [guía de auditoría ISO](/recursos/auditoria-iso/).
 
 ### 4. Elegir entidad certificadora
 
