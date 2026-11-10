@@ -18,11 +18,11 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
-import { readArticles, writeSitemap, startupsUrl } from "./recursos-lib.mjs";
+import { readArticles, writeSitemap, startupsUrl, recursoLinks, ASSET_VERSION } from "./recursos-lib.mjs";
 
 // ---- Change this when the final domain is known (no trailing slash) ----
 const SITE_URL = process.env.SITE_URL || "https://ozmetra.com";
-const VERSION = "20"; // cache-busting for styles/scripts
+const VERSION = ASSET_VERSION; // cache-busting for styles/scripts (shared with the Recursos pages)
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "diseno-landing");
@@ -35,8 +35,10 @@ const sandbox = { window: {} };
 vm.runInNewContext(readFileSync(join(OUT, "i18n.js"), "utf8"), sandbox);
 const I18N = sandbox.window.I18N;
 
-const template = readFileSync(join(ROOT, "tools", "index.template.html"), "utf8");
-const startupsTemplate = readFileSync(join(ROOT, "tools", "startups.template.html"), "utf8");
+// Normalise line endings so a build on Windows writes the same files as the GitHub action
+const readText = (path) => readFileSync(path, "utf8").replace(/\r\n/g, "\n");
+const template = readText(join(ROOT, "tools", "index.template.html"));
+const startupsTemplate = readText(join(ROOT, "tools", "startups.template.html"));
 
 // Legal texts, as legal.js renders them
 const legalSandbox = { window: {} };
@@ -182,6 +184,7 @@ function buildPage(lang) {
   const recursos = lang === DEFAULT && ARTICLES.length;
   html = html.replace(/\n([ \t]*)<!--RECURSOS-NAV-->/, (_, i) => (recursos ? `\n${i}<li><a href="recursos/">Recursos</a></li>` : ""));
   html = html.replace(/\n([ \t]*)<!--RECURSOS-FOOTER-->/, (_, i) => (recursos ? `\n${i}<a href="recursos/">Recursos</a>` : ""));
+  html = recursoLinks(html, lang, ARTICLES);
 
   html = relink(html, base, lang);
   html = legalLinks(html, base, lang);
@@ -203,6 +206,7 @@ function buildStartups(lang) {
   const recursos = lang === DEFAULT && ARTICLES.length;
   html = html.replace(/\n([ \t]*)<!--RECURSOS-NAV-->/, (_, i) => (recursos ? `\n${i}<li><a href="recursos/">Recursos</a></li>` : ""));
   html = html.replace(/\n([ \t]*)<!--RECURSOS-FOOTER-->/, (_, i) => (recursos ? `\n${i}<a href="recursos/">Recursos</a>` : ""));
+  html = recursoLinks(html, lang, ARTICLES);
   html = relink(html, base, lang);
   html = legalLinks(html, base, lang);
   html = html.replaceAll("{{HOME}}", "../");
@@ -233,7 +237,7 @@ const legalBlock = (b) => (Array.isArray(b) ? `<ul>${b.map((li) => `<li>${legalI
 function buildLegal(file, doc) {
   const path = join(OUT, file);
   const d = LEGAL[doc][DEFAULT];
-  let html = translate(readFileSync(path, "utf8"), DEFAULT);
+  let html = translate(readText(path), DEFAULT);
   const sections = d.sections.map((s, i) => `
       <section class="legal-section" id="s-${i + 1}" aria-labelledby="h-${i + 1}">
         <h2 id="h-${i + 1}"><span class="legal-num mono">${i + 1}.</span> ${esc(s.h)}</h2>

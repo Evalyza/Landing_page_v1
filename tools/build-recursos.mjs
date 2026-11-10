@@ -16,11 +16,11 @@ import { join } from "node:path";
 import { Marked, Renderer } from "marked";
 import { Resvg } from "@resvg/resvg-js";
 import {
-  ROOT, OUT, SITE_URL, TEMAS, PENDING_RE, articleUrl, readArticles, readAuthors, writeSitemap,
+  ROOT, OUT, SITE_URL, TEMAS, PENDING_RE, ASSET_VERSION, articleUrl, readArticles, readAuthors, writeSitemap,
 } from "./recursos-lib.mjs";
 
 const VERSION = "1"; // cache-busting for recursos.css / recursos.js
-const STYLES_VERSION = "16"; // must match the ?v= used by the landing for styles.css
+const STYLES_VERSION = ASSET_VERSION; // same ?v= as the landing for styles.css and theme.js
 const DIR = join(OUT, "recursos");
 
 const PAPERS = [
@@ -167,13 +167,14 @@ const SCRIPTS = `<script>window.I18N={es:{"theme.toLight":"Cambiar a modo claro"
 
 // Bottom call to action: the articles speak to founders, so it leads to the diagnosis
 // for startups (/startups/), tagged with the article; programmes get a secondary link.
-function ctaBlock(slug) {
+// datos.json can override the heading and text with "cta": { "titulo": "…", "texto": "…" }.
+function ctaBlock(slug, cta = {}) {
   const utm = `utm_source=blog&amp;utm_medium=organic&amp;utm_campaign=${slug}`;
   return `<section class="rc-cta" aria-labelledby="cta-h">
       <div>
         <p class="rc-kicker">Ozmetra</p>
-        <h2 id="cta-h">¿Quieres ver los procesos de tu startup con este nivel de detalle?</h2>
-        <p>En dos semanas analizamos cómo trabaja vuestro equipo por dentro y os entregamos un plan priorizado para ordenar lo que se ha descontrolado al crecer. ¿Diriges una aceleradora o un vivero? <a href="/?${utm}#programa">Mira el piloto gratuito para programas</a>.</p>
+        <h2 id="cta-h">${esc(cta.titulo || "¿Quieres ver los procesos de tu startup con este nivel de detalle?")}</h2>
+        <p>${esc(cta.texto || "En dos semanas analizamos cómo trabaja vuestro equipo por dentro y os entregamos un plan priorizado para ordenar lo que se ha descontrolado al crecer.")} ¿Diriges una aceleradora o un vivero? <a href="/?${utm}#programa">Mira el piloto gratuito para programas</a>.</p>
       </div>
       <a class="btn btn-primary" href="/startups/?${utm}#diagnostico" data-cta="final"><span>Ver el diagnóstico</span><i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
     </section>`;
@@ -315,7 +316,7 @@ ${a.faq.map((f) => `          <details><summary>${esc(f.pregunta)}<i class="ph p
           </div>
         </section>
 
-        ${ctaBlock(a.slug)}
+        ${ctaBlock(a.slug, a.cta)}
       </article>
     </div>
 
@@ -350,7 +351,7 @@ function card(a) {
 function indexPage(all) {
   const url = `${SITE_URL}/recursos/`;
   const title = "Recursos para ordenar los procesos de tu startup · Ozmetra";
-  const description = "Guías, checklists y plantillas para preparar una due diligence, escalar procesos, fijar OKR, preparar la ISO 9001 y medir la madurez de tu startup.";
+  const description = "Guías y checklists gratis para startups: preparar una auditoría ISO, entrar en una aceleradora, pasar una due diligence, fijar OKR y escalar procesos.";
   const groups = Object.entries(TEMAS)
     .map(([key, t]) => ({ key, t, items: all.filter((a) => a.tema === key).sort((x, y) => (y.pilar ? 1 : 0) - (x.pilar ? 1 : 0)) }))
     .filter((g) => g.items.length);
@@ -412,6 +413,39 @@ function feed(all) {
 ${items}
   </channel>
 </rss>
+`;
+}
+
+// ---------- llms.txt (summary for AI assistants, https://llmstxt.org) ----------
+// Rebuilt with every article so the list of guides never goes stale.
+function llmsTxt(all) {
+  return `# Ozmetra
+
+> Ozmetra es un software con IA que analiza los procesos internos de las startups. Ayuda a aceleradoras, incubadoras y viveros de empresas a seleccionar candidatas con evidencias y a dar continuidad a la mentoría cuando termina el programa. También ofrece un diagnóstico de procesos para startups de 15 a 60 personas que han crecido rápido. Con sede en España; web en español, inglés, francés, alemán e italiano.
+
+## Qué hace
+- Analiza cada startup en ocho áreas: estrategia, producto, equipo, operaciones, ventas, marketing, finanzas y tecnología.
+- Compara cada startup con una referencia para su fase (pre-seed, seed, Serie A) del modelo LightStartup.
+- Para programas (aceleradoras, incubadoras, viveros): evaluación de candidatas, comparación de la cohorte, informe para el comité y seguimiento tras el programa. Piloto gratuito para la próxima convocatoria.
+- Para startups: diagnóstico de procesos en dos semanas, con entrevistas a 3-5 personas del equipo, puntuación de 8 áreas, plan de mejora priorizado y una sesión de 60 minutos con el equipo fundador.
+- Ayuda a preparar la documentación que piden normas como ISO 9001 e ISO/IEC 20000-1. Ozmetra no certifica: la certificación la concede una entidad acreditada.
+
+## Método
+Ozmetra aplica LightStartup y LightSME, marcos de evaluación de procesos desarrollados en la Universidad Rey Juan Carlos a partir de la familia de normas ISO/IEC 33000 y validados en empresas reales.
+${PAPERS.map((p) => `- ${p.name} (${p.isPartOf}, ${p.datePublished}): ${p.url}`).join("\n")}
+
+## Páginas principales
+- Para programas (aceleradoras, incubadoras, viveros): ${SITE_URL}/
+- Diagnóstico para startups: ${SITE_URL}/startups/
+- Recursos: ${SITE_URL}/recursos/
+
+## Guías
+${all.map((a) => `- [${a.titulo}](${articleUrl(a.slug)}): ${a.descripcion}`).join("\n")}
+
+## Contacto
+- Email: ozmetra.solution@gmail.com
+- LinkedIn: https://www.linkedin.com/company/ozmetra/
+- Fundador: Ángel León Soriano
 `;
 }
 
@@ -489,6 +523,7 @@ if (articles.length) {
   }
   writeFileSync(join(DIR, "index.html"), indexPage(articles));
   writeFileSync(join(DIR, "feed.xml"), feed(articles));
+  writeFileSync(join(OUT, "llms.txt"), llmsTxt(articles));
 } else if (existsSync(DIR)) {
   rmSync(DIR, { recursive: true });
 }

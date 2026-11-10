@@ -27,7 +27,23 @@ export const TEMAS = {
   okr: { nombre: "OKR", icono: "ph-target" },
   iso: { nombre: "Normas ISO", icono: "ph-seal-check" },
   madurez: { nombre: "Madurez de procesos", icono: "ph-stairs" },
+  aceleradoras: { nombre: "Aceleradoras", icono: "ph-rocket-launch" },
 };
+
+// Cache-busting for styles.css / theme.js. build-pages.mjs and build-recursos.mjs both use it,
+// so the landing and the articles always ask for the same version.
+export const ASSET_VERSION = "20";
+
+// Spanish-only link from a landing template to an article:
+//   <!--RECURSO:slug:Texto del enlace-->
+// becomes a link when the article exists and the page is in Spanish; otherwise it disappears.
+export function recursoLinks(html, lang, articles) {
+  const slugs = new Set(articles.map((a) => a.slug));
+  return html.replace(/\n([ \t]*)<!--RECURSO:([a-z0-9-]+):([^>]+?)-->/g, (_, indent, slug, text) =>
+    lang === "es" && slugs.has(slug)
+      ? `\n${indent}<a class="startup-link rc-landing-link" href="recursos/${slug}/"><span>${text.trim()}</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>`
+      : "");
+}
 
 export const pageUrl = (lang) => (lang === DEFAULT_LANG ? `${SITE_URL}/` : `${SITE_URL}/${lang}/`);
 export const articleUrl = (slug) => `${SITE_URL}/recursos/${slug}/`;
@@ -47,7 +63,7 @@ export function readArticles() {
     .filter((dir) => existsSync(join(dir, "datos.json")) && existsSync(join(dir, "articulo.md")))
     .map((dir) => {
       const datos = JSON.parse(readFileSync(join(dir, "datos.json"), "utf8"));
-      const markdown = readFileSync(join(dir, "articulo.md"), "utf8");
+      const markdown = readFileSync(join(dir, "articulo.md"), "utf8").replace(/\r\n/g, "\n");
       return { ...datos, markdown, dir };
     })
     .sort((a, b) => (b.publicado || "").localeCompare(a.publicado || "") || a.slug.localeCompare(b.slug));

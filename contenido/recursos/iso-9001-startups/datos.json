@@ -14,7 +14,7 @@
   ],
   "autor": "angel",
   "publicado": "2026-11-03",
-  "actualizado": "2026-11-03",
+  "actualizado": "2026-11-10",
   "faq": [
     {
       "pregunta": "¿Es obligatoria la ISO 9001 para una startup?",
@@ -42,6 +42,7 @@
     }
   ],
   "relacionados": [
+    "auditoria-iso",
     "escalar-procesos-startup",
     "checklist-due-diligence-operativa",
     "plantilla-okr-startup"

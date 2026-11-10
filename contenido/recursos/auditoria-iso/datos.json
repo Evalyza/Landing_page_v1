@@ -1,0 +1,112 @@
+{
+  "slug": "auditoria-iso",
+  "titulo": "Auditoría ISO paso a paso: cómo auditar tu empresa antes de que lo haga la certificadora",
+  "tituloSeo": "Auditoría ISO 9001 y 20000-1: cómo prepararla",
+  "descripcion": "Cómo hacer una auditoría ISO 9001 o ISO/IEC 20000-1: tipos de auditoría, qué revisa el auditor, auditoría interna en 6 pasos y plan de 6 semanas.",
+  "entradilla": "Los tres tipos de auditoría, qué revisa un auditor en la ISO 9001 y la ISO/IEC 20000-1, cómo hacer tu auditoría interna en seis pasos y un plan de seis semanas para llegar a la certificación.",
+  "tema": "iso",
+  "palabraClave": "auditoría ISO",
+  "palabrasSecundarias": [
+    "auditar norma ISO",
+    "auditoría interna ISO 9001",
+    "auditoría de certificación ISO 9001",
+    "auditoría ISO/IEC 20000-1",
+    "preparar auditoría ISO"
+  ],
+  "autor": "angel",
+  "publicado": "2026-11-10",
+  "actualizado": "2026-11-10",
+  "cta": {
+    "titulo": "¿Quieres saber qué te falta antes de la auditoría?",
+    "texto": "En dos semanas analizamos cómo trabaja vuestro equipo por dentro y os entregamos un plan priorizado, con el mismo análisis que sirve para preparar la documentación de la ISO."
+  },
+  "faq": [
+    {
+      "pregunta": "¿Puedo auditar mi propia empresa?",
+      "respuesta": "Sí, la auditoría interna la hace la propia empresa y es obligatoria en normas como la ISO 9001. La condición es la imparcialidad: nadie debe auditar su propio trabajo. En una startup pequeña puede hacerla alguien de otro equipo o un auditor externo contratado solo para ese paso."
+    },
+    {
+      "pregunta": "¿Cada cuánto hay que hacer una auditoría interna?",
+      "respuesta": "La norma pide hacerla a intervalos planificados. En una empresa pequeña lo habitual es al menos una vez al año y siempre antes de la auditoría de certificación o de renovación."
+    },
+    {
+      "pregunta": "¿Quién hace la auditoría de certificación ISO en España?",
+      "respuesta": "Una entidad de certificación independiente. Lo recomendable es elegir una acreditada por ENAC, la Entidad Nacional de Acreditación, para la norma concreta que buscas."
+    },
+    {
+      "pregunta": "¿Qué es una no conformidad mayor?",
+      "respuesta": "Un incumplimiento grave de un requisito, por ejemplo que falte por completo la auditoría interna o un proceso clave. Hay que cerrarla antes de obtener el certificado. Las no conformidades menores se resuelven con un plan de acciones."
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre la ISO 9001 y la ISO/IEC 20000-1?",
+      "respuesta": "La ISO 9001 trata la gestión de la calidad de cualquier empresa. La ISO/IEC 20000-1 trata la gestión de servicios de TI: catálogo de servicios, niveles de servicio, incidencias, cambios y continuidad. Comparten estructura, así que el trabajo de una adelanta buena parte de la otra."
+    },
+    {
+      "pregunta": "¿Ozmetra certifica en normas ISO?",
+      "respuesta": "No. Ozmetra ayuda a preparar la documentación y las evidencias que pide la norma. La certificación la concede siempre una entidad de certificación acreditada."
+    }
+  ],
+  "relacionados": [
+    "iso-9001-startups",
+    "modelo-madurez-procesos",
+    "escalar-procesos-startup"
+  ],
+  "recurso": {
+    "tipo": "checklist",
+    "titulo": "Checklist de auditoría interna ISO",
+    "descripcion": "Repasa lo que mirará el auditor antes de que llegue. Sirve para la ISO 9001 y para la ISO/IEC 20000-1; los puntos críticos son los que suelen acabar en no conformidad.",
+    "secciones": [
+      {
+        "titulo": "Antes de auditar",
+        "items": [
+          { "texto": "Hay un programa de auditoría con procesos, cláusulas, auditor y fecha", "critico": true },
+          { "texto": "Quien audita cada proceso no es quien lo hace", "detalle": "Otro equipo, otra startup o un auditor externo.", "critico": true },
+          { "texto": "Hay una lista de comprobación con una pregunta por requisito" },
+          { "texto": "Las personas que se van a entrevistar saben cuándo y para qué" }
+        ]
+      },
+      {
+        "titulo": "Sistema y liderazgo",
+        "items": [
+          { "texto": "El alcance del sistema está por escrito y coincide con lo que hacéis", "critico": true },
+          { "texto": "La política está aprobada por la dirección y el equipo la conoce" },
+          { "texto": "Los objetivos tienen indicador, responsable y datos de avance", "critico": true },
+          { "texto": "Los riesgos y oportunidades tienen acciones decididas" }
+        ]
+      },
+      {
+        "titulo": "Procesos y evidencias",
+        "items": [
+          { "texto": "Cada proceso clave tiene dueño y forma de control" },
+          { "texto": "Se han revisado muestras elegidas por el auditor, no preparadas", "detalle": "Tickets, altas de cliente, cambios en producción." },
+          { "texto": "Lo que dicen los documentos coincide con lo que cuentan las personas", "critico": true },
+          { "texto": "Hay registros de formación o experiencia en los roles críticos" },
+          { "texto": "Las incidencias y reclamaciones quedan registradas y cerradas" }
+        ]
+      },
+      {
+        "titulo": "Solo ISO/IEC 20000-1",
+        "items": [
+          { "texto": "Hay catálogo de servicios y acuerdos de nivel de servicio con los clientes" },
+          { "texto": "Incidencias, peticiones, problemas y cambios siguen un proceso definido" },
+          { "texto": "Disponibilidad, capacidad y continuidad del servicio se miden y se prueban" }
+        ]
+      },
+      {
+        "titulo": "Después de auditar",
+        "items": [
+          { "texto": "El informe clasifica cada hallazgo y cita su evidencia", "critico": true },
+          { "texto": "Cada no conformidad tiene análisis de causa, acción, responsable y plazo", "critico": true },
+          { "texto": "Se ha comprobado que las acciones funcionaron" },
+          { "texto": "La revisión por la dirección ha tratado los resultados y está registrada", "critico": true }
+        ]
+      }
+    ],
+    "niveles": [
+      { "desde": 0, "titulo": "Sin auditoría todavía", "texto": "Empieza por el programa y el alcance. Con eso y una lista de comprobación puedes hacer tu primera auditoría interna en unas semanas." },
+      { "desde": 40, "titulo": "Auditoría a medias", "texto": "Tienes piezas, pero faltan evidencias o el cierre de acciones. Elige muestras reales y termina el ciclo hasta la revisión por la dirección." },
+      { "desde": 70, "titulo": "Casi listo", "texto": "Cierra los puntos críticos pendientes y confirma fechas con una entidad de certificación acreditada." },
+      { "desde": 90, "titulo": "Listo para la certificadora", "texto": "Tu auditoría interna se parece a la que vas a pasar. Ensaya con cada dueño de proceso cómo enseñará sus evidencias." }
+    ]
+  }
+}
