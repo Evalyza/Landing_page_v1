@@ -1,0 +1,219 @@
+{
+  "slug": "ejemplos-okr-startup",
+  "titulo": "Ejemplos de OKR para startups según su fase: pre-seed, seed y Serie A",
+  "tituloSeo": "Ejemplos de OKR para startups por fase y área",
+  "descripcion": "Ejemplos de OKR para startups por área (producto, ventas, marketing, clientes, operaciones y personas) y por fase, con errores típicos y plantilla gratis.",
+  "entradilla": "Ejemplos de OKR para cada área de una startup, ordenados por fase, con los errores típicos de cada etapa y un banco de ejemplos descargable listo para adaptar.",
+  "tema": "okr",
+  "pilar": false,
+  "palabraClave": "ejemplos de OKR por fase",
+  "palabrasSecundarias": [
+    "ejemplos OKR",
+    "OKR ejemplos startup",
+    "OKR por departamento"
+  ],
+  "autor": "angel",
+  "publicado": "2026-11-22",
+  "actualizado": "2026-11-22",
+  "faq": [
+    {
+      "pregunta": "¿Cuántos OKR debe tener una startup?",
+      "respuesta": "Pocos: uno o dos objetivos para la empresa y, como mucho, uno a tres por equipo, cada uno con dos a cuatro resultados clave. En pre-seed suele bastar con uno o dos en total."
+    },
+    {
+      "pregunta": "¿Puedo copiar ejemplos de OKR de otras empresas?",
+      "respuesta": "Sirven como punto de partida, pero hay que adaptarlos: cambiar las metas por las tuyas, medir el valor inicial y asignar un responsable. Un OKR copiado tal cual rara vez encaja con tu situación."
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre un resultado clave y una tarea?",
+      "respuesta": "Un resultado clave mide un cambio (subir una conversión, reducir un plazo). Una tarea es algo que haces (lanzar una página). Las tareas van en el plan de trabajo; los OKR miden si ese trabajo sirvió."
+    },
+    {
+      "pregunta": "¿Cambian los OKR según la fase de la startup?",
+      "respuesta": "Sí. En pre-seed se centran en aprender y validar, en seed en encontrar un crecimiento repetible y en Serie A en escalar sin depender de los fundadores y sin perder eficiencia."
+    },
+    {
+      "pregunta": "¿Cada cuánto se revisan los OKR?",
+      "respuesta": "Lo habitual es fijarlos por trimestre, revisarlos 15 minutos cada semana y hacer una revisión más profunda cada mes."
+    }
+  ],
+  "relacionados": [
+    "plantilla-okr-startup",
+    "procesos-que-se-rompen-al-crecer",
+    "que-revisa-un-inversor-serie-a"
+  ],
+  "recurso": {
+    "tipo": "plantilla",
+    "titulo": "Banco de ejemplos de OKR para startups",
+    "descripcion": "Los ejemplos del artículo con una métrica y una meta de ejemplo para cada uno. Filtra por tu fase, copia los que encajen y sustituye las cifras por las tuyas.",
+    "tablas": [
+      {
+        "titulo": "Ejemplos de OKR por área y fase",
+        "descripcion": "Las metas son ejemplos ilustrativos, no referencias del mercado: mide tu valor inicial antes de fijar la tuya.",
+        "columnas": [
+          "Área",
+          "Fase",
+          "Objetivo",
+          "Resultado clave (métrica)",
+          "Valor inicial → meta",
+          "Responsable",
+          "Tu valor inicial",
+          "Tu meta"
+        ],
+        "filas": [
+          [
+            "Producto",
+            "Pre-seed",
+            "Confirmar que el problema existe y que lo resolvemos mejor que la alternativa actual",
+            "Entrevistas de descubrimiento con el perfil objetivo",
+            "Ejemplo: de 0 a 20",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Producto",
+            "Seed",
+            "Que los nuevos usuarios lleguen rápido al momento de valor",
+            "Tiempo desde el registro hasta la primera acción de valor",
+            "Ejemplo: de 5 a 2 días",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Producto",
+            "Serie A",
+            "Entregar valor más rápido sin perder estabilidad",
+            "Incidencias graves por cada 10 despliegues",
+            "Ejemplo: de 3 a 1",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Ventas",
+            "Pre-seed",
+            "Conseguir los primeros clientes que pagan",
+            "Clientes de pago del perfil objetivo",
+            "Ejemplo: de 0 a 5",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Ventas",
+            "Seed",
+            "Encontrar un canal de venta que se pueda repetir",
+            "Ciclo de venta medio",
+            "Ejemplo: de 60 a 40 días",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Ventas",
+            "Serie A",
+            "Que las ventas crezcan sin depender de los fundadores",
+            "Ventas cerradas sin el CEO",
+            "Ejemplo: del 30 % al 70 %",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Marketing",
+            "Pre-seed",
+            "Aprender qué mensaje resuena con nuestro cliente",
+            "Registros en la lista de espera del perfil objetivo",
+            "Ejemplo: de 0 a 200",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Marketing",
+            "Seed",
+            "Generar oportunidades cualificadas de forma constante",
+            "Oportunidades cualificadas al mes desde contenido",
+            "Ejemplo: de 4 a 15",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Marketing",
+            "Serie A",
+            "Que el coste de conseguir clientes sea sostenible",
+            "Meses para recuperar el coste de adquisición",
+            "Ejemplo: de 18 a 12",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Clientes",
+            "Seed",
+            "Que cada cliente nuevo arranque bien",
+            "Días desde la firma hasta el primer uso real",
+            "Ejemplo: de 21 a 10",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Clientes",
+            "Serie A",
+            "Que los clientes se queden y compren más",
+            "Retención neta de ingresos",
+            "Ejemplo: del 95 % al 110 %",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Operaciones",
+            "Seed",
+            "Tener los números de la empresa bajo control",
+            "Días para cerrar el mes",
+            "Ejemplo: de 15 a 5",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Operaciones",
+            "Serie A",
+            "Que la empresa aguante el doble de tamaño",
+            "Procesos críticos escritos, con dueño y métrica",
+            "Ejemplo: de 2 de 8 a 8 de 8",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Personas",
+            "Seed",
+            "Incorporar bien a las primeras contrataciones clave",
+            "Incorporaciones con plan de primer mes desde el día 1",
+            "Ejemplo: del 0 % al 100 %",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Personas",
+            "Serie A",
+            "Crecer el equipo sin perder a las personas clave",
+            "Bajas voluntarias no deseadas en el trimestre",
+            "Ejemplo: de 3 a 1",
+            "",
+            "",
+            ""
+          ]
+        ]
+      }
+    ],
+    "nota": "Descárgala para Excel o Google Sheets, filtra por la columna Fase y quédate con uno o dos objetivos por equipo. En la plantilla OKR para startups tienes las columnas de seguimiento semanal y puntuación."
+  }
+}

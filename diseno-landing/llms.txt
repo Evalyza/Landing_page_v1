@@ -20,6 +20,9 @@ Ozmetra aplica LightStartup y LightSME, marcos de evaluación de procesos desarr
 - Recursos: https://ozmetra.com/recursos/
 
 ## Guías
+- [Ejemplos de OKR para startups según su fase: pre-seed, seed y Serie A](https://ozmetra.com/recursos/ejemplos-okr-startup/): Ejemplos de OKR para startups por área (producto, ventas, marketing, clientes, operaciones y personas) y por fase, con errores típicos y plantilla gratis.
+- [Los procesos que se rompen cuando una startup pasa de 10 a 50 personas](https://ozmetra.com/recursos/procesos-que-se-rompen-al-crecer/): Los siete procesos que se rompen al crecer una startup de 10 a 50 personas, las señales para detectarlos a tiempo y un arreglo barato para cada uno.
+- [Qué revisa un inversor antes de una Serie A (y qué suele faltar)](https://ozmetra.com/recursos/que-revisa-un-inversor-serie-a/): Qué revisa un inversor antes de una Serie A: diferencias con la seed, preguntas operativas, fallos que retrasan el cierre y checklist de preparación gratis.
 - [Auditoría ISO paso a paso: cómo auditar tu empresa antes de que lo haga la certificadora](https://ozmetra.com/recursos/auditoria-iso/): Cómo hacer una auditoría ISO 9001 o ISO/IEC 20000-1: tipos de auditoría, qué revisa el auditor, auditoría interna en 6 pasos y plan de 6 semanas.
 - [Cómo entrar en una aceleradora: qué miran en la selección y cómo preparar tu candidatura](https://ozmetra.com/recursos/como-entrar-aceleradora/): Qué valoran las aceleradoras al elegir startups, cómo preparar la candidatura paso a paso, qué preguntan en la entrevista y checklist antes de aplicar.
 - [ISO 9001 para startups: cuándo merece la pena y cómo prepararla sin consultora](https://ozmetra.com/recursos/iso-9001-startups/): ISO 9001 para startups y pymes: cuándo compensa certificarse, qué exige de verdad, qué cambia en la versión 2026 y cómo prepararla sin consultora.

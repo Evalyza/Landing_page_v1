@@ -1,0 +1,177 @@
+{
+  "slug": "que-revisa-un-inversor-serie-a",
+  "titulo": "Qué revisa un inversor antes de una Serie A (y qué suele faltar)",
+  "tituloSeo": "Qué revisa un inversor antes de una Serie A",
+  "descripcion": "Qué revisa un inversor antes de una Serie A: diferencias con la seed, preguntas operativas, fallos que retrasan el cierre y checklist de preparación gratis.",
+  "entradilla": "En qué se diferencia una Serie A de una seed, las preguntas operativas que te van a hacer, los fallos que más retrasan el cierre y cómo prepararte antes de abrir la ronda.",
+  "tema": "inversores",
+  "pilar": false,
+  "palabraClave": "qué revisa un inversor antes de una Serie A",
+  "palabrasSecundarias": [
+    "preparar una Serie A",
+    "due diligence Serie A",
+    "requisitos Serie A"
+  ],
+  "autor": "angel",
+  "publicado": "2026-11-22",
+  "actualizado": "2026-11-22",
+  "faq": [
+    {
+      "pregunta": "¿Qué diferencia hay entre una ronda seed y una Serie A?",
+      "respuesta": "En la seed se invierte en un equipo, un problema y las primeras señales de encaje del producto. En la Serie A se invierte en un modelo de crecimiento que ya funciona y se puede repetir, con métricas limpias y procesos que no dependen de los fundadores."
+    },
+    {
+      "pregunta": "¿Qué métricas piden los inversores en una Serie A?",
+      "respuesta": "Depende del modelo de negocio, pero suelen pedir ingresos recurrentes, coste de adquisición de clientes y tiempo de recuperación, retención por cohortes y crecimiento, presentados como series mensuales o trimestrales y coherentes entre todos los documentos."
+    },
+    {
+      "pregunta": "¿Con cuánta antelación conviene preparar la Serie A?",
+      "respuesta": "Lo ideal es empezar uno o dos trimestres antes de hablar con fondos: ordenar las métricas, sacar las ventas de la cabeza del fundador, escribir los procesos críticos y montar la data room con calma."
+    },
+    {
+      "pregunta": "¿Qué retrasa más el cierre de una Serie A?",
+      "respuesta": "Sobre todo problemas pequeños que aparecen tarde: métricas que no cuadran, ventas que dependen del fundador, procesos que solo conoce una persona, papeleo pendiente y un plan de uso de fondos genérico."
+    },
+    {
+      "pregunta": "¿Se revisan los procesos internos en una Serie A?",
+      "respuesta": "Sí. La due diligence operativa pesa más que en la seed, porque el fondo necesita entender cómo crece la empresa y si aguantará cuando el equipo se duplique."
+    }
+  ],
+  "relacionados": [
+    "checklist-due-diligence-operativa",
+    "escalar-procesos-startup",
+    "modelo-madurez-procesos"
+  ],
+  "recurso": {
+    "tipo": "checklist",
+    "titulo": "Checklist de preparación para la Serie A",
+    "descripcion": "Comprueba si tu startup está lista para abrir una Serie A: métricas, ventas, equipo, procesos y documentación. Hazla con otra persona del equipo y comparad.",
+    "secciones": [
+      {
+        "titulo": "Métricas",
+        "items": [
+          {
+            "texto": "Las métricas principales están definidas por escrito: cómo se calculan y de dónde salen",
+            "critico": true
+          },
+          {
+            "texto": "Las cifras coinciden en el deck, el modelo financiero y el panel de control",
+            "critico": true
+          },
+          {
+            "texto": "Tienes series mensuales o trimestrales, no solo acumulados"
+          },
+          {
+            "texto": "Conoces tu coste de adquisición y el tiempo en recuperarlo"
+          },
+          {
+            "texto": "Tienes la retención por cohortes de clientes"
+          }
+        ]
+      },
+      {
+        "titulo": "Ventas y clientes",
+        "items": [
+          {
+            "texto": "El equipo comercial cierra ventas sin el fundador en cada llamada",
+            "critico": true
+          },
+          {
+            "texto": "Las etapas del embudo están definidas y el CRM está al día"
+          },
+          {
+            "texto": "La lista de clientes cuadra con la facturación"
+          },
+          {
+            "texto": "Ningún cliente pesa tanto que su marcha pondría en riesgo la caja",
+            "detalle": "O tienes un plan para explicarlo."
+          },
+          {
+            "texto": "El alta de clientes sigue un proceso escrito"
+          }
+        ]
+      },
+      {
+        "titulo": "Equipo y organización",
+        "items": [
+          {
+            "texto": "Cada área tiene un responsable con decisiones propias"
+          },
+          {
+            "texto": "Ninguna área crítica depende de una sola persona sin respaldo",
+            "critico": true
+          },
+          {
+            "texto": "El plan de contratación dice qué perfiles, cuándo y para qué"
+          },
+          {
+            "texto": "La incorporación de personas nuevas sigue un proceso definido"
+          }
+        ]
+      },
+      {
+        "titulo": "Procesos",
+        "items": [
+          {
+            "texto": "Los procesos críticos están escritos, con dueño y una métrica",
+            "critico": true
+          },
+          {
+            "texto": "Hay un único canal para las peticiones a producto"
+          },
+          {
+            "texto": "Las incidencias se registran y se mide cuánto se tarda en resolverlas"
+          },
+          {
+            "texto": "Sabes en qué nivel de capacidad está cada proceso crítico"
+          }
+        ]
+      },
+      {
+        "titulo": "Documentación y ronda",
+        "items": [
+          {
+            "texto": "La data room está montada con índice y fechas",
+            "critico": true
+          },
+          {
+            "texto": "Los contratos con clientes clave y proveedores están firmados y localizables"
+          },
+          {
+            "texto": "Las cesiones de propiedad intelectual de fundadores, equipo y externos están firmadas",
+            "critico": true
+          },
+          {
+            "texto": "La tabla de capitalización está al día"
+          },
+          {
+            "texto": "Tienes un plan de uso de fondos con hitos y métricas",
+            "critico": true
+          }
+        ]
+      }
+    ],
+    "niveles": [
+      {
+        "desde": 0,
+        "titulo": "Todavía no",
+        "texto": "Abrir la ronda ahora te costaría tiempo y condiciones. Dedica uno o dos trimestres a ordenar métricas, ventas y procesos críticos."
+      },
+      {
+        "desde": 40,
+        "titulo": "En camino",
+        "texto": "Tienes base, pero aparecerán preguntas incómodas. Prioriza los puntos críticos pendientes antes de hablar con fondos."
+      },
+      {
+        "desde": 65,
+        "titulo": "Casi lista",
+        "texto": "Lo esencial está. Cierra lo que falte de la data room y ensaya las preguntas difíciles con alguien de fuera."
+      },
+      {
+        "desde": 85,
+        "titulo": "Lista para salir",
+        "texto": "Puedes abrir la ronda con tranquilidad. Mantén las métricas y la data room actualizadas cada mes mientras dure el proceso."
+      }
+    ]
+  }
+}
