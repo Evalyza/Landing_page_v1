@@ -26,6 +26,20 @@
   document.body.prepend(sentinel);
   new IntersectionObserver(([e]) => nav.classList.toggle("is-scrolled", !e.isIntersecting)).observe(sentinel);
 
+  // Mobile menu: the burger opens the links under the bar (same as the home page)
+  const navToggle = $("[data-nav-toggle]");
+  if (navToggle) {
+    const setMenu = (open) => {
+      nav.classList.toggle("is-open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", t(open ? "aria.menuClose" : "aria.menuOpen"));
+    };
+    navToggle.addEventListener("click", () => setMenu(!nav.classList.contains("is-open")));
+    document.querySelectorAll("[data-nav-menu] a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && nav.classList.contains("is-open")) { setMenu(false); navToggle.focus(); } });
+    matchMedia("(min-width: 1201px)").addEventListener("change", (e) => { if (e.matches) setMenu(false); });
+  }
+
   /* ---------- Request tabs: diagnosis / call ---------- */
   const group = $("[data-tabs]");
   const thumb = $(".thumb", group);

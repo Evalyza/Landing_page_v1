@@ -68,6 +68,20 @@
   document.body.prepend(sentinel);
   new IntersectionObserver(([e]) => nav.classList.toggle("is-scrolled", !e.isIntersecting)).observe(sentinel);
 
+  /* ---------- Mobile menu: the burger opens the links under the bar ---------- */
+  const navToggle = $("[data-nav-toggle]");
+  if (navToggle) {
+    const setMenu = (open) => {
+      nav.classList.toggle("is-open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", t(open ? "aria.menuClose" : "aria.menuOpen"));
+    };
+    navToggle.addEventListener("click", () => setMenu(!nav.classList.contains("is-open")));
+    $$("[data-nav-menu] a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && nav.classList.contains("is-open")) { setMenu(false); navToggle.focus(); } });
+    matchMedia("(min-width: 1201px)").addEventListener("change", (e) => { if (e.matches) setMenu(false); });
+  }
+
   /* ---------- Hero agent console ---------- */
   const consoleEl = $("[data-console]");
   const agents = $$(".agent", consoleEl);
@@ -308,28 +322,6 @@
     renderRadarText();
   });
 
-  /* ---------- Self-check quiz ---------- */
-  // Programme type, startups per intake and main concern (stored as quiz_phase/size/pain)
-  const answers = { phase: "accel", size: "m", pain: "select" };
-  const resultBox = $("[data-result]");
-  function renderResult(animate = true) {
-    const apply = () => {
-      $("[data-result-title]").textContent = t(`quiz.t.${answers.pain}`);
-      $("[data-result-text]").textContent = `${t(`quiz.p.${answers.pain}`)} ${t(`quiz.size.${answers.size}`)}`;
-    };
-    if (!animate || reduceMotion) return apply();
-    resultBox.classList.add("is-swapping");
-    setTimeout(() => { apply(); resultBox.classList.remove("is-swapping"); }, 150);
-  }
-  $$("[data-q]").forEach((group) => {
-    $$("button", group).forEach((btn) => btn.addEventListener("click", () => {
-      $$("button", group).forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
-      answers[group.dataset.q] = btn.dataset.v;
-      renderResult();
-    }));
-  });
-  onLang(() => renderResult(false));
-
   /* ---------- Contact tabs: waitlist / call request ---------- */
   const panels = $$("[data-tabpanel]");
   const tabs = segmented($("[data-tabs]"), (value) => {
@@ -484,19 +476,29 @@
     play();
   }));
 
-  /* ---------- Plans: each plan button preselects it in the sign-up form ---------- */
-  const wlPlan = $("#wl-plan");
+  /* ---------- Plans: the cards preselect a plan in the sign-up form ---------- */
   const wlRole = $("#wl-role");
-  // A programme plan is usually asked for by the programme team; a company plan by the company
-  function matchRole(plan) {
-    if (plan === "programs" && wlRole.value === "founder") wlRole.value = "director";
-    if (plan !== "programs" && wlRole.value === "director") wlRole.value = "founder";
+  const programField = $("[data-program-field]");
+  const planRadios = $$("input[name=plan]");
+  const planValue = () => (planRadios.find((r) => r.checked) || planRadios[0]).value;
+  const submitLabel = $("[data-waitlist-form] button[type=submit] [data-i18n]");
+  // Programme plans ask for the type of programme and are usually requested by the programme
+  // team; paid plans "request a plan" instead of "start free"
+  function applyPlan(plan) {
+    const isProgram = plan === "programs";
+    programField.hidden = !isProgram;
+    if (isProgram && wlRole.value === "founder") wlRole.value = "director";
+    if (!isProgram && wlRole.value === "director") wlRole.value = "founder";
+    submitLabel.dataset.i18n = plan === "free" ? "cta.join" : "plans.cta";
+    submitLabel.textContent = t(submitLabel.dataset.i18n);
   }
-  $$("[data-plan]").forEach((link) => link.addEventListener("click", () => {
-    wlPlan.value = link.dataset.plan;
-    matchRole(wlPlan.value);
-  }));
-  wlPlan.addEventListener("change", () => matchRole(wlPlan.value));
+  function setPlan(plan) {
+    planRadios.forEach((r) => (r.checked = r.value === plan));
+    applyPlan(plan);
+  }
+  planRadios.forEach((r) => r.addEventListener("change", () => applyPlan(planValue())));
+  $$("[data-plan]").forEach((link) => link.addEventListener("click", () => setPlan(link.dataset.plan)));
+  applyPlan(planValue());
 
   const wl = $("[data-waitlist]");
   const wlForm = $("[data-waitlist-form]");
@@ -511,16 +513,15 @@
     if (!consent.checked) return fieldError(consent, consentErr, "err.consent");
     setLoading(btn, true);
     try {
-      // The self-check asks about the programme, so its answers only describe programme sign-ups
-      const isProgram = wlPlan.value === "programs";
+      // Programme type goes in quiz_phase, which the CRM turns into the lead segment
+      const plan = planValue();
       await send("join_waitlist", {
-        p_email: v, p_company: $("#wl-company").value, p_role: $("#wl-role").value, p_lang: lang,
-        p_quiz_phase: isProgram ? answers.phase : null,
-        p_quiz_size: isProgram ? answers.size : null,
-        p_quiz_pain: isProgram ? answers.pain : null,
+        p_email: v, p_company: $("#wl-company").value, p_role: wlRole.value, p_lang: lang,
+        p_quiz_phase: plan === "programs" ? $("#wl-program").value : null,
+        p_quiz_size: null, p_quiz_pain: null,
         p_source: "waitlist", p_consent: true,
         // Plan chosen in the form (waitlist.plan): free, custom or programs
-        p_plan: wlPlan.value,
+        p_plan: plan,
         ...(wlPrompt.value.trim() && { p_prompt: wlPrompt.value.trim() }),
       }, attribution());
     } catch {
@@ -529,7 +530,7 @@
       return;
     }
     // Companies (free or custom plan) get their access reply; programmes get the demo reply
-    const isStartup = wlPlan.value !== "programs";
+    const isStartup = planValue() !== "programs";
     $("[data-success-program]", wl).hidden = isStartup;
     $("[data-success-startup]", wl).hidden = !isStartup;
     wl.classList.add("is-done");
