@@ -25,6 +25,7 @@
     <ul class="nav-links">
       <li><a href="#programa" data-i18n="nav.programs">Para programas</a></li>
       <li><a href="{{STARTUPS}}" data-i18n="nav.startups">Para startups</a></li>
+      <li><a href="#planes" data-i18n="nav.plans">Precios</a></li>
       <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
       <li><a href="#framework" data-i18n="nav.framework">Framework</a></li>
       <li><a href="#faq" data-i18n="nav.faq">Preguntas</a></li>
@@ -47,7 +48,7 @@
         </select>
         <i class="ph ph-caret-down" aria-hidden="true"></i>
       </label>
-      <a class="btn btn-dark btn-small nav-cta" href="#lista" data-open-tab="waitlist" data-i18n="cta.nav">Empezar gratis</a>
+      <a class="btn btn-dark btn-small nav-cta" href="#lista" data-open-tab="waitlist" data-plan="free" data-i18n="cta.nav">Empezar gratis</a>
     </div>
   </div>
 </header>
@@ -268,18 +269,61 @@
           <ul><li data-i18n="moment.3.pt1">Implantación adaptada a cada startup</li><li data-i18n="moment.3.pt2">Evaluación trimestral para medir el avance</li><li data-i18n="moment.3.pt3">Documentación ISO cuando la necesiten</li></ul>
         </li>
       </ol>
+    </div>
+  </section>
 
-      <div class="panel pilot">
-        <div>
-          <span class="tag tag-sample" data-i18n="pilot.badge">Fase MVP</span>
-          <h3 data-i18n="pilot.h">Pruébalo gratis con tu próxima convocatoria</h3>
-          <p data-i18n="pilot.p">Más que venderte un producto terminado, queremos que lo probéis sin coste y nos ayudéis a darle forma con vuestro feedback.</p>
-        </div>
-        <div class="pilot-actions">
-          <a class="btn btn-primary" href="#lista" data-open-tab="waitlist"><span data-i18n="cta.join">Solicitar piloto gratuito</span> <i class="ph-bold ph-arrow-right"></i></a>
-          <a class="btn btn-ghost pilot-call" href="#lista" data-open-tab="call"><i class="ph ph-phone"></i><span data-i18n="cta.call">Agendar una llamada</span></a>
-        </div>
+  <!-- PLANS: free for companies, custom SaaS, viveros and accelerators -->
+  <section class="section plans" id="planes" aria-labelledby="plans-h2">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="plans-h2" data-i18n="plans.h2">Planes y precios</h2>
+        <p data-i18n="plans.p">Analiza los procesos de tu empresa gratis. Si quieres un SaaS a tu medida o gestionas un programa de empresas, elige el plan que encaja contigo.</p>
       </div>
+      <div class="plans-grid">
+        <article class="plan" aria-labelledby="plan-free-h">
+          <span class="plan-for"><i class="ph ph-buildings" aria-hidden="true"></i><span data-i18n="plans.free.for">Para empresas</span></span>
+          <h3 id="plan-free-h" data-i18n="plans.free.name">Gratis</h3>
+          <p class="plan-price"><span class="plan-amount" data-i18n="plans.free.price">0 €</span> <span class="plan-unit" data-i18n="plans.free.unit">para siempre</span></p>
+          <p class="plan-desc" data-i18n="plans.free.desc">Analiza los procesos internos de tu empresa con IA, sin coste y sin tarjeta.</p>
+          <ul>
+            <li data-i18n="plans.free.f1">Análisis de procesos con los agentes de IA</li>
+            <li data-i18n="plans.free.f2">Puntuación en 8 áreas, ajustada a vuestra fase</li>
+            <li data-i18n="plans.free.f3">Plan de mejora priorizado por impacto y esfuerzo</li>
+            <li data-i18n="plans.free.f4">Cada hallazgo, con su fuente</li>
+          </ul>
+          <a class="btn btn-ghost plan-cta" href="#lista" data-open-tab="waitlist" data-plan="free"><span data-i18n="plans.free.cta">Empezar gratis</span> <i class="ph-bold ph-arrow-right"></i></a>
+        </article>
+
+        <article class="plan" aria-labelledby="plan-custom-h">
+          <span class="plan-for"><i class="ph ph-puzzle-piece" aria-hidden="true"></i><span data-i18n="plans.custom.for">Para empresas</span></span>
+          <h3 id="plan-custom-h" data-i18n="plans.custom.name">Personalizado</h3>
+          <p class="plan-price"><span class="plan-from" data-i18n="plans.from">Desde</span> <span class="plan-amount" data-i18n="plans.custom.price">35,99 €</span> <span class="plan-unit" data-i18n="plans.month">/mes</span></p>
+          <p class="plan-desc" data-i18n="plans.custom.desc">Un SaaS hecho a medida para tu empresa, con las mismas funciones y un acompañamiento completo.</p>
+          <ul>
+            <li data-i18n="plans.custom.f1">Todo lo del plan Gratis</li>
+            <li data-i18n="plans.custom.f2">SaaS personalizado para tu empresa</li>
+            <li data-i18n="plans.custom.f3">Investigación interna de tus procesos</li>
+            <li data-i18n="plans.custom.f4">Auditoría con IA</li>
+            <li data-i18n="plans.custom.f5">Implantación del producto en tu equipo</li>
+          </ul>
+          <a class="btn btn-ghost plan-cta" href="#lista" data-open-tab="waitlist" data-plan="custom"><span data-i18n="plans.custom.cta">Solicitar el plan Personalizado</span> <i class="ph-bold ph-arrow-right"></i></a>
+        </article>
+
+        <article class="plan plan-featured" aria-labelledby="plan-programs-h">
+          <span class="plan-for"><i class="ph ph-plant" aria-hidden="true"></i><span data-i18n="plans.programs.for">Para viveros y aceleradoras</span></span>
+          <h3 id="plan-programs-h" data-i18n="plans.programs.name">Viveros y aceleradoras</h3>
+          <p class="plan-price"><span class="plan-from" data-i18n="plans.from">Desde</span> <span class="plan-amount" data-i18n="plans.programs.price">49,99 €</span> <span class="plan-unit" data-i18n="plans.month">/mes</span></p>
+          <p class="plan-desc" data-i18n="plans.programs.desc">Para viveros de empresas, incubadoras y aceleradoras que acompañan a varias empresas a la vez.</p>
+          <ul>
+            <li data-i18n="plans.programs.f1">Todo lo de los planes Gratis y Personalizado</li>
+            <li data-i18n="plans.programs.f2">Dashboard para seguir a todas tus empresas</li>
+            <li data-i18n="plans.programs.f3">Filtrado de empresas con el análisis de procesos integrado</li>
+            <li data-i18n="plans.programs.f4">Ideal para convocatorias, selección y seguimiento de cohortes</li>
+          </ul>
+          <a class="btn btn-primary plan-cta" href="#lista" data-open-tab="waitlist" data-plan="programs"><span data-i18n="plans.programs.cta">Solicitar el plan para programas</span> <i class="ph-bold ph-arrow-right"></i></a>
+        </article>
+      </div>
+      <p class="plans-note"><span data-i18n="plans.note">¿No sabes qué plan elegir? Te ayudamos en una llamada corta.</span> <a href="#lista" data-open-tab="call" data-i18n="cta.call">Agendar una llamada</a></p>
     </div>
   </section>
 
@@ -695,12 +739,20 @@
                   <input id="wl-company" name="company" type="text" autocomplete="organization" data-i18n-ph="form.companyPh" placeholder="Nombre de tu startup">
                 </div>
                 <div class="field">
+                  <label for="wl-plan" data-i18n="form.plan">Plan</label>
+                  <select id="wl-plan" name="plan">
+                    <option value="free" data-i18n="plans.opt.free">Gratis · para empresas</option>
+                    <option value="custom" data-i18n="plans.opt.custom">Personalizado · desde 35,99 €/mes</option>
+                    <option value="programs" data-i18n="plans.opt.programs">Viveros y aceleradoras · desde 49,99 €/mes</option>
+                  </select>
+                </div>
+                <div class="field">
                   <label for="wl-role" data-i18n="form.role">Tu rol</label>
                   <select id="wl-role" name="role">
+                    <option value="founder" data-i18n="role.4">Empresa o startup</option>
                     <option value="director" data-i18n="role.1">Dirección del programa</option>
                     <option value="analyst" data-i18n="role.2">Selección o inversión</option>
                     <option value="mentor" data-i18n="role.3">Mentor</option>
-                    <option value="founder" data-i18n="role.4">Startup</option>
                     <option value="other" data-i18n="role.5">Otro</option>
                   </select>
                 </div>
@@ -721,10 +773,9 @@
               </div>
               <div data-success-startup hidden>
                 <div class="check"><i class="ph-bold ph-rocket-launch"></i></div>
-                <h3 data-i18n="wl.stH">Gracias por escribirnos</h3>
-                <p data-i18n="wl.stP">El piloto gratuito es para programas de aceleración e incubación.</p>
-                <a class="btn btn-primary" href="{{STARTUPS}}"><span data-i18n="wl.stCta">Ver el diagnóstico</span> <i class="ph-bold ph-arrow-right"></i></a>
-                <p><span data-i18n-html="wl.stP2">Si vuestra aceleradora o vivero aún no trabaja con nosotros, dinos cuál es y les escribimos.</span></p>
+                <h3 data-i18n="wl.stH">Solicitud recibida</h3>
+                <p data-i18n="wl.stP">Gracias. Te escribo en las próximas 24-48 horas con tu acceso.</p>
+                <p class="success-sign">— <span data-i18n="wl.okSign">Ángel, fundador de Ozmetra</span></p>
               </div>
             </div>
           </div>
@@ -832,6 +883,10 @@
           <summary><span data-i18n="faq.q11">¿Quién está detrás de Ozmetra?</span><i class="ph ph-plus"></i></summary>
           <p data-i18n="faq.a11">Ozmetra la fundó Ángel León.</p>
         </details>
+        <details>
+          <summary><span data-i18n="faq.q12">¿Qué plan me conviene?</span><i class="ph ph-plus"></i></summary>
+          <p data-i18n="faq.a12">Si quieres analizar tu empresa, empieza gratis.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -842,6 +897,7 @@
   <div class="wrap">
     <a class="brand" href="#top"><img class="logo-on-dark" src="assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200" style="height:52px"><img class="logo-on-light" src="assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200" style="height:52px"></a>
     <nav data-i18n-aria="aria.footer" aria-label="Pie de página">
+      <a href="#planes" data-i18n="nav.plans">Precios</a>
       <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
       <a href="#framework" data-i18n="nav.framework">Framework</a>
       <a href="#faq" data-i18n="nav.faq">Preguntas</a>

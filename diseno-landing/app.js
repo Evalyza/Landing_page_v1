@@ -484,6 +484,16 @@
     play();
   }));
 
+  /* ---------- Plans: each plan button preselects it in the sign-up form ---------- */
+  const wlPlan = $("#wl-plan");
+  const wlRole = $("#wl-role");
+  $$("[data-plan]").forEach((link) => link.addEventListener("click", () => {
+    wlPlan.value = link.dataset.plan;
+    // A programme plan is usually asked for by the programme team; a company plan by the company
+    if (link.dataset.plan === "programs" && wlRole.value === "founder") wlRole.value = "director";
+    if (link.dataset.plan !== "programs" && wlRole.value === "director") wlRole.value = "founder";
+  }));
+
   const wl = $("[data-waitlist]");
   const wlForm = $("[data-waitlist-form]");
   wlForm.addEventListener("submit", async (e) => {
@@ -502,15 +512,16 @@
         // The quick self-check answers travel with the sign-up ("we keep your first hint")
         p_quiz_phase: answers.phase, p_quiz_size: answers.size, p_quiz_pain: answers.pain,
         p_source: "waitlist", p_consent: true,
-        ...(wlPrompt.value.trim() && { p_prompt: wlPrompt.value.trim() }),
+        // The chosen plan travels in the first request (no schema change): "[Plan: custom] ..."
+        p_prompt: `[Plan: ${wlPlan.value}]${wlPrompt.value.trim() ? ` ${wlPrompt.value.trim()}` : ""}`,
       }, attribution());
     } catch {
       setLoading(btn, false);
       consentErr.textContent = t("err.send");
       return;
     }
-    // A startup gets pointed to the diagnosis page; programmes get the founder's reply
-    const isStartup = $("#wl-role").value === "founder";
+    // Companies (free or custom plan) get their access reply; programmes get the demo reply
+    const isStartup = wlPlan.value !== "programs";
     $("[data-success-program]", wl).hidden = isStartup;
     $("[data-success-startup]", wl).hidden = !isStartup;
     wl.classList.add("is-done");
