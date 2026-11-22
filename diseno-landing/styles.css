@@ -1452,7 +1452,7 @@ html:is([lang="fr"], [lang="de"], [lang="it"]) .st-hero h1 { font-size: clamp(2.
 .nav-burger .ph-x, .nav.is-open .nav-burger .ph-list { display: none; }
 .nav.is-open .nav-burger .ph-x { display: block; }
 
-@media (max-width: 1240px) { .nav-demo { display: none; } }
+@media (max-width: 1200px) { .nav-login { display: none; } }
 @media (max-width: 1200px) {
   .nav-burger { display: grid; }
   .nav-main {
@@ -1611,3 +1611,83 @@ html:is([lang="fr"], [lang="de"], [lang="it"]) .st-hero h1 { font-size: clamp(2.
 .plan-price { flex-wrap: nowrap; }
 /* /startups: its CTA label is long; on phones the hero button does that job */
 @media (max-width: 480px) { .nav-cta[data-open-tab="diag"] { display: none !important; } }
+
+/* ========== Customer account (/cuenta/): sign-in, sign-up and profile (2026-11-22) ========== */
+.account { padding: clamp(40px, 6vw, 88px) 0 var(--section); min-height: 70vh; }
+.account-loading { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 40vh; color: var(--ink-soft); }
+.account-loading .spinner, .auth .spinner, .profile .spinner { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--ink); animation: spin 600ms linear infinite; }
+.btn .spinner { margin-right: 4px; }
+
+.auth { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
+.auth-copy { position: sticky; top: 104px; }
+.auth-copy h1 { font-size: clamp(2.1rem, 3.6vw, 3.2rem); text-wrap: balance; }
+.auth-copy > p { margin-top: 18px; font-size: 18px; color: var(--ink-soft); max-width: 44ch; }
+.auth-card .form-stack[hidden] { display: none; }
+.plan-pick-note { margin: -6px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--bg); border: 1px dashed var(--line); font-size: 14px; color: var(--ink-soft); }
+.auth-switch { margin: 0; text-align: center; font-size: 15px; color: var(--ink-soft); }
+.link-btn { padding: 0; border: 0; background: none; font: inherit; color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink-soft); text-underline-offset: 3px; cursor: pointer; }
+.link-btn:hover { text-decoration-color: var(--ink); }
+.link-btn:disabled { cursor: default; text-decoration: none; color: var(--ink-soft); }
+.label-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.label-row .link-btn { font-size: 13.5px; }
+.pass-row { position: relative; }
+.pass-row input { width: 100%; padding-right: 48px !important; }
+.pass-toggle { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: 10px; background: transparent; color: var(--ink-soft); font-size: 19px; cursor: pointer; }
+.pass-toggle:hover { color: var(--ink); }
+.signup-card .field .pass-row input { width: 100%; }
+
+.auth-message { max-width: 520px; margin: 4vh auto 0; text-align: center; align-items: center; }
+.auth-message h1 { font-size: clamp(1.7rem, 3vw, 2.2rem); }
+.auth-message p { margin: 0; color: var(--ink-soft); }
+.auth-message .form-stack { width: 100%; text-align: left; }
+.auth-message .check { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; background: var(--lima); color: var(--tinta); font-size: 28px; }
+.auth-message strong { color: var(--ink); }
+
+.profile-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+.profile-head h1 { font-size: clamp(2rem, 3.6vw, 3rem); }
+.profile-email { margin: 8px 0 0; color: var(--ink-soft); }
+.profile-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 20px; align-items: start; }
+.profile-card { display: flex; flex-direction: column; gap: 16px; padding: clamp(22px, 3vw, 34px); border-radius: 22px; background: var(--paper); border: 1px solid var(--line); }
+.profile-card h2 { font-size: 20px; }
+.pc-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.pc-plan-name { margin: 4px 0 0; font-family: var(--f-display); font-weight: 700; font-size: 26px; letter-spacing: -0.02em; }
+.plan-card .plan-price { margin-top: 0; }
+.pc-status-text { margin: 0; padding: 12px 14px; border-radius: 12px; background: var(--bg); font-size: 14.5px; color: var(--ink-soft); }
+.plan-card .plan-includes { margin-top: 4px; }
+.pc-features { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pc-features li { position: relative; padding-left: 26px; font-size: 15px; line-height: 1.4; }
+.pc-features li::before { content: ""; position: absolute; left: 3px; top: 0.4em; width: 10px; height: 6px; border: 2px solid var(--ink); border-top: 0; border-right: 0; transform: rotate(-45deg); }
+.pc-change { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--line); }
+.pc-change .plan-pick { grid-template-columns: 1fr; }
+.pc-change .plan-option { flex-direction: row; align-items: center; justify-content: space-between; min-height: 52px; padding: 10px 44px 10px 14px; }
+.pc-change .plan-option::after { top: 50%; transform: translateY(-50%); }
+.pc-change .po-name { padding-right: 0; }
+.pc-change .po-price { margin-top: 0; font-size: 17px; }
+.pc-change .btn { height: 48px; }
+.pc-change .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.status-badge { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; border-radius: var(--r-pill); font-size: 13px; font-weight: 600; background: var(--lima); color: var(--tinta); white-space: nowrap; }
+.status-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.status-badge[data-status="requested"] { background: #f5c451; color: #3b2a00; }
+.status-badge[data-status="cancelled"] { background: var(--line); color: var(--ink-soft); }
+.form-msg { margin: 0; min-height: 1.4em; font-size: 14.5px; color: var(--ink-soft); }
+.form-msg[data-state="ok"] { color: var(--ink); }
+.form-msg[data-state="ok"]::before { content: "✓ "; }
+.form-msg[data-state="error"] { color: var(--err); }
+.profile-card .btn-primary { width: 100%; height: 50px; }
+.profile-foot { margin: 24px 0 0; color: var(--ink-soft); font-size: 14.5px; }
+
+/* Profile and auth cards share the light form styles of the sign-up card */
+.profile-card .field label:not(.consent) { color: var(--ink); font-size: 14px; font-weight: 600; }
+.profile-card .field input, .profile-card .field select {
+  height: 50px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font-size: 16px;
+}
+.profile-card .field input:focus, .profile-card .field select:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(198, 242, 78, 0.5); }
+.profile-card .field select option { background: var(--paper); color: var(--ink); }
+
+@media (max-width: 980px) {
+  .auth, .profile-grid { grid-template-columns: 1fr; }
+  .auth-copy { position: static; }
+}
+
+/* Nav: "Log in" as a quiet button next to "Sign up" */
+.nav-login { white-space: nowrap; }

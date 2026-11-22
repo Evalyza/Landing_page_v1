@@ -64,5 +64,8 @@ window.OzForms = (() => {
     return rest;
   };
 
-  return { rpc, send, attribution, callAttribution };
+  // The account page (/cuenta/) builds its Supabase Auth client from the same project
+  const config = { url: SUPABASE_URL, key: SUPABASE_KEY };
+
+  return { rpc, send, attribution, callAttribution, campaign, config };
 })();

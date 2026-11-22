@@ -44,7 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="stylesheet" href="../styles.css?v=22">
+  <link rel="stylesheet" href="../styles.css?v=23">
   <script>var t;try{t=localStorage.getItem("ozmetra-theme")}catch(e){}if(t!=="dark")document.documentElement.dataset.theme="light"</script>
   <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -61,7 +61,7 @@
         <li><a href="#programa" data-i18n="nav.programs">For programmes</a></li>
         <li><a href="#planes" data-i18n="nav.plans">Pricing</a></li>
         <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-        <li class="nav-menu-cta"><a class="btn btn-ghost" href="#lista" data-open-tab="call"><i class="ph ph-phone" aria-hidden="true"></i><span data-i18n="cta.demo">Request a demo</span></a></li>
+        <li class="nav-menu-cta"><a class="btn btn-ghost" href="cuenta/#acceder" data-account-link><i class="ph ph-user-circle" aria-hidden="true"></i><span data-i18n="cta.login">Log in</span></a></li>
       </ul>
     </nav>
     <div class="nav-actions">
@@ -81,8 +81,8 @@
         <i class="ph ph-sun" aria-hidden="true"></i>
         <i class="ph ph-moon" aria-hidden="true"></i>
       </button>
-      <a class="btn btn-outline btn-small nav-demo" href="#lista" data-open-tab="call" data-i18n="cta.demo">Request a demo</a>
-      <a class="btn btn-primary btn-small nav-cta" href="#lista" data-open-tab="waitlist" data-plan="free" data-i18n="cta.nav">Start free</a>
+      <a class="btn btn-outline btn-small nav-login" href="cuenta/#acceder" data-account-link data-i18n="cta.login">Log in</a>
+      <a class="btn btn-primary btn-small nav-cta" href="cuenta/#registro" data-register-link data-i18n="cta.register">Sign up</a>
       <button class="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle data-i18n-aria="aria.menuOpen" aria-label="Open menu">
         <i class="ph ph-list" aria-hidden="true"></i><i class="ph ph-x" aria-hidden="true"></i>
       </button>
@@ -659,7 +659,7 @@
           <h3 id="plan-free-h" data-i18n="plans.free.name">Free</h3>
           <p class="plan-price"><span class="plan-amount" data-i18n="plans.free.price">€0</span> <span class="plan-unit" data-i18n="plans.free.unit">no card</span></p>
           <p class="plan-desc" data-i18n="plans.free.desc">Analyse your company's internal processes with AI, at no cost.</p>
-          <a class="btn btn-outline plan-cta" href="#lista" data-open-tab="waitlist" data-plan="free"><span data-i18n="plans.free.cta">Start free</span> <i class="ph-bold ph-arrow-right"></i></a>
+          <a class="btn btn-outline plan-cta" href="cuenta/?plan=free#registro"><span data-i18n="plans.free.cta">Start free</span> <i class="ph-bold ph-arrow-right"></i></a>
           <p class="plan-includes" data-i18n="plans.includes">What's included?</p>
           <ul>
             <li data-i18n="plans.free.f1">Process analysis with the AI agents</li>
@@ -674,7 +674,7 @@
           <h3 id="plan-custom-h" data-i18n="plans.custom.name">Custom</h3>
           <p class="plan-price"><span class="plan-from" data-i18n="plans.from">From</span> <span class="plan-amount" data-i18n="plans.custom.price">€35.99</span> <span class="plan-unit" data-i18n="plans.month">/month</span></p>
           <p class="plan-desc" data-i18n="plans.custom.desc">A SaaS built for your company, with the same features and full support.</p>
-          <a class="btn btn-outline plan-cta" href="#lista" data-open-tab="waitlist" data-plan="custom"><span data-i18n="plans.cta">Request plan</span> <i class="ph-bold ph-arrow-right"></i></a>
+          <a class="btn btn-outline plan-cta" href="cuenta/?plan=custom#registro"><span data-i18n="plans.cta">Request plan</span> <i class="ph-bold ph-arrow-right"></i></a>
           <p class="plan-includes" data-i18n="plans.includes">What's included?</p>
           <ul>
             <li data-i18n="plans.custom.f1">Everything in Free</li>
@@ -691,7 +691,7 @@
           <h3 id="plan-programs-h" data-i18n="plans.programs.name">Incubators &amp; accelerators</h3>
           <p class="plan-price"><span class="plan-from" data-i18n="plans.from">From</span> <span class="plan-amount" data-i18n="plans.programs.price">€49.99</span> <span class="plan-unit" data-i18n="plans.month">/month</span></p>
           <p class="plan-desc" data-i18n="plans.programs.desc">For business incubators and accelerators that support several companies at once.</p>
-          <a class="btn btn-primary plan-cta" href="#lista" data-open-tab="waitlist" data-plan="programs"><span data-i18n="plans.cta">Request plan</span> <i class="ph-bold ph-arrow-right"></i></a>
+          <a class="btn btn-primary plan-cta" href="cuenta/?plan=programs#registro"><span data-i18n="plans.cta">Request plan</span> <i class="ph-bold ph-arrow-right"></i></a>
           <p class="plan-includes" data-i18n="plans.includes">What's included?</p>
           <ul>
             <li data-i18n="plans.programs.f1">Everything in Free and Custom</li>
@@ -931,9 +931,9 @@
   </div>
 </footer>
 
-<script src="../i18n.js?v=22"></script>
-<script src="../forms.js?v=22"></script>
-<script src="../app.js?v=22"></script>
-<script src="../theme.js?v=22"></script>
+<script src="../i18n.js?v=23"></script>
+<script src="../forms.js?v=23"></script>
+<script src="../app.js?v=23"></script>
+<script src="../theme.js?v=23"></script>
 </body>
 </html>

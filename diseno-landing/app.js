@@ -68,6 +68,21 @@
   document.body.prepend(sentinel);
   new IntersectionObserver(([e]) => nav.classList.toggle("is-scrolled", !e.isIntersecting)).observe(sentinel);
 
+  /* ---------- Signed-in visitors: "My account" instead of Log in / Sign up ---------- */
+  // Supabase Auth keeps the session in localStorage (sb-<project>-auth-token)
+  try {
+    if (Object.keys(localStorage).some((k) => /^sb-.+-auth-token$/.test(k))) {
+      $$("[data-account-link]").forEach((a) => {
+        a.href = a.href.split("#")[0];
+        const label = a.matches("[data-i18n]") ? a : $("[data-i18n]", a);
+        label.dataset.i18n = "cta.myAccount";
+        label.textContent = t("cta.myAccount");
+      });
+      $$("[data-register-link]").forEach((a) => (a.hidden = true));
+      $$(".nav-login").forEach((a) => a.classList.replace("btn-outline", "btn-primary"));
+    }
+  } catch { /* private mode */ }
+
   /* ---------- Mobile menu: the burger opens the links under the bar ---------- */
   const navToggle = $("[data-nav-toggle]");
   if (navToggle) {
