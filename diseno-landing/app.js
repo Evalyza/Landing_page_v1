@@ -487,12 +487,16 @@
   /* ---------- Plans: each plan button preselects it in the sign-up form ---------- */
   const wlPlan = $("#wl-plan");
   const wlRole = $("#wl-role");
+  // A programme plan is usually asked for by the programme team; a company plan by the company
+  function matchRole(plan) {
+    if (plan === "programs" && wlRole.value === "founder") wlRole.value = "director";
+    if (plan !== "programs" && wlRole.value === "director") wlRole.value = "founder";
+  }
   $$("[data-plan]").forEach((link) => link.addEventListener("click", () => {
     wlPlan.value = link.dataset.plan;
-    // A programme plan is usually asked for by the programme team; a company plan by the company
-    if (link.dataset.plan === "programs" && wlRole.value === "founder") wlRole.value = "director";
-    if (link.dataset.plan !== "programs" && wlRole.value === "director") wlRole.value = "founder";
+    matchRole(wlPlan.value);
   }));
+  wlPlan.addEventListener("change", () => matchRole(wlPlan.value));
 
   const wl = $("[data-waitlist]");
   const wlForm = $("[data-waitlist-form]");
@@ -507,13 +511,17 @@
     if (!consent.checked) return fieldError(consent, consentErr, "err.consent");
     setLoading(btn, true);
     try {
+      // The self-check asks about the programme, so its answers only describe programme sign-ups
+      const isProgram = wlPlan.value === "programs";
       await send("join_waitlist", {
         p_email: v, p_company: $("#wl-company").value, p_role: $("#wl-role").value, p_lang: lang,
-        // The quick self-check answers travel with the sign-up ("we keep your first hint")
-        p_quiz_phase: answers.phase, p_quiz_size: answers.size, p_quiz_pain: answers.pain,
+        p_quiz_phase: isProgram ? answers.phase : null,
+        p_quiz_size: isProgram ? answers.size : null,
+        p_quiz_pain: isProgram ? answers.pain : null,
         p_source: "waitlist", p_consent: true,
-        // The chosen plan travels in the first request (no schema change): "[Plan: custom] ..."
-        p_prompt: `[Plan: ${wlPlan.value}]${wlPrompt.value.trim() ? ` ${wlPrompt.value.trim()}` : ""}`,
+        // Plan chosen in the form (waitlist.plan): free, custom or programs
+        p_plan: wlPlan.value,
+        ...(wlPrompt.value.trim() && { p_prompt: wlPrompt.value.trim() }),
       }, attribution());
     } catch {
       setLoading(btn, false);
