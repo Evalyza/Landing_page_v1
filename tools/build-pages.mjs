@@ -124,8 +124,20 @@ function seoHead(lang, base) {
         "@type": "SoftwareApplication", "@id": `${SITE_URL}/#software`, name: "Ozmetra",
         applicationCategory: "BusinessApplication", operatingSystem: "Web",
         description: desc, inLanguage: lang, url, image: ogImage, publisher: { "@id": `${SITE_URL}/#org` },
-        audience: { "@type": "BusinessAudience", audienceType: "Startup accelerators, incubators, business incubators and university entrepreneurship programmes" },
+        audience: { "@type": "BusinessAudience", audienceType: "Companies, startups, business incubators and startup accelerators" },
         keywords: t(lang, "seo.keywords"),
+        // The three plans shown in #planes (the paid ones are "from" prices, per month)
+        offers: [
+          { key: "free", price: "0" },
+          { key: "custom", price: "35.99" },
+          { key: "programs", price: "49.99" },
+        ].map(({ key, price }) => ({
+          "@type": "Offer", name: t(lang, `plans.${key}.name`), description: t(lang, `plans.${key}.desc`),
+          price, priceCurrency: "EUR", url: `${url}#planes`, availability: "https://schema.org/InStock",
+          ...(price !== "0" && {
+            priceSpecification: { "@type": "UnitPriceSpecification", minPrice: price, price, priceCurrency: "EUR", referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" } },
+          }),
+        })),
       },
       { "@type": "FAQPage", "@id": `${url}#faq`, inLanguage: lang, mainEntity: faq },
     ],
