@@ -23,19 +23,16 @@
     <a class="brand" href="{{HOME}}" data-i18n-aria="aria.home" aria-label="Ozmetra, inicio">
       <img class="logo-on-dark" src="assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200"><img class="logo-on-light" src="assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200">
     </a>
-    <ul class="nav-links">
-      <li><a href="{{HOME}}#programa" data-i18n="nav.programs">Para programas</a></li>
-      <li><a href="#top" aria-current="page" data-i18n="nav.startups">Para startups</a></li>
-      <li><a href="{{HOME}}#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
-      <li><a href="{{HOME}}#framework" data-i18n="nav.framework">Framework</a></li>
-      <li><a href="{{HOME}}#faq" data-i18n="nav.faq">Preguntas</a></li>
-      <!--RECURSOS-NAV-->
-    </ul>
+    <nav class="nav-main" data-i18n-aria="aria.menu" aria-label="Menú principal">
+      <ul class="nav-links" id="nav-menu" data-nav-menu>
+        <li><a href="#top" aria-current="page" data-i18n="nav.startups">Para startups</a></li>
+        <li><a href="{{HOME}}#programa" data-i18n="nav.programs">Para programas</a></li>
+        <li><a href="{{HOME}}#planes" data-i18n="nav.plans">Precios</a></li>
+        <li><a href="{{HOME}}#faq" data-i18n="nav.faq">Preguntas</a></li>
+        <!--RECURSOS-NAV-->
+      </ul>
+    </nav>
     <div class="nav-actions">
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar a modo claro">
-        <i class="ph ph-sun" aria-hidden="true"></i>
-        <i class="ph ph-moon" aria-hidden="true"></i>
-      </button>
       <label class="lang">
         <span class="sr-only" data-i18n="lang.label">Idioma</span>
         <i class="ph ph-globe" aria-hidden="true"></i>
@@ -48,7 +45,14 @@
         </select>
         <i class="ph ph-caret-down" aria-hidden="true"></i>
       </label>
-      <a class="btn btn-dark btn-small nav-cta" href="#diagnostico" data-open-tab="diag" data-i18n="st.cta">Solicitar mi diagnóstico</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar a modo claro">
+        <i class="ph ph-sun" aria-hidden="true"></i>
+        <i class="ph ph-moon" aria-hidden="true"></i>
+      </button>
+      <a class="btn btn-primary btn-small nav-cta" href="#diagnostico" data-open-tab="diag" data-i18n="st.cta">Solicitar mi diagnóstico</a>
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle data-i18n-aria="aria.menuOpen" aria-label="Abrir menú">
+        <i class="ph ph-list" aria-hidden="true"></i><i class="ph ph-x" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 </header>
