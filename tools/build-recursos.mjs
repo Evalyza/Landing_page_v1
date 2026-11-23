@@ -159,6 +159,12 @@ const FOOTER = `<footer class="footer">
       <span>© 2026 Ozmetra</span>
     </div>
   </div>
+  <div class="wrap footer-partners">
+    <a class="partner-badge" href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener">
+      <span class="pb-mark" aria-hidden="true"></span>
+      <span class="pb-text"><span class="pb-kicker">Miembro del programa</span> <b>NVIDIA Inception</b></span>
+    </a>
+  </div>
 </footer>`;
 
 const SCRIPTS = `<script>window.I18N={es:{"theme.toLight":"Cambiar a modo claro","theme.toDark":"Cambiar a modo oscuro"}}</script>

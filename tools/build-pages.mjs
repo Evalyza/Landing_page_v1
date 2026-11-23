@@ -201,6 +201,7 @@ function buildPage(lang) {
   html = relink(html, base, lang);
   html = legalLinks(html, base, lang);
   html = html.replaceAll("{{STARTUPS}}", "startups/");
+  html = html.replaceAll("{{CUENTA}}", "cuenta/");
   html = html.replace("<!--SEO-->", seoHead(lang, base).trimStart());
   html = html.replace(/<html lang="es"><!--HTMLATTRS-->/, `<html lang="${lang}" data-page-lang="${lang}"${base ? ` data-base="${base}"` : ""}>`);
   html = html.replaceAll("__V__", VERSION);
@@ -229,6 +230,33 @@ function buildStartups(lang) {
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, "index.html"), html);
   return `${lang}: ${startupsUrl(lang)}`;
+}
+
+// /cuenta/: customer sign-in, sign-up and profile. Private page: noindex and not in the sitemap.
+const cuentaTemplate = readText(join(ROOT, "tools", "cuenta.template.html"));
+function cuentaHead(lang, base) {
+  return [
+    `  <title data-i18n="acc.title">${esc(t(lang, "acc.title"))}</title>`,
+    `  <meta name="description" content="${escAttr(t(lang, "acc.p"))}">`,
+    `  <meta name="robots" content="noindex, nofollow">`,
+    `  <link rel="icon" href="${base}assets/ozmetra-icono-app.svg" type="image/svg+xml">`,
+    `  <link rel="icon" href="${base}assets/ozmetra-icono-app-192.png" type="image/png" sizes="192x192">`,
+    `  <link rel="apple-touch-icon" href="${base}assets/apple-touch-icon.png">`,
+  ].join("\n");
+}
+function buildCuenta(lang) {
+  const base = lang === DEFAULT ? "../" : "../../";
+  let html = translate(cuentaTemplate, lang);
+  html = relink(html, base, lang);
+  html = legalLinks(html, base, lang);
+  html = html.replaceAll("{{HOME}}", "../");
+  html = html.replace("<!--SEO-->", cuentaHead(lang, base).trimStart());
+  html = html.replace(/<html lang="es"><!--HTMLATTRS-->/, `<html lang="${lang}" data-page-lang="${lang}" data-base="${base}">`);
+  html = html.replaceAll("__V__", VERSION);
+  const dir = join(OUT, ...(lang === DEFAULT ? [] : [lang]), "cuenta");
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, "index.html"), html);
+  return `${lang}: ${pageUrl(lang)}cuenta/`;
 }
 
 // Legal pages: legal.js renders the chosen language, but the Spanish text is also written
@@ -285,6 +313,7 @@ Sitemap: ${SITE_URL}/sitemap.xml
 console.log(`SITE_URL = ${SITE_URL}`);
 for (const l of LANGS) console.log(buildPage(l));
 for (const l of LANGS) console.log(buildStartups(l));
+for (const l of LANGS) console.log(buildCuenta(l));
 console.log(buildLegal("terminos.html", "terms"), "·", buildLegal("privacidad.html", "privacy"));
 buildSitemap();
 console.log("sitemap.xml, robots.txt, site.webmanifest");

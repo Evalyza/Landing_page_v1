@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" data-page-lang="en" data-base="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="acc.title">My account · Ozmetra</title>
+  <meta name="description" content="Create your free account and start today. Your profile shows your plan and your company details.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="../../assets/ozmetra-icono-app.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/ozmetra-icono-app-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#F5F1E8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" href="../../styles.css?v=26">
+  <script>var t;try{t=localStorage.getItem("ozmetra-theme")}catch(e){}if(t!=="dark")document.documentElement.dataset.theme="light"</script>
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body class="account-page">
+
+<!-- Ozmetra customer account: sign in, sign up and profile (source: tools/cuenta.template.html) -->
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="../" data-i18n-aria="aria.home" aria-label="Ozmetra, home">
+      <img class="logo-on-dark" src="../../assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200"><img class="logo-on-light" src="../../assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200">
+    </a>
+    <nav class="nav-main" data-i18n-aria="aria.menu" aria-label="Main menu">
+      <ul class="nav-links" id="nav-menu" data-nav-menu>
+        <li><a href="../#como-funciona" data-i18n="nav.how">How it works</a></li>
+        <li><a href="../#programa" data-i18n="nav.programs">For programmes</a></li>
+        <li><a href="../#planes" data-i18n="nav.plans">Pricing</a></li>
+        <li><a href="../#faq" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <label class="lang">
+        <span class="sr-only" data-i18n="lang.label">Language</span>
+        <i class="ph ph-globe" aria-hidden="true"></i>
+        <select data-lang>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+        <i class="ph ph-caret-down" aria-hidden="true"></i>
+      </label>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar a modo claro">
+        <i class="ph ph-sun" aria-hidden="true"></i>
+        <i class="ph ph-moon" aria-hidden="true"></i>
+      </button>
+      <button class="nav-burger" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle data-i18n-aria="aria.menuOpen" aria-label="Open menu">
+        <i class="ph ph-list" aria-hidden="true"></i><i class="ph ph-x" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="account">
+  <div class="wrap">
+
+    <!-- Loading -->
+    <div class="account-loading" data-view="loading" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span><span data-i18n="acc.loading">Loading your account…</span>
+    </div>
+
+    <!-- Sign in / sign up -->
+    <section class="auth" data-view="auth" hidden>
+      <div class="auth-copy">
+        <span class="eyebrow" data-i18n="acc.eyebrow">Your Ozmetra account</span>
+        <h1 data-i18n="acc.h1">Analyse your company's processes</h1>
+        <p data-i18n="acc.p">Create your free account and start today. Your profile shows your plan and your company details.</p>
+        <ul class="signup-points">
+          <li><i class="ph ph-credit-card" aria-hidden="true"></i><span data-i18n="signup.pt1">The Free plan needs no card</span></li>
+          <li><i class="ph ph-magnifying-glass" aria-hidden="true"></i><span data-i18n="signup.pt2">Every finding, with the source behind it</span></li>
+          <li><i class="ph ph-lock-simple" aria-hidden="true"></i><span data-i18n="signup.pt3">You decide what you share and who sees it</span></li>
+        </ul>
+      </div>
+
+      <div class="signup-card auth-card">
+        <div class="segmented" role="tablist" data-auth-tabs>
+          <span class="thumb" aria-hidden="true"></span>
+          <button type="button" role="tab" aria-pressed="false" aria-selected="false" data-v="login" data-i18n="acc.tab.login">Log in</button>
+          <button type="button" role="tab" aria-pressed="true" aria-selected="true" data-v="register" data-i18n="acc.tab.register">Create account</button>
+        </div>
+
+        <!-- Sign up -->
+        <form class="form-stack" data-register-form data-auth-panel="register" novalidate>
+          <fieldset class="plan-pick">
+            <legend data-i18n="form.plan">Plan</legend>
+            <label class="plan-option"><input type="radio" name="plan" value="free" checked><span class="po-name" data-i18n="plans.free.name">Free</span><span class="po-price" data-i18n="plans.free.price">€0</span></label>
+            <label class="plan-option"><input type="radio" name="plan" value="custom"><span class="po-name" data-i18n="plans.custom.name">Custom</span><span class="po-price"><span data-i18n="plans.custom.price">€35.99</span><small data-i18n="plans.month">/month</small></span></label>
+            <label class="plan-option"><input type="radio" name="plan" value="programs"><span class="po-name" data-i18n="plans.programs.short">Incubators &amp; accelerators</span><span class="po-price"><span data-i18n="plans.programs.price">€49.99</span><small data-i18n="plans.month">/month</small></span></label>
+          </fieldset>
+          <p class="plan-pick-note" data-plan-note hidden data-i18n="acc.paidNote">Paid plans are activated after a short call with us. Meanwhile, you have everything in the Free plan.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="rg-name" data-i18n="form.name">Name</label>
+              <input id="rg-name" name="full_name" type="text" autocomplete="name" maxlength="120" data-i18n-ph="form.namePh" placeholder="Your name" aria-describedby="rg-name-err" required>
+              <span class="err" id="rg-name-err" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="rg-company" data-i18n="form.company">Organisation</label>
+              <input id="rg-company" name="company" type="text" autocomplete="organization" maxlength="160" data-i18n-ph="form.companyPh" placeholder="Your company or programme">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="rg-email" data-i18n="form.email">Work email</label>
+            <input id="rg-email" name="email" type="email" autocomplete="email" data-i18n-ph="form.emailPh" placeholder="you@company.com" aria-describedby="rg-email-err" required>
+            <span class="err" id="rg-email-err" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="rg-pass" data-i18n="acc.password">Password</label>
+            <div class="pass-row">
+              <input id="rg-pass" name="password" type="password" autocomplete="new-password" minlength="8" data-i18n-ph="acc.passPh" placeholder="At least 8 characters" aria-describedby="rg-pass-err" required>
+              <button class="pass-toggle" type="button" data-pass-toggle data-i18n-aria="acc.showPass" aria-label="Show password"><i class="ph ph-eye" aria-hidden="true"></i></button>
+            </div>
+            <span class="err" id="rg-pass-err" aria-live="polite"></span>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="rg-role" data-i18n="form.role">Your role</label>
+              <select id="rg-role" name="role">
+                <option value="founder" data-i18n="role.4">Company or startup</option>
+                <option value="director" data-i18n="role.1">Programme lead</option>
+                <option value="analyst" data-i18n="role.2">Selection or investment</option>
+                <option value="mentor" data-i18n="role.3">Mentor</option>
+                <option value="other" data-i18n="role.5">Other</option>
+              </select>
+            </div>
+            <div class="field" data-program-field hidden>
+              <label for="rg-program" data-i18n="form.program">Type of programme</label>
+              <select id="rg-program" name="program_type">
+                <option value="incub" data-i18n="prog.incub">Incubator</option>
+                <option value="accel" data-i18n="prog.accel">Accelerator</option>
+                <option value="uni" data-i18n="prog.uni">University</option>
+                <option value="corp" data-i18n="prog.corp">Corporate or fund</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="consent"><input type="checkbox" name="consent" aria-describedby="rg-consent-err"><span data-i18n-html="consent.html">I agree to the <a href="../../terminos.html?lang=en" target="_blank">Terms of Service</a> and have read the <a href="../../privacidad.html?lang=en" target="_blank">Privacy Policy</a>.</span></label>
+            <span class="err" id="rg-consent-err" aria-live="polite"></span>
+          </div>
+          <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="acc.create">Create account</span> <i class="ph-bold ph-arrow-right"></i></span></button>
+          <p class="auth-switch"><span data-i18n="acc.haveAccount">Already have an account?</span> <button type="button" class="link-btn" data-go-tab="login" data-i18n="acc.tab.login">Log in</button></p>
+        </form>
+
+        <!-- Sign in -->
+        <form class="form-stack" data-login-form data-auth-panel="login" novalidate hidden>
+          <div class="field">
+            <label for="lg-email" data-i18n="form.email">Work email</label>
+            <input id="lg-email" name="email" type="email" autocomplete="email" data-i18n-ph="form.emailPh" placeholder="you@company.com" aria-describedby="lg-email-err" required>
+            <span class="err" id="lg-email-err" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <div class="label-row"><label for="lg-pass" data-i18n="acc.password">Password</label><button type="button" class="link-btn" data-show-view="forgot" data-i18n="acc.forgot">Forgot your password?</button></div>
+            <div class="pass-row">
+              <input id="lg-pass" name="password" type="password" autocomplete="current-password" aria-describedby="lg-pass-err" required>
+              <button class="pass-toggle" type="button" data-pass-toggle data-i18n-aria="acc.showPass" aria-label="Show password"><i class="ph ph-eye" aria-hidden="true"></i></button>
+            </div>
+            <span class="err" id="lg-pass-err" aria-live="polite"></span>
+          </div>
+          <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="acc.signin">Log in</span> <i class="ph-bold ph-arrow-right"></i></span></button>
+          <p class="auth-switch"><span data-i18n="acc.noAccount">Don't have an account yet?</span> <button type="button" class="link-btn" data-go-tab="register" data-i18n="acc.tab.register">Create account</button></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Check your email -->
+    <section class="auth-message signup-card" data-view="sent" hidden>
+      <div class="check"><i class="ph-bold ph-envelope-simple" aria-hidden="true"></i></div>
+      <h1 data-i18n="acc.sentH">Check your email</h1>
+      <p><span data-i18n="acc.sentP">We've sent a link to</span> <strong data-sent-email></strong>. <span data-i18n="acc.sentP2">Open it to continue. If you can't see it, check your spam folder.</span></p>
+      <button type="button" class="link-btn" data-show-view="auth" data-i18n="acc.back">Back</button>
+    </section>
+
+    <!-- Forgotten password -->
+    <section class="auth-message signup-card" data-view="forgot" hidden>
+      <h1 data-i18n="acc.forgotH">Reset your password</h1>
+      <p data-i18n="acc.forgotP">Enter your email and we'll send you a link to create a new one.</p>
+      <form class="form-stack" data-forgot-form novalidate>
+        <div class="field">
+          <label for="fg-email" data-i18n="form.email">Work email</label>
+          <input id="fg-email" name="email" type="email" autocomplete="email" aria-describedby="fg-email-err" required>
+          <span class="err" id="fg-email-err" aria-live="polite"></span>
+        </div>
+        <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="acc.sendLink">Send link</span></span></button>
+      </form>
+      <button type="button" class="link-btn" data-show-view="auth" data-i18n="acc.back">Back</button>
+    </section>
+
+    <!-- New password (after the recovery link) -->
+    <section class="auth-message signup-card" data-view="newpass" hidden>
+      <h1 data-i18n="acc.newPassH">Create a new password</h1>
+      <form class="form-stack" data-newpass-form novalidate>
+        <div class="field">
+          <label for="np-pass" data-i18n="acc.password">Password</label>
+          <div class="pass-row">
+            <input id="np-pass" name="password" type="password" autocomplete="new-password" minlength="8" data-i18n-ph="acc.passPh" placeholder="At least 8 characters" aria-describedby="np-pass-err" required>
+            <button class="pass-toggle" type="button" data-pass-toggle data-i18n-aria="acc.showPass" aria-label="Show password"><i class="ph ph-eye" aria-hidden="true"></i></button>
+          </div>
+          <span class="err" id="np-pass-err" aria-live="polite"></span>
+        </div>
+        <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="acc.savePass">Save password</span></span></button>
+      </form>
+    </section>
+
+    <!-- Signed in, but not a customer account (e.g. a CRM team member) -->
+    <section class="auth-message signup-card" data-view="noaccount" hidden>
+      <h1 data-i18n="acc.noAccH">This isn't a customer account</h1>
+      <p data-i18n="acc.noAccP">You've logged in with an Ozmetra team account. To see a customer profile, log out and log in with another account.</p>
+      <button class="btn btn-outline" type="button" data-signout><i class="ph ph-sign-out" aria-hidden="true"></i><span data-i18n="acc.signout">Log out</span></button>
+    </section>
+
+    <!-- Profile -->
+    <section class="profile" data-view="account" hidden>
+      <header class="profile-head">
+        <div>
+          <span class="eyebrow" data-i18n="acc.profile">My account</span>
+          <h1><span data-i18n="acc.hello">Hello</span><span data-hello-name></span></h1>
+          <p class="profile-email" data-account-email></p>
+        </div>
+        <button class="btn btn-outline btn-small" type="button" data-signout><i class="ph ph-sign-out" aria-hidden="true"></i><span data-i18n="acc.signout">Log out</span></button>
+      </header>
+
+      <div class="profile-grid">
+        <!-- Contracted plan -->
+        <article class="profile-card plan-card" aria-labelledby="pc-plan-h">
+          <div class="pc-top">
+            <h2 id="pc-plan-h" data-i18n="acc.yourPlan">Your plan</h2>
+            <span class="status-badge" data-plan-status></span>
+          </div>
+          <p class="pc-plan-name" data-plan-name></p>
+          <p class="plan-price"><span class="plan-from" data-plan-from hidden data-i18n="plans.from">From</span> <span class="plan-amount" data-plan-price></span> <span class="plan-unit" data-plan-unit></span></p>
+          <p class="pc-status-text" data-plan-status-text></p>
+          <p class="plan-includes" data-i18n="plans.includes">What's included?</p>
+          <ul class="pc-features" data-plan-features></ul>
+
+          <form class="pc-change" data-change-plan-form>
+            <fieldset class="plan-pick">
+              <legend data-i18n="acc.changePlan">Change plan</legend>
+              <label class="plan-option"><input type="radio" name="new_plan" value="free"><span class="po-name" data-i18n="plans.free.name">Free</span><span class="po-price" data-i18n="plans.free.price">€0</span></label>
+              <label class="plan-option"><input type="radio" name="new_plan" value="custom"><span class="po-name" data-i18n="plans.custom.name">Custom</span><span class="po-price"><span data-i18n="plans.custom.price">€35.99</span><small data-i18n="plans.month">/month</small></span></label>
+              <label class="plan-option"><input type="radio" name="new_plan" value="programs"><span class="po-name" data-i18n="plans.programs.short">Incubators &amp; accelerators</span><span class="po-price"><span data-i18n="plans.programs.price">€49.99</span><small data-i18n="plans.month">/month</small></span></label>
+            </fieldset>
+            <button class="btn btn-outline" type="submit" disabled><span class="btn-label"><span data-i18n="acc.requestChange">Request the change</span></span></button>
+            <p class="form-msg" data-plan-msg aria-live="polite"></p>
+          </form>
+
+          <div class="pc-cancel" data-cancel-box hidden>
+            <button type="button" class="link-btn" data-cancel-open data-i18n="acc.cancel">Cancel subscription</button>
+            <form class="pc-cancel-form" data-cancel-form hidden>
+              <p data-i18n="acc.cancelConfirm">We'll stop billing you from the next period. You can reactivate the plan here whenever you like.</p>
+              <div class="field">
+                <label for="pc-reason" data-i18n="acc.cancelReason">Why are you cancelling? (optional)</label>
+                <textarea id="pc-reason" name="reason" rows="2" maxlength="500"></textarea>
+              </div>
+              <div class="pc-cancel-actions">
+                <button class="btn btn-outline btn-small" type="button" data-cancel-close><span class="btn-label"><span data-i18n="acc.keepPlan">Keep my plan</span></span></button>
+                <button class="btn btn-danger btn-small" type="submit"><span class="btn-label"><span data-i18n="acc.cancelYes">Yes, cancel</span></span></button>
+              </div>
+            </form>
+          </div>
+          <p class="form-msg" data-cancel-msg aria-live="polite"></p>
+        </article>
+
+        <!-- Payment and billing (no online payments yet: invoices) -->
+        <article class="profile-card billing-card" aria-labelledby="pc-billing-h">
+          <h2 id="pc-billing-h" data-i18n="acc.billing">Payment and billing</h2>
+          <dl class="bill-summary">
+            <div><dt data-i18n="acc.billMethod">Payment method</dt><dd data-bill-method></dd></div>
+            <div><dt data-i18n="acc.billAmount">Amount</dt><dd data-bill-amount></dd></div>
+          </dl>
+          <p class="bill-note" data-i18n="acc.billNote">We don't take online payments yet. Paid plans are billed monthly and we email you the invoice.</p>
+          <form class="form-stack" data-billing-form novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="pb-name" data-i18n="acc.billName">Company legal name</label>
+                <input id="pb-name" name="billing_name" type="text" autocomplete="organization" maxlength="160">
+              </div>
+              <div class="field">
+                <label for="pb-tax" data-i18n="acc.billTax">Tax ID (VAT number)</label>
+                <input id="pb-tax" name="billing_tax_id" type="text" maxlength="40" autocapitalize="characters">
+              </div>
+            </div>
+            <div class="field">
+              <label for="pb-address" data-i18n="acc.billAddress">Billing address</label>
+              <input id="pb-address" name="billing_address" type="text" autocomplete="street-address" maxlength="300">
+            </div>
+            <div class="field">
+              <label for="pb-email" data-i18n="acc.billEmail">Email for invoices</label>
+              <input id="pb-email" name="billing_email" type="email" autocomplete="email" maxlength="200">
+            </div>
+            <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="acc.saveBilling">Save billing details</span></span></button>
+            <p class="form-msg" data-billing-msg aria-live="polite"></p>
+          </form>
+        </article>
+
+        <!-- Company details -->
+        <article class="profile-card" aria-labelledby="pc-company-h">
+          <h2 id="pc-company-h" data-i18n="acc.companyData">Your company details</h2>
+          <form class="form-stack" data-company-form novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="pf-name" data-i18n="form.name">Name</label>
+                <input id="pf-name" name="full_name" type="text" autocomplete="name" maxlength="120">
+              </div>
+              <div class="field">
+                <label for="pf-phone" data-i18n="form.phone">Phone</label>
+                <input id="pf-phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="pf-company" data-i18n="form.company">Organisation</label>
+                <input id="pf-company" name="company" type="text" autocomplete="organization" maxlength="160">
+              </div>
+              <div class="field">
+                <label for="pf-website" data-i18n="acc.website">Website</label>
+                <input id="pf-website" name="website" type="url" inputmode="url" maxlength="200" placeholder="https://">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="pf-sector" data-i18n="acc.sector">Sector</label>
+                <input id="pf-sector" name="sector" type="text" maxlength="80" data-i18n-ph="acc.sectorPh" placeholder="For example, logistics">
+              </div>
+              <div class="field">
+                <label for="pf-size" data-i18n="acc.size">Team size</label>
+                <select id="pf-size" name="team_size">
+                  <option value="" data-i18n="acc.choose">Choose an option</option>
+                  <option value="1-10" data-i18n="acc.size.1">1 to 10 people</option>
+                  <option value="11-50" data-i18n="acc.size.2">11 to 50 people</option>
+                  <option value="51-200" data-i18n="acc.size.3">51 to 200 people</option>
+                  <option value="200+" data-i18n="acc.size.4">More than 200 people</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="pf-role" data-i18n="form.role">Your role</label>
+                <select id="pf-role" name="role">
+                  <option value="founder" data-i18n="role.4">Company or startup</option>
+                  <option value="director" data-i18n="role.1">Programme lead</option>
+                  <option value="analyst" data-i18n="role.2">Selection or investment</option>
+                  <option value="mentor" data-i18n="role.3">Mentor</option>
+                  <option value="other" data-i18n="role.5">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="pf-program" data-i18n="form.program">Type of programme</label>
+                <select id="pf-program" name="program_type">
+                  <option value="" data-i18n="acc.none">Not applicable</option>
+                  <option value="incub" data-i18n="prog.incub">Incubator</option>
+                  <option value="accel" data-i18n="prog.accel">Accelerator</option>
+                  <option value="uni" data-i18n="prog.uni">University</option>
+                  <option value="corp" data-i18n="prog.corp">Corporate or fund</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="acc.save">Save changes</span></span></button>
+            <p class="form-msg" data-company-msg aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+
+      <p class="profile-foot"><span data-i18n="acc.memberSince">Customer since</span> <span data-member-since></span> · <button type="button" class="link-btn" data-reset-pass data-i18n="acc.changePass">Change password</button></p>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="../"><img class="logo-on-dark" src="../../assets/ozmetra-logo-horizontal-blanco.svg" alt="Ozmetra" width="616" height="200" style="height:52px"><img class="logo-on-light" src="../../assets/ozmetra-logo-horizontal.svg" alt="Ozmetra" width="616" height="200" style="height:52px"></a>
+    <nav data-i18n-aria="aria.footer" aria-label="Footer">
+      <a href="../#planes" data-i18n="nav.plans">Pricing</a>
+      <a href="../#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="../../terminos.html?lang=en" data-i18n="footer.terms">Terms of Service</a>
+      <a href="../../privacidad.html?lang=en" data-i18n="footer.privacy">Privacy Policy</a>
+    </nav>
+    <div class="footer-end">
+      <span>© 2026 Ozmetra</span>
+    </div>
+    <div class="footer-partner">
+      <span data-i18n="footer.inception">Member of</span>
+      <img class="logo-on-light" src="../../assets/nvidia-inception.png" alt="NVIDIA Inception Program" width="534" height="189" loading="lazy">
+      <img class="logo-on-dark" src="../../assets/nvidia-inception-blanco.png" alt="NVIDIA Inception Program" width="534" height="189" loading="lazy">
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="../../i18n.js?v=26"></script>
+<script src="../../forms.js?v=26"></script>
+<script src="../../cuenta.js?v=26"></script>
+<script src="../../theme.js?v=26"></script>
+</body>
+</html>
