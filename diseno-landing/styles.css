@@ -1611,3 +1611,8 @@ html:is([lang="fr"], [lang="de"], [lang="it"]) .st-hero h1 { font-size: clamp(2.
 .plan-price { flex-wrap: nowrap; }
 /* /startups: its CTA label is long; on phones the hero button does that job */
 @media (max-width: 480px) { .nav-cta[data-open-tab="diag"] { display: none !important; } }
+
+/* Footer: NVIDIA Inception membership */
+.footer-partner { flex-basis: 100%; display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--line); }
+.footer-partner span { font-size: 13px; color: var(--ink-soft); white-space: nowrap; }
+.footer-partner img { height: 48px; width: auto; }
