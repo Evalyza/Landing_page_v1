@@ -2988,3 +2988,75 @@ Object.assign(window.I18N.it, {
   "acc.err.generic": "Qualcosa è andato storto. Riprova tra un momento.",
   "acc.err.name": "Scrivi il tuo nome.", "acc.err.emailEmpty": "Scrivi la tua email.", "acc.err.passEmpty": "Scrivi la tua password."
 });
+
+/* ---------- Team voice in forms + NVIDIA Inception footer (2026-11-23) ---------- */
+Object.assign(window.I18N.es, {
+  "footer.inception": "Miembro del programa",
+  "wl.okSign": "El equipo de Ozmetra",
+  "wl.okP": "Gracias. Una persona de nuestro equipo se pondrá en contacto contigo en las próximas 24-48 horas para conocer vuestro programa y preparar una demo con vuestros criterios.",
+  "wl.stP": "Gracias. Una persona de nuestro equipo se pondrá en contacto contigo en las próximas 24-48 horas con tu acceso y los siguientes pasos.",
+  "call.intro": "Déjanos tu teléfono y una persona de nuestro equipo te llamará para enseñarte Ozmetra y resolver tus dudas.",
+  "call.okP": "Una persona de nuestro equipo te llamará en la franja que has elegido. Si necesitas cambiarla, escríbenos a <a href=\"mailto:ozmetra.solution@gmail.com\">ozmetra.solution@gmail.com</a>.",
+  "signup.founder": "Una persona de nuestro equipo te acompaña desde el primer día.",
+  "st.form.p": "Cuéntanos quiénes sois y qué os preocupa. Nuestro equipo te responderá en 24-48 horas.",
+  "st.form.intro": "Nuestro equipo se pondrá en contacto contigo para conocer a vuestro equipo y organizar el diagnóstico.",
+  "st.okP": "Gracias. Una persona de nuestro equipo se pondrá en contacto contigo en las próximas 24-48 horas para organizar el diagnóstico.",
+  "st.call.intro": "Déjanos tu teléfono y una persona de nuestro equipo te llamará. En 15 minutos te contamos cómo es el diagnóstico y si encaja con vosotros.",
+  "faq.a11": "Ozmetra la fundó Ángel León y aplica los marcos LightSME y LightStartup, desarrollados en la Universidad Rey Juan Carlos. Forma parte del programa NVIDIA Inception, y una persona del equipo acompaña a cada cliente desde el primer día."
+});
+Object.assign(window.I18N.en, {
+  "footer.inception": "Member of",
+  "wl.okSign": "The Ozmetra team",
+  "wl.okP": "Thank you. Someone from our team will get in touch within 24-48 hours to learn about your programme and prepare a demo with your criteria.",
+  "wl.stP": "Thank you. Someone from our team will get in touch within 24-48 hours with your access and the next steps.",
+  "call.intro": "Leave us your phone number and someone from our team will call you to show you Ozmetra and answer your questions.",
+  "call.okP": "Someone from our team will call you in the time slot you chose. If you need to change it, write to us at <a href=\"mailto:ozmetra.solution@gmail.com\">ozmetra.solution@gmail.com</a>.",
+  "signup.founder": "Someone from our team supports you from day one.",
+  "st.form.p": "Tell us who you are and what concerns you. Our team will reply within 24-48 hours.",
+  "st.form.intro": "Our team will get in touch to meet your team and organise the diagnosis.",
+  "st.okP": "Thank you. Someone from our team will get in touch within 24-48 hours to organise the diagnosis.",
+  "st.call.intro": "Leave us your phone number and someone from our team will call you. In 15 minutes we'll explain the diagnosis and whether it suits you.",
+  "faq.a11": "Ozmetra was founded by Ángel León and applies the LightSME and LightStartup frameworks, developed at Rey Juan Carlos University. It is part of the NVIDIA Inception programme, and someone from the team supports every customer from day one."
+});
+Object.assign(window.I18N.fr, {
+  "footer.inception": "Membre du programme",
+  "wl.okSign": "L'équipe Ozmetra",
+  "wl.okP": "Merci. Une personne de notre équipe vous contactera sous 24 à 48 heures pour découvrir votre programme et préparer une démo avec vos critères.",
+  "wl.stP": "Merci. Une personne de notre équipe vous contactera sous 24 à 48 heures avec votre accès et les prochaines étapes.",
+  "call.intro": "Laissez-nous votre téléphone et une personne de notre équipe vous appellera pour vous présenter Ozmetra et répondre à vos questions.",
+  "call.okP": "Une personne de notre équipe vous appellera dans le créneau choisi. Pour le modifier, écrivez-nous à <a href=\"mailto:ozmetra.solution@gmail.com\">ozmetra.solution@gmail.com</a>.",
+  "signup.founder": "Une personne de notre équipe vous accompagne dès le premier jour.",
+  "st.form.p": "Dites-nous qui vous êtes et ce qui vous préoccupe. Notre équipe vous répondra sous 24 à 48 heures.",
+  "st.form.intro": "Notre équipe vous contactera pour rencontrer votre équipe et organiser le diagnostic.",
+  "st.okP": "Merci. Une personne de notre équipe vous contactera sous 24 à 48 heures pour organiser le diagnostic.",
+  "st.call.intro": "Laissez-nous votre téléphone et une personne de notre équipe vous appellera. En 15 minutes, nous vous expliquons le diagnostic et s'il vous convient.",
+  "faq.a11": "Ozmetra a été fondée par Ángel León et applique les cadres LightSME et LightStartup, développés à l'Université Rey Juan Carlos. Elle fait partie du programme NVIDIA Inception, et une personne de l'équipe accompagne chaque client dès le premier jour."
+});
+Object.assign(window.I18N.de, {
+  "footer.inception": "Mitglied im Programm",
+  "wl.okSign": "Das Ozmetra-Team",
+  "wl.okP": "Danke. Jemand aus unserem Team meldet sich innerhalb von 24-48 Stunden, um euer Programm kennenzulernen und eine Demo mit euren Kriterien vorzubereiten.",
+  "wl.stP": "Danke. Jemand aus unserem Team meldet sich innerhalb von 24-48 Stunden mit deinem Zugang und den nächsten Schritten.",
+  "call.intro": "Hinterlasse uns deine Telefonnummer, und jemand aus unserem Team ruft dich an, um dir Ozmetra zu zeigen und deine Fragen zu beantworten.",
+  "call.okP": "Jemand aus unserem Team ruft dich im gewählten Zeitfenster an. Wenn du es ändern musst, schreib uns an <a href=\"mailto:ozmetra.solution@gmail.com\">ozmetra.solution@gmail.com</a>.",
+  "signup.founder": "Jemand aus unserem Team begleitet dich vom ersten Tag an.",
+  "st.form.p": "Erzähl uns, wer ihr seid und was euch beschäftigt. Unser Team antwortet innerhalb von 24-48 Stunden.",
+  "st.form.intro": "Unser Team meldet sich, um euer Team kennenzulernen und die Diagnose zu organisieren.",
+  "st.okP": "Danke. Jemand aus unserem Team meldet sich innerhalb von 24-48 Stunden, um die Diagnose zu organisieren.",
+  "st.call.intro": "Hinterlasse uns deine Telefonnummer, und jemand aus unserem Team ruft dich an. In 15 Minuten erklären wir dir die Diagnose und ob sie zu euch passt.",
+  "faq.a11": "Ozmetra wurde von Ángel León gegründet und wendet die an der Universität Rey Juan Carlos entwickelten Frameworks LightSME und LightStartup an. Es ist Teil des Programms NVIDIA Inception, und jemand aus dem Team begleitet jeden Kunden vom ersten Tag an."
+});
+Object.assign(window.I18N.it, {
+  "footer.inception": "Membro del programma",
+  "wl.okSign": "Il team di Ozmetra",
+  "wl.okP": "Grazie. Una persona del nostro team ti contatterà entro 24-48 ore per conoscere il vostro programma e preparare una demo con i vostri criteri.",
+  "wl.stP": "Grazie. Una persona del nostro team ti contatterà entro 24-48 ore con il tuo accesso e i prossimi passi.",
+  "call.intro": "Lasciaci il tuo telefono e una persona del nostro team ti chiamerà per mostrarti Ozmetra e rispondere ai tuoi dubbi.",
+  "call.okP": "Una persona del nostro team ti chiamerà nella fascia che hai scelto. Se devi cambiarla, scrivici a <a href=\"mailto:ozmetra.solution@gmail.com\">ozmetra.solution@gmail.com</a>.",
+  "signup.founder": "Una persona del nostro team ti accompagna dal primo giorno.",
+  "st.form.p": "Raccontaci chi siete e cosa vi preoccupa. Il nostro team ti risponderà entro 24-48 ore.",
+  "st.form.intro": "Il nostro team ti contatterà per conoscere il vostro team e organizzare la diagnosi.",
+  "st.okP": "Grazie. Una persona del nostro team ti contatterà entro 24-48 ore per organizzare la diagnosi.",
+  "st.call.intro": "Lasciaci il tuo telefono e una persona del nostro team ti chiamerà. In 15 minuti ti spieghiamo la diagnosi e se fa per voi.",
+  "faq.a11": "Ozmetra è stata fondata da Ángel León e applica i framework LightSME e LightStartup, sviluppati all'Università Rey Juan Carlos. Fa parte del programma NVIDIA Inception, e una persona del team accompagna ogni cliente dal primo giorno."
+});

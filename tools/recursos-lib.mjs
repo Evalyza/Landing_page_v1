@@ -32,7 +32,7 @@ export const TEMAS = {
 
 // Cache-busting for styles.css / theme.js. build-pages.mjs and build-recursos.mjs both use it,
 // so the landing and the articles always ask for the same version.
-export const ASSET_VERSION = "23";
+export const ASSET_VERSION = "24";
 
 // Spanish-only link from a landing template to an article:
 //   <!--RECURSO:slug:Texto del enlace-->

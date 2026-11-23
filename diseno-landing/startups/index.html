@@ -44,7 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="stylesheet" href="../styles.css?v=23">
+  <link rel="stylesheet" href="../styles.css?v=24">
   <script>var t;try{t=localStorage.getItem("ozmetra-theme")}catch(e){}if(t!=="dark")document.documentElement.dataset.theme="light"</script>
   <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -211,7 +211,7 @@
       <div class="panel close-panel">
         <div>
           <h2 data-i18n="st.form.h2">¿Lo vemos con vuestro equipo?</h2>
-          <p data-i18n="st.form.p">Cuéntanos quiénes sois y qué os preocupa. Te respondo yo, Ángel, en 24-48 horas.</p>
+          <p data-i18n="st.form.p">Cuéntanos quiénes sois y qué os preocupa. Nuestro equipo te responderá en 24-48 horas.</p>
           <a class="startup-link rc-landing-link" href="../recursos/como-entrar-aceleradora/"><span>¿Vais a presentaros a una aceleradora? Qué miran en la selección</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
           <a class="startup-link st-programs" href="../#programa"><span data-i18n="st.programs">¿Diriges una aceleradora, incubadora o vivero? Mira el piloto gratuito para programas</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
         </div>
@@ -228,7 +228,7 @@
             <form data-diag-form novalidate>
               <div class="form-stack">
                 <h3 data-i18n="st.form.h3">Solicita tu diagnóstico</h3>
-                <p class="waitlist-intro" data-i18n="st.form.intro">Te escribo para conocer a vuestro equipo y organizar el diagnóstico.</p>
+                <p class="waitlist-intro" data-i18n="st.form.intro">Nuestro equipo se pondrá en contacto contigo para conocer a vuestro equipo y organizar el diagnóstico.</p>
                 <div class="field">
                   <label for="st-email" data-i18n="form.email">Email de trabajo</label>
                   <input id="st-email" name="email" type="email" autocomplete="email" data-i18n-ph="st.form.emailPh" placeholder="tu@startup.com" aria-describedby="st-email-err" required>
@@ -261,8 +261,8 @@
             <div class="success" role="status">
               <div class="check"><i class="ph-bold ph-check"></i></div>
               <h3 data-i18n="st.okH">Solicitud recibida</h3>
-              <p data-i18n="st.okP">Gracias. Te escribo en las próximas 24-48 horas para conocer a vuestro equipo y organizar el diagnóstico.</p>
-              <p class="success-sign">— <span data-i18n="wl.okSign">Ángel, fundador de Ozmetra</span></p>
+              <p data-i18n="st.okP">Gracias. Una persona de nuestro equipo se pondrá en contacto contigo en las próximas 24-48 horas para organizar el diagnóstico.</p>
+              <p class="success-sign">— <span data-i18n="wl.okSign">El equipo de Ozmetra</span></p>
             </div>
           </div>
 
@@ -271,7 +271,7 @@
             <form data-call-form novalidate>
               <div class="form-stack">
                 <h3 data-i18n="call.h3">Habla con nuestro equipo</h3>
-                <p class="waitlist-intro" data-i18n="st.call.intro">Déjanos tu teléfono y te llamo yo, Ángel. En 15 minutos te cuento cómo es el diagnóstico y si encaja con vosotros.</p>
+                <p class="waitlist-intro" data-i18n="st.call.intro">Déjanos tu teléfono y una persona de nuestro equipo te llamará. En 15 minutos te contamos cómo es el diagnóstico y si encaja con vosotros.</p>
                 <div class="field">
                   <label for="call-name" data-i18n="form.name">Nombre</label>
                   <input id="call-name" name="name" type="text" autocomplete="name" data-i18n-ph="form.namePh" placeholder="Tu nombre" aria-describedby="call-name-err" required>
@@ -311,7 +311,7 @@
             <div class="success" role="status">
               <div class="check"><i class="ph-bold ph-phone-call"></i></div>
               <h3 data-i18n="call.okH">Llamada solicitada</h3>
-              <p><span data-i18n-html="call.okP">Te llamo yo, Ángel, en la franja que has elegido. Si al final no te viene bien, escríbeme a <a href="mailto:ozmetra.solution@gmail.com">ozmetra.solution@gmail.com</a> y lo cambiamos.</span></p>
+              <p><span data-i18n-html="call.okP">Una persona de nuestro equipo te llamará en la franja que has elegido. Si necesitas cambiarla, escríbenos a <a href="mailto:ozmetra.solution@gmail.com">ozmetra.solution@gmail.com</a>.</span></p>
             </div>
           </div>
         </div>
@@ -337,11 +337,17 @@
       <span>© 2026 Ozmetra</span>
     </div>
   </div>
+  <div class="wrap footer-partners">
+    <a class="partner-badge" href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener">
+      <span class="pb-mark" aria-hidden="true"></span>
+      <span class="pb-text"><span class="pb-kicker" data-i18n="footer.inception">Miembro del programa</span> <b>NVIDIA Inception</b></span>
+    </a>
+  </div>
 </footer>
 
-<script src="../i18n.js?v=23"></script>
-<script src="../forms.js?v=23"></script>
-<script src="../startups.js?v=23"></script>
-<script src="../theme.js?v=23"></script>
+<script src="../i18n.js?v=24"></script>
+<script src="../forms.js?v=24"></script>
+<script src="../startups.js?v=24"></script>
+<script src="../theme.js?v=24"></script>
 </body>
 </html>
