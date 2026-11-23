@@ -79,7 +79,6 @@
         label.textContent = t("cta.myAccount");
       });
       $$("[data-register-link]").forEach((a) => (a.hidden = true));
-      $$(".nav-login").forEach((a) => a.classList.replace("btn-outline", "btn-primary"));
     }
   } catch { /* private mode */ }
 

@@ -243,6 +243,21 @@
     }
     $$("input[name=new_plan]").forEach((r) => (r.checked = r.value === plan));
     $("[data-change-plan-form] button[type=submit]").disabled = true;
+    // Cancel: only a paid plan that is not cancelled yet
+    $("[data-cancel-box]").hidden = plan === "free" || account.plan_status === "cancelled";
+    $("[data-cancel-form]").hidden = true;
+    $("[data-cancel-open]").hidden = false;
+    renderBilling();
+  }
+
+  function renderBilling() {
+    const paid = account.plan !== "free" && account.plan_status !== "cancelled";
+    $("[data-bill-method]").textContent = t(paid ? "acc.billMethod.invoice" : "acc.billMethod.none");
+    $("[data-bill-amount]").textContent = paid
+      ? `${t("plans.from")} ${t(`plans.${account.plan}.price`)}${t("plans.month")}`
+      : t("plans.free.price");
+    const f = $("[data-billing-form]");
+    for (const k of ["billing_name", "billing_tax_id", "billing_address", "billing_email"]) f.elements[k].value = account[k] ?? "";
   }
 
   function renderCompany() {
@@ -276,13 +291,14 @@
   const changeForm = $("[data-change-plan-form]");
   const changeBtn = $("button[type=submit]", changeForm);
   $$("input[name=new_plan]").forEach((r) => r.addEventListener("change", () => {
-    changeBtn.disabled = r.value === account.plan && r.checked;
+    // Same plan only makes sense to reactivate a cancelled one
+    changeBtn.disabled = r.value === account.plan && r.checked && account.plan_status !== "cancelled";
     $("[data-plan-msg]").textContent = "";
   }));
   changeForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const chosen = $$("input[name=new_plan]").find((r) => r.checked)?.value;
-    if (!chosen || chosen === account.plan) return;
+    if (!chosen || (chosen === account.plan && account.plan_status !== "cancelled")) return;
     setLoading(changeBtn, true);
     const { data, error } = await sb.rpc("request_plan", { p_plan: chosen });
     setLoading(changeBtn, false);
@@ -291,6 +307,60 @@
     account = Array.isArray(data) ? data[0] : data;
     renderPlan();
     msg.textContent = t(chosen === "free" ? "acc.planChangedFree" : "acc.planRequested");
+    msg.dataset.state = "ok";
+  });
+
+  // Cancel subscription
+  const cancelForm = $("[data-cancel-form]");
+  $("[data-cancel-open]").addEventListener("click", (e) => {
+    e.currentTarget.hidden = true;
+    cancelForm.hidden = false;
+    $("[data-cancel-msg]").textContent = "";
+    cancelForm.elements.reason.focus();
+  });
+  $("[data-cancel-close]").addEventListener("click", () => {
+    cancelForm.hidden = true;
+    $("[data-cancel-open]").hidden = false;
+  });
+  cancelForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = $("button[type=submit]", cancelForm);
+    const msg = $("[data-cancel-msg]");
+    setLoading(btn, true);
+    const { data, error } = await sb.rpc("cancel_plan", { p_reason: cancelForm.elements.reason.value.trim() || null });
+    setLoading(btn, false);
+    if (error) { msg.textContent = t("acc.err.generic"); msg.dataset.state = "error"; return; }
+    account = Array.isArray(data) ? data[0] : data;
+    cancelForm.reset();
+    renderPlan();
+    msg.textContent = t("acc.cancelDone");
+    msg.dataset.state = "ok";
+  });
+
+  // Billing details
+  const billingForm = $("[data-billing-form]");
+  billingForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = $("button[type=submit]", billingForm);
+    const msg = $("[data-billing-msg]");
+    const f = billingForm.elements;
+    const email = f.billing_email.value.trim();
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.textContent = t("acc.err.email"); msg.dataset.state = "error"; f.billing_email.focus(); return;
+    }
+    const changes = {
+      billing_name: f.billing_name.value.trim() || null,
+      billing_tax_id: f.billing_tax_id.value.trim().toUpperCase() || null,
+      billing_address: f.billing_address.value.trim() || null,
+      billing_email: email || null,
+    };
+    setLoading(btn, true);
+    const { data, error } = await sb.from("accounts").update(changes).eq("id", account.id).select().maybeSingle();
+    setLoading(btn, false);
+    if (error || !data) { msg.textContent = t("acc.err.generic"); msg.dataset.state = "error"; return; }
+    account = data;
+    renderBilling();
+    msg.textContent = t("acc.saved");
     msg.dataset.state = "ok";
   });
 

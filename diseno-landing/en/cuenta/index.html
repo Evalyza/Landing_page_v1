@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="stylesheet" href="../../styles.css?v=25">
+  <link rel="stylesheet" href="../../styles.css?v=26">
   <script>var t;try{t=localStorage.getItem("ozmetra-theme")}catch(e){}if(t!=="dark")document.documentElement.dataset.theme="light"</script>
   <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -256,6 +256,54 @@
             <button class="btn btn-outline" type="submit" disabled><span class="btn-label"><span data-i18n="acc.requestChange">Request the change</span></span></button>
             <p class="form-msg" data-plan-msg aria-live="polite"></p>
           </form>
+
+          <div class="pc-cancel" data-cancel-box hidden>
+            <button type="button" class="link-btn" data-cancel-open data-i18n="acc.cancel">Cancel subscription</button>
+            <form class="pc-cancel-form" data-cancel-form hidden>
+              <p data-i18n="acc.cancelConfirm">We'll stop billing you from the next period. You can reactivate the plan here whenever you like.</p>
+              <div class="field">
+                <label for="pc-reason" data-i18n="acc.cancelReason">Why are you cancelling? (optional)</label>
+                <textarea id="pc-reason" name="reason" rows="2" maxlength="500"></textarea>
+              </div>
+              <div class="pc-cancel-actions">
+                <button class="btn btn-outline btn-small" type="button" data-cancel-close><span class="btn-label"><span data-i18n="acc.keepPlan">Keep my plan</span></span></button>
+                <button class="btn btn-danger btn-small" type="submit"><span class="btn-label"><span data-i18n="acc.cancelYes">Yes, cancel</span></span></button>
+              </div>
+            </form>
+          </div>
+          <p class="form-msg" data-cancel-msg aria-live="polite"></p>
+        </article>
+
+        <!-- Payment and billing (no online payments yet: invoices) -->
+        <article class="profile-card billing-card" aria-labelledby="pc-billing-h">
+          <h2 id="pc-billing-h" data-i18n="acc.billing">Payment and billing</h2>
+          <dl class="bill-summary">
+            <div><dt data-i18n="acc.billMethod">Payment method</dt><dd data-bill-method></dd></div>
+            <div><dt data-i18n="acc.billAmount">Amount</dt><dd data-bill-amount></dd></div>
+          </dl>
+          <p class="bill-note" data-i18n="acc.billNote">We don't take online payments yet. Paid plans are billed monthly and we email you the invoice.</p>
+          <form class="form-stack" data-billing-form novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="pb-name" data-i18n="acc.billName">Company legal name</label>
+                <input id="pb-name" name="billing_name" type="text" autocomplete="organization" maxlength="160">
+              </div>
+              <div class="field">
+                <label for="pb-tax" data-i18n="acc.billTax">Tax ID (VAT number)</label>
+                <input id="pb-tax" name="billing_tax_id" type="text" maxlength="40" autocapitalize="characters">
+              </div>
+            </div>
+            <div class="field">
+              <label for="pb-address" data-i18n="acc.billAddress">Billing address</label>
+              <input id="pb-address" name="billing_address" type="text" autocomplete="street-address" maxlength="300">
+            </div>
+            <div class="field">
+              <label for="pb-email" data-i18n="acc.billEmail">Email for invoices</label>
+              <input id="pb-email" name="billing_email" type="email" autocomplete="email" maxlength="200">
+            </div>
+            <button class="btn btn-primary" type="submit"><span class="btn-label"><span data-i18n="acc.saveBilling">Save billing details</span></span></button>
+            <p class="form-msg" data-billing-msg aria-live="polite"></p>
+          </form>
         </article>
 
         <!-- Company details -->
@@ -352,9 +400,9 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-<script src="../../i18n.js?v=25"></script>
-<script src="../../forms.js?v=25"></script>
-<script src="../../cuenta.js?v=25"></script>
-<script src="../../theme.js?v=25"></script>
+<script src="../../i18n.js?v=26"></script>
+<script src="../../forms.js?v=26"></script>
+<script src="../../cuenta.js?v=26"></script>
+<script src="../../theme.js?v=26"></script>
 </body>
 </html>
